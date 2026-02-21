@@ -17,8 +17,6 @@ body{
   display:flex;
 }
 
-/* SIDEBAR */
-
 .sidebar{
   width:240px;
   height:100vh;
@@ -31,10 +29,7 @@ body{
   justify-content:space-between;
 }
 
-.avatar{
-  text-align:center;
-}
-
+.avatar{text-align:center;}
 .avatar img{
   width:90px;
   border-radius:50%;
@@ -49,19 +44,10 @@ body{
   text-decoration:none;
   margin:6px 0;
   border-radius:6px;
-  transition:.2s;
 }
 
-.nav a:hover{
-  background:#1a2128;
-}
-
-.nav .active{
-  background:#1a2128;
-  color:#9FEF00;
-}
-
-/* CONTENT */
+.nav a:hover{background:#1a2128;}
+.nav .active{background:#1a2128;color:#9FEF00;}
 
 .content{
   margin-left:260px;
@@ -69,22 +55,8 @@ body{
   max-width:900px;
 }
 
-h1{
-  font-size:38px;
-  margin-bottom:10px;
-}
-
-.subtitle{
-  color:#8b949e;
-  font-size:18px;
-  margin-bottom:30px;
-}
-
-.section{
-  margin-bottom:50px;
-}
-
-/* BUTTON */
+h1{font-size:38px;margin-bottom:10px;}
+.subtitle{color:#8b949e;font-size:18px;margin-bottom:30px;}
 
 .btn{
   display:inline-block;
@@ -95,14 +67,7 @@ h1{
   font-weight:600;
   text-decoration:none;
   margin-top:20px;
-  transition:.2s;
 }
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-/* PROJECT LINKS */
 
 .projects a{
   display:block;
@@ -110,24 +75,12 @@ h1{
   color:#9FEF00;
   text-decoration:none;
 }
-
-.projects a:hover{
-  text-decoration:underline;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-  .sidebar{display:none;}
-  .content{margin:0;padding:30px;}
-}
 </style>
 </head>
 
 <body>
 
 <div class="sidebar">
-
   <div>
     <div class="avatar">
       <img src="https://i.imgur.com/2yaf2wb.png">
@@ -135,64 +88,44 @@ h1{
     </div>
 
     <div class="nav">
-      <a class="active" href="#">Inicio</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contacto</a>
+      <a class="active" href="index.html">Inicio</a>
+      <a href="cv.html">CV</a>
+      <a href="mailto:bitsofalber@gmail.com">Contacto</a>
     </div>
   </div>
-
 </div>
 
 <div class="content">
 
-  <!-- HOME -->
-  <div class="section">
-    <h1>Hi, I’m Alberto Hidalgo</h1>
-    <div class="subtitle">
-      Estudiante de ASIR & Ciberseguridad
-    </div>
+  <h1>Hi, I’m Alberto Hidalgo</h1>
+  <div class="subtitle">
+    Estudiante de ASIR & Ciberseguridad
+  </div>
 
-    <p>
-      Apasion lead por la ciberseguridad defensiva, el análisis de amenazas
-      y la protección de infraestructuras.
-    </p>
+  <p>
+    Apasionado por la ciberseguridad defensiva, detección de amenazas
+    y protección de infraestructuras.
+  </p>
 
-    <a class="btn" href="mailto:bitsofalber@gmail.com">
-      Contact
+  <a class="btn" href="mailto:bitsofalber@gmail.com">
+    Contact
+  </a>
+
+  <div class="projects">
+    <h3 style="margin-top:40px;">Proyectos</h3>
+
+    <a href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
+      → ASIR Learning Labs
     </a>
 
-    <div class="projects">
-      <h3 style="margin-top:40px;">Proyectos</h3>
+    <a href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">
+      → Raspberry Homelab Infrastructure
+    </a>
 
-      <a href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
-        → ASIR Learning Labs
-      </a>
+    <a href="https://github.com/bitsofalber/ciberseguridad" target="_blank">
+      → Apuntes de Ciberseguridad
+    </a>
 
-      <a href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">
-        → Raspberry Homelab Infrastructure
-      </a>
-
-      <a href="https://github.com/bitsofalber/ciberseguridad" target="_blank">
-        → Apuntes de Ciberseguridad
-      </a>
-
-    </div>
-  </div>
-
-  <!-- CV -->
-  <div id="cv" class="section">
-    <h1>CV</h1>
-    <p>
-      Aquí irá tu experiencia profesional, formación, certificaciones y habilidades.
-      Puedes actualizar esta sección conforme avances en tu carrera.
-    </p>
-  </div>
-
-  <!-- CONTACT -->
-  <div id="contact" class="section">
-    <h1>Contacto</h1>
-    <p>Puedes escribirme directamente:</p>
-    <a class="btn" href="mailto:bitsofalber@gmail.com">Enviar email</a>
   </div>
 
 </div>
