@@ -27,6 +27,25 @@ body{
   padding:30px 20px;
   position:fixed;
   border-right:1px solid #1f2933;
+  display:flex;
+  flex-direction:column;
+}
+
+.avatar{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.avatar img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:3px solid #9FEF00;
+}
+
+.avatar h3{
+  margin-top:10px;
+  font-weight:500;
 }
 
 .nav a{
@@ -170,136 +189,48 @@ li{margin-bottom:6px;}
 <body>
 
 <div class="sidebar">
+
+  <div class="avatar">
+    <img src="https://i.imgur.com/2yaf2wb.png" alt="avatar">
+    <h3>Alberto Hidalgo</h3>
+  </div>
+
   <div class="nav">
     <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
     <a class="active" href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
     <a href="mailto:bitsofalber@gmail.com"><i class="fa-solid fa-envelope"></i> Contacto</a>
   </div>
+
 </div>
 
 <div class="content">
 
-  <!-- ===== CV ESPAÑOL ===== -->
-
   <h1>Curriculum Vitae</h1>
 
   <h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
-  <p>
-    Estudiante de Administración de Sistemas Informáticos en Red con especial interés
-    en ciberseguridad y monitorización de sistemas.
-  </p>
-  <p>
-    Experiencia práctica en análisis de logs, detección de amenazas con Splunk
-    y pruebas de penetración en entornos controlados.
-  </p>
-  <p>
-    Buscando oportunidades de prácticas o posiciones junior en sistemas,
-    redes o ciberseguridad.
-  </p>
+  <p>Estudiante de ASIR con especial interés en ciberseguridad y monitorización.</p>
 
   <h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
   <div class="timeline">
     <div class="timeline-item">
       <strong>Vigilante de Seguridad</strong><br>
-      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
-      <ul>
-        <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
-        <li>Vigilancia preventiva y detección de situaciones de riesgo</li>
-        <li>Toma de decisiones críticas bajo presión</li>
-      </ul>
+      2018 – 2026
     </div>
   </div>
 
   <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <strong>Grado Superior ASIR</strong><br>
-      FP Euroformac | 2025 – Actualidad
+      ASIR | 2025 – Actualidad
     </div>
   </div>
 
-  <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
-  <ul>
-    <li>eJPTv2 — 2025</li>
-    <li>Curso Splunk</li>
-    <li>Introducción al Hacking Web</li>
-    <li>Blue Team Path — TryHackMe</li>
-  </ul>
-
-  <h2><i class="fa-solid fa-screwdriver-wrench"></i> Habilidades Técnicas</h2>
-  <div class="skills">
-    <span>Linux & Windows</span>
-    <span>Networking</span>
-    <span>Virtualización</span>
-    <span>Splunk</span>
-    <span>Threat Detection</span>
-    <span>Nmap</span>
-    <span>Burp Suite</span>
-  </div>
-
-  <h2><i class="fa-solid fa-circle-info"></i> Datos Adicionales</h2>
-  <ul>
-    <li>Inglés nivel intermedio</li>
-    <li>Carnet B y vehículo propio</li>
-    <li>Disponibilidad para viajar</li>
-  </ul>
-
-  <h2><i class="fa-solid fa-address-card"></i> Contacto</h2>
-  <div class="contact">
-    <p><i class="fa-brands fa-github"></i><a href="https://github.com/bitsofalber" target="_blank">GitHub</a></p>
-    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/ahidalgotech" target="_blank">LinkedIn</a></p>
-    <p><i class="fa-solid fa-envelope"></i><a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
-  </div>
-
-  <!-- SEPARADOR -->
   <div class="separator"></div>
-
-  <!-- ===== CV ENGLISH ===== -->
 
   <h1>Curriculum Vitae</h1>
 
   <h2><i class="fa-solid fa-user"></i> Professional Profile</h2>
-  <p>
-    Network Systems Administration student with a strong interest in cybersecurity
-    and system monitoring.
-  </p>
-  <p>
-    Practical experience in log analysis, threat detection using Splunk,
-    and penetration testing in controlled environments.
-  </p>
-  <p>
-    Seeking internship or junior opportunities in systems,
-    networking, or cybersecurity.
-  </p>
-
-  <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <strong>Security Officer</strong><br>
-      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
-      <ul>
-        <li>Security protocol implementation and incident management</li>
-        <li>Preventive surveillance and risk detection</li>
-        <li>Critical decision-making under pressure</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <strong>Network Systems Administration (ASIR)</strong><br>
-      FP Euroformac | 2025 – Present
-    </div>
-  </div>
-
-  <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
-  <ul>
-    <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
-    <li>Splunk Course</li>
-    <li>Web Hacking Introduction</li>
-    <li>Blue Team Path — TryHackMe</li>
-  </ul>
+  <p>ASIR student focused on cybersecurity and threat detection.</p>
 
 </div>
 
