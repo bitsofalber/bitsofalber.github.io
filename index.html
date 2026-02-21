@@ -6,9 +6,8 @@
 
 <title>ahidalgotech</title>
 
-<!-- FAVICON PROFESIONAL -->
+<!-- FAVICON -->
 <link rel="icon" type="image/png" sizes="32x32" href="img/img2.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/img2.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/img2.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
@@ -108,9 +107,7 @@ body{
   transition:.25s;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-}
+.btn:hover{ transform:translateY(-2px); }
 
 .btn-outline{
   background:transparent;
@@ -135,14 +132,6 @@ body{
   box-shadow:
     0 20px 40px rgba(0,0,0,0.6),
     0 0 30px rgba(159,239,0,0.08);
-  transition:.3s ease;
-}
-
-.profile-card:hover{
-  transform:translateY(-6px);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.8),
-    0 0 45px rgba(159,239,0,0.18);
 }
 
 .profile-glow{
@@ -180,9 +169,7 @@ body{
 
 /* VIDEOS */
 
-.videos{
-  margin-top:60px;
-}
+.videos{ margin-top:60px; }
 
 .video-grid{
   display:grid;
@@ -198,9 +185,64 @@ body{
   border:none;
 }
 
+/* SOFT SKILLS PANEL */
+
+.skills-section{
+  margin-top:80px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:50px;
+  margin-top:25px;
+  align-items:center;
+}
+
+.radar{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, rgba(159,239,0,0.15), transparent 70%),
+    repeating-radial-gradient(circle,
+      rgba(159,239,0,0.25) 0px,
+      rgba(159,239,0,0.25) 2px,
+      transparent 2px,
+      transparent 25px);
+  box-shadow:0 0 30px rgba(159,239,0,0.15);
+}
+
+.radar-label{
+  margin-top:12px;
+  color:#9FEF00;
+  text-align:center;
+}
+
+.bar{ margin-bottom:18px; }
+
+.bar span{
+  font-size:14px;
+  color:#c9d1d9;
+}
+
+.progress{
+  height:10px;
+  background:#11161c;
+  border-radius:6px;
+  margin-top:6px;
+  overflow:hidden;
+}
+
+.progress div{
+  height:100%;
+  background:linear-gradient(90deg,#9FEF00,#00ffc3);
+  box-shadow:0 0 10px rgba(159,239,0,0.6);
+}
+
 /* MOBILE */
 
-@media(max-width:1000px){
+@media(max-width:900px){
   .sidebar{display:none;}
   .content{
     margin:0;
@@ -209,6 +251,9 @@ body{
   .hero-layout{
     flex-direction:column;
     text-align:center;
+  }
+  .skills-grid{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -244,12 +289,9 @@ body{
 
   <div class="profile-card">
     <div class="profile-glow"></div>
-
-    <img src="img/img.jpeg" alt="Alberto Hidalgo">
-
+    <img src="img/img.jpeg">
     <h3>Alberto Hidalgo Moreno</h3>
     <p class="birth">06 · 01 · 1994</p>
-
     <div class="badge">🟢 Open to Work</div>
   </div>
 
@@ -259,20 +301,59 @@ body{
   <h2>Vídeos recientes</h2>
 
   <div class="video-grid">
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe>
-    </div>
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe>
-    </div>
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/cI27_M5_a4E"></iframe>
-    </div>
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w"></iframe>
-    </div>
+    <div class="video-card"><iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe></div>
+    <div class="video-card"><iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe></div>
+    <div class="video-card"><iframe src="https://www.youtube.com/embed/cI27_M5_a4E"></iframe></div>
+    <div class="video-card"><iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w"></iframe></div>
   </div>
 </div>
+
+<!-- SOFT SKILLS PANEL -->
+
+<section class="skills-section">
+  <h2>Soft Skills & Professional Traits</h2>
+
+  <div class="skills-grid">
+
+    <div>
+      <div class="radar"></div>
+      <div class="radar-label">Perfil Profesional</div>
+    </div>
+
+    <div>
+      <div class="bar">
+        <span>Pensamiento Analítico</span>
+        <div class="progress"><div style="width:90%"></div></div>
+      </div>
+
+      <div class="bar">
+        <span>Resolución de Problemas</span>
+        <div class="progress"><div style="width:88%"></div></div>
+      </div>
+
+      <div class="bar">
+        <span>Atención al Detalle</span>
+        <div class="progress"><div style="width:92%"></div></div>
+      </div>
+
+      <div class="bar">
+        <span>Trabajo bajo presión</span>
+        <div class="progress"><div style="width:85%"></div></div>
+      </div>
+
+      <div class="bar">
+        <span>Aprendizaje continuo</span>
+        <div class="progress"><div style="width:95%"></div></div>
+      </div>
+
+      <div class="bar">
+        <span>Comunicación técnica</span>
+        <div class="progress"><div style="width:80%"></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 </div>
 </body>
