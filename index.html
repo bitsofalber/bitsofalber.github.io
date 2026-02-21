@@ -126,8 +126,9 @@ body{
   border-radius:18px;
   text-align:center;
   border:1px solid rgba(159,239,0,0.15);
-  box-shadow:0 20px 40px rgba(0,0,0,0.6),
-             0 0 30px rgba(159,239,0,0.08);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.6),
+    0 0 30px rgba(159,239,0,0.08);
 }
 
 .profile-glow{
@@ -178,45 +179,65 @@ body{
   border:none;
 }
 
-/* SOFT SKILLS */
+/* ===== SOFT SKILLS PANEL 3D ===== */
 
-.skills-section{ margin-top:80px; }
+.skills-section{ margin-top:90px; }
 
-.skills-grid{
+.skills-panel{
   display:grid;
-  grid-template-columns:240px 1fr;
+  grid-template-columns:260px 1fr;
   gap:50px;
-  margin-top:25px;
-  align-items:center;
+  margin-top:30px;
+  padding:40px;
+  border-radius:20px;
+  background:linear-gradient(180deg,#0e1318,#0b0f14);
+  border:1px solid rgba(159,239,0,0.12);
+  box-shadow:
+      0 25px 50px rgba(0,0,0,0.6),
+      inset 0 1px 0 rgba(255,255,255,0.04),
+      0 0 40px rgba(159,239,0,0.06);
+  transition:.35s ease;
 }
+
+.skills-panel:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:
+      0 40px 80px rgba(0,0,0,0.8),
+      0 0 60px rgba(159,239,0,0.12);
+}
+
+/* ICON */
 
 .skills-icon{text-align:center;}
 
 .skills-icon img{
-  width:120px;
-  filter:drop-shadow(0 0 12px rgba(159,239,0,0.45));
+  width:180px;
+  filter:drop-shadow(0 0 18px rgba(159,239,0,0.45));
 }
 
 .skills-icon p{
-  margin-top:12px;
+  margin-top:14px;
   color:#9FEF00;
+  font-size:18px;
   font-weight:600;
 }
 
-.bar{ margin-bottom:22px; }
+/* BARS */
+
+.bar{ margin-bottom:26px; }
 
 .bar-info{
   display:flex;
   justify-content:space-between;
-  font-size:14px;
+  font-size:15px;
   color:#c9d1d9;
 }
 
 .progress{
-  height:10px;
+  height:12px;
   background:#11161c;
-  border-radius:6px;
-  margin-top:6px;
+  border-radius:8px;
+  margin-top:8px;
   overflow:hidden;
   position:relative;
 }
@@ -225,22 +246,22 @@ body{
   height:100%;
   width:0;
   background:linear-gradient(90deg,#9FEF00,#00ffc3);
-  box-shadow:0 0 12px rgba(159,239,0,0.6);
-  border-radius:6px;
+  box-shadow:0 0 14px rgba(159,239,0,0.6);
+  border-radius:8px;
   transition:width 1.4s ease;
 }
 
 .progress div::after{
   content:'';
   position:absolute;
-  right:-6px;
+  right:-7px;
   top:50%;
   transform:translateY(-50%);
-  width:12px;
-  height:12px;
+  width:14px;
+  height:14px;
   border-radius:50%;
   background:#9FEF00;
-  box-shadow:0 0 10px rgba(159,239,0,0.9);
+  box-shadow:0 0 14px rgba(159,239,0,0.9);
 }
 
 /* MOBILE */
@@ -249,7 +270,8 @@ body{
   .sidebar{display:none;}
   .content{margin:0;padding:50px 25px;}
   .hero-layout{flex-direction:column;text-align:center;}
-  .skills-grid{grid-template-columns:1fr;}
+  .skills-panel{grid-template-columns:1fr;text-align:center;}
+  .skills-icon img{width:140px;}
 }
 </style>
 </head>
@@ -303,7 +325,8 @@ body{
 
 <section class="skills-section">
   <h2>Soft Skills & Professional Traits</h2>
-  <div class="skills-grid">
+
+  <div class="skills-panel">
 
     <div class="skills-icon">
       <img src="img/img2.png">
@@ -313,44 +336,32 @@ body{
     <div class="bars">
 
       <div class="bar">
-        <div class="bar-info">
-          <span>Pensamiento Analítico</span><span>90%</span>
-        </div>
+        <div class="bar-info"><span>Pensamiento Analítico</span><span>90%</span></div>
         <div class="progress"><div data-width="90"></div></div>
       </div>
 
       <div class="bar">
-        <div class="bar-info">
-          <span>Resolución de Problemas</span><span>88%</span>
-        </div>
+        <div class="bar-info"><span>Resolución de Problemas</span><span>88%</span></div>
         <div class="progress"><div data-width="88"></div></div>
       </div>
 
       <div class="bar">
-        <div class="bar-info">
-          <span>Atención al Detalle</span><span>92%</span>
-        </div>
+        <div class="bar-info"><span>Atención al Detalle</span><span>92%</span></div>
         <div class="progress"><div data-width="92"></div></div>
       </div>
 
       <div class="bar">
-        <div class="bar-info">
-          <span>Trabajo bajo presión</span><span>85%</span>
-        </div>
+        <div class="bar-info"><span>Trabajo bajo presión</span><span>85%</span></div>
         <div class="progress"><div data-width="85"></div></div>
       </div>
 
       <div class="bar">
-        <div class="bar-info">
-          <span>Aprendizaje continuo</span><span>95%</span>
-        </div>
+        <div class="bar-info"><span>Aprendizaje continuo</span><span>95%</span></div>
         <div class="progress"><div data-width="95"></div></div>
       </div>
 
       <div class="bar">
-        <div class="bar-info">
-          <span>Comunicación técnica</span><span>80%</span>
-        </div>
+        <div class="bar-info"><span>Comunicación técnica</span><span>80%</span></div>
         <div class="progress"><div data-width="80"></div></div>
       </div>
 
