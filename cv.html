@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV — Alberto Hidalgo</title>
+
+<title>CV — ahidalgotech</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/img2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/img2.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -14,11 +17,11 @@
 body{
   font-family:'Inter',sans-serif;
   color:#e6edf3;
-  display:flex;
   background:
     radial-gradient(circle at 20% 20%, rgba(159,239,0,0.06), transparent 40%),
     radial-gradient(circle at 80% 60%, rgba(0,150,255,0.05), transparent 40%),
     #0b0f14;
+  display:flex;
 }
 
 /* SIDEBAR */
@@ -30,7 +33,6 @@ body{
   padding:30px 20px;
   position:fixed;
   border-right:1px solid #1f2933;
-  box-shadow:8px 0 30px rgba(0,0,0,0.6);
 }
 
 .nav a{
@@ -50,11 +52,6 @@ body{
 
 .nav .active{
   background:#1a2128;
-  color:#9FEF00;
-}
-
-.nav i{
-  margin-right:10px;
   color:#9FEF00;
 }
 
@@ -79,7 +76,7 @@ h2{
   color:#9FEF00;
 }
 
-/* TIMELINE LINE */
+/* TIMELINE */
 
 .timeline{
   position:relative;
@@ -114,7 +111,7 @@ h2{
   box-shadow:0 0 12px rgba(159,239,0,0.7);
 }
 
-/* FLOATING CARD */
+/* FLOATING CARDS */
 
 .card{
   background:#11161c;
@@ -163,11 +160,35 @@ h2{
   font-size:14px;
 }
 
-/* CONTACT LINKS */
+/* CONTACT */
 
 .contact a{
   color:#9FEF00;
   text-decoration:none;
+}
+
+/* BOTÓN VOLVER */
+
+.back-home{
+  margin-top:60px;
+  text-align:center;
+}
+
+.btn-home{
+  display:inline-block;
+  padding:14px 26px;
+  background:#9FEF00;
+  color:#000;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 0 18px rgba(159,239,0,0.35);
+  transition:.25s ease;
+}
+
+.btn-home:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 28px rgba(159,239,0,0.55);
 }
 
 /* RESPONSIVE */
@@ -186,9 +207,9 @@ h2{
 
 <div class="sidebar">
   <div class="nav">
-    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-    <a class="active" href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
-    <a href="mailto:bitsofalber@gmail.com"><i class="fa-solid fa-envelope"></i> Contacto</a>
+    <a href="index.html">Inicio</a>
+    <a class="active" href="cv.html">CV</a>
+    <a href="mailto:bitsofalber@gmail.com">Contacto</a>
   </div>
 </div>
 
@@ -196,14 +217,14 @@ h2{
 
 <h1>Curriculum Vitae</h1>
 
-<h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
+<h2>Perfil Profesional</h2>
 <div class="card">
   Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y monitorización de sistemas.<br><br>
   Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados.<br><br>
   Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.
 </div>
 
-<h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
+<h2>Experiencia Profesional</h2>
 <div class="timeline">
   <div class="timeline-item">
     <div class="timeline-dot"></div>
@@ -219,7 +240,7 @@ h2{
   </div>
 </div>
 
-<h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
+<h2>Educación</h2>
 <div class="timeline">
   <div class="timeline-item">
     <div class="timeline-dot"></div>
@@ -230,7 +251,7 @@ h2{
   </div>
 </div>
 
-<h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
+<h2>Certificaciones</h2>
 <div class="card">
   <ul>
     <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
@@ -240,7 +261,7 @@ h2{
   </ul>
 </div>
 
-<h2><i class="fa-solid fa-screwdriver-wrench"></i> Habilidades Técnicas</h2>
+<h2>Habilidades Técnicas</h2>
 <div class="skills">
   <span>Linux & Windows</span>
   <span>Redes</span>
@@ -253,7 +274,7 @@ h2{
   <span>Web Pentesting</span>
 </div>
 
-<h2><i class="fa-solid fa-circle-info"></i> Información Adicional</h2>
+<h2>Información Adicional</h2>
 <div class="card">
   <ul>
     <li>Inglés: nivel intermedio</li>
@@ -262,23 +283,18 @@ h2{
   </ul>
 </div>
 
-<h2><i class="fa-solid fa-address-card"></i> Contacto</h2>
+<h2>Contacto</h2>
 <div class="card contact">
-  <p><i class="fa-brands fa-github"></i>
-  <a href="https://github.com/bitsofalber" target="_blank"> GitHub</a></p>
-
-  <p><i class="fa-brands fa-linkedin"></i>
-  <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank"> LinkedIn</a></p>
-
-  <p><i class="fa-solid fa-envelope"></i>
-  <a href="mailto:bitsofalber@gmail.com"> bitsofalber@gmail.com</a></p>
+  <p><a href="https://github.com/bitsofalber" target="_blank">GitHub</a></p>
+  <p><a href="https://www.linkedin.com/in/ahidalgotech" target="_blank">LinkedIn</a></p>
+  <p><a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
 </div>
 
-</div>
-
-  <div class="back-home">
+<!-- BOTÓN VOLVER -->
+<div class="back-home">
   <a href="index.html" class="btn-home">← Volver a Inicio</a>
 </div>
-  
+
+</div>
 </body>
 </html>
