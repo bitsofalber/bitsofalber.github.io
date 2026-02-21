@@ -6,6 +6,7 @@
 <title>Alberto Hidalgo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -17,6 +18,8 @@ body{
   display:flex;
 }
 
+/* SIDEBAR */
+
 .sidebar{
   width:240px;
   height:100vh;
@@ -24,17 +27,6 @@ body{
   padding:30px 20px;
   position:fixed;
   border-right:1px solid #1f2933;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.avatar{text-align:center;}
-.avatar img{
-  width:90px;
-  border-radius:50%;
-  border:2px solid #9FEF00;
-  margin-bottom:10px;
 }
 
 .nav a{
@@ -48,6 +40,13 @@ body{
 
 .nav a:hover{background:#1a2128;}
 .nav .active{background:#1a2128;color:#9FEF00;}
+
+.nav i{
+  margin-right:10px;
+  color:#9FEF00;
+}
+
+/* CONTENT */
 
 .content{
   margin-left:260px;
@@ -81,17 +80,10 @@ h1{font-size:38px;margin-bottom:10px;}
 <body>
 
 <div class="sidebar">
-  <div>
-    <div class="avatar">
-      <img src="https://i.imgur.com/2yaf2wb.png">
-      <h3>Alberto</h3>
-    </div>
-
-    <div class="nav">
-      <a class="active" href="index.html">Inicio</a>
-      <a href="cv.html">CV</a>
-      <a href="mailto:bitsofalber@gmail.com">Contacto</a>
-    </div>
+  <div class="nav">
+    <a class="active" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+    <a href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
+    <a href="mailto:bitsofalber@gmail.com"><i class="fa-solid fa-envelope"></i> Contacto</a>
   </div>
 </div>
 
