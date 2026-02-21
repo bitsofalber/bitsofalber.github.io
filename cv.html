@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV | Alberto Hidalgo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
@@ -40,6 +40,11 @@ body{
 
 .nav a:hover{background:#1a2128;}
 .nav .active{background:#1a2128;color:#9FEF00;}
+
+.nav i{
+  margin-right:10px;
+  color:#9FEF00;
+}
 
 /* CONTENT */
 
@@ -120,6 +125,17 @@ li{margin-bottom:6px;}
   font-size:14px;
 }
 
+/* CONTACT LINKS */
+
+.contact p{
+  margin:8px 0;
+}
+
+.contact i{
+  margin-right:8px;
+  color:#9FEF00;
+}
+
 /* SEPARATOR */
 
 .separator{
@@ -141,6 +157,13 @@ li{margin-bottom:6px;}
   font-size:12px;
   letter-spacing:2px;
 }
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .sidebar{display:none;}
+  .content{margin:0;padding:30px;}
+}
 </style>
 </head>
 
@@ -148,19 +171,19 @@ li{margin-bottom:6px;}
 
 <div class="sidebar">
   <div class="nav">
-    <a href="index.html">Inicio</a>
-    <a class="active" href="cv.html">CV</a>
-    <a href="mailto:bitsofalber@gmail.com">Contacto</a>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+    <a class="active" href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
+    <a href="mailto:bitsofalber@gmail.com"><i class="fa-solid fa-envelope"></i> Contacto</a>
   </div>
 </div>
 
 <div class="content">
 
-  <!-- ===== SPANISH CV ===== -->
+  <!-- ===== CV ESPAÑOL ===== -->
 
   <h1>Curriculum Vitae</h1>
 
-  <h2>Perfil Profesional</h2>
+  <h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
   <p>
     Estudiante de Administración de Sistemas Informáticos en Red con especial interés
     en ciberseguridad y monitorización de sistemas.
@@ -174,7 +197,7 @@ li{margin-bottom:6px;}
     redes o ciberseguridad.
   </p>
 
-  <h2>Experiencia Profesional</h2>
+  <h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
   <div class="timeline">
     <div class="timeline-item">
       <strong>Vigilante de Seguridad</strong><br>
@@ -187,7 +210,7 @@ li{margin-bottom:6px;}
     </div>
   </div>
 
-  <h2>Educación</h2>
+  <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
   <div class="timeline">
     <div class="timeline-item">
       <strong>Grado Superior ASIR</strong><br>
@@ -195,7 +218,7 @@ li{margin-bottom:6px;}
     </div>
   </div>
 
-  <h2>Certificaciones</h2>
+  <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
   <ul>
     <li>eJPTv2 — 2025</li>
     <li>Curso Splunk</li>
@@ -203,7 +226,7 @@ li{margin-bottom:6px;}
     <li>Blue Team Path — TryHackMe</li>
   </ul>
 
-  <h2>Habilidades Técnicas</h2>
+  <h2><i class="fa-solid fa-screwdriver-wrench"></i> Habilidades Técnicas</h2>
   <div class="skills">
     <span>Linux & Windows</span>
     <span>Networking</span>
@@ -214,21 +237,28 @@ li{margin-bottom:6px;}
     <span>Burp Suite</span>
   </div>
 
-  <h2>Datos Adicionales</h2>
+  <h2><i class="fa-solid fa-circle-info"></i> Datos Adicionales</h2>
   <ul>
     <li>Inglés nivel intermedio</li>
     <li>Carnet B y vehículo propio</li>
     <li>Disponibilidad para viajar</li>
   </ul>
 
-  <!-- SEPARATOR -->
+  <h2><i class="fa-solid fa-address-card"></i> Contacto</h2>
+  <div class="contact">
+    <p><i class="fa-brands fa-github"></i><a href="https://github.com/bitsofalber" target="_blank">GitHub</a></p>
+    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/ahidalgotech" target="_blank">LinkedIn</a></p>
+    <p><i class="fa-solid fa-envelope"></i><a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
+  </div>
+
+  <!-- SEPARADOR -->
   <div class="separator"></div>
 
-  <!-- ===== ENGLISH CV ===== -->
+  <!-- ===== CV ENGLISH ===== -->
 
   <h1>Curriculum Vitae</h1>
 
-  <h2>Professional Profile</h2>
+  <h2><i class="fa-solid fa-user"></i> Professional Profile</h2>
   <p>
     Network Systems Administration student with a strong interest in cybersecurity
     and system monitoring.
@@ -242,7 +272,7 @@ li{margin-bottom:6px;}
     networking, or cybersecurity.
   </p>
 
-  <h2>Professional Experience</h2>
+  <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
   <div class="timeline">
     <div class="timeline-item">
       <strong>Security Officer</strong><br>
@@ -255,7 +285,7 @@ li{margin-bottom:6px;}
     </div>
   </div>
 
-  <h2>Education</h2>
+  <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
   <div class="timeline">
     <div class="timeline-item">
       <strong>Network Systems Administration (ASIR)</strong><br>
@@ -263,30 +293,12 @@ li{margin-bottom:6px;}
     </div>
   </div>
 
-  <h2>Certifications</h2>
+  <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
   <ul>
     <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
     <li>Splunk Course</li>
     <li>Web Hacking Introduction</li>
     <li>Blue Team Path — TryHackMe</li>
-  </ul>
-
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <span>Linux & Windows</span>
-    <span>Networking</span>
-    <span>Virtualization</span>
-    <span>Splunk</span>
-    <span>Threat Detection</span>
-    <span>Nmap</span>
-    <span>Burp Suite</span>
-  </div>
-
-  <h2>Additional Information</h2>
-  <ul>
-    <li>English: Intermediate</li>
-    <li>Driving license & vehicle</li>
-    <li>Willing to travel</li>
   </ul>
 
 </div>
