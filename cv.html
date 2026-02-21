@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,6 +16,8 @@ body{
   color:#e6edf3;
   display:flex;
 }
+
+/* SIDEBAR */
 
 .sidebar{
   width:240px;
@@ -39,19 +40,40 @@ body{
 .nav a:hover{background:#1a2128;}
 .nav .active{background:#1a2128;color:#9FEF00;}
 
+/* CONTENT */
+
 .content{
   margin-left:260px;
   padding:60px;
   max-width:900px;
+  line-height:1.7;
+}
+
+h1{
+  font-size:34px;
+  margin-bottom:30px;
+}
+
+h2{
+  margin-top:40px;
+  margin-bottom:15px;
+  color:#9FEF00;
+  font-size:20px;
+  letter-spacing:1px;
+}
+
+p{
+  margin-bottom:12px;
 }
 
 .timeline{
   border-left:2px solid #9FEF00;
   padding-left:20px;
+  margin-top:10px;
 }
 
 .timeline-item{
-  margin-bottom:25px;
+  margin-bottom:20px;
   position:relative;
 }
 
@@ -59,11 +81,30 @@ body{
   content:"";
   position:absolute;
   left:-31px;
-  top:3px;
+  top:6px;
   width:10px;
   height:10px;
   background:#9FEF00;
   border-radius:50%;
+}
+
+ul{
+  margin-left:18px;
+  margin-top:8px;
+}
+
+li{
+  margin-bottom:6px;
+}
+
+.skills span{
+  display:inline-block;
+  background:#11161c;
+  padding:6px 12px;
+  margin:5px;
+  border-radius:6px;
+  border:1px solid #1f2933;
+  font-size:14px;
 }
 </style>
 </head>
@@ -82,26 +123,77 @@ body{
 
   <h1>Curriculum Vitae</h1>
 
-  <h2 style="margin-top:30px;">Formación</h2>
+  <h2>Perfil Profesional</h2>
+  <p>
+    Estudiante de Administración de Sistemas Informáticos en Red con especial interés en
+    ciberseguridad y monitorización de sistemas.
+  </p>
+  <p>
+    Experiencia práctica en análisis de logs, detección de amenazas con Splunk y
+    pruebas de penetración en entornos controlados.
+  </p>
+  <p>
+    Buscando oportunidades de prácticas o posiciones junior en sistemas,
+    redes o ciberseguridad.
+  </p>
+
+  <h2>Experiencia Profesional</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <strong>ASIR – Administración de Sistemas Informáticos en Red</strong><br>
-      Formación en sistemas, redes y seguridad.
+      <strong>Vigilante de Seguridad</strong><br>
+      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
+      <ul>
+        <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
+        <li>Vigilancia preventiva y detección de situaciones de riesgo</li>
+        <li>Toma de decisiones críticas bajo presión</li>
+      </ul>
     </div>
   </div>
 
-  <h2 style="margin-top:30px;">Especialización</h2>
+  <h2>Educación</h2>
   <div class="timeline">
     <div class="timeline-item">
-      Blue Team & Threat Detection
-    </div>
-    <div class="timeline-item">
-      SIEM & Log Analysis
-    </div>
-    <div class="timeline-item">
-      Linux Hardening
+      <strong>Grado Superior ASIR</strong><br>
+      FP Euroformac | 2025 – Actualidad
     </div>
   </div>
+
+  <h2>Certificaciones</h2>
+  <ul>
+    <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
+    <li>Curso Splunk — elrincondelhacker.es</li>
+    <li>Introducción al Hacking Web — elrincondelhacker.es</li>
+    <li>Blue Team Path — TryHackMe</li>
+  </ul>
+
+  <h2>Laboratorios y Práctica en Ciberseguridad</h2>
+  <ul>
+    <li>Resolución de retos en TryHackMe y Hack The Box</li>
+    <li>Explotación de vulnerabilidades en entornos controlados</li>
+    <li>Enumeración de sistemas y escalada básica de privilegios</li>
+    <li>Participación en CTF y laboratorios prácticos</li>
+  </ul>
+
+  <h2>Habilidades Técnicas</h2>
+  <div class="skills">
+    <span>Linux & Windows</span>
+    <span>Sistemas y Redes</span>
+    <span>Virtualización</span>
+    <span>Splunk</span>
+    <span>Threat Detection</span>
+    <span>OWASP Top 10</span>
+    <span>Nmap</span>
+    <span>Burp Suite</span>
+    <span>Pentesting Web</span>
+    <span>MySQL básico</span>
+  </div>
+
+  <h2>Datos Adicionales</h2>
+  <ul>
+    <li>Inglés nivel intermedio</li>
+    <li>Carnet B y vehículo propio</li>
+    <li>Disponibilidad para viajar</li>
+  </ul>
 
 </div>
 
