@@ -71,7 +71,7 @@ ul{
 
 li{margin-bottom:6px;}
 
-/* ===== TIMELINE PROFESIONAL ===== */
+/* TIMELINE */
 
 .timeline{
   position:relative;
@@ -117,19 +117,28 @@ li{margin-bottom:6px;}
   border-radius:6px;
   border:1px solid #1f2933;
   font-size:14px;
-  transition:.2s;
 }
 
-.skills span:hover{
-  border-color:#9FEF00;
-  transform:translateY(-2px);
+/* SEPARATOR */
+
+.separator{
+  margin:70px 0;
+  height:1px;
+  background:#1f2933;
+  position:relative;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:900px){
-  .sidebar{display:none;}
-  .content{margin:0;padding:30px;}
+.separator::after{
+  content:"ENGLISH VERSION";
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#0b0f14;
+  padding:0 15px;
+  color:#8b949e;
+  font-size:12px;
+  letter-spacing:2px;
 }
 </style>
 </head>
@@ -145,6 +154,8 @@ li{margin-bottom:6px;}
 </div>
 
 <div class="content">
+
+  <!-- ===== SPANISH CV ===== -->
 
   <h1>Curriculum Vitae</h1>
 
@@ -185,32 +196,21 @@ li{margin-bottom:6px;}
 
   <h2>Certificaciones</h2>
   <ul>
-    <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
-    <li>Curso Splunk — elrincondelhacker.es</li>
-    <li>Introducción al Hacking Web — elrincondelhacker.es</li>
+    <li>eJPTv2 — 2025</li>
+    <li>Curso Splunk</li>
+    <li>Introducción al Hacking Web</li>
     <li>Blue Team Path — TryHackMe</li>
-  </ul>
-
-  <h2>Laboratorios y Práctica en Ciberseguridad</h2>
-  <ul>
-    <li>Resolución de retos en TryHackMe y Hack The Box</li>
-    <li>Explotación de vulnerabilidades en entornos controlados</li>
-    <li>Enumeración de sistemas y escalada básica de privilegios</li>
-    <li>Participación en CTF y laboratorios prácticos</li>
   </ul>
 
   <h2>Habilidades Técnicas</h2>
   <div class="skills">
     <span>Linux & Windows</span>
-    <span>Sistemas y Redes</span>
+    <span>Networking</span>
     <span>Virtualización</span>
     <span>Splunk</span>
     <span>Threat Detection</span>
-    <span>OWASP Top 10</span>
     <span>Nmap</span>
     <span>Burp Suite</span>
-    <span>Pentesting Web</span>
-    <span>MySQL básico</span>
   </div>
 
   <h2>Datos Adicionales</h2>
@@ -218,6 +218,74 @@ li{margin-bottom:6px;}
     <li>Inglés nivel intermedio</li>
     <li>Carnet B y vehículo propio</li>
     <li>Disponibilidad para viajar</li>
+  </ul>
+
+  <!-- SEPARATOR -->
+  <div class="separator"></div>
+
+  <!-- ===== ENGLISH CV ===== -->
+
+  <h1>Curriculum Vitae</h1>
+
+  <h2>Professional Profile</h2>
+  <p>
+    Network Systems Administration student with a strong interest in cybersecurity
+    and system monitoring.
+  </p>
+  <p>
+    Practical experience in log analysis, threat detection using Splunk,
+    and penetration testing in controlled environments.
+  </p>
+  <p>
+    Seeking internship or junior opportunities in systems,
+    networking, or cybersecurity.
+  </p>
+
+  <h2>Professional Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <strong>Security Officer</strong><br>
+      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
+      <ul>
+        <li>Security protocol implementation and incident management</li>
+        <li>Preventive surveillance and risk detection</li>
+        <li>Critical decision-making under pressure</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <strong>Network Systems Administration (ASIR)</strong><br>
+      FP Euroformac | 2025 – Present
+    </div>
+  </div>
+
+  <h2>Certifications</h2>
+  <ul>
+    <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
+    <li>Splunk Course</li>
+    <li>Web Hacking Introduction</li>
+    <li>Blue Team Path — TryHackMe</li>
+  </ul>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>Linux & Windows</span>
+    <span>Networking</span>
+    <span>Virtualization</span>
+    <span>Splunk</span>
+    <span>Threat Detection</span>
+    <span>Nmap</span>
+    <span>Burp Suite</span>
+  </div>
+
+  <h2>Additional Information</h2>
+  <ul>
+    <li>English: Intermediate</li>
+    <li>Driving license & vehicle</li>
+    <li>Willing to travel</li>
   </ul>
 
 </div>
