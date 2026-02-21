@@ -8,119 +8,148 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family: 'Inter', sans-serif;
-  background:#0d1117;
-  color:#c9d1d9;
+body{
+  font-family:'Inter',sans-serif;
+  background:#0b0f14;
+  color:#e6edf3;
   display:flex;
 }
 
 /* SIDEBAR */
 
-.sidebar {
+.sidebar{
   width:240px;
   height:100vh;
-  background:#161b22;
+  background:#11161c;
   padding:30px 20px;
   position:fixed;
-  border-right:1px solid #30363d;
+  border-right:1px solid #1f2933;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
-.sidebar h2 {
-  color:#58a6ff;
-  margin-bottom:40px;
+.avatar{
+  text-align:center;
 }
 
-.sidebar a {
+.avatar img{
+  width:90px;
+  border-radius:50%;
+  margin-bottom:10px;
+  border:2px solid #9FEF00;
+}
+
+.avatar h3{
+  margin-top:5px;
+}
+
+.nav a{
   display:block;
-  color:#c9d1d9;
+  padding:12px;
+  color:#e6edf3;
   text-decoration:none;
-  margin:18px 0;
+  margin:6px 0;
+  border-radius:6px;
   transition:.2s;
-  font-weight:500;
 }
 
-.sidebar a:hover {
-  color:#58a6ff;
-  transform:translateX(5px);
+.nav a:hover{
+  background:#1a2128;
+}
+
+.nav .active{
+  background:#1a2128;
+  color:#9FEF00;
+}
+
+.social{
+  display:flex;
+  justify-content:space-around;
+  font-size:18px;
 }
 
 /* CONTENT */
 
-.content {
+.content{
   margin-left:260px;
   padding:60px;
   max-width:900px;
 }
 
-h1 {
-  font-size:48px;
-  margin-bottom:10px;
+h1{
+  font-size:34px;
+  margin-bottom:15px;
 }
 
-.subtitle {
-  color:#8b949e;
-  margin-bottom:40px;
-  font-size:18px;
-}
-
-.section {
+.section{
   margin-bottom:50px;
 }
 
-.section h2 {
-  color:#58a6ff;
-  margin-bottom:15px;
+.section h2{
+  color:#ffffff;
+  margin-bottom:10px;
 }
 
 /* TIMELINE */
 
-.timeline {
-  border-left:2px solid #30363d;
+.timeline{
+  border-left:2px solid #9FEF00;
   padding-left:20px;
 }
 
-.timeline-item {
+.timeline-item{
   margin-bottom:25px;
+  position:relative;
 }
 
-.timeline-item strong {
-  color:#ffffff;
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-31px;
+  top:3px;
+  width:10px;
+  height:10px;
+  background:#9FEF00;
+  border-radius:50%;
+}
+
+.timeline-item strong{
+  color:#fff;
 }
 
 /* SKILLS */
 
-.skills span {
+.skills span{
   display:inline-block;
-  background:#161b22;
+  background:#11161c;
   padding:8px 14px;
   margin:5px;
   border-radius:6px;
-  border:1px solid #30363d;
+  border:1px solid #1f2933;
   font-size:14px;
+  transition:.2s;
+}
+
+.skills span:hover{
+  border-color:#9FEF00;
+  transform:translateY(-2px);
+}
+
+/* LINKS */
+
+a{
+  color:#9FEF00;
+  text-decoration:none;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
-  .sidebar {
-    display:none;
-  }
-
-  .content {
-    margin:0;
-    padding:30px;
-  }
-
-  h1 {
-    font-size:36px;
-  }
+  .sidebar{display:none;}
+  .content{margin:0;padding:30px;}
 }
 </style>
 </head>
@@ -128,49 +157,61 @@ h1 {
 <body>
 
 <div class="sidebar">
-  <h2>Alberto</h2>
-  <a href="#">Inicio</a>
-  <a href="#">Experiencia</a>
-  <a href="#">Skills</a>
-  <a href="#">Proyectos</a>
-  <a href="#">Contacto</a>
+
+  <div>
+    <div class="avatar">
+      <img src="https://i.imgur.com/2yaf2wb.png" alt="avatar">
+      <h3>Alberto</h3>
+    </div>
+
+    <div class="nav">
+      <a class="active" href="#">Inicio</a>
+      <a href="#">Experiencia</a>
+      <a href="#">Skills</a>
+      <a href="#">Proyectos</a>
+      <a href="#">Contacto</a>
+    </div>
+  </div>
+
+  <div class="social">
+    <span>🐙</span>
+    <span>💼</span>
+    <span>🔗</span>
+  </div>
+
 </div>
 
 <div class="content">
 
-  <h1>Alberto Hidalgo</h1>
-  <div class="subtitle">
-    Cybersecurity · Blue Team · DevSecOps
-  </div>
-
   <div class="section">
-    <h2>Perfil</h2>
+    <h1>Profile</h1>
     <p>
       Especializado en ciberseguridad defensiva y administración de sistemas.
-      Enfocado en detección de amenazas, análisis de logs y fortalecimiento de infraestructuras.
+      Enfocado en Blue Team, detección de amenazas, análisis de logs y fortalecimiento de infraestructuras.
     </p>
   </div>
 
   <div class="section">
-    <h2>Experiencia</h2>
+    <h1>Experience</h1>
+
     <div class="timeline">
 
       <div class="timeline-item">
         <strong>Cybersecurity Student</strong><br>
         2025 – Actualidad
-        <p>Formación en detección de amenazas, SIEM, Splunk y análisis forense.</p>
+        <p>SIEM, Splunk, threat detection y análisis forense.</p>
       </div>
 
       <div class="timeline-item">
         <strong>ASIR – Administración de Sistemas</strong><br>
-        Sistemas Linux, redes y virtualización.
+        Linux, redes, virtualización.
       </div>
 
     </div>
   </div>
 
   <div class="section">
-    <h2>Skills</h2>
+    <h1>Skills</h1>
     <div class="skills">
       <span>Linux</span>
       <span>Splunk</span>
@@ -180,6 +221,11 @@ h1 {
       <span>Threat Detection</span>
       <span>Bash</span>
     </div>
+  </div>
+
+  <div class="section">
+    <h1>Education</h1>
+    <p>Administración de Sistemas Informáticos en Red</p>
   </div>
 
 </div>
