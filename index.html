@@ -51,7 +51,7 @@ body{
 .content{
   margin-left:260px;
   padding:60px;
-  max-width:1000px;
+  max-width:1100px;
 }
 
 h1{font-size:38px;margin-bottom:10px;}
@@ -73,6 +73,8 @@ h1{font-size:38px;margin-bottom:10px;}
   transform:translateY(-2px);
 }
 
+/* PROJECT LINKS */
+
 .projects a{
   display:block;
   margin:10px 0;
@@ -80,34 +82,80 @@ h1{font-size:38px;margin-bottom:10px;}
   text-decoration:none;
 }
 
-/* VIDEO GRID */
+/* ===== NETFLIX VIDEO GRID ===== */
 
 .video-section{
-  margin-top:70px;
+  margin-top:80px;
 }
 
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
   margin-top:20px;
 }
 
-.video-container{
+.video-card{
   position:relative;
-  padding-bottom:56.25%;
-  height:0;
   overflow:hidden;
   border-radius:10px;
-  box-shadow:0 0 20px rgba(0,0,0,0.6);
+  cursor:pointer;
+  transition:transform .35s ease, box-shadow .35s ease;
 }
 
-.video-container iframe{
-  position:absolute;
-  top:0;
-  left:0;
+.video-card img{
   width:100%;
-  height:100%;
+  display:block;
+  transition:transform .4s ease;
+}
+
+/* overlay */
+
+.video-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity .3s ease;
+}
+
+/* play button */
+
+.play-btn{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#9FEF00;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:#000;
+  transform:scale(.8);
+  transition:.3s ease;
+}
+
+/* hover effects */
+
+.video-card:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  z-index:2;
+}
+
+.video-card:hover img{
+  transform:scale(1.1);
+}
+
+.video-card:hover .video-overlay{
+  opacity:1;
+}
+
+.video-card:hover .play-btn{
+  transform:scale(1);
 }
 
 /* RESPONSIVE */
@@ -161,28 +209,40 @@ h1{font-size:38px;margin-bottom:10px;}
     </a>
   </div>
 
-  <!-- VIDEOS -->
+  <!-- NETFLIX STYLE VIDEOS -->
 
   <div class="video-section">
     <h3>Vídeos recientes</h3>
 
     <div class="video-grid">
 
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A" allowfullscreen></iframe>
-      </div>
+      <a class="video-card" href="https://youtu.be/DZ2VGWUK_-A" target="_blank">
+        <img src="https://img.youtube.com/vi/DZ2VGWUK_-A/hqdefault.jpg">
+        <div class="video-overlay">
+          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+        </div>
+      </a>
 
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/87WXqvBKFBs" allowfullscreen></iframe>
-      </div>
+      <a class="video-card" href="https://youtu.be/87WXqvBKFBs" target="_blank">
+        <img src="https://img.youtube.com/vi/87WXqvBKFBs/hqdefault.jpg">
+        <div class="video-overlay">
+          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+        </div>
+      </a>
 
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/cI27_M5_a4E" allowfullscreen></iframe>
-      </div>
+      <a class="video-card" href="https://youtu.be/cI27_M5_a4E" target="_blank">
+        <img src="https://img.youtube.com/vi/cI27_M5_a4E/hqdefault.jpg">
+        <div class="video-overlay">
+          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+        </div>
+      </a>
 
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w" allowfullscreen></iframe>
-      </div>
+      <a class="video-card" href="https://youtu.be/ZR1CGDGQH-w" target="_blank">
+        <img src="https://img.youtube.com/vi/ZR1CGDGQH-w/hqdefault.jpg">
+        <div class="video-overlay">
+          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+        </div>
+      </a>
 
     </div>
 
