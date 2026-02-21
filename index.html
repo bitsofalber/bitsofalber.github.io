@@ -21,37 +21,6 @@ body{
     #0b0f14;
 }
 
-/* MOBILE TOP NAV */
-
-.mobile-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  background:#0e1318;
-  display:none;
-  justify-content:center;
-  gap:18px;
-  padding:14px;
-  z-index:1000;
-  border-bottom:1px solid #1f2933;
-  box-shadow:0 5px 20px rgba(0,0,0,0.5);
-}
-
-.mobile-nav a{
-  color:#e6edf3;
-  text-decoration:none;
-  font-size:14px;
-  padding:6px 12px;
-  border-radius:6px;
-  transition:.25s;
-}
-
-.mobile-nav a:hover{
-  background:#1a2128;
-  color:#9FEF00;
-}
-
 /* SIDEBAR */
 
 .sidebar{
@@ -106,7 +75,7 @@ h1{
 .subtitle{
   color:#8b949e;
   font-size:19px;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 p{
@@ -114,7 +83,14 @@ p{
   line-height:1.7;
 }
 
-/* BUTTON */
+/* BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
 
 .btn{
   display:inline-block;
@@ -124,7 +100,6 @@ p{
   border-radius:8px;
   font-weight:600;
   text-decoration:none;
-  margin-top:25px;
   transition:.25s ease;
   box-shadow:0 6px 18px rgba(159,239,0,0.25);
 }
@@ -132,6 +107,18 @@ p{
 .btn:hover{
   transform:translateY(-3px);
   box-shadow:0 12px 30px rgba(159,239,0,0.35);
+}
+
+.btn-outline{
+  background:transparent;
+  color:#9FEF00;
+  border:2px solid rgba(159,239,0,0.4);
+  box-shadow:none;
+}
+
+.btn-outline:hover{
+  background:rgba(159,239,0,0.08);
+  border-color:#9FEF00;
 }
 
 /* VIDEO GRID */
@@ -201,32 +188,17 @@ p{
 /* RESPONSIVE */
 
 @media(max-width:900px){
-
   .sidebar{display:none;}
-
-  .mobile-nav{
-    display:flex;
-  }
-
   .content{
     margin:0;
-    padding:90px 25px 40px 25px;
+    padding:50px 25px;
   }
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- MOBILE NAV -->
-<div class="mobile-nav">
-  <a href="cv.html">CV</a>
-  <a href="mailto:bitsofalber@gmail.com">Contacto</a>
-  <a href="#">Proyectos</a>
-</div>
-
-<!-- SIDEBAR DESKTOP -->
 <div class="sidebar">
   <div class="nav">
     <a class="active" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
@@ -247,9 +219,10 @@ p{
     y protección de infraestructuras.
   </p>
 
-  <a class="btn" href="mailto:bitsofalber@gmail.com">
-    Contact
-  </a>
+  <div class="hero-buttons">
+    <a class="btn" href="mailto:bitsofalber@gmail.com">Contact</a>
+    <a class="btn btn-outline" href="cv.html">CV</a>
+  </div>
 
   <!-- VIDEOS -->
 
