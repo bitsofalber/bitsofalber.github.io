@@ -2,10 +2,187 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alberto Hidalgo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background:#0d1117;
+  color:#c9d1d9;
+  display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width:240px;
+  height:100vh;
+  background:#161b22;
+  padding:30px 20px;
+  position:fixed;
+  border-right:1px solid #30363d;
+}
+
+.sidebar h2 {
+  color:#58a6ff;
+  margin-bottom:40px;
+}
+
+.sidebar a {
+  display:block;
+  color:#c9d1d9;
+  text-decoration:none;
+  margin:18px 0;
+  transition:.2s;
+  font-weight:500;
+}
+
+.sidebar a:hover {
+  color:#58a6ff;
+  transform:translateX(5px);
+}
+
+/* CONTENT */
+
+.content {
+  margin-left:260px;
+  padding:60px;
+  max-width:900px;
+}
+
+h1 {
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.subtitle {
+  color:#8b949e;
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+.section {
+  margin-bottom:50px;
+}
+
+.section h2 {
+  color:#58a6ff;
+  margin-bottom:15px;
+}
+
+/* TIMELINE */
+
+.timeline {
+  border-left:2px solid #30363d;
+  padding-left:20px;
+}
+
+.timeline-item {
+  margin-bottom:25px;
+}
+
+.timeline-item strong {
+  color:#ffffff;
+}
+
+/* SKILLS */
+
+.skills span {
+  display:inline-block;
+  background:#161b22;
+  padding:8px 14px;
+  margin:5px;
+  border-radius:6px;
+  border:1px solid #30363d;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .sidebar {
+    display:none;
+  }
+
+  .content {
+    margin:0;
+    padding:30px;
+  }
+
+  h1 {
+    font-size:36px;
+  }
+}
+</style>
 </head>
-<body style="background:#0d1117;color:white;font-family:sans-serif;text-align:center;margin-top:50px;">
-<h1>Alberto Hidalgo</h1>
-<p>Cybersecurity · Blue Team · DevSecOps</p>
+
+<body>
+
+<div class="sidebar">
+  <h2>Alberto</h2>
+  <a href="#">Inicio</a>
+  <a href="#">Experiencia</a>
+  <a href="#">Skills</a>
+  <a href="#">Proyectos</a>
+  <a href="#">Contacto</a>
+</div>
+
+<div class="content">
+
+  <h1>Alberto Hidalgo</h1>
+  <div class="subtitle">
+    Cybersecurity · Blue Team · DevSecOps
+  </div>
+
+  <div class="section">
+    <h2>Perfil</h2>
+    <p>
+      Especializado en ciberseguridad defensiva y administración de sistemas.
+      Enfocado en detección de amenazas, análisis de logs y fortalecimiento de infraestructuras.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Experiencia</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <strong>Cybersecurity Student</strong><br>
+        2025 – Actualidad
+        <p>Formación en detección de amenazas, SIEM, Splunk y análisis forense.</p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>ASIR – Administración de Sistemas</strong><br>
+        Sistemas Linux, redes y virtualización.
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Linux</span>
+      <span>Splunk</span>
+      <span>SIEM</span>
+      <span>Networking</span>
+      <span>Docker</span>
+      <span>Threat Detection</span>
+      <span>Bash</span>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
