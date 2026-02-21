@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV | Alberto Hidalgo</title>
+<title>CV — Alberto Hidalgo</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,9 +13,12 @@
 
 body{
   font-family:'Inter',sans-serif;
-  background:#0b0f14;
   color:#e6edf3;
   display:flex;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(159,239,0,0.06), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(0,150,255,0.05), transparent 40%),
+    #0b0f14;
 }
 
 /* SIDEBAR */
@@ -23,29 +26,11 @@ body{
 .sidebar{
   width:240px;
   height:100vh;
-  background:#11161c;
+  background:linear-gradient(180deg,#11161c,#0e1318);
   padding:30px 20px;
   position:fixed;
   border-right:1px solid #1f2933;
-  display:flex;
-  flex-direction:column;
-}
-
-.avatar{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.avatar img{
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  border:3px solid #9FEF00;
-}
-
-.avatar h3{
-  margin-top:10px;
-  font-weight:500;
+  box-shadow:8px 0 30px rgba(0,0,0,0.6);
 }
 
 .nav a{
@@ -55,10 +40,18 @@ body{
   text-decoration:none;
   margin:6px 0;
   border-radius:6px;
+  transition:.25s ease;
 }
 
-.nav a:hover{background:#1a2128;}
-.nav .active{background:#1a2128;color:#9FEF00;}
+.nav a:hover{
+  background:#1a2128;
+  transform:translateX(6px);
+}
+
+.nav .active{
+  background:#1a2128;
+  color:#9FEF00;
+}
 
 .nav i{
   margin-right:10px;
@@ -69,119 +62,101 @@ body{
 
 .content{
   margin-left:260px;
-  padding:60px;
+  padding:80px 70px;
   max-width:900px;
-  line-height:1.7;
 }
 
 h1{
-  font-size:34px;
-  margin-bottom:30px;
+  font-size:38px;
+  margin-bottom:25px;
+  text-shadow:0 0 20px rgba(159,239,0,0.15);
 }
 
 h2{
-  margin-top:40px;
-  margin-bottom:15px;
+  margin-top:50px;
+  margin-bottom:20px;
+  font-size:22px;
   color:#9FEF00;
-  font-size:20px;
-  letter-spacing:1px;
 }
 
-p{margin-bottom:12px;}
+p{
+  line-height:1.7;
+  color:#c9d1d9;
+}
 
 ul{
-  margin-left:18px;
-  margin-top:8px;
+  margin-left:20px;
+  margin-top:10px;
+  line-height:1.6;
 }
-
-li{margin-bottom:6px;}
 
 /* TIMELINE */
 
 .timeline{
   position:relative;
-  margin-top:25px;
-  padding-left:40px;
-}
-
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:12px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#9FEF00;
+  margin-left:15px;
+  padding-left:30px;
+  border-left:2px solid rgba(159,239,0,0.25);
 }
 
 .timeline-item{
   position:relative;
   margin-bottom:35px;
-  padding-left:10px;
 }
 
 .timeline-item::before{
   content:"";
   position:absolute;
-  left:-30px;
-  top:6px;
+  left:-38px;
+  top:5px;
   width:14px;
   height:14px;
   background:#9FEF00;
   border-radius:50%;
-  border:3px solid #0b0f14;
+  box-shadow:0 0 10px rgba(159,239,0,0.6);
+}
+
+.timeline strong{
+  font-size:16px;
+  color:#e6edf3;
 }
 
 /* SKILLS */
 
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
 .skills span{
-  display:inline-block;
   background:#11161c;
+  border:1px solid rgba(159,239,0,0.25);
   padding:6px 12px;
-  margin:5px;
   border-radius:6px;
-  border:1px solid #1f2933;
   font-size:14px;
 }
 
-/* CONTACT LINKS */
+/* CONTACT */
 
 .contact p{
-  margin:8px 0;
+  margin-top:8px;
 }
 
-.contact i{
-  margin-right:8px;
+.contact a{
   color:#9FEF00;
-}
-
-/* SEPARATOR */
-
-.separator{
-  margin:70px 0;
-  height:1px;
-  background:#1f2933;
-  position:relative;
-}
-
-.separator::after{
-  content:"ENGLISH VERSION";
-  position:absolute;
-  top:-12px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#0b0f14;
-  padding:0 15px;
-  color:#8b949e;
-  font-size:12px;
-  letter-spacing:2px;
+  text-decoration:none;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
   .sidebar{display:none;}
-  .content{margin:0;padding:30px;}
+  .content{
+    margin:0;
+    padding:50px 25px;
+  }
 }
 </style>
 </head>
@@ -189,158 +164,78 @@ li{margin-bottom:6px;}
 <body>
 
 <div class="sidebar">
-
-  <div class="avatar">
-    <img src="https://i.imgur.com/2yaf2wb.png" alt="avatar">
-    <h3>Alberto Hidalgo</h3>
-  </div>
-
   <div class="nav">
     <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
     <a class="active" href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
     <a href="mailto:bitsofalber@gmail.com"><i class="fa-solid fa-envelope"></i> Contacto</a>
   </div>
-
 </div>
 
 <div class="content">
 
-  <!-- CV ESPAÑOL -->
-
-  <h1>Curriculum Vitae</h1>
-
-  <h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
-  <p>Estudiante de ASIR con especial interés en ciberseguridad y monitorización de sistemas.</p>
-  <p>Experiencia en análisis de logs, detección de amenazas con Splunk y pentesting en entornos controlados.</p>
-  <p>Buscando oportunidades junior en sistemas, redes o ciberseguridad.</p>
-
-  <h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <strong>Vigilante de Seguridad</strong><br>
-      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
-      <ul>
-        <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
-        <li>Vigilancia preventiva y detección de situaciones de riesgo</li>
-        <li>Toma de decisiones críticas bajo presión</li>
-      </ul>
-    </div>
-  </div>
-
-  <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      Grado Superior ASIR — 2025 – Actualidad
-    </div>
-  </div>
-
-  <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
-  <ul>
-    <li>eJPTv2 — 2025</li>
-    <li>Curso Splunk</li>
-    <li>Introducción al Hacking Web</li>
-    <li>Blue Team Path — TryHackMe</li>
-  </ul>
-
-  <h2><i class="fa-solid fa-screwdriver-wrench"></i> Habilidades Técnicas</h2>
-  <div class="skills">
-    <span>Linux & Windows</span>
-    <span>Networking</span>
-    <span>Virtualización</span>
-    <span>Splunk</span>
-    <span>Threat Detection</span>
-    <span>OWASP Top 10</span>
-    <span>Nmap</span>
-    <span>Burp Suite</span>
-    <span>Pentesting Web</span>
-  </div>
-
-  <h2><i class="fa-solid fa-circle-info"></i> Datos Adicionales</h2>
-  <ul>
-    <li>Inglés intermedio</li>
-    <li>Carnet B y vehículo propio</li>
-    <li>Disponibilidad para viajar</li>
-  </ul>
-
-  <h2><i class="fa-solid fa-address-card"></i> Contacto</h2>
-  <div class="contact">
-    <p><i class="fa-brands fa-github"></i><a href="https://github.com/bitsofalber" target="_blank"> GitHub</a></p>
-    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/ahidalgotech" target="_blank"> LinkedIn</a></p>
-    <p><i class="fa-solid fa-envelope"></i><a href="mailto:bitsofalber@gmail.com"> bitsofalber@gmail.com</a></p>
-  </div>
-
-  <div class="separator"></div>
-
-  <!-- CV ENGLISH -->
-
-  <!-- CV ENGLISH -->
-
 <h1>Curriculum Vitae</h1>
 
-<h2><i class="fa-solid fa-user"></i> Professional Profile</h2>
+<h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
 <p>
-Network Systems Administration student with a strong interest in cybersecurity
-and system monitoring.
+Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y monitorización de sistemas.
 </p>
 <p>
-Hands-on experience in log analysis, threat detection using Splunk
-and penetration testing in controlled environments.
+Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados.
 </p>
 <p>
-Seeking internship or junior opportunities in systems,
-networking or cybersecurity.
+Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.
 </p>
 
-<h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
+<h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
 <div class="timeline">
   <div class="timeline-item">
-    <strong>Security Officer</strong><br>
+    <strong>Vigilante de Seguridad</strong><br>
     Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
     <ul>
-      <li>Implementation of security protocols and incident management</li>
-      <li>Preventive surveillance and risk detection</li>
-      <li>Critical decision-making under pressure</li>
+      <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
+      <li>Vigilancia preventiva y detección de riesgos</li>
+      <li>Toma de decisiones críticas bajo presión</li>
     </ul>
   </div>
 </div>
 
-<h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+<h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
 <div class="timeline">
   <div class="timeline-item">
-    <strong>Network Systems Administration (ASIR)</strong><br>
-    FP Euroformac | 2025 – Present
+    <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
+    FP Euroformac | 2025 – Actualidad
   </div>
 </div>
 
-<h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
+<h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
 <ul>
   <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
-  <li>Splunk Course</li>
-  <li>Web Hacking Introduction Course</li>
+  <li>Curso Splunk</li>
+  <li>Curso Introducción al Web Hacking</li>
   <li>Blue Team Path — TryHackMe</li>
 </ul>
 
-<h2><i class="fa-solid fa-screwdriver-wrench"></i> Technical Skills</h2>
+<h2><i class="fa-solid fa-screwdriver-wrench"></i> Habilidades Técnicas</h2>
 <div class="skills">
   <span>Linux & Windows</span>
-  <span>Networking</span>
-  <span>Virtualization</span>
+  <span>Redes</span>
+  <span>Virtualización</span>
   <span>Splunk</span>
-  <span>Threat Detection</span>
+  <span>Detección de amenazas</span>
   <span>OWASP Top 10</span>
   <span>Nmap</span>
   <span>Burp Suite</span>
   <span>Web Pentesting</span>
 </div>
 
-<h2><i class="fa-solid fa-circle-info"></i> Additional Information</h2>
+<h2><i class="fa-solid fa-circle-info"></i> Información Adicional</h2>
 <ul>
-  <li>English: Intermediate level</li>
-  <li>Driving license & own vehicle</li>
-  <li>Willingness to travel</li>
+  <li>Inglés: nivel intermedio</li>
+  <li>Carnet de conducir y vehículo propio</li>
+  <li>Disponibilidad para viajar</li>
 </ul>
 
-<h2><i class="fa-solid fa-address-card"></i> Contact</h2>
+<h2><i class="fa-solid fa-address-card"></i> Contacto</h2>
 <div class="contact">
   <p><i class="fa-brands fa-github"></i>
   <a href="https://github.com/bitsofalber" target="_blank">GitHub</a></p>
@@ -351,3 +246,8 @@ networking or cybersecurity.
   <p><i class="fa-solid fa-envelope"></i>
   <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
 </div>
+
+</div>
+
+</body>
+</html>
