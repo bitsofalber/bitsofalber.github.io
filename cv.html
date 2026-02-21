@@ -90,75 +90,65 @@ ul{
   line-height:1.6;
 }
 
-/* ===== TIMELINE PREMIUM ANIMADO ===== */
+/* ===== TIMELINE FLOATING CARDS ===== */
 
 .timeline{
   position:relative;
-  margin-left:15px;
-  padding-left:30px;
-  border-left:2px solid rgba(159,239,0,0.25);
+  margin-left:10px;
+  padding-left:40px;
 }
 
 .timeline::before{
   content:"";
   position:absolute;
-  left:-2px;
+  left:8px;
   top:0;
+  bottom:0;
   width:2px;
-  height:100%;
   background:#9FEF00;
-  transform:scaleY(0);
-  transform-origin:top;
-  animation:growLine 1.2s ease forwards;
+  opacity:.35;
 }
 
 .timeline-item{
   position:relative;
   margin-bottom:35px;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp .6s ease forwards;
 }
 
-.timeline-item:nth-child(1){animation-delay:.3s;}
-.timeline-item:nth-child(2){animation-delay:.6s;}
-.timeline-item:nth-child(3){animation-delay:.9s;}
-.timeline-item:nth-child(4){animation-delay:1.2s;}
-
-.timeline-item::before{
-  content:"";
+.timeline-dot{
   position:absolute;
-  left:-38px;
-  top:5px;
+  left:-4px;
+  top:18px;
   width:14px;
   height:14px;
   background:#9FEF00;
   border-radius:50%;
-  box-shadow:0 0 10px rgba(159,239,0,0.7);
-  transform:scale(0);
-  animation:popDot .4s ease forwards;
+  box-shadow:0 0 12px rgba(159,239,0,0.7);
 }
 
-.timeline-item:nth-child(1)::before{animation-delay:.3s;}
-.timeline-item:nth-child(2)::before{animation-delay:.6s;}
-.timeline-item:nth-child(3)::before{animation-delay:.9s;}
-.timeline-item:nth-child(4)::before{animation-delay:1.2s;}
+/* floating card */
 
-/* animations */
-
-@keyframes growLine{
-  to{ transform:scaleY(1); }
+.timeline-card{
+  background:#11161c;
+  border:1px solid rgba(159,239,0,0.15);
+  border-radius:12px;
+  padding:18px 20px;
+  margin-left:20px;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.5),
+    0 0 12px rgba(159,239,0,0.08);
+  transition:.25s ease;
 }
 
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+.timeline-card:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 18px 35px rgba(0,0,0,0.6),
+    0 0 18px rgba(159,239,0,0.15);
 }
 
-@keyframes popDot{
-  to{ transform:scale(1); }
+.timeline-card strong{
+  font-size:16px;
+  color:#e6edf3;
 }
 
 /* SKILLS */
@@ -227,24 +217,36 @@ Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ci
 </p>
 
 <h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
+
 <div class="timeline">
+
   <div class="timeline-item">
-    <strong>Vigilante de Seguridad</strong><br>
-    Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
-    <ul>
-      <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
-      <li>Vigilancia preventiva y detección de riesgos</li>
-      <li>Toma de decisiones críticas bajo presión</li>
-    </ul>
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <strong>Vigilante de Seguridad</strong><br>
+      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
+      <ul>
+        <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
+        <li>Vigilancia preventiva y detección de riesgos</li>
+        <li>Toma de decisiones críticas bajo presión</li>
+      </ul>
+    </div>
   </div>
+
 </div>
 
 <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
+
 <div class="timeline">
+
   <div class="timeline-item">
-    <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
-    FP Euroformac | 2025 – Actualidad
+    <div class="timeline-dot"></div>
+    <div class="timeline-card">
+      <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
+      FP Euroformac | 2025 – Actualidad
+    </div>
   </div>
+
 </div>
 
 <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
