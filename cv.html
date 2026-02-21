@@ -1,1 +1,109 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV | Alberto Hidalgo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#0b0f14;
+  color:#e6edf3;
+  display:flex;
+}
+
+.sidebar{
+  width:240px;
+  height:100vh;
+  background:#11161c;
+  padding:30px 20px;
+  position:fixed;
+  border-right:1px solid #1f2933;
+}
+
+.nav a{
+  display:block;
+  padding:12px;
+  color:#e6edf3;
+  text-decoration:none;
+  margin:6px 0;
+  border-radius:6px;
+}
+
+.nav a:hover{background:#1a2128;}
+.nav .active{background:#1a2128;color:#9FEF00;}
+
+.content{
+  margin-left:260px;
+  padding:60px;
+  max-width:900px;
+}
+
+.timeline{
+  border-left:2px solid #9FEF00;
+  padding-left:20px;
+}
+
+.timeline-item{
+  margin-bottom:25px;
+  position:relative;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-31px;
+  top:3px;
+  width:10px;
+  height:10px;
+  background:#9FEF00;
+  border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <div class="nav">
+    <a href="index.html">Inicio</a>
+    <a class="active" href="cv.html">CV</a>
+    <a href="mailto:bitsofalber@gmail.com">Contacto</a>
+  </div>
+</div>
+
+<div class="content">
+
+  <h1>Curriculum Vitae</h1>
+
+  <h2 style="margin-top:30px;">Formación</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <strong>ASIR – Administración de Sistemas Informáticos en Red</strong><br>
+      Formación en sistemas, redes y seguridad.
+    </div>
+  </div>
+
+  <h2 style="margin-top:30px;">Especialización</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      Blue Team & Threat Detection
+    </div>
+    <div class="timeline-item">
+      SIEM & Log Analysis
+    </div>
+    <div class="timeline-item">
+      Linux Hardening
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
