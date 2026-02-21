@@ -79,18 +79,7 @@ h2{
   color:#9FEF00;
 }
 
-p{
-  line-height:1.7;
-  color:#c9d1d9;
-}
-
-ul{
-  margin-left:20px;
-  margin-top:10px;
-  line-height:1.6;
-}
-
-/* ===== TIMELINE FLOATING CARDS ===== */
+/* TIMELINE LINE */
 
 .timeline{
   position:relative;
@@ -125,9 +114,9 @@ ul{
   box-shadow:0 0 12px rgba(159,239,0,0.7);
 }
 
-/* floating card */
+/* FLOATING CARD */
 
-.timeline-card{
+.card{
   background:#11161c;
   border:1px solid rgba(159,239,0,0.15);
   border-radius:12px;
@@ -139,16 +128,22 @@ ul{
   transition:.25s ease;
 }
 
-.timeline-card:hover{
+.card:hover{
   transform:translateY(-4px);
   box-shadow:
     0 18px 35px rgba(0,0,0,0.6),
     0 0 18px rgba(159,239,0,0.15);
 }
 
-.timeline-card strong{
-  font-size:16px;
-  color:#e6edf3;
+.card ul{
+  margin-left:18px;
+  margin-top:8px;
+  line-height:1.6;
+}
+
+.card p{
+  margin-top:6px;
+  line-height:1.6;
 }
 
 /* SKILLS */
@@ -168,11 +163,7 @@ ul{
   font-size:14px;
 }
 
-/* CONTACT */
-
-.contact p{
-  margin-top:8px;
-}
+/* CONTACT LINKS */
 
 .contact a{
   color:#9FEF00;
@@ -206,23 +197,17 @@ ul{
 <h1>Curriculum Vitae</h1>
 
 <h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
-<p>
-Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y monitorización de sistemas.
-</p>
-<p>
-Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados.
-</p>
-<p>
-Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.
-</p>
+<div class="card">
+  Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y monitorización de sistemas.<br><br>
+  Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados.<br><br>
+  Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.
+</div>
 
 <h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
-
 <div class="timeline">
-
   <div class="timeline-item">
     <div class="timeline-dot"></div>
-    <div class="timeline-card">
+    <div class="card">
       <strong>Vigilante de Seguridad</strong><br>
       Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
       <ul>
@@ -232,30 +217,28 @@ Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ci
       </ul>
     </div>
   </div>
-
 </div>
 
 <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
-
 <div class="timeline">
-
   <div class="timeline-item">
     <div class="timeline-dot"></div>
-    <div class="timeline-card">
+    <div class="card">
       <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
       FP Euroformac | 2025 – Actualidad
     </div>
   </div>
-
 </div>
 
 <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
-<ul>
-  <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
-  <li>Curso Splunk</li>
-  <li>Curso Introducción al Web Hacking</li>
-  <li>Blue Team Path — TryHackMe</li>
-</ul>
+<div class="card">
+  <ul>
+    <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
+    <li>Curso Splunk</li>
+    <li>Curso Introducción al Web Hacking</li>
+    <li>Blue Team Path — TryHackMe</li>
+  </ul>
+</div>
 
 <h2><i class="fa-solid fa-screwdriver-wrench"></i> Habilidades Técnicas</h2>
 <div class="skills">
@@ -271,22 +254,24 @@ Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ci
 </div>
 
 <h2><i class="fa-solid fa-circle-info"></i> Información Adicional</h2>
-<ul>
-  <li>Inglés: nivel intermedio</li>
-  <li>Carnet de conducir y vehículo propio</li>
-  <li>Disponibilidad para viajar</li>
-</ul>
+<div class="card">
+  <ul>
+    <li>Inglés: nivel intermedio</li>
+    <li>Carnet de conducir y vehículo propio</li>
+    <li>Disponibilidad para viajar</li>
+  </ul>
+</div>
 
 <h2><i class="fa-solid fa-address-card"></i> Contacto</h2>
-<div class="contact">
+<div class="card contact">
   <p><i class="fa-brands fa-github"></i>
-  <a href="https://github.com/bitsofalber" target="_blank">GitHub</a></p>
+  <a href="https://github.com/bitsofalber" target="_blank"> GitHub</a></p>
 
   <p><i class="fa-brands fa-linkedin"></i>
-  <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank">LinkedIn</a></p>
+  <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank"> LinkedIn</a></p>
 
   <p><i class="fa-solid fa-envelope"></i>
-  <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
+  <a href="mailto:bitsofalber@gmail.com"> bitsofalber@gmail.com</a></p>
 </div>
 
 </div>
