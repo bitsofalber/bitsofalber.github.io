@@ -6,7 +6,6 @@
 
 <title>ahidalgotech</title>
 
-<!-- FAVICON -->
 <link rel="icon" type="image/png" sizes="32x32" href="img/img2.png">
 <link rel="apple-touch-icon" sizes="180x180" href="img/img2.png">
 
@@ -73,9 +72,7 @@ body{
   gap:60px;
 }
 
-.hero h1{
-  font-size:40px;
-}
+.hero h1{ font-size:40px; }
 
 .subtitle{
   color:#9FEF00;
@@ -129,9 +126,8 @@ body{
   border-radius:18px;
   text-align:center;
   border:1px solid rgba(159,239,0,0.15);
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.6),
-    0 0 30px rgba(159,239,0,0.08);
+  box-shadow:0 20px 40px rgba(0,0,0,0.6),
+             0 0 30px rgba(159,239,0,0.08);
 }
 
 .profile-glow{
@@ -152,10 +148,7 @@ body{
   margin-bottom:15px;
 }
 
-.birth{
-  font-size:13px;
-  color:#8b949e;
-}
+.birth{ font-size:13px; color:#8b949e; }
 
 .badge{
   margin-top:10px;
@@ -185,43 +178,36 @@ body{
   border:none;
 }
 
-/* SOFT SKILLS PANEL */
+/* SOFT SKILLS */
 
-.skills-section{
-  margin-top:80px;
-}
+.skills-section{ margin-top:80px; }
 
 .skills-grid{
   display:grid;
-  grid-template-columns:300px 1fr;
+  grid-template-columns:240px 1fr;
   gap:50px;
   margin-top:25px;
   align-items:center;
 }
 
-.radar{
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  background:
-    radial-gradient(circle, rgba(159,239,0,0.15), transparent 70%),
-    repeating-radial-gradient(circle,
-      rgba(159,239,0,0.25) 0px,
-      rgba(159,239,0,0.25) 2px,
-      transparent 2px,
-      transparent 25px);
-  box-shadow:0 0 30px rgba(159,239,0,0.15);
+.skills-icon{text-align:center;}
+
+.skills-icon img{
+  width:120px;
+  filter:drop-shadow(0 0 12px rgba(159,239,0,0.45));
 }
 
-.radar-label{
+.skills-icon p{
   margin-top:12px;
   color:#9FEF00;
-  text-align:center;
+  font-weight:600;
 }
 
-.bar{ margin-bottom:18px; }
+.bar{ margin-bottom:22px; }
 
-.bar span{
+.bar-info{
+  display:flex;
+  justify-content:space-between;
   font-size:14px;
   color:#c9d1d9;
 }
@@ -232,29 +218,38 @@ body{
   border-radius:6px;
   margin-top:6px;
   overflow:hidden;
+  position:relative;
 }
 
 .progress div{
   height:100%;
+  width:0;
   background:linear-gradient(90deg,#9FEF00,#00ffc3);
-  box-shadow:0 0 10px rgba(159,239,0,0.6);
+  box-shadow:0 0 12px rgba(159,239,0,0.6);
+  border-radius:6px;
+  transition:width 1.4s ease;
+}
+
+.progress div::after{
+  content:'';
+  position:absolute;
+  right:-6px;
+  top:50%;
+  transform:translateY(-50%);
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#9FEF00;
+  box-shadow:0 0 10px rgba(159,239,0,0.9);
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
   .sidebar{display:none;}
-  .content{
-    margin:0;
-    padding:50px 25px;
-  }
-  .hero-layout{
-    flex-direction:column;
-    text-align:center;
-  }
-  .skills-grid{
-    grid-template-columns:1fr;
-  }
+  .content{margin:0;padding:50px 25px;}
+  .hero-layout{flex-direction:column;text-align:center;}
+  .skills-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -263,7 +258,7 @@ body{
 
 <div class="sidebar">
   <div class="nav">
-    <a class="active" href="#"><b>Inicio</b></a>
+    <a class="active" href="#">Inicio</a>
     <a href="cv.html">CV</a>
     <a href="mailto:bitsofalber@gmail.com">Contacto</a>
   </div>
@@ -276,7 +271,6 @@ body{
   <div class="hero">
     <h1>Hi, I’m Alberto Hidalgo</h1>
     <p class="subtitle">Estudiante de ASIR & Ciberseguridad</p>
-
     <p class="desc">
       Apasionado por la ciberseguridad defensiva, detección de amenazas y protección de infraestructuras.
     </p>
@@ -299,7 +293,6 @@ body{
 
 <div class="videos">
   <h2>Vídeos recientes</h2>
-
   <div class="video-grid">
     <div class="video-card"><iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe></div>
     <div class="video-card"><iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe></div>
@@ -308,47 +301,57 @@ body{
   </div>
 </div>
 
-<!-- SOFT SKILLS PANEL -->
-
 <section class="skills-section">
   <h2>Soft Skills & Professional Traits</h2>
-
   <div class="skills-grid">
 
-    <div>
-      <div class="radar"></div>
-      <div class="radar-label">Perfil Profesional</div>
+    <div class="skills-icon">
+      <img src="img/img2.png">
+      <p>Soft Skills</p>
     </div>
 
-    <div>
+    <div class="bars">
+
       <div class="bar">
-        <span>Pensamiento Analítico</span>
-        <div class="progress"><div style="width:90%"></div></div>
+        <div class="bar-info">
+          <span>Pensamiento Analítico</span><span>90%</span>
+        </div>
+        <div class="progress"><div data-width="90"></div></div>
       </div>
 
       <div class="bar">
-        <span>Resolución de Problemas</span>
-        <div class="progress"><div style="width:88%"></div></div>
+        <div class="bar-info">
+          <span>Resolución de Problemas</span><span>88%</span>
+        </div>
+        <div class="progress"><div data-width="88"></div></div>
       </div>
 
       <div class="bar">
-        <span>Atención al Detalle</span>
-        <div class="progress"><div style="width:92%"></div></div>
+        <div class="bar-info">
+          <span>Atención al Detalle</span><span>92%</span>
+        </div>
+        <div class="progress"><div data-width="92"></div></div>
       </div>
 
       <div class="bar">
-        <span>Trabajo bajo presión</span>
-        <div class="progress"><div style="width:85%"></div></div>
+        <div class="bar-info">
+          <span>Trabajo bajo presión</span><span>85%</span>
+        </div>
+        <div class="progress"><div data-width="85"></div></div>
       </div>
 
       <div class="bar">
-        <span>Aprendizaje continuo</span>
-        <div class="progress"><div style="width:95%"></div></div>
+        <div class="bar-info">
+          <span>Aprendizaje continuo</span><span>95%</span>
+        </div>
+        <div class="progress"><div data-width="95"></div></div>
       </div>
 
       <div class="bar">
-        <span>Comunicación técnica</span>
-        <div class="progress"><div style="width:80%"></div></div>
+        <div class="bar-info">
+          <span>Comunicación técnica</span><span>80%</span>
+        </div>
+        <div class="progress"><div data-width="80"></div></div>
       </div>
 
     </div>
@@ -356,5 +359,27 @@ body{
 </section>
 
 </div>
+
+<script>
+const bars = document.querySelectorAll('.progress div');
+
+const animateBars = () => {
+  bars.forEach(bar => {
+    const width = bar.getAttribute('data-width');
+    bar.style.width = width + '%';
+  });
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      animateBars();
+    }
+  });
+});
+
+observer.observe(document.querySelector('.skills-section'));
+</script>
+
 </body>
 </html>
