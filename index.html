@@ -21,6 +21,37 @@ body{
     #0b0f14;
 }
 
+/* MOBILE TOP NAV */
+
+.mobile-nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background:#0e1318;
+  display:none;
+  justify-content:center;
+  gap:18px;
+  padding:14px;
+  z-index:1000;
+  border-bottom:1px solid #1f2933;
+  box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+.mobile-nav a{
+  color:#e6edf3;
+  text-decoration:none;
+  font-size:14px;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:.25s;
+}
+
+.mobile-nav a:hover{
+  background:#1a2128;
+  color:#9FEF00;
+}
+
 /* SIDEBAR */
 
 .sidebar{
@@ -76,7 +107,6 @@ h1{
   color:#8b949e;
   font-size:19px;
   margin-bottom:30px;
-  letter-spacing:.3px;
 }
 
 p{
@@ -84,7 +114,7 @@ p{
   line-height:1.7;
 }
 
-/* PREMIUM BUTTON */
+/* BUTTON */
 
 .btn{
   display:inline-block;
@@ -104,25 +134,7 @@ p{
   box-shadow:0 12px 30px rgba(159,239,0,0.35);
 }
 
-/* PROJECT LINKS */
-
-.projects{
-  margin-top:50px;
-}
-
-.projects a{
-  display:block;
-  margin:10px 0;
-  color:#9FEF00;
-  text-decoration:none;
-  transition:.2s;
-}
-
-.projects a:hover{
-  transform:translateX(6px);
-}
-
-/* ===== VIDEO GRID PREMIUM ===== */
+/* VIDEO GRID */
 
 .video-section{
   margin-top:90px;
@@ -149,8 +161,6 @@ p{
   transition:transform .4s ease;
 }
 
-/* overlay */
-
 .video-overlay{
   position:absolute;
   inset:0;
@@ -162,12 +172,9 @@ p{
   transition:opacity .3s ease;
 }
 
-/* play button */
-
 .play-btn{
   width:60px;
   height:60px;
-  borderOnly: none;
   border-radius:50%;
   background:#9FEF00;
   display:flex;
@@ -180,39 +187,46 @@ p{
   box-shadow:0 0 20px rgba(159,239,0,0.4);
 }
 
-/* hover effects */
-
 .video-card:hover{
   transform:scale(1.06);
   box-shadow:
     0 15px 40px rgba(0,0,0,0.6),
     0 0 18px rgba(159,239,0,0.18);
-  z-index:2;
 }
 
-.video-card:hover img{
-  transform:scale(1.1);
-}
-
-.video-card:hover .video-overlay{
-  opacity:1;
-}
-
-.video-card:hover .play-btn{
-  transform:scale(1);
-}
+.video-card:hover img{transform:scale(1.1);}
+.video-card:hover .video-overlay{opacity:1;}
+.video-card:hover .play-btn{transform:scale(1);}
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
+
   .sidebar{display:none;}
-  .content{margin:0;padding:40px 25px;}
+
+  .mobile-nav{
+    display:flex;
+  }
+
+  .content{
+    margin:0;
+    padding:90px 25px 40px 25px;
+  }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <a href="cv.html">CV</a>
+  <a href="mailto:bitsofalber@gmail.com">Contacto</a>
+  <a href="#">Proyectos</a>
+</div>
+
+<!-- SIDEBAR DESKTOP -->
 <div class="sidebar">
   <div class="nav">
     <a class="active" href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
@@ -237,23 +251,7 @@ p{
     Contact
   </a>
 
-  <div class="projects">
-    <h3>Proyectos</h3>
-
-    <a href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
-      → ASIR Learning Labs
-    </a>
-
-    <a href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">
-      → Raspberry Homelab Infrastructure
-    </a>
-
-    <a href="https://github.com/bitsofalber/ciberseguridad" target="_blank">
-      → Apuntes de Ciberseguridad
-    </a>
-  </div>
-
-  <!-- PREMIUM VIDEO SECTION -->
+  <!-- VIDEOS -->
 
   <div class="video-section">
     <h3>Vídeos recientes</h3>
@@ -262,37 +260,25 @@ p{
 
       <a class="video-card" href="https://youtu.be/DZ2VGWUK_-A" target="_blank">
         <img src="https://img.youtube.com/vi/DZ2VGWUK_-A/hqdefault.jpg">
-        <div class="video-overlay">
-          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
-        </div>
+        <div class="video-overlay"><div class="play-btn"><i class="fa-solid fa-play"></i></div></div>
       </a>
 
       <a class="video-card" href="https://youtu.be/87WXqvBKFBs" target="_blank">
         <img src="https://img.youtube.com/vi/87WXqvBKFBs/hqdefault.jpg">
-        <div class="video-overlay">
-          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
-        </div>
+        <div class="video-overlay"><div class="play-btn"><i class="fa-solid fa-play"></i></div></div>
       </a>
 
       <a class="video-card" href="https://youtu.be/cI27_M5_a4E" target="_blank">
         <img src="https://img.youtube.com/vi/cI27_M5_a4E/hqdefault.jpg">
-        <div class="video-overlay">
-          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
-        </div>
+        <div class="video-overlay"><div class="play-btn"><i class="fa-solid fa-play"></i></div></div>
       </a>
 
       <a class="video-card" href="https://youtu.be/ZR1CGDGQH-w" target="_blank">
         <img src="https://img.youtube.com/vi/ZR1CGDGQH-w/hqdefault.jpg">
-        <div class="video-overlay">
-          <div class="play-btn"><i class="fa-solid fa-play"></i></div>
-        </div>
+        <div class="video-overlay"><div class="play-btn"><i class="fa-solid fa-play"></i></div></div>
       </a>
 
     </div>
-
-    <a class="btn" href="https://www.youtube.com/@bitsofalber" target="_blank">
-      Ver canal completo
-    </a>
 
   </div>
 
