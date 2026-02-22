@@ -56,48 +56,97 @@ opacity:0.35;
 }
 
 
-/* FOOTER */
+/* ===== PREMIUM FOOTER ===== */
 
 .footer{
-margin-top:80px;
-padding:30px 20px;
+margin-top:120px;
+padding:50px 20px 40px;
 text-align:center;
-border-top:1px solid rgba(158,255,0,0.15);
-background:linear-gradient(to top, rgba(0,0,0,0.25), transparent);
+position:relative;
+border-top:1px solid rgba(158,255,0,0.25);
+
+/* efecto glass */
+background:rgba(5,8,15,0.65);
+backdrop-filter:blur(12px);
+
+/* glow superior */
+box-shadow:
+0 -1px 0 rgba(158,255,0,0.2),
+0 -10px 40px rgba(158,255,0,0.08);
+}
+
+/* línea glow animada superior */
+.footer::before{
+content:"";
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+width:220px;
+height:2px;
+background:linear-gradient(90deg,transparent,#9eff00,transparent);
+box-shadow:0 0 12px #9eff00;
+opacity:.8;
 }
 
 .footer p{
 color:#9aa3ad;
 font-size:14px;
 margin-bottom:10px;
+letter-spacing:.3px;
 }
 
 .footer a{
 color:#9eff00;
 text-decoration:none;
 font-weight:500;
-transition:.2s;
+transition:.25s;
 }
 
 .footer a:hover{
 text-shadow:0 0 8px #9eff00;
 }
 
+/* links */
 .footer-links{
-margin-top:8px;
+margin-top:16px;
 display:flex;
 justify-content:center;
-gap:18px;
+gap:28px;
 flex-wrap:wrap;
 }
 
 .footer-links a{
 font-size:14px;
 color:#cbd5e1;
+position:relative;
+}
+
+/* efecto underline glow */
+.footer-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-4px;
+width:0%;
+height:2px;
+background:#9eff00;
+transition:.25s;
 }
 
 .footer-links a:hover{
 color:#9eff00;
+}
+
+.footer-links a:hover::after{
+width:100%;
+}
+
+/* texto inferior pequeño */
+.footer-note{
+margin-top:18px;
+font-size:12px;
+opacity:.6;
 }
   
   
@@ -527,7 +576,8 @@ display:none;
 </div>
 
 <footer class="footer">
-  <p>© 2026 Alberto Hidalgo · Todos los derechos reservados</p>
+
+  <p>© 2026 Alberto Hidalgo</p>
   <p>Email: <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
 
   <div class="footer-links">
@@ -536,6 +586,11 @@ display:none;
     <a href="terminal.html">Terminal</a>
     <a href="mailto:bitsofalber@gmail.com">Contact</a>
   </div>
+
+  <div class="footer-note">
+    Built with passion for cybersecurity & technology
+  </div>
+
 </footer>
   
 </div>
