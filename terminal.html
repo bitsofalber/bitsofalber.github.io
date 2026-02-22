@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terminal | ahidalgotech</title>
+<link rel="icon" type="image/png" href="img/img2.png">
+
+<style>
+body{
+  background:#000;
+  color:#00ff9c;
+  font-family: monospace;
+  padding:20px;
+}
+
+.terminal{
+  max-width:900px;
+  margin:auto;
+}
+
+.line{
+  margin:6px 0;
+}
+
+input{
+  background:transparent;
+  border:none;
+  color:#00ff9c;
+  font-family:monospace;
+  font-size:16px;
+  outline:none;
+  width:80%;
+}
+
+.prompt{
+  color:#00ffc3;
+}
+
+a{
+  color:#9FEF00;
+  text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="terminal" id="terminal">
+
+<div class="line">Welcome to ahidalgotech terminal</div>
+<div class="line">Type <strong>help</strong> to see available commands</div>
+
+</div>
+
+<div class="line">
+<span class="prompt">visitor@ahidalgotech:~$</span>
+<input id="cmd" autofocus>
+</div>
+
+<script>
+const terminal = document.getElementById("terminal");
+const input = document.getElementById("cmd");
+
+const commands = {
+
+help: `
+Available commands:
+
+about      → about me
+skills     → technical skills
+projects   → github projects
+cv         → open CV
+contact    → email contact
+whoami     → current user
+clear      → clear terminal
+`,
+
+about: `
+Alberto Hidalgo
+SOC Trainee | Blue Team Enthusiast
+Focused on threat detection & defensive security.
+`,
+
+skills: `
+SIEM (Splunk)
+Linux & Networking
+Threat Detection
+Log Analysis
+Incident Response basics
+`,
+
+projects: `
+GitHub Projects:
+→ https://github.com/bitsofalber
+`,
+
+contact: `
+Email: bitsofalber@gmail.com
+`,
+
+cv: `
+Opening CV...
+`,
+
+whoami: `
+visitor
+`,
+
+clear: ""
+};
+
+input.addEventListener("keydown", function(e){
+  if(e.key === "Enter"){
+    const value = input.value.trim().toLowerCase();
+
+    const line = document.createElement("div");
+    line.className = "line";
+    line.innerHTML = `<span class="prompt">visitor@ahidalgotech:~$</span> ${value}`;
+    terminal.appendChild(line);
+
+    if(value === "clear"){
+      terminal.innerHTML="";
+    }
+    else if(value === "cv"){
+      window.location.href="cv.html";
+    }
+    else if(commands[value]){
+      const output = document.createElement("div");
+      output.className="line";
+      output.innerText = commands[value];
+      terminal.appendChild(output);
+    }
+    else{
+      const error = document.createElement("div");
+      error.className="line";
+      error.innerText = "command not found";
+      terminal.appendChild(error);
+    }
+
+    input.value="";
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+});
+</script>
+
+</body>
+</html>
