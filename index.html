@@ -59,7 +59,7 @@ transition:.2s;
 color:#9eff00;
 }
 
-/* HERO */
+/* LAYOUT */
 
 .container{
 max-width:1200px;
@@ -67,10 +67,12 @@ margin:auto;
 padding:60px 20px;
 }
 
+/* HERO */
+
 .hero{
 display:grid;
-grid-template-columns:1fr 340px;
-gap:40px;
+grid-template-columns:1fr 360px;
+gap:50px;
 align-items:center;
 }
 
@@ -85,17 +87,19 @@ color:#9eff00;
 
 .subtitle{
 color:#9aa3ad;
-margin-bottom:18px;
+margin-bottom:14px;
 }
 
 .desc{
 color:#cbd5e1;
-margin-bottom:30px;
+margin-bottom:26px;
 }
+
+/* BUTTONS */
 
 .buttons a{
 display:inline-block;
-padding:12px 24px;
+padding:12px 22px;
 border-radius:10px;
 text-decoration:none;
 margin-right:12px;
@@ -118,26 +122,64 @@ color:#9eff00;
 
 .profile-card{
 background:linear-gradient(145deg,#0b111b,#06090f);
-padding:28px;
-border-radius:18px;
+padding:34px 28px;
+border-radius:22px;
 text-align:center;
-border:1px solid #9eff0025;
-box-shadow:0 0 25px #9eff0020;
+border:1px solid rgba(158,255,0,0.25);
+box-shadow:0 0 25px rgba(158,255,0,0.15);
 }
 
 .profile-card img{
-width:120px;
-height:120px;
+width:140px;
+height:140px;
 border-radius:50%;
 object-fit:cover;
-border:3px solid #9eff00;
-margin-bottom:14px;
+border:4px solid #9eff00;
+margin-bottom:16px;
+box-shadow:0 0 18px rgba(158,255,0,0.4);
 }
 
-.badge{
+.profile-name{
+font-size:26px;
+font-weight:700;
+margin-bottom:4px;
+}
+
+.birth{
+font-size:13px;
+color:#9aa3ad;
+margin-bottom:14px;
+letter-spacing:1px;
+}
+
+/* STATUS BADGE */
+
+.status{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:6px 16px;
+border-radius:30px;
+background:rgba(158,255,0,0.08);
+border:1px solid rgba(158,255,0,0.35);
 color:#9eff00;
 font-size:14px;
-margin-top:6px;
+font-weight:600;
+margin-bottom:10px;
+box-shadow:0 0 12px rgba(158,255,0,0.35);
+}
+
+.status .dot{
+width:8px;
+height:8px;
+background:#9eff00;
+border-radius:50%;
+box-shadow:0 0 8px #9eff00;
+}
+
+.role{
+color:#cbd5e1;
+font-size:15px;
 }
 
 /* SECTION */
@@ -155,7 +197,7 @@ font-size:26px;
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:20px;
 }
 
@@ -308,10 +350,11 @@ display:none;
 </div>
 
 <div class="profile-card">
-<img src="img/img.jpeg">
-<h3>Alberto Hidalgo</h3>
-<div class="badge">● Open To Work</div>
-<p>SOC Trainee · HelpDesk</p>
+<img src="img/img.jpeg" alt="Alberto Hidalgo">
+<h3 class="profile-name">Alberto Hidalgo</h3>
+<div class="birth">06 · 01 · 1994</div>
+<div class="status"><span class="dot"></span>Open To Work</div>
+<p class="role">SOC Trainee · HelpDesk</p>
 </div>
 
 </div>
@@ -319,7 +362,6 @@ display:none;
 <!-- PROJECTS -->
 <div class="section">
 <h2>Projects</h2>
-
 <div class="projects-grid">
 
 <a class="project-card" href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
@@ -348,7 +390,6 @@ display:none;
 <!-- SOFT SKILLS -->
 <div class="section">
 <h2>Soft Skills & Professional Traits</h2>
-
 <div class="skills">
 
 <div class="skill">
@@ -389,14 +430,12 @@ display:none;
 <div class="level-title">LEVEL 20</div>
 <p>SOC Trainee</p>
 <p>XP: 6,250 / 15,000</p>
-
 <div class="xp-bar"><span></span></div>
 </div>
 
 <!-- VIDEOS -->
 <div class="section">
 <h2>Videos recientes</h2>
-
 <div class="videos">
 
 <div class="video">
