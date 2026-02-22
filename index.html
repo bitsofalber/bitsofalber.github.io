@@ -16,8 +16,41 @@
 
 body{
 font-family:'Inter',sans-serif;
-background:#05080f;
 color:#e8ecf1;
+overflow-x:hidden;
+}
+
+/* 🌌 TECH BACKGROUND */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 30%, rgba(0,255,140,0.08), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(0,255,255,0.06), transparent 40%),
+radial-gradient(circle at 60% 20%, rgba(0,140,255,0.07), transparent 40%),
+#05080f;
+z-index:-2;
+animation: bgMove 18s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
+}
+
+/* GRID TECH EFFECT */
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background-image:
+linear-gradient(rgba(0,255,140,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,140,0.03) 1px, transparent 1px);
+background-size:40px 40px;
+z-index:-1;
 }
 
 /* NAVBAR */
@@ -25,9 +58,9 @@ color:#e8ecf1;
 .navbar{
 position:sticky;
 top:0;
-background:rgba(5,8,15,0.8);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #9eff0020;
+background:rgba(5,8,15,0.65);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(158,255,0,0.15);
 z-index:999;
 }
 
@@ -59,7 +92,7 @@ transition:.2s;
 color:#9eff00;
 }
 
-/* LAYOUT */
+/* CONTAINER */
 
 .container{
 max-width:1200px;
@@ -105,6 +138,7 @@ text-decoration:none;
 margin-right:12px;
 margin-bottom:10px;
 font-weight:600;
+transition:.2s;
 }
 
 .btn-primary{
@@ -118,10 +152,15 @@ border:1px solid #9eff00;
 color:#9eff00;
 }
 
+.btn-outline:hover{
+box-shadow:0 0 12px #9eff0050;
+}
+
 /* PROFILE CARD */
 
 .profile-card{
-background:linear-gradient(145deg,#0b111b,#06090f);
+background:rgba(11,17,27,0.6);
+backdrop-filter:blur(12px);
 padding:34px 28px;
 border-radius:22px;
 text-align:center;
@@ -152,7 +191,7 @@ margin-bottom:14px;
 letter-spacing:1px;
 }
 
-/* STATUS BADGE */
+/* OPEN TO WORK */
 
 .status{
 display:inline-flex;
@@ -182,7 +221,7 @@ color:#cbd5e1;
 font-size:15px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
 margin-top:70px;
@@ -202,10 +241,11 @@ gap:20px;
 }
 
 .project-card{
-background:linear-gradient(145deg,#0b111b,#06090f);
+background:rgba(11,17,27,0.6);
+backdrop-filter:blur(10px);
 padding:22px;
 border-radius:16px;
-border:1px solid #9eff0025;
+border:1px solid rgba(158,255,0,0.2);
 transition:.3s;
 text-decoration:none;
 color:white;
@@ -213,7 +253,7 @@ color:white;
 
 .project-card:hover{
 transform:translateY(-6px);
-box-shadow:0 0 20px #9eff0040;
+box-shadow:0 0 20px rgba(158,255,0,0.3);
 }
 
 .project-card h3{
@@ -224,10 +264,11 @@ margin-bottom:6px;
 /* SOFT SKILLS */
 
 .skills{
-background:linear-gradient(145deg,#0b111b,#06090f);
+background:rgba(11,17,27,0.6);
+backdrop-filter:blur(10px);
 padding:30px;
 border-radius:18px;
-border:1px solid #9eff0025;
+border:1px solid rgba(158,255,0,0.2);
 }
 
 .skill{
@@ -253,14 +294,15 @@ background:linear-gradient(90deg,#9eff00,#7effc7);
 border-radius:8px;
 }
 
-/* LEVEL PANEL */
+/* LEVEL */
 
 .level-panel{
 margin-top:60px;
-background:linear-gradient(145deg,#0b111b,#06090f);
+background:rgba(11,17,27,0.6);
+backdrop-filter:blur(10px);
 padding:30px;
 border-radius:18px;
-border:1px solid #9eff0025;
+border:1px solid rgba(158,255,0,0.2);
 }
 
 .level-title{
@@ -318,7 +360,6 @@ display:none;
 </head>
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
   <div class="nav-container">
     <div class="logo">ahidalgotech</div>
@@ -333,7 +374,6 @@ display:none;
 
 <div class="container">
 
-<!-- HERO -->
 <div class="hero">
 
 <div>
@@ -350,111 +390,13 @@ display:none;
 </div>
 
 <div class="profile-card">
-<img src="img/img.jpeg" alt="Alberto Hidalgo">
+<img src="img/img.jpeg">
 <h3 class="profile-name">Alberto Hidalgo</h3>
 <div class="birth">06 · 01 · 1994</div>
 <div class="status"><span class="dot"></span>Open To Work</div>
 <p class="role">SOC Trainee · HelpDesk</p>
 </div>
 
-</div>
-
-<!-- PROJECTS -->
-<div class="section">
-<h2>Projects</h2>
-<div class="projects-grid">
-
-<a class="project-card" href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
-<h3>ASIR Learning Labs</h3>
-<p>Laboratorios Linux y redes.</p>
-</a>
-
-<a class="project-card" href="https://github.com/bitsofalber/ciberseguridad" target="_blank">
-<h3>Cybersecurity Notes</h3>
-<p>Apuntes Blue Team.</p>
-</a>
-
-<a class="project-card" href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">
-<h3>Raspberry Homelab</h3>
-<p>Infraestructura segura Docker.</p>
-</a>
-
-<a class="project-card" href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank">
-<h3>Portfolio Website</h3>
-<p>Web premium interactiva.</p>
-</a>
-
-</div>
-</div>
-
-<!-- SOFT SKILLS -->
-<div class="section">
-<h2>Soft Skills & Professional Traits</h2>
-<div class="skills">
-
-<div class="skill">
-<div class="skill-title">Pensamiento Analítico</div>
-<div class="bar"><span style="width:90%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Resolución de Problemas</div>
-<div class="bar"><span style="width:88%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Atención al Detalle</div>
-<div class="bar"><span style="width:92%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Trabajo bajo presión</div>
-<div class="bar"><span style="width:85%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Aprendizaje continuo</div>
-<div class="bar"><span style="width:95%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Comunicación técnica</div>
-<div class="bar"><span style="width:80%"></span></div>
-</div>
-
-</div>
-</div>
-
-<!-- LEVEL -->
-<div class="level-panel">
-<div class="level-title">LEVEL 20</div>
-<p>SOC Trainee</p>
-<p>XP: 6,250 / 15,000</p>
-<div class="xp-bar"><span></span></div>
-</div>
-
-<!-- VIDEOS -->
-<div class="section">
-<h2>Videos recientes</h2>
-<div class="videos">
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/cI27_M5_a4E"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w"></iframe>
-</div>
-
-</div>
 </div>
 
 </div>
