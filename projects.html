@@ -1,1 +1,178 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Alberto Hidalgo</title>
+
+<link rel="icon" type="image/png" href="img/img2.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background: radial-gradient(circle at 20% 30%, #0f3d2b 0%, #071018 40%, #04070c 100%);
+color:#fff;
+min-height:100vh;
+}
+
+/* ===== NAV BUTTONS ===== */
+
+.top-nav{
+display:flex;
+gap:15px;
+padding:25px;
+}
+
+.nav-btn{
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+border:1px solid #7fff00;
+color:#7fff00;
+transition:.3s;
+}
+
+.nav-btn:hover{
+background:#7fff00;
+color:#000;
+box-shadow:0 0 12px #7fff00;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+padding:40px 25px 10px;
+}
+
+.header h1{
+font-size:36px;
+}
+
+.header p{
+color:#aaa;
+margin-top:10px;
+}
+
+/* ===== PROJECT GRID ===== */
+
+.projects{
+padding:40px 25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+/* ===== CARD ===== */
+
+.card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(127,255,0,0.15);
+border-radius:16px;
+padding:20px;
+transition:.35s;
+backdrop-filter: blur(10px);
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#7fff00;
+box-shadow:0 0 20px rgba(127,255,0,0.35);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#7fff00;
+}
+
+.card p{
+font-size:14px;
+color:#ccc;
+margin-bottom:15px;
+}
+
+.tech{
+font-size:12px;
+color:#999;
+margin-bottom:15px;
+}
+
+.card a{
+display:inline-block;
+padding:8px 14px;
+border-radius:6px;
+background:#7fff00;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.card a:hover{
+box-shadow:0 0 10px #7fff00;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+.header h1{
+font-size:28px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+<a href="index.html" class="nav-btn">Inicio</a>
+<a href="cv.html" class="nav-btn">CV</a>
+</div>
+
+<div class="header">
+<h1>Projects</h1>
+<p>Laboratorios, herramientas y entornos prácticos de ciberseguridad.</p>
+</div>
+
+<div class="projects">
+
+<div class="card">
+<h3>ASIR Learning Labs</h3>
+<p>Laboratorios prácticos de Linux, redes, bases de datos y seguridad.</p>
+<div class="tech">Linux • Networking • Security</div>
+<a href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">Ver en GitHub</a>
+</div>
+
+<div class="card">
+<h3>Cybersecurity Notes</h3>
+<p>Apuntes técnicos sobre ciberseguridad y conceptos defensivos.</p>
+<div class="tech">Cybersecurity • Blue Team</div>
+<a href="https://github.com/bitsofalber/ciberseguridad" target="_blank">Ver en GitHub</a>
+</div>
+
+<div class="card">
+<h3>Raspberry Homelab Infrastructure</h3>
+<p>Infraestructura segura en Raspberry Pi con Docker y automatización.</p>
+<div class="tech">Docker • VPN • Automation</div>
+<a href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">Ver en GitHub</a>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Web personal con diseño premium y terminal interactiva.</p>
+<div class="tech">HTML • CSS • JS</div>
+<a href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank">Ver en GitHub</a>
+</div>
+
+</div>
+
+</body>
+</html>
