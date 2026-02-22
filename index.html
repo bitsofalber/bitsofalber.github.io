@@ -36,23 +36,15 @@ animation: glowMove 15s ease-in-out infinite alternate;
 body::after{
 content:"";
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:1px;
-background:linear-gradient(to right, transparent, #9eff00, transparent);
-opacity:.2;
-z-index:10;
-}
-
-/* líneas horizontales */
+inset:0;
+background-image:
 linear-gradient(rgba(0,255,140,0.05) 1px, transparent 1px),
-
-/* líneas verticales */
 linear-gradient(90deg, rgba(0,255,140,0.05) 1px, transparent 1px),
-
-/* nodos tipo circuito */
 radial-gradient(circle at 25px 25px, rgba(0,255,140,0.12) 2px, transparent 3px);
+background-size:60px 60px;
+z-index:-1;
+opacity:0.35;
+}
 
 background-size:
 60px 60px,
@@ -107,8 +99,8 @@ color:#9eff00;
 
 .container{
 max-width:1200px;
-margin:40px auto 0;
-padding:60px 20px;
+margin:0 auto;
+padding:80px 24px 60px;
 }
 
 /* HERO */
@@ -362,8 +354,7 @@ display:none;
 </style>
 </head>
 <body>
-
-
+<div class="container">
 
 <!-- HERO -->
 <div class="hero">
