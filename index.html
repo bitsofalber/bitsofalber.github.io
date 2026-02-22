@@ -25,15 +25,10 @@ content:"";
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 20% 30%, rgba(0,255,140,0.08), transparent 40%),
-radial-gradient(circle at 80% 70%, rgba(0,255,255,0.06), transparent 40%);
-z-index:-1;
+radial-gradient(circle at 20% 30%, rgba(0,255,140,0.05), transparent 45%),
+radial-gradient(circle at 80% 70%, rgba(0,255,255,0.04), transparent 45%);
+z-index:-2;
 animation: glowMove 15s ease-in-out infinite alternate;
-}
-
-@keyframes glowMove{
-0%{transform:scale(1);}
-100%{transform:scale(1.08);}
 }
 
 /* ===== CIRCUIT TECH PATTERN ===== */
@@ -41,9 +36,14 @@ animation: glowMove 15s ease-in-out infinite alternate;
 body::after{
 content:"";
 position:fixed;
-inset:0;
-pointer-events:none;
-background-image:
+top:0;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(to right, transparent, #9eff00, transparent);
+opacity:.2;
+z-index:10;
+}
 
 /* líneas horizontales */
 linear-gradient(rgba(0,255,140,0.05) 1px, transparent 1px),
@@ -107,13 +107,14 @@ color:#9eff00;
 
 .container{
 max-width:1200px;
-margin:auto;
+margin:40px auto 0;
 padding:60px 20px;
 }
 
 /* HERO */
 
 .hero{
+margin-top:20px;
 display:grid;
 grid-template-columns:1fr 360px;
 gap:50px;
