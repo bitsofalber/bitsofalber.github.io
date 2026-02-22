@@ -35,6 +35,33 @@ animation: glowMove 15s ease-in-out infinite alternate;
 0%{transform:scale(1);}
 100%{transform:scale(1.08);}
 }
+
+/* ===== CIRCUIT TECH PATTERN ===== */
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background-image:
+
+/* líneas horizontales */
+linear-gradient(rgba(0,255,140,0.05) 1px, transparent 1px),
+
+/* líneas verticales */
+linear-gradient(90deg, rgba(0,255,140,0.05) 1px, transparent 1px),
+
+/* nodos tipo circuito */
+radial-gradient(circle at 25px 25px, rgba(0,255,140,0.12) 2px, transparent 3px);
+
+background-size:
+60px 60px,
+60px 60px,
+60px 60px;
+
+z-index:-1;
+opacity:0.35;
+}
   
 /* NAVBAR */
 
