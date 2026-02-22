@@ -11,8 +11,20 @@
 body{
   background:#000;
   color:#d0d0d0;
-  font-family:"Courier New",monospace;
+  font-family:"Courier New", monospace;
   padding:20px;
+}
+
+/* back link */
+
+.back-link{
+  margin-bottom:15px;
+}
+
+.back-link a{
+  color:#00ff9c;
+  text-decoration:none;
+  font-size:14px;
 }
 
 .terminal{
@@ -51,6 +63,10 @@ input{
 
 <body>
 
+<div class="back-link">
+  <a href="index.html">← back to site</a>
+</div>
+
 <div class="terminal" id="terminal">
 
 <div class="line">Welcome to ahidalgotech terminal</div>
@@ -83,6 +99,7 @@ function helpMenu(){
     <div>whoami</div><div>date</div><div>uptime</div><div>uname</div>
     <div>ip</div><div>ping</div><div>dns</div><div>matrix</div>
     <div>hack</div><div>joke</div><div>ascii</div><div>clear</div>
+    <div>home</div><div>exit</div>
   `;
   terminal.appendChild(grid);
 
@@ -125,7 +142,13 @@ break;
 
 case "cv":
 print("Opening CV...");
-setTimeout(()=>window.location.href="cv.html",800);
+setTimeout(()=>window.location.href="cv.html",700);
+break;
+
+case "home":
+case "exit":
+print("Returning to homepage...");
+setTimeout(()=>window.location.href="index.html",600);
 break;
 
 case "date":
