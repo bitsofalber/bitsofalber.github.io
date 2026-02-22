@@ -11,364 +11,413 @@
 
 <style>
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  background:#05080f;
-  color:#e8ecf1;
-  display:flex;
-  min-height:100vh;
+font-family:'Inter',sans-serif;
+background:#05080f;
+color:#e8ecf1;
 }
 
-/* SIDEBAR */
+/* NAVBAR */
 
-.sidebar{
-  width:220px;
-  background:#070b13;
-  padding:40px 20px;
-  position:fixed;
-  height:100%;
+.navbar{
+position:sticky;
+top:0;
+background:rgba(5,8,15,0.8);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #9eff0020;
+z-index:999;
 }
 
-.sidebar a{
-  display:block;
-  color:#cfd6df;
-  text-decoration:none;
-  margin:18px 0;
-  font-weight:500;
-  transition:.2s;
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 20px;
 }
 
-.sidebar a:hover{
-  color:#9eff00;
+.logo{
+font-weight:700;
+color:#9eff00;
+font-size:18px;
+letter-spacing:1px;
 }
 
-/* MAIN */
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:#cbd5e1;
+font-weight:500;
+transition:.2s;
+}
 
-.main{
-  margin-left:220px;
-  padding:60px 60px 80px 60px;
-  width:100%;
+.nav-links a:hover{
+color:#9eff00;
 }
 
 /* HERO */
 
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
 .hero{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  flex-wrap:wrap;
-  gap:40px;
-  margin-bottom:50px;
+display:grid;
+grid-template-columns:1fr 340px;
+gap:40px;
+align-items:center;
 }
 
-.hero-text h1{
-  font-size:42px;
-  margin-bottom:8px;
+.hero h1{
+font-size:46px;
+margin-bottom:12px;
 }
 
-.hero-text h1 span{
-  color:#9eff00;
+.hero h1 span{
+color:#9eff00;
 }
 
 .subtitle{
-  color:#9eff00;
-  margin-bottom:15px;
+color:#9aa3ad;
+margin-bottom:18px;
 }
 
-.description{
-  color:#aab3bf;
-  max-width:500px;
-  line-height:1.6;
-  margin-bottom:25px;
+.desc{
+color:#cbd5e1;
+margin-bottom:30px;
 }
 
 .buttons a{
-  display:inline-block;
-  padding:12px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  margin-right:12px;
-  font-weight:600;
-  border:1px solid #9eff00;
-  color:#9eff00;
-  transition:.25s;
+display:inline-block;
+padding:12px 24px;
+border-radius:10px;
+text-decoration:none;
+margin-right:12px;
+margin-bottom:10px;
+font-weight:600;
 }
 
-.buttons a.primary{
-  background:#9eff00;
-  color:#000;
-  box-shadow:0 0 15px #9eff00aa;
+.btn-primary{
+background:#9eff00;
+color:#05080f;
+box-shadow:0 0 15px #9eff0060;
 }
 
-.buttons a:hover{
-  transform:translateY(-2px);
-  box-shadow:0 0 12px #9eff00;
+.btn-outline{
+border:1px solid #9eff00;
+color:#9eff00;
 }
 
 /* PROFILE CARD */
 
 .profile-card{
-  background:linear-gradient(145deg,#0b111b,#06090f);
-  padding:30px 28px;
-  border-radius:18px;
-  text-align:center;
-  border:1px solid #9eff0030;
-  box-shadow:0 0 25px #9eff0020;
-  width:240px;
+background:linear-gradient(145deg,#0b111b,#06090f);
+padding:28px;
+border-radius:18px;
+text-align:center;
+border:1px solid #9eff0025;
+box-shadow:0 0 25px #9eff0020;
 }
 
 .profile-card img{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  border:3px solid #9eff00;
-  margin-bottom:12px;
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #9eff00;
+margin-bottom:14px;
 }
 
-.profile-card h3{
-  margin-bottom:4px;
+.badge{
+color:#9eff00;
+font-size:14px;
+margin-top:6px;
 }
 
-.status{
-  color:#9eff00;
-  font-size:14px;
-  margin-bottom:6px;
+/* SECTION */
+
+.section{
+margin-top:70px;
 }
 
-.role{
-  color:#9aa3ad;
-  font-size:14px;
+.section h2{
+margin-bottom:25px;
+font-size:26px;
 }
 
 /* PROJECTS */
 
-.section-title{
-  font-size:26px;
-  margin:60px 0 25px 0;
-}
-
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
-  margin-bottom:50px;
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .project-card{
-  background:linear-gradient(145deg,#0b111b,#06090f);
-  padding:22px;
-  border-radius:14px;
-  border:1px solid #9eff0025;
-  transition:.25s;
+background:linear-gradient(145deg,#0b111b,#06090f);
+padding:22px;
+border-radius:16px;
+border:1px solid #9eff0025;
+transition:.3s;
+text-decoration:none;
+color:white;
 }
 
 .project-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 20px #9eff0040;
+transform:translateY(-6px);
+box-shadow:0 0 20px #9eff0040;
 }
 
-.project-card h4{
-  color:#9eff00;
-  margin-bottom:6px;
-}
-
-.project-card p{
-  font-size:14px;
-  color:#9aa3ad;
+.project-card h3{
+color:#9eff00;
+margin-bottom:6px;
 }
 
 /* SOFT SKILLS */
 
-.softskills{
-  background:linear-gradient(145deg,#0b111b,#06090f);
-  padding:35px;
-  border-radius:18px;
-  border:1px solid #9eff0025;
-  box-shadow:0 0 25px #9eff0015;
+.skills{
+background:linear-gradient(145deg,#0b111b,#06090f);
+padding:30px;
+border-radius:18px;
+border:1px solid #9eff0025;
 }
 
 .skill{
-  margin:22px 0;
+margin-bottom:22px;
 }
 
 .skill-title{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:6px;
-  font-size:14px;
+margin-bottom:8px;
+font-size:14px;
 }
 
 .bar{
-  height:8px;
-  background:#0e141c;
-  border-radius:8px;
-  overflow:hidden;
+height:10px;
+background:#0f1622;
+border-radius:8px;
+overflow:hidden;
 }
 
-.fill{
-  height:100%;
-  background:linear-gradient(90deg,#9eff00,#00ffa6);
-  border-radius:8px;
-  width:0;
-  transition:2s ease;
+.bar span{
+display:block;
+height:100%;
+background:linear-gradient(90deg,#9eff00,#7effc7);
+border-radius:8px;
 }
 
 /* LEVEL PANEL */
 
 .level-panel{
-  background:linear-gradient(145deg,#0b111b,#06090f);
-  margin-top:40px;
-  padding:30px;
-  border-radius:18px;
-  border:1px solid #9eff0025;
+margin-top:60px;
+background:linear-gradient(145deg,#0b111b,#06090f);
+padding:30px;
+border-radius:18px;
+border:1px solid #9eff0025;
 }
 
 .level-title{
-  color:#9eff00;
-  font-size:28px;
-  font-weight:700;
+font-size:32px;
+color:#9eff00;
 }
 
 .xp-bar{
-  height:10px;
-  background:#0e141c;
-  border-radius:8px;
-  overflow:hidden;
-  margin:12px 0 20px 0;
+height:12px;
+background:#0f1622;
+border-radius:10px;
+margin-top:10px;
+overflow:hidden;
 }
 
-.xp-fill{
-  width:42%;
-  height:100%;
-  background:linear-gradient(90deg,#9eff00,#00ffa6);
+.xp-bar span{
+display:block;
+height:100%;
+width:42%;
+background:linear-gradient(90deg,#9eff00,#7effc7);
 }
 
-/* RESPONSIVE */
+/* VIDEOS */
+
+.videos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.video iframe{
+width:100%;
+height:160px;
+border-radius:14px;
+border:none;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
-  .sidebar{display:none;}
-  .main{margin:0;padding:30px;}
-  .hero{flex-direction:column;}
-  .profile-card{width:100%;}
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+.profile-card{
+max-width:320px;
+margin:auto;
+}
+.nav-links{
+display:none;
+}
 }
 
 </style>
 </head>
 <body>
 
-<div class="sidebar">
-  <a href="#">Inicio</a>
-  <a href="cv.html">CV</a>
-  <a href="#projects">Proyectos</a>
-  <a href="terminal.html">Terminal</a>
-  <a href="mailto:bitsofalber@gmail.com">Contacto</a>
-</div>
-
-<div class="main">
-
-<div class="hero">
-  <div class="hero-text">
-    <h1>Hi, I'm <span>Alberto Hidalgo</span></h1>
-    <div class="subtitle">Estudiante de ASIR & Ciberseguridad</div>
-    <p class="description">
-      Apasionado por la ciberseguridad defensiva y la detección de amenazas.
-    </p>
-
-    <div class="buttons">
-      <a class="primary" href="mailto:bitsofalber@gmail.com">Contact</a>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-container">
+    <div class="logo">ahidalgotech</div>
+    <div class="nav-links">
       <a href="cv.html">CV</a>
-      <a href="#projects">Projects</a>
+      <a href="projects.html">Projects</a>
       <a href="terminal.html">Terminal</a>
+      <a href="mailto:bitsofalber@gmail.com">Contact</a>
     </div>
   </div>
-
-  <div class="profile-card">
-    <img src="img/img.jpeg">
-    <h3>Alberto Hidalgo</h3>
-    <div class="status">● Open to Work</div>
-    <div class="role">SOC Trainee · HelpDesk</div>
-  </div>
 </div>
 
-<h2 id="projects" class="section-title">Projects</h2>
+<div class="container">
 
-<div class="projects">
-  <div class="project-card">
-    <h4>ASIR Learning Labs</h4>
-    <p>Laboratorios Linux, redes y seguridad.</p>
-  </div>
-  <div class="project-card">
-    <h4>Cybersecurity Notes</h4>
-    <p>Apuntes técnicos Blue Team.</p>
-  </div>
-  <div class="project-card">
-    <h4>Raspberry Homelab</h4>
-    <p>Infraestructura segura con Docker.</p>
-  </div>
-  <div class="project-card">
-    <h4>Portfolio Website</h4>
-    <p>Web premium interactiva.</p>
-  </div>
+<!-- HERO -->
+<div class="hero">
+
+<div>
+<h1>Hi, I'm <span>Alberto Hidalgo</span></h1>
+<p class="subtitle">Estudiante de ASIR & Ciberseguridad</p>
+<p class="desc">Apasionado por la ciberseguridad defensiva y detección de amenazas.</p>
+
+<div class="buttons">
+<a href="mailto:bitsofalber@gmail.com" class="btn-primary">Contact</a>
+<a href="cv.html" class="btn-outline">CV</a>
+<a href="projects.html" class="btn-outline">Projects</a>
+<a href="terminal.html" class="btn-outline">Terminal</a>
+</div>
 </div>
 
-<div class="softskills">
-  <h2>Soft Skills & Professional Traits</h2>
-
-  <div class="skill">
-    <div class="skill-title"><span>Pensamiento Analítico</span><span>90%</span></div>
-    <div class="bar"><div class="fill" style="width:90%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title"><span>Resolución de Problemas</span><span>88%</span></div>
-    <div class="bar"><div class="fill" style="width:88%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title"><span>Atención al Detalle</span><span>92%</span></div>
-    <div class="bar"><div class="fill" style="width:92%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title"><span>Trabajo bajo presión</span><span>85%</span></div>
-    <div class="bar"><div class="fill" style="width:85%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title"><span>Aprendizaje continuo</span><span>95%</span></div>
-    <div class="bar"><div class="fill" style="width:95%"></div></div>
-  </div>
-
-  <div class="skill">
-    <div class="skill-title"><span>Comunicación técnica</span><span>80%</span></div>
-    <div class="bar"><div class="fill" style="width:80%"></div></div>
-  </div>
+<div class="profile-card">
+<img src="img/img.jpeg">
+<h3>Alberto Hidalgo</h3>
+<div class="badge">● Open To Work</div>
+<p>SOC Trainee · HelpDesk</p>
+</div>
 
 </div>
 
+<!-- PROJECTS -->
+<div class="section">
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<a class="project-card" href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
+<h3>ASIR Learning Labs</h3>
+<p>Laboratorios Linux y redes.</p>
+</a>
+
+<a class="project-card" href="https://github.com/bitsofalber/ciberseguridad" target="_blank">
+<h3>Cybersecurity Notes</h3>
+<p>Apuntes Blue Team.</p>
+</a>
+
+<a class="project-card" href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">
+<h3>Raspberry Homelab</h3>
+<p>Infraestructura segura Docker.</p>
+</a>
+
+<a class="project-card" href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank">
+<h3>Portfolio Website</h3>
+<p>Web premium interactiva.</p>
+</a>
+
+</div>
+</div>
+
+<!-- SOFT SKILLS -->
+<div class="section">
+<h2>Soft Skills & Professional Traits</h2>
+
+<div class="skills">
+
+<div class="skill">
+<div class="skill-title">Pensamiento Analítico</div>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Resolución de Problemas</div>
+<div class="bar"><span style="width:88%"></span></div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Atención al Detalle</div>
+<div class="bar"><span style="width:92%"></span></div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Trabajo bajo presión</div>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Aprendizaje continuo</div>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill">
+<div class="skill-title">Comunicación técnica</div>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+</div>
+</div>
+
+<!-- LEVEL -->
 <div class="level-panel">
-  <div class="level-title">LEVEL 20 — SOC Trainee</div>
-  <div>XP: 6,250 / 15,000</div>
-  <div class="xp-bar"><div class="xp-fill"></div></div>
+<div class="level-title">LEVEL 20</div>
+<p>SOC Trainee</p>
+<p>XP: 6,250 / 15,000</p>
 
-  <div class="skill-title"><span>Threat Detection</span><span>78%</span></div>
-  <div class="bar"><div class="fill" style="width:78%"></div></div>
+<div class="xp-bar"><span></span></div>
+</div>
 
-  <div class="skill-title"><span>Log Analysis</span><span>72%</span></div>
-  <div class="bar"><div class="fill" style="width:72%"></div></div>
+<!-- VIDEOS -->
+<div class="section">
+<h2>Videos recientes</h2>
 
-  <div class="skill-title"><span>SIEM (Splunk)</span><span>65%</span></div>
-  <div class="bar"><div class="fill" style="width:65%"></div></div>
+<div class="videos">
 
+<div class="video">
+<iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe>
+</div>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe>
+</div>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/cI27_M5_a4E"></iframe>
+</div>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w"></iframe>
 </div>
 
 </div>
+</div>
 
+</div>
 </body>
 </html>
