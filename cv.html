@@ -24,6 +24,17 @@ body{
   display:flex;
 }
 
+/* ===== FONDO ANIMADO ===== */
+#particles-js{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  pointer-events:none;
+}
+
 /* SIDEBAR */
 
 .sidebar{
@@ -205,6 +216,9 @@ h2{
 
 <body>
 
+<!-- fondo animado -->
+<div id="particles-js"></div>
+
 <div class="sidebar">
   <div class="nav">
     <a href="index.html">Inicio</a>
@@ -290,11 +304,37 @@ h2{
   <p><a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
 </div>
 
-<!-- BOTÓN VOLVER -->
 <div class="back-home">
   <a href="index.html" class="btn-home">← Volver a Inicio</a>
 </div>
 
 </div>
+
+<!-- SCRIPT FONDO ANIMADO -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script>
+tsParticles.load("particles-js", {
+  background: { color: "transparent" },
+  particles: {
+    number: { value: 35 },
+    color: { value: "#9FEF00" },
+    links: {
+      enable: true,
+      distance: 140,
+      color: "#9FEF00",
+      opacity: 0.15,
+      width: 1
+    },
+    move: { enable: true, speed: 0.6 },
+    size: { value: 2 },
+    opacity: { value: 0.35 }
+  },
+  interactivity: {
+    events: { onHover: { enable: true, mode: "grab" } },
+    modes: { grab: { distance: 120, links: { opacity: 0.3 } } }
+  }
+});
+</script>
+
 </body>
 </html>
