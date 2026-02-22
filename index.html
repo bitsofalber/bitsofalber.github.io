@@ -20,6 +20,17 @@ background: radial-gradient(circle at top, #0a0f1c, #05080f 70%);
 color:#e8ecf1;
 }
 
+/* PARTICLES LAYER */
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-3;
+}
+
+/* glow background */
 body::before{
 content:"";
 position:fixed;
@@ -31,8 +42,12 @@ z-index:-2;
 animation: glowMove 15s ease-in-out infinite alternate;
 }
 
-/* ===== CIRCUIT TECH PATTERN ===== */
+@keyframes glowMove{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
+}
 
+/* ===== CIRCUIT TECH PATTERN ===== */
 body::after{
 content:"";
 position:fixed;
@@ -46,36 +61,6 @@ z-index:-1;
 opacity:0.35;
 }
 
-background-size:
-60px 60px,
-60px 60px,
-60px 60px;
-
-z-index:-1;
-opacity:0.35;
-}
-
-
-/* ===== PREMIUM FOOTER ===== */
-
-.footer{
-margin-top:120px;
-padding:50px 20px 40px;
-text-align:center;
-position:relative;
-border-top:1px solid rgba(158,255,0,0.25);
-
-/* efecto glass */
-background:rgba(5,8,15,0.65);
-backdrop-filter:blur(12px);
-
-/* glow superior */
-box-shadow:
-0 -1px 0 rgba(158,255,0,0.2),
-0 -10px 40px rgba(158,255,0,0.08);
-}
-
-/* línea glow animada superior */
 /* ===== PREMIUM FOOTER ===== */
 
 .footer{
@@ -83,18 +68,11 @@ margin-top:120px;
 padding:60px 20px;
 text-align:center;
 position:relative;
-
-/* fondo propio */
 background:linear-gradient(to top, #05080f 0%, rgba(5,8,15,0.6) 100%);
-
-/* separación visual */
 border-top:1px solid rgba(158,255,0,0.25);
-
-/* profundidad */
 box-shadow:0 -20px 60px rgba(0,0,0,0.6);
 }
 
-/* glow line superior */
 .footer::before{
 content:"";
 position:absolute;
@@ -105,7 +83,6 @@ width:260px;
 height:2px;
 background:linear-gradient(90deg,transparent,#9eff00,transparent);
 box-shadow:0 0 12px #9eff00;
-opacity:.9;
 }
 
 .footer p{
@@ -118,11 +95,6 @@ margin-bottom:10px;
 color:#9eff00;
 text-decoration:none;
 font-weight:500;
-transition:.25s;
-}
-
-.footer a:hover{
-text-shadow:0 0 8px #9eff00;
 }
 
 .footer-links{
@@ -135,72 +107,13 @@ flex-wrap:wrap;
 
 .footer-links a{
 color:#cbd5e1;
-position:relative;
 }
 
 .footer-links a:hover{
 color:#9eff00;
 }
 
-/* línea animada hover */
-.footer-links a::after{
-content:"";
-position:absolute;
-bottom:-5px;
-left:0;
-width:0%;
-height:2px;
-background:#9eff00;
-transition:.25s;
-}
-
-.footer-links a:hover::after{
-width:100%;
-}
-  
-  
-/* NAVBAR 
-
-.navbar{
-position:sticky;
-top:0;
-background:rgba(5,8,15,0.8);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #9eff0020;
-z-index:999;
-}
-
-.nav-container{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 20px;
-}
-*/
-  
-.logo{
-font-weight:700;
-color:#9eff00;
-font-size:18px;
-letter-spacing:1px;
-}
-
-.nav-links a{
-margin-left:20px;
-text-decoration:none;
-color:#cbd5e1;
-font-weight:500;
-transition:.2s;
-}
-
-.nav-links a:hover{
-color:#9eff00;
-}
-
 /* LAYOUT */
-
 .container{
 max-width:1200px;
 margin:0 auto;
@@ -208,7 +121,6 @@ padding:80px 24px 60px;
 }
 
 /* HERO */
-
 .hero{
 margin-top:20px;
 display:grid;
@@ -226,18 +138,10 @@ margin-bottom:12px;
 color:#9eff00;
 }
 
-.subtitle{
-color:#9aa3ad;
-margin-bottom:14px;
-}
-
-.desc{
-color:#cbd5e1;
-margin-bottom:26px;
-}
+.subtitle{color:#9aa3ad;margin-bottom:14px;}
+.desc{color:#cbd5e1;margin-bottom:26px;}
 
 /* BUTTONS */
-
 .buttons a{
 display:inline-block;
 padding:12px 22px;
@@ -260,7 +164,6 @@ color:#9eff00;
 }
 
 /* PROFILE CARD */
-
 .profile-card{
 background:linear-gradient(145deg,#0b111b,#06090f);
 padding:34px 28px;
@@ -280,20 +183,8 @@ margin-bottom:16px;
 box-shadow:0 0 18px rgba(158,255,0,0.4);
 }
 
-.profile-name{
-font-size:26px;
-font-weight:700;
-margin-bottom:4px;
-}
-
-.birth{
-font-size:13px;
-color:#9aa3ad;
-margin-bottom:14px;
-letter-spacing:1px;
-}
-
-/* STATUS BADGE */
+.profile-name{font-size:26px;font-weight:700;}
+.birth{font-size:13px;color:#9aa3ad;margin-bottom:14px;}
 
 .status{
 display:inline-flex;
@@ -307,35 +198,19 @@ color:#9eff00;
 font-size:14px;
 font-weight:600;
 margin-bottom:10px;
-box-shadow:0 0 12px rgba(158,255,0,0.35);
 }
 
 .status .dot{
-width:8px;
-height:8px;
-background:#9eff00;
-border-radius:50%;
-box-shadow:0 0 8px #9eff00;
+width:8px;height:8px;background:#9eff00;border-radius:50%;
 }
 
-.role{
-color:#cbd5e1;
-font-size:15px;
-}
+.role{color:#cbd5e1;font-size:15px;}
 
-/* SECTION */
-
-.section{
-margin-top:70px;
-}
-
-.section h2{
-margin-bottom:25px;
-font-size:26px;
-}
+/* SECTIONS */
+.section{margin-top:70px;}
+.section h2{margin-bottom:25px;font-size:26px;}
 
 /* PROJECTS */
-
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -347,7 +222,6 @@ background:linear-gradient(145deg,#0b111b,#06090f);
 padding:22px;
 border-radius:16px;
 border:1px solid #9eff0025;
-transition:.3s;
 text-decoration:none;
 color:white;
 }
@@ -357,13 +231,9 @@ transform:translateY(-6px);
 box-shadow:0 0 20px #9eff0040;
 }
 
-.project-card h3{
-color:#9eff00;
-margin-bottom:6px;
-}
+.project-card h3{color:#9eff00;margin-bottom:6px;}
 
 /* SOFT SKILLS */
-
 .skills{
 background:linear-gradient(145deg,#0b111b,#06090f);
 padding:30px;
@@ -371,14 +241,8 @@ border-radius:18px;
 border:1px solid #9eff0025;
 }
 
-.skill{
-margin-bottom:22px;
-}
-
-.skill-title{
-margin-bottom:8px;
-font-size:14px;
-}
+.skill{margin-bottom:22px;}
+.skill-title{margin-bottom:8px;font-size:14px;}
 
 .bar{
 height:10px;
@@ -391,11 +255,9 @@ overflow:hidden;
 display:block;
 height:100%;
 background:linear-gradient(90deg,#9eff00,#7effc7);
-border-radius:8px;
 }
 
-/* LEVEL PANEL */
-
+/* LEVEL */
 .level-panel{
 margin-top:60px;
 background:linear-gradient(145deg,#0b111b,#06090f);
@@ -404,10 +266,7 @@ border-radius:18px;
 border:1px solid #9eff0025;
 }
 
-.level-title{
-font-size:32px;
-color:#9eff00;
-}
+.level-title{font-size:32px;color:#9eff00;}
 
 .xp-bar{
 height:12px;
@@ -425,7 +284,6 @@ background:linear-gradient(90deg,#9eff00,#7effc7);
 }
 
 /* VIDEOS */
-
 .videos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -440,24 +298,18 @@ border:none;
 }
 
 /* MOBILE */
-
 @media(max-width:900px){
-.hero{
-grid-template-columns:1fr;
-text-align:center;
-}
-.profile-card{
-max-width:320px;
-margin:auto;
-}
-.nav-links{
-display:none;
-}
+.hero{grid-template-columns:1fr;text-align:center;}
+.profile-card{max-width:320px;margin:auto;}
 }
 
 </style>
 </head>
 <body>
+
+<!-- PARTICLES BACKGROUND -->
+<div id="particles-js"></div>
+
 <div class="container">
 
 <!-- HERO -->
@@ -477,7 +329,7 @@ display:none;
 </div>
 
 <div class="profile-card">
-<img src="img/img.jpeg" alt="Alberto Hidalgo">
+<img src="img/img.jpeg">
 <h3 class="profile-name">Alberto Hidalgo</h3>
 <div class="birth">06 · 01 · 1994</div>
 <div class="status"><span class="dot"></span>Open To Work</div>
@@ -490,27 +342,22 @@ display:none;
 <div class="section">
 <h2>Projects</h2>
 <div class="projects-grid">
-
 <a class="project-card" href="https://github.com/bitsofalber/asir-learning-labs" target="_blank">
 <h3>ASIR Learning Labs</h3>
 <p>Laboratorios Linux y redes.</p>
 </a>
-
 <a class="project-card" href="https://github.com/bitsofalber/ciberseguridad" target="_blank">
 <h3>Cybersecurity Notes</h3>
 <p>Apuntes Blue Team.</p>
 </a>
-
 <a class="project-card" href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank">
 <h3>Raspberry Homelab</h3>
 <p>Infraestructura segura Docker.</p>
 </a>
-
 <a class="project-card" href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank">
 <h3>Portfolio Website</h3>
 <p>Web premium interactiva.</p>
 </a>
-
 </div>
 </div>
 
@@ -518,37 +365,12 @@ display:none;
 <div class="section">
 <h2>Soft Skills & Professional Traits</h2>
 <div class="skills">
-
-<div class="skill">
-<div class="skill-title">Pensamiento Analítico</div>
-<div class="bar"><span style="width:90%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Resolución de Problemas</div>
-<div class="bar"><span style="width:88%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Atención al Detalle</div>
-<div class="bar"><span style="width:92%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Trabajo bajo presión</div>
-<div class="bar"><span style="width:85%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Aprendizaje continuo</div>
-<div class="bar"><span style="width:95%"></span></div>
-</div>
-
-<div class="skill">
-<div class="skill-title">Comunicación técnica</div>
-<div class="bar"><span style="width:80%"></span></div>
-</div>
-
+<div class="skill"><div class="skill-title">Pensamiento Analítico</div><div class="bar"><span style="width:90%"></span></div></div>
+<div class="skill"><div class="skill-title">Resolución de Problemas</div><div class="bar"><span style="width:88%"></span></div></div>
+<div class="skill"><div class="skill-title">Atención al Detalle</div><div class="bar"><span style="width:92%"></span></div></div>
+<div class="skill"><div class="skill-title">Trabajo bajo presión</div><div class="bar"><span style="width:85%"></span></div></div>
+<div class="skill"><div class="skill-title">Aprendizaje continuo</div><div class="bar"><span style="width:95%"></span></div></div>
+<div class="skill"><div class="skill-title">Comunicación técnica</div><div class="bar"><span style="width:80%"></span></div></div>
 </div>
 </div>
 
@@ -564,33 +386,16 @@ display:none;
 <div class="section">
 <h2>Videos recientes</h2>
 <div class="videos">
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/cI27_M5_a4E"></iframe>
-</div>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w"></iframe>
-</div>
-
+<div class="video"><iframe src="https://www.youtube.com/embed/DZ2VGWUK_-A"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/87WXqvBKFBs"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/cI27_M5_a4E"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/ZR1CGDGQH-w"></iframe></div>
 </div>
 </div>
 
-
-</div>
-</body>
 <footer class="footer">
   <p>© 2026 Alberto Hidalgo · Todos los derechos reservados</p>
   <p>Email: <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
-
   <div class="footer-links">
     <a href="cv.html">CV</a>
     <a href="projects.html">Projects</a>
@@ -598,5 +403,29 @@ display:none;
     <a href="mailto:bitsofalber@gmail.com">Contact</a>
   </div>
 </footer>
-  
+
+</div>
+
+<!-- PARTICLES SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+tsParticles.load("particles-js", {
+  particles: {
+    number: { value: 45 },
+    color: { value: "#9eff00" },
+    links: {
+      enable: true,
+      color: "#9eff00",
+      distance: 140,
+      opacity: 0.15
+    },
+    move: { enable: true, speed: 1 },
+    size: { value: 2 },
+    opacity: { value: 0.4 }
+  }
+});
+</script>
+
+</body>
 </html>
