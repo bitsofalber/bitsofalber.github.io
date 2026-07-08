@@ -35,7 +35,7 @@
 
 <div class="term-wrap">
   <div class="term-head">
-    <a href="index.html">← Volver al sitio</a>
+    <a href="index.html">&larr; Volver al sitio</a>
     <span class="muted" style="font-family:var(--mono);font-size:12.5px">bitsofalber // interactive shell</span>
   </div>
   <div class="window">
@@ -46,7 +46,7 @@
       <div class="line">&nbsp;</div>
       <div class="inputline" id="wrapline">
         <span class="prompt">visitor@bitsofalber:~$</span>
-        <input id="cmd" autofocus autocomplete="off" spellcheck="false">
+        <input id="cmd" autofocus autocomplete="off" spellcheck="false" aria-label="terminal">
       </div>
     </div>
   </div>
@@ -63,11 +63,11 @@ function focusInput(){input.focus();window.scrollTo(0,document.body.scrollHeight
 document.addEventListener("click",focusInput);
 
 function helpMenu(){
-  print("🔎 <span class='accent'>Comandos disponibles:</span>");
+  print("<span class='accent'>Comandos disponibles:</span>");
   const g=document.createElement("div");g.className="help-grid";
-  g.innerHTML=["about","skills","projects","cv","contact","whoami","date","uname","matrix","joke","ascii","clear","home"].map(c=>`<div>${c}</div>`).join("");
+  g.innerHTML=["about","skills","projects","writeups","cv","contact","whoami","date","uname","joke","ascii","clear","home"].map(c=>`<div>${c}</div>`).join("");
   screen.insertBefore(g,wrapline);
-  print("<div class='tip'>💡 Usa ↑ / ↓ para navegar el historial. Escribe <span class='accent'>clear</span> para limpiar.</div>");
+  print("<div class='tip'>Usa flechas arriba/abajo para el historial. Escribe <span class='accent'>clear</span> para limpiar.</div>");
 }
 
 function run(cmd){
@@ -77,14 +77,14 @@ function run(cmd){
     case "whoami": print("visitor"); break;
     case "about": print("Alberto Hidalgo — SOC Analyst &amp; Blue Team. SIEM (Splunk), detection engineering, forense de red y DFIR."); break;
     case "skills": print("Splunk · SPL · Sysmon · Sigma · MITRE ATT&amp;CK · Wireshark · Nmap · Burp Suite · Linux · Docker"); break;
-    case "projects": print("KrakenSOC-Labs · ASIR Learning Labs · Raspberry Homelab · Cybersecurity Notes"); setTimeout(()=>print("<span class='muted'>Abriendo proyectos...</span>"),300); setTimeout(()=>location.href="index.html#proyectos",900); break;
+    case "projects": print("KrakenSOC-Labs · ASIR Learning Labs · Raspberry Homelab · Cybersecurity Notes"); setTimeout(()=>location.href="index.html#proyectos",900); break;
+    case "writeups": print("<span class='muted'>Abriendo write-ups...</span>"); setTimeout(()=>location.href="writeups.html",700); break;
     case "cv": print("<span class='muted'>Abriendo CV...</span>"); setTimeout(()=>location.href="cv.html",700); break;
-    case "contact": print("✉️ bitsofalber@gmail.com &nbsp;·&nbsp; 🐙 github.com/bitsofalber &nbsp;·&nbsp; 💼 in/ahidalgotech"); break;
+    case "contact": print("bitsofalber@gmail.com &nbsp;·&nbsp; github.com/bitsofalber &nbsp;·&nbsp; in/ahidalgotech"); break;
     case "home": case "exit": print("<span class='muted'>Volviendo al inicio...</span>"); setTimeout(()=>location.href="index.html",600); break;
     case "date": print(new Date().toString()); break;
     case "uname": print("bitsofalber SOC-shell 1.0 (blue-team)"); break;
-    case "matrix": print("<span class='accent'>Entering matrix mode...</span>"); document.querySelectorAll('.screen .line').forEach(l=>l.style.color="#2DD4BF"); break;
-    case "joke": print("¿Por qué los analistas aman el modo oscuro? Porque la luz atrae bugs. 🐛"); break;
+    case "joke": print("Por que los analistas aman el modo oscuro? Porque la luz atrae bugs."); break;
     case "ascii": print("   /\\_/\\\n  ( o.o )   &lt; detect · investigate · respond\n   &gt; ^ &lt;"); break;
     case "clear": screen.querySelectorAll(".line,.help-grid").forEach(n=>{if(n!==wrapline)n.remove();}); break;
     case "": break;

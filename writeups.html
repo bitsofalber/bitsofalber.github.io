@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Write-ups — Alberto Hidalgo</title>
+<meta name="description" content="Write-ups de investigación de Alberto Hidalgo: DNS exfiltration, password spraying y correlación en SIEM con SPL, detección Sigma y mapeo MITRE ATT&CK.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0E16'/%3E%3Ctext x='32' y='45' font-family='monospace' font-size='34' font-weight='700' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Write-ups — Alberto Hidalgo (SOC · Blue Team)">
+<meta property="og:description" content="Investigaciones reales: DNS exfiltration, password spraying y correlación en SIEM. SPL, Sigma y MITRE ATT&CK.">
+<meta property="og:image" content="https://bitsofalber.github.io/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="bg-glow"></div><div class="bg-grid"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="logo">A</span><span>Alberto Hidalgo<small>bitsofalber · Blue Team</small></span></a>
+    <button class="nav-toggle" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="nav">
+      <a href="index.html" data-en="Home">Inicio</a>
+      <a href="index.html#proyectos" data-en="Projects">Proyectos</a>
+      <a href="cv.html">CV</a>
+      <span class="lang-btn"><button data-lang="es">ES</button><button data-lang="en">EN</button></span>
+      <a class="cta" href="mailto:bitsofalber@gmail.com" data-en="Contact">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <section style="padding-top:48px">
+    <div class="reveal">
+      <span class="kicker" data-en="Proof of work">Demostración práctica</span>
+      <h1 class="h-section" style="font-size:clamp(28px,4vw,40px)">Write-ups &amp; detecciones</h1>
+      <p class="section-sub" data-en="Methodology-focused investigations from my KrakenSOC-Labs: hypothesis, the exact SPL/filters, the detection logic and the ATT&CK mapping. Flags are omitted so the labs stay solvable.">Investigaciones centradas en la metodología, de mis KrakenSOC-Labs: hipótesis, la SPL/filtros exactos, la lógica de detección y el mapeo ATT&amp;CK. Se omiten las flags para no destripar los labs.</p>
+    </div>
+
+    <!-- WRITEUP 1 -->
+    <article class="writeup reveal" id="silent-harvest" style="margin-top:26px">
+      <div class="wu-head">
+        <div class="wu-tags"><span class="wu-tag">Network Forensics</span><span class="wu-tag">Wireshark · tshark</span><span class="wu-tag mitre">T1048.003</span><span class="wu-tag mitre">T1071.004</span></div>
+        <h3>Silent Harvest — Exfiltración por DNS tunneling</h3>
+        <p class="wu-sub" data-en="A workstation leaks a payroll file off the network using only DNS. Prove it, quantify it and reconstruct what was stolen.">Una estación filtra un fichero de nóminas fuera de la red usando solo DNS. Demostrarlo, cuantificarlo y reconstruir lo robado.</p>
+      </div>
+      <div class="wu-body">
+        <div class="wu-step"><div class="wu-k" data-en="Hypothesis">Hipótesis</div><p data-en="No HTTP upload, no email — but a spike in DNS. Hypothesis: DNS tunneling, where data is encoded into subdomain labels toward an attacker-controlled domain.">No hay subida HTTP ni correo, pero sí un pico de DNS. Hipótesis: DNS tunneling, con datos codificados en las etiquetas de subdominio hacia un dominio del atacante.</p></div>
+        <div class="wu-step"><div class="wu-k" data-en="Hunt">Investigación</div><p data-en="Rank the parent domains receiving the most queries and look for long, high-entropy labels:">Rankear los dominios padre que reciben más consultas y buscar etiquetas largas de alta entropía:</p>
+          <pre class="code"><span class="cmt"># dominios más consultados en el PCAP</span>
+tshark -r dns-exfil.pcap -Y <span class="kw">'dns.flags.response==0'</span> -T fields -e dns.qry.name \
+  | rev | cut -d. -f1-2 | rev | sort | uniq -c | sort -rn | head</pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Quantify & reconstruct">Cuantificar y reconstruir</div><p data-en="Data-carrying queries use a dNNNN prefix and a base32 alphabet (a-z, 2-7). Count them, then order, join and base32-decode the labels to rebuild the exfiltrated file:">Las consultas con datos usan prefijo dNNNN y alfabeto base32 (a-z, 2-7). Contarlas, y luego ordenar, unir y decodificar en base32 para reconstruir el fichero:</p>
+          <pre class="code">tshark -r dns-exfil.pcap -Y <span class="kw">'dns.flags.response==0'</span> -T fields -e dns.qry.name \
+  | grep -E <span class="kw">'^d[0-9]{4}\.'</span> | sort -t. -k1.2n | awk -F. <span class="kw">'{print $2}'</span> \
+  | tr -d <span class="kw">'\n'</span> | python3 -c <span class="kw">'import sys,base64;s=sys.stdin.read().upper();print(base64.b32decode(s+"="*((-len(s))%8)).decode("utf-8","replace"))'</span></pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Detection (Sigma)">Detección (Sigma)</div><p data-en="Alert on DNS query names with very long, high-entropy labels toward a single parent domain — classic tunneling.">Alertar sobre nombres DNS con etiquetas muy largas y de alta entropía hacia un mismo dominio padre — tunneling clásico.</p>
+          <pre class="code">detection:
+  selection_long_label:
+    dns.query.name|re: <span class="kw">'([a-z2-7]{40,})\.'</span>
+  condition: selection_long_label
+level: high  <span class="cmt"># tags: attack.t1048.003, attack.t1071.004</span></pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Outcome">Resultado</div><p data-en="Exfiltration confirmed and quantified; the stolen file reconstructed from the wire. Full lab, rules and ATT&CK layer:">Exfiltración confirmada y cuantificada; fichero robado reconstruido desde la captura. Lab completo, reglas y capa ATT&amp;CK:</p><a class="btn btn-outline" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/silent-harvest" target="_blank" rel="noopener">silent-harvest ↗</a></div>
+      </div>
+    </article>
+
+    <!-- WRITEUP 2 -->
+    <article class="writeup reveal" id="battering-ram">
+      <div class="wu-head">
+        <div class="wu-tags"><span class="wu-tag">SIEM · Splunk</span><span class="wu-tag">Windows Security</span><span class="wu-tag mitre">T1110.003</span><span class="wu-tag mitre">T1078</span></div>
+        <h3>Battering Ram — Password spraying &amp; account takeover</h3>
+        <p class="wu-sub" data-en="A flood of failed logons. Distinguish spraying from brute force, find the attacker IP and the account that fell.">Un aluvión de logins fallidos. Distinguir spraying de fuerza bruta, hallar la IP atacante y la cuenta que cayó.</p>
+      </div>
+      <div class="wu-body">
+        <div class="wu-step"><div class="wu-k" data-en="Key idea">Idea clave</div><p data-en="Spraying = one password against many accounts (many distinct users, few failures each, one source IP). Brute force = one account, many failures. Both show as 4625; you tell them apart by counting per IP and per account.">Spraying = una contraseña contra muchas cuentas (muchos usuarios distintos, pocos fallos cada uno, una IP). Fuerza bruta = una cuenta, muchos fallos. Ambos son 4625; se distinguen contando por IP y por cuenta.</p></div>
+        <div class="wu-step"><div class="wu-k" data-en="Hunt (SPL)">Investigación (SPL)</div>
+          <pre class="code"><span class="cmt"># una IP fallando contra MUCHAS cuentas = spraying</span>
+index=northwind sourcetype=WinEventLog:Security EventCode=4625
+| stats count dc(Account_Name) as cuentas by Source_Network_Address
+| where cuentas &gt;= 10 | sort -cuentas</pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Pivot to the compromise">Pivote al compromiso</div><p data-en="The turning point is a successful 4624 from the same IP that was failing. What comes next (4720 account creation, 4732 add-to-Administrators) is persistence.">El punto de inflexión es un 4624 exitoso desde la misma IP que fallaba. Lo que viene después (4720 alta de cuenta, 4732 alta en Administradores) es persistencia.</p>
+          <pre class="code">index=northwind sourcetype=WinEventLog:Security EventCode=4624
+  Source_Network_Address=&lt;attacker_ip&gt;
+| stats values(Account_Name) values(Computer)</pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Detection (Sigma)">Detección (Sigma)</div>
+          <pre class="code">detection:
+  selection: { EventCode: 4625 }
+  timeframe: 15m
+  condition: selection | count(Account_Name) by Source_Network_Address &gt; 10
+level: high  <span class="cmt"># attack.t1110.003</span></pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Outcome">Resultado</div><p data-en="Spraying identified, attacker IP and cracked account found, and the backdoor account traced. Full lab:">Spraying identificado, IP atacante y cuenta comprometida halladas, y la cuenta backdoor rastreada. Lab completo:</p><a class="btn btn-outline" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/battering-ram" target="_blank" rel="noopener">battering-ram ↗</a></div>
+      </div>
+    </article>
+
+    <!-- WRITEUP 3 -->
+    <article class="writeup reveal" id="overwatch">
+      <div class="wu-head">
+        <div class="wu-tags"><span class="wu-tag">SIEM · Splunk</span><span class="wu-tag">Multi-source correlation</span><span class="wu-tag mitre">T1071.001</span><span class="wu-tag mitre">T1059.001</span><span class="wu-tag mitre">T1048.003</span></div>
+        <h3>Overwatch — Correlación de una intrusión completa</h3>
+        <p class="wu-sub" data-en="A full intrusion seen from the SOC: no single source tells the story — you correlate them.">Una intrusión completa vista desde el SOC: ninguna fuente por sí sola cuenta la historia — se correlacionan.</p>
+      </div>
+      <div class="wu-body">
+        <div class="wu-step"><div class="wu-k" data-en="Approach">Enfoque</div><p data-en="Azure AD gives the WHO (a high-risk sign-in), Sysmon the WHAT (PowerShell -EncodedCommand → an implant), proxy/Zeek the WHO-WITH (C2 beaconing), and DNS the WHAT-WAS-TAKEN (base32 exfiltration). The value is the join.">Azure AD da el QUIÉN (un sign-in de alto riesgo), Sysmon el QUÉ (PowerShell -EncodedCommand → un implante), proxy/Zeek el CON-QUIÉN (beaconing C2) y DNS el QUÉ-SE-LLEVARON (exfiltración base32). El valor está en cruzarlos.</p></div>
+        <div class="wu-step"><div class="wu-k" data-en="Baseline & pivots (SPL)">Línea base y pivotes (SPL)</div>
+          <pre class="code"><span class="cmt"># 1) línea base por fuente</span>
+index=northwind | stats count by sourcetype
+<span class="cmt"># 2) sign-in de alto riesgo (acceso inicial)</span>
+index=northwind sourcetype=azuread:signin riskLevel=high
+<span class="cmt"># 3) ejecución ofuscada (implante)</span>
+index=northwind sourcetype=Sysmon EventID=1 CommandLine="*-EncodedCommand*"
+<span class="cmt"># 4) beaconing: cadencia casi fija hacia un dominio</span>
+index=northwind sourcetype=proxy:web
+| streamstats current=f last(_time) as prev by src,dest_host
+| eval gap=_time-prev | stats avg(gap) dc(gap) by src,dest_host,http_user_agent</pre></div>
+        <div class="wu-step"><div class="wu-k" data-en="Outcome">Resultado</div><p data-en="The kill chain reconstructed end to end (initial access → execution → C2 → collection → exfiltration) across five log sources — the capstone that unifies the atomic labs. Full lab:">Kill chain reconstruida de principio a fin (acceso inicial → ejecución → C2 → colección → exfiltración) entre cinco fuentes — el capstone que une los labs atómicos. Lab completo:</p><a class="btn btn-outline" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/overwatch" target="_blank" rel="noopener">overwatch ↗</a></div>
+      </div>
+    </article>
+
+    <div class="reveal" style="margin-top:8px"><a class="btn btn-primary" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" rel="noopener" data-en="See all 9 labs on GitHub ↗">Ver los 9 labs en GitHub ↗</a></div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div><div style="font-weight:800;font-size:16px">Alberto Hidalgo</div><div class="f-copy">SOC Analyst · Blue Team — © 2026</div></div>
+    <div class="f-links">
+      <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html" data-en="Home">Inicio</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

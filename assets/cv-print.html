@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<style>
+  @page{size:A4;margin:0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{--ink:#12202b;--muted:#4a5b68;--line:#dbe4ea;--teal:#0d9488;--teal2:#0f766e;}
+  html,body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);}
+  .page{width:210mm;min-height:297mm;padding:16mm 16mm 14mm;background:#fff;}
+  .head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--teal);padding-bottom:12px;margin-bottom:16px;}
+  .head h1{font-size:26pt;letter-spacing:-.5px;line-height:1;}
+  .head .role{color:var(--teal2);font-weight:bold;font-size:11.5pt;margin-top:4px;letter-spacing:.4px;}
+  .head .contact{text-align:right;font-size:9pt;color:var(--muted);line-height:1.7;}
+  .head .contact a{color:var(--ink);text-decoration:none;}
+  .grid{display:grid;grid-template-columns:1fr 62mm;gap:12mm;}
+  h2{font-size:10.5pt;color:var(--teal2);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--line);padding-bottom:4px;margin:14px 0 9px;}
+  section:first-child h2{margin-top:0;}
+  p,li{font-size:10pt;line-height:1.5;color:#243642;}
+  .muted{color:var(--muted);}
+  .item{margin-bottom:10px;}
+  .item .r{font-weight:bold;font-size:10.5pt;}
+  .item .m{font-size:9pt;color:var(--muted);margin:1px 0 4px;}
+  ul{list-style:none;}
+  ul li{position:relative;padding-left:12px;margin-bottom:2px;}
+  ul li::before{content:"–";position:absolute;left:0;color:var(--teal);}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;}
+  .chip{font-size:8.5pt;border:1px solid var(--line);border-radius:4px;padding:2px 7px;color:#2b3a45;}
+  .chip.k{border-color:var(--teal);color:var(--teal2);font-weight:bold;}
+  .side .box{margin-bottom:12px;}
+  .cert{font-size:9.5pt;margin-bottom:5px;}
+  .cert b{color:var(--teal2);}
+  .cert a{color:var(--teal2);font-size:8.5pt;text-decoration:none;}
+</style></head>
+<body>
+<div class="page">
+  <div class="head">
+    <div>
+      <h1>Alberto Hidalgo</h1>
+      <div class="role">SOC Analyst · Blue Team</div>
+    </div>
+    <div class="contact">
+      <div><a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></div>
+      <div><a href="https://github.com/bitsofalber">github.com/bitsofalber</a></div>
+      <div><a href="https://www.linkedin.com/in/ahidalgotech">linkedin.com/in/ahidalgotech</a></div>
+      <div>bitsofalber.github.io</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="main">
+      <section>
+        <h2>Perfil profesional</h2>
+        <p>Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad defensiva y la monitorización de sistemas. Experiencia práctica en análisis de logs, detección de amenazas con Splunk (SIEM), ingeniería de detección (Sigma, mapeo MITRE ATT&amp;CK) y pruebas de penetración en entornos controlados. Creador de <b>KrakenSOC-Labs</b>, una colección de 9 laboratorios Blue Team en Docker.</p>
+      </section>
+      <section>
+        <h2>Experiencia</h2>
+        <div class="item">
+          <div class="r">Vigilante de Seguridad</div>
+          <div class="m">Viten Seguridad y Transportes Blindados S.A. · 2018 – 2026</div>
+          <ul>
+            <li>Aplicación de protocolos de seguridad y gestión de incidentes.</li>
+            <li>Vigilancia preventiva y detección de riesgos.</li>
+            <li>Toma de decisiones críticas bajo presión.</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Proyectos destacados</h2>
+        <div class="item">
+          <div class="r">KrakenSOC-Labs — Laboratorios Blue Team en Docker</div>
+          <div class="m">9 labs · 30+ técnicas MITRE ATT&amp;CK · reglas Sigma/Suricata</div>
+          <ul>
+            <li>Forense de red (PCAP) y caza de amenazas con un Splunk real.</li>
+            <li>Data-forge determinista, detección y write-ups por lab.</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Educación</h2>
+        <div class="item">
+          <div class="r">Administración de Sistemas Informáticos en Red (ASIR)</div>
+          <div class="m">FP Euroformac · 2025 – Actualidad</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="side">
+      <div class="box">
+        <h2>Certificaciones</h2>
+        <div class="cert"><b>eJPTv2</b> — eLearnSecurity Junior Penetration Tester v2 (2025) · <a href="https://certs.ine.com/a936b81a-2e84-47f2-9cb6-a6334e6b4db8#acc.BF9vQ26p">verificar</a></div>
+        <div class="cert muted">Curso de Splunk</div>
+        <div class="cert muted">Introducción al Web Hacking</div>
+        <div class="cert muted">Blue Team Path — TryHackMe</div>
+      </div>
+      <div class="box">
+        <h2>Habilidades</h2>
+        <div class="chips">
+          <span class="chip k">Splunk</span><span class="chip">SPL</span><span class="chip">SIEM</span><span class="chip">Sysmon</span>
+          <span class="chip">Sigma</span><span class="chip k">MITRE ATT&CK</span><span class="chip">Wireshark</span><span class="chip">tcpdump</span>
+          <span class="chip">Threat Hunting</span><span class="chip">DFIR</span><span class="chip">Linux</span><span class="chip">Windows</span>
+          <span class="chip">Redes</span><span class="chip">Docker</span><span class="chip">Python</span><span class="chip k">eJPTv2</span>
+          <span class="chip">Nmap</span><span class="chip">Burp Suite</span><span class="chip">OWASP Top 10</span>
+        </div>
+      </div>
+      <div class="box">
+        <h2>Info adicional</h2>
+        <ul>
+          <li>Inglés: nivel intermedio</li>
+          <li>Carnet de conducir y vehículo propio</li>
+          <li>Disponibilidad para viajar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

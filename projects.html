@@ -6,6 +6,8 @@
 <title>Proyectos — Alberto Hidalgo</title>
 <meta name="description" content="Proyectos de ciberseguridad de Alberto Hidalgo: KrakenSOC-Labs, ASIR Learning Labs, Raspberry Homelab y más.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0E16'/%3E%3Ctext x='32' y='45' font-family='monospace' font-size='34' font-weight='700' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Proyectos — Alberto Hidalgo (SOC · Blue Team)">
+<meta property="og:image" content="https://bitsofalber.github.io/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -18,10 +20,11 @@
     <a class="brand" href="index.html"><span class="logo">A</span><span>Alberto Hidalgo<small>bitsofalber · Blue Team</small></span></a>
     <button class="nav-toggle" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     <div class="nav-links" id="nav">
-      <a href="index.html">Inicio</a>
+      <a href="index.html" data-en="Home">Inicio</a>
+      <a href="writeups.html">Write-ups</a>
       <a href="cv.html">CV</a>
-      <a href="terminal.html">Terminal</a>
-      <a class="cta" href="mailto:bitsofalber@gmail.com">Contacto</a>
+      <span class="lang-btn"><button data-lang="es">ES</button><button data-lang="en">EN</button></span>
+      <a class="cta" href="mailto:bitsofalber@gmail.com" data-en="Contact">Contacto</a>
     </div>
   </div>
 </nav>
@@ -29,19 +32,18 @@
 <div class="wrap">
   <section style="padding-top:48px">
     <div class="reveal">
-      <span class="kicker">Proyectos</span>
-      <h1 class="h-section" style="font-size:clamp(28px,4vw,40px)">Laboratorios, herramientas y entornos</h1>
-      <p class="section-sub">Proyectos prácticos de ciberseguridad defensiva, sistemas y automatización.</p>
+      <span class="kicker" data-en="Projects">Proyectos</span>
+      <h1 class="h-section" style="font-size:clamp(28px,4vw,40px)" data-en="Labs, tools and environments">Laboratorios, herramientas y entornos</h1>
+      <p class="section-sub" data-en="Hands-on defensive security, systems and automation projects.">Proyectos prácticos de ciberseguridad defensiva, sistemas y automatización.</p>
     </div>
 
-    <!-- FEATURED -->
     <div class="featured reveal" style="margin-top:26px">
       <div class="featured-inner">
-        <span class="flag">🐙 Destacado — KrakenSOC-Labs</span>
-        <h3>9 laboratorios Blue Team en Docker</h3>
-        <p>Labs SOC deterministas que se despliegan con un comando: forense de red (PCAP) y caza de amenazas en un Splunk real. Mapeados a MITRE ATT&CK, con reglas Sigma/Suricata y soluciones cifradas.</p>
+        <span class="flag"><svg class="flag-ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg><span data-en="Featured — KrakenSOC-Labs">Destacado — KrakenSOC-Labs</span></span>
+        <h3 data-en="9 Blue Team Docker labs">9 laboratorios Blue Team en Docker</h3>
+        <p data-en="Deterministic SOC labs deployed with one command: network forensics (PCAP) and threat hunting in a real Splunk. MITRE ATT&CK-mapped, with Sigma/Suricata rules and encrypted solutions.">Labs SOC deterministas que se despliegan con un comando: forense de red (PCAP) y caza de amenazas en un Splunk real. Mapeados a MITRE ATT&amp;CK, con reglas Sigma/Suricata y soluciones cifradas.</p>
         <div class="p-tech" style="margin-bottom:20px"><span>Docker</span><span>Splunk</span><span>Python</span><span>Sigma</span><span>Suricata</span><span>MITRE ATT&CK</span></div>
-        <a class="btn btn-primary" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" rel="noopener">Ver en GitHub ↗</a>
+        <a class="btn btn-primary" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" rel="noopener" data-en="View on GitHub ↗">Ver en GitHub ↗</a>
       </div>
     </div>
 
@@ -49,31 +51,31 @@
       <a class="card proj reveal" href="https://github.com/bitsofalber/asir-learning-labs" target="_blank" rel="noopener">
         <div class="p-top"><span class="p-tag">Systems · Networking</span><span class="arrow">↗</span></div>
         <h3>ASIR Learning Labs</h3>
-        <p>Laboratorios prácticos de Linux, redes, bases de datos y seguridad.</p>
+        <p data-en="Hands-on labs in Linux, networking, databases and security.">Laboratorios prácticos de Linux, redes, bases de datos y seguridad.</p>
         <div class="p-tech"><span>Linux</span><span>Networking</span><span>Security</span></div>
       </a>
       <a class="card proj reveal" href="https://github.com/bitsofalber/ciberseguridad" target="_blank" rel="noopener">
         <div class="p-top"><span class="p-tag">Notes · Blue Team</span><span class="arrow">↗</span></div>
         <h3>Cybersecurity Notes</h3>
-        <p>Apuntes técnicos de ciberseguridad y conceptos defensivos.</p>
+        <p data-en="Technical notes on cybersecurity and defensive concepts.">Apuntes técnicos de ciberseguridad y conceptos defensivos.</p>
         <div class="p-tech"><span>Blue Team</span><span>DFIR</span><span>SOC</span></div>
       </a>
       <a class="card proj reveal" href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank" rel="noopener">
         <div class="p-top"><span class="p-tag">DevSecOps · Homelab</span><span class="arrow">↗</span></div>
         <h3>Raspberry Homelab Infrastructure</h3>
-        <p>Infraestructura self-hosted segura en Raspberry Pi con Docker y automatización.</p>
+        <p data-en="Secure self-hosted infrastructure on Raspberry Pi with Docker and automation.">Infraestructura self-hosted segura en Raspberry Pi con Docker y automatización.</p>
         <div class="p-tech"><span>Docker</span><span>VPN</span><span>Automation</span></div>
       </a>
       <a class="card proj reveal" href="https://tech4uacademy.es" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">Founder · Formación</span><span class="arrow">↗</span></div>
+        <div class="p-top"><span class="p-tag">Founder · Training</span><span class="arrow">↗</span></div>
         <h3>tech4uAcademy</h3>
-        <p>Proyecto de formación práctica en ciberseguridad que fundé y mantengo.</p>
+        <p data-en="Hands-on cybersecurity training project I founded and maintain.">Proyecto de formación práctica en ciberseguridad que fundé y mantengo.</p>
         <div class="p-tech"><span>Training</span><span>SOC</span><span>Web</span></div>
       </a>
       <a class="card proj reveal" href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank" rel="noopener">
         <div class="p-top"><span class="p-tag">Web</span><span class="arrow">↗</span></div>
         <h3>Portfolio Website</h3>
-        <p>Web personal con diseño limpio y una terminal interactiva.</p>
+        <p data-en="Personal site with clean design and an interactive terminal.">Web personal con diseño limpio y una terminal interactiva.</p>
         <div class="p-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
       </a>
     </div>
@@ -86,16 +88,12 @@
     <div class="f-links">
       <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="index.html">Inicio</a>
+      <a href="index.html" data-en="Home">Inicio</a>
       <a href="cv.html">CV</a>
     </div>
   </div>
 </footer>
 
-<script>
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
-</script>
+<script src="assets/main.js"></script>
 </body>
 </html>

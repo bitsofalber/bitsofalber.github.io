@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV — Alberto Hidalgo</title>
-<meta name="description" content="Currículum de Alberto Hidalgo — SOC Analyst · Blue Team. eJPTv2, ASIR, Splunk.">
+<meta name="description" content="Currículum de Alberto Hidalgo — SOC Analyst · Blue Team. eJPTv2 (verificable), ASIR, Splunk.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0E16'/%3E%3Ctext x='32' y='45' font-family='monospace' font-size='34' font-weight='700' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,8 +18,9 @@
   .contact-row{display:flex;flex-direction:column;gap:10px;}
   .contact-row a{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-size:14px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.02);transition:.2s;}
   .contact-row a:hover{border-color:var(--accent);color:var(--accent);}
+  .cert-link{color:var(--accent);text-decoration:none;font-size:12.5px;font-family:var(--mono);}
+  .cert-link:hover{text-decoration:underline;}
   @media(max-width:860px){.cv-grid{grid-template-columns:1fr;}}
-  @media print{.nav,.footer,.bg-grid,.bg-glow{display:none;}body{background:#fff;color:#000;}}
 </style>
 </head>
 <body>
@@ -30,105 +31,105 @@
     <a class="brand" href="index.html"><span class="logo">A</span><span>Alberto Hidalgo<small>bitsofalber · Blue Team</small></span></a>
     <button class="nav-toggle" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     <div class="nav-links" id="nav">
-      <a href="index.html">Inicio</a>
-      <a href="index.html#proyectos">Proyectos</a>
+      <a href="index.html" data-en="Home">Inicio</a>
+      <a href="writeups.html">Write-ups</a>
       <a href="terminal.html">Terminal</a>
-      <a class="cta" href="mailto:bitsofalber@gmail.com">Contacto</a>
+      <span class="lang-btn"><button data-lang="es">ES</button><button data-lang="en">EN</button></span>
+      <a class="cta" href="mailto:bitsofalber@gmail.com" data-en="Contact">Contacto</a>
     </div>
   </div>
 </nav>
 
 <div class="wrap">
   <div class="cv-head reveal">
-    <img src="img/img.jpeg" alt="Alberto Hidalgo">
-    <div>
+    <img src="img/img.webp" alt="Alberto Hidalgo" width="96" height="96">
+    <div style="flex:1">
       <span class="kicker">Curriculum Vitae</span>
       <h1 style="font-size:34px;font-weight:800;margin:8px 0 4px">Alberto Hidalgo</h1>
       <p style="color:var(--muted);font-family:var(--mono);font-size:14px">SOC Analyst · Blue Team · eJPTv2</p>
     </div>
+    <a class="btn btn-primary" href="cv.pdf" download data-en="Download PDF">Descargar PDF</a>
   </div>
 
   <div class="cv-grid" style="padding-bottom:20px">
-    <!-- MAIN -->
     <div>
       <div class="cv-block reveal">
-        <span class="kicker">Perfil profesional</span>
-        <div class="card">Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y la monitorización de sistemas. Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados. Busco oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.</div>
+        <span class="kicker" data-en="Professional profile">Perfil profesional</span>
+        <div class="card" data-en="ASIR student with a strong interest in cybersecurity and systems monitoring. Hands-on experience in log analysis, threat detection with Splunk and penetration testing in controlled environments. Seeking internships or junior roles in systems, networking or cybersecurity.">Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y la monitorización de sistemas. Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados. Busco oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.</div>
       </div>
 
       <div class="cv-block reveal">
-        <span class="kicker">Experiencia</span>
+        <span class="kicker" data-en="Experience">Experiencia</span>
         <div class="timeline">
           <div class="tl-item">
-            <div class="tl-role">Vigilante de Seguridad</div>
+            <div class="tl-role" data-en="Security Officer">Vigilante de Seguridad</div>
             <div class="tl-meta">Viten Seguridad y Transportes Blindados S.A. · 2018 – 2026</div>
             <ul>
-              <li>Aplicación de protocolos de seguridad y gestión de incidentes.</li>
-              <li>Vigilancia preventiva y detección de riesgos.</li>
-              <li>Toma de decisiones críticas bajo presión.</li>
+              <li data-en="Applying security protocols and incident management.">Aplicación de protocolos de seguridad y gestión de incidentes.</li>
+              <li data-en="Preventive surveillance and risk detection.">Vigilancia preventiva y detección de riesgos.</li>
+              <li data-en="Critical decision-making under pressure.">Toma de decisiones críticas bajo presión.</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="cv-block reveal">
-        <span class="kicker">Educación</span>
+        <span class="kicker" data-en="Education">Educación</span>
         <div class="timeline">
           <div class="tl-item">
-            <div class="tl-role">Administración de Sistemas Informáticos en Red (ASIR)</div>
-            <div class="tl-meta">FP Euroformac · 2025 – Actualidad</div>
+            <div class="tl-role" data-en="Network Systems Administration (ASIR)">Administración de Sistemas Informáticos en Red (ASIR)</div>
+            <div class="tl-meta" data-en="FP Euroformac · 2025 – Present">FP Euroformac · 2025 – Actualidad</div>
           </div>
         </div>
       </div>
 
       <div class="cv-block reveal">
-        <span class="kicker">Certificaciones & formación</span>
+        <span class="kicker" data-en="Certifications & training">Certificaciones &amp; formación</span>
         <div class="card">
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
-            <li style="color:var(--text)"><span style="color:var(--accent)">◆</span> eLearnSecurity Junior Penetration Tester v2 <b>(eJPTv2)</b> — 2025</li>
-            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> Curso de Splunk</li>
-            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> Introducción al Web Hacking</li>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:11px">
+            <li style="color:var(--text)"><span style="color:var(--accent)">◆</span> eLearnSecurity Junior Penetration Tester v2 <b>(eJPTv2)</b> — 2025 &nbsp;<a class="cert-link" href="https://certs.ine.com/a936b81a-2e84-47f2-9cb6-a6334e6b4db8#acc.BF9vQ26p" target="_blank" rel="noopener" data-en="verify ↗">verificar ↗</a></li>
+            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> <span data-en="Splunk course">Curso de Splunk</span></li>
+            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> <span data-en="Intro to Web Hacking">Introducción al Web Hacking</span></li>
             <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> Blue Team Path — TryHackMe</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- SIDE -->
     <aside>
       <div class="cv-block reveal">
-        <span class="kicker">Contacto</span>
+        <span class="kicker" data-en="Contact">Contacto</span>
         <div class="contact-row">
-          <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">🐙 github.com/bitsofalber</a>
-          <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">💼 in/ahidalgotech</a>
-          <a href="mailto:bitsofalber@gmail.com">✉️ bitsofalber@gmail.com</a>
+          <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">github.com/bitsofalber</a>
+          <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">in/ahidalgotech</a>
+          <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a>
         </div>
       </div>
 
       <div class="cv-block reveal">
-        <span class="kicker">Habilidades técnicas</span>
+        <span class="kicker" data-en="Technical skills">Habilidades técnicas</span>
         <div class="card">
           <div class="chips">
-            <span class="chip accent">Splunk</span><span class="chip">SIEM</span><span class="chip">Detección de amenazas</span>
-            <span class="chip">Linux</span><span class="chip">Windows</span><span class="chip">Redes</span>
-            <span class="chip">Virtualización</span><span class="chip">Nmap</span><span class="chip">Burp Suite</span>
+            <span class="chip accent">Splunk</span><span class="chip">SIEM</span><span class="chip" data-en="Threat detection">Detección de amenazas</span>
+            <span class="chip">Linux</span><span class="chip">Windows</span><span class="chip" data-en="Networking">Redes</span>
+            <span class="chip" data-en="Virtualization">Virtualización</span><span class="chip">Nmap</span><span class="chip">Burp Suite</span>
             <span class="chip">Web Pentesting</span><span class="chip">OWASP Top 10</span><span class="chip">Docker</span>
           </div>
         </div>
       </div>
 
       <div class="cv-block reveal">
-        <span class="kicker">Información adicional</span>
+        <span class="kicker" data-en="Additional info">Información adicional</span>
         <div class="card">
           <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:14px">
-            <li><span style="color:var(--accent)">–</span> Inglés: nivel intermedio</li>
-            <li><span style="color:var(--accent)">–</span> Carnet de conducir y vehículo propio</li>
-            <li><span style="color:var(--accent)">–</span> Disponibilidad para viajar</li>
+            <li data-en="<span style='color:var(--accent)'>–</span> English: intermediate"><span style="color:var(--accent)">–</span> Inglés: nivel intermedio</li>
+            <li data-en="<span style='color:var(--accent)'>–</span> Driving licence and own vehicle"><span style="color:var(--accent)">–</span> Carnet de conducir y vehículo propio</li>
+            <li data-en="<span style='color:var(--accent)'>–</span> Available to travel"><span style="color:var(--accent)">–</span> Disponibilidad para viajar</li>
           </ul>
         </div>
       </div>
 
-      <a class="btn btn-primary" href="index.html" style="width:100%;justify-content:center">← Volver a Inicio</a>
+      <a class="btn btn-outline" href="index.html" style="width:100%;justify-content:center" data-en="← Back to home">← Volver a Inicio</a>
     </aside>
   </div>
 </div>
@@ -139,16 +140,12 @@
     <div class="f-links">
       <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="index.html">Inicio</a>
-      <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a>
+      <a href="index.html" data-en="Home">Inicio</a>
+      <a href="writeups.html">Write-ups</a>
     </div>
   </div>
 </footer>
 
-<script>
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
-</script>
+<script src="assets/main.js"></script>
 </body>
 </html>
