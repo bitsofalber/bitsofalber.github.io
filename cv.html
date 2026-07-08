@@ -3,338 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CV — ahidalgotech</title>
-
-<link rel="icon" type="image/png" sizes="32x32" href="img/img2.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/img2.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
+<title>CV — Alberto Hidalgo</title>
+<meta name="description" content="Currículum de Alberto Hidalgo — SOC Analyst · Blue Team. eJPTv2, ASIR, Splunk.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0E16'/%3E%3Ctext x='32' y='45' font-family='monospace' font-size='34' font-weight='700' text-anchor='middle' fill='%232DD4BF'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-  font-family:'Inter',sans-serif;
-  color:#e6edf3;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(159,239,0,0.06), transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(0,150,255,0.05), transparent 40%),
-    #0b0f14;
-  display:flex;
-}
-
-/* ===== FONDO ANIMADO ===== */
-#particles-js{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-  pointer-events:none;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-  width:240px;
-  height:100vh;
-  background:linear-gradient(180deg,#11161c,#0e1318);
-  padding:30px 20px;
-  position:fixed;
-  border-right:1px solid #1f2933;
-}
-
-.nav a{
-  display:block;
-  padding:12px;
-  color:#e6edf3;
-  text-decoration:none;
-  margin:6px 0;
-  border-radius:6px;
-  transition:.25s ease;
-}
-
-.nav a:hover{
-  background:#1a2128;
-  transform:translateX(6px);
-}
-
-.nav .active{
-  background:#1a2128;
-  color:#9FEF00;
-}
-
-/* CONTENT */
-
-.content{
-  margin-left:260px;
-  padding:80px 70px;
-  max-width:900px;
-}
-
-h1{
-  font-size:38px;
-  margin-bottom:25px;
-  text-shadow:0 0 20px rgba(159,239,0,0.15);
-}
-
-h2{
-  margin-top:50px;
-  margin-bottom:20px;
-  font-size:22px;
-  color:#9FEF00;
-}
-
-/* TIMELINE */
-
-.timeline{
-  position:relative;
-  margin-left:10px;
-  padding-left:40px;
-}
-
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:8px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:#9FEF00;
-  opacity:.35;
-}
-
-.timeline-item{
-  position:relative;
-  margin-bottom:35px;
-}
-
-.timeline-dot{
-  position:absolute;
-  left:-4px;
-  top:18px;
-  width:14px;
-  height:14px;
-  background:#9FEF00;
-  border-radius:50%;
-  box-shadow:0 0 12px rgba(159,239,0,0.7);
-}
-
-/* FLOATING CARDS */
-
-.card{
-  background:#11161c;
-  border:1px solid rgba(159,239,0,0.15);
-  border-radius:12px;
-  padding:18px 20px;
-  margin-left:20px;
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.5),
-    0 0 12px rgba(159,239,0,0.08);
-  transition:.25s ease;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:
-    0 18px 35px rgba(0,0,0,0.6),
-    0 0 18px rgba(159,239,0,0.15);
-}
-
-.card ul{
-  margin-left:18px;
-  margin-top:8px;
-  line-height:1.6;
-}
-
-.card p{
-  margin-top:6px;
-  line-height:1.6;
-}
-
-/* SKILLS */
-
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:10px;
-}
-
-.skills span{
-  background:#11161c;
-  border:1px solid rgba(159,239,0,0.25);
-  padding:6px 12px;
-  border-radius:6px;
-  font-size:14px;
-}
-
-/* CONTACT */
-
-.contact a{
-  color:#9FEF00;
-  text-decoration:none;
-}
-
-/* BOTÓN VOLVER */
-
-.back-home{
-  margin-top:60px;
-  text-align:center;
-}
-
-.btn-home{
-  display:inline-block;
-  padding:14px 26px;
-  background:#9FEF00;
-  color:#000;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 0 18px rgba(159,239,0,0.35);
-  transition:.25s ease;
-}
-
-.btn-home:hover{
-  transform:translateY(-2px);
-  box-shadow:0 0 28px rgba(159,239,0,0.55);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-  .sidebar{display:none;}
-  .content{
-    margin:0;
-    padding:50px 25px;
-  }
-}
+  .cv-head{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding:48px 0 8px;}
+  .cv-head img{width:96px;height:96px;border-radius:20px;object-fit:cover;border:1px solid var(--border-strong);}
+  .cv-grid{display:grid;grid-template-columns:1fr 320px;gap:26px;align-items:start;margin-top:8px;}
+  .cv-block{margin-bottom:26px;}
+  .cv-block > .kicker{margin-bottom:12px;}
+  .contact-row{display:flex;flex-direction:column;gap:10px;}
+  .contact-row a{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-size:14px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.02);transition:.2s;}
+  .contact-row a:hover{border-color:var(--accent);color:var(--accent);}
+  @media(max-width:860px){.cv-grid{grid-template-columns:1fr;}}
+  @media print{.nav,.footer,.bg-grid,.bg-glow{display:none;}body{background:#fff;color:#000;}}
 </style>
 </head>
-
 <body>
+<div class="bg-glow"></div><div class="bg-grid"></div>
 
-<!-- fondo animado -->
-<div id="particles-js"></div>
-
-<div class="sidebar">
-  <div class="nav">
-    <a href="index.html">Inicio</a>
-    <a class="active" href="cv.html">CV</a>
-    <a href="mailto:bitsofalber@gmail.com">Contacto</a>
-  </div>
-</div>
-
-<div class="content">
-
-<h1>Curriculum Vitae</h1>
-
-<h2>Perfil Profesional</h2>
-<div class="card">
-  Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y monitorización de sistemas.<br><br>
-  Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados.<br><br>
-  Buscando oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.
-</div>
-
-<h2>Experiencia Profesional</h2>
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="card">
-      <strong>Vigilante de Seguridad</strong><br>
-      Viten Seguridad y Transportes Blindados S.A. | 2018 – 2026
-      <ul>
-        <li>Aplicación de protocolos de seguridad y gestión de incidentes</li>
-        <li>Vigilancia preventiva y detección de riesgos</li>
-        <li>Toma de decisiones críticas bajo presión</li>
-      </ul>
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="logo">A</span><span>Alberto Hidalgo<small>bitsofalber · Blue Team</small></span></a>
+    <button class="nav-toggle" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="terminal.html">Terminal</a>
+      <a class="cta" href="mailto:bitsofalber@gmail.com">Contacto</a>
     </div>
   </div>
-</div>
+</nav>
 
-<h2>Educación</h2>
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-dot"></div>
-    <div class="card">
-      <strong>Administración de Sistemas Informáticos en Red (ASIR)</strong><br>
-      FP Euroformac | 2025 – Actualidad
+<div class="wrap">
+  <div class="cv-head reveal">
+    <img src="img/img.jpeg" alt="Alberto Hidalgo">
+    <div>
+      <span class="kicker">Curriculum Vitae</span>
+      <h1 style="font-size:34px;font-weight:800;margin:8px 0 4px">Alberto Hidalgo</h1>
+      <p style="color:var(--muted);font-family:var(--mono);font-size:14px">SOC Analyst · Blue Team · eJPTv2</p>
     </div>
+  </div>
+
+  <div class="cv-grid" style="padding-bottom:20px">
+    <!-- MAIN -->
+    <div>
+      <div class="cv-block reveal">
+        <span class="kicker">Perfil profesional</span>
+        <div class="card">Estudiante de Administración de Sistemas Informáticos en Red con gran interés en la ciberseguridad y la monitorización de sistemas. Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados. Busco oportunidades de prácticas o posiciones junior en sistemas, redes o ciberseguridad.</div>
+      </div>
+
+      <div class="cv-block reveal">
+        <span class="kicker">Experiencia</span>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-role">Vigilante de Seguridad</div>
+            <div class="tl-meta">Viten Seguridad y Transportes Blindados S.A. · 2018 – 2026</div>
+            <ul>
+              <li>Aplicación de protocolos de seguridad y gestión de incidentes.</li>
+              <li>Vigilancia preventiva y detección de riesgos.</li>
+              <li>Toma de decisiones críticas bajo presión.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-block reveal">
+        <span class="kicker">Educación</span>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-role">Administración de Sistemas Informáticos en Red (ASIR)</div>
+            <div class="tl-meta">FP Euroformac · 2025 – Actualidad</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-block reveal">
+        <span class="kicker">Certificaciones & formación</span>
+        <div class="card">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
+            <li style="color:var(--text)"><span style="color:var(--accent)">◆</span> eLearnSecurity Junior Penetration Tester v2 <b>(eJPTv2)</b> — 2025</li>
+            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> Curso de Splunk</li>
+            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> Introducción al Web Hacking</li>
+            <li style="color:var(--muted)"><span style="color:var(--accent)">◆</span> Blue Team Path — TryHackMe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDE -->
+    <aside>
+      <div class="cv-block reveal">
+        <span class="kicker">Contacto</span>
+        <div class="contact-row">
+          <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">🐙 github.com/bitsofalber</a>
+          <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">💼 in/ahidalgotech</a>
+          <a href="mailto:bitsofalber@gmail.com">✉️ bitsofalber@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="cv-block reveal">
+        <span class="kicker">Habilidades técnicas</span>
+        <div class="card">
+          <div class="chips">
+            <span class="chip accent">Splunk</span><span class="chip">SIEM</span><span class="chip">Detección de amenazas</span>
+            <span class="chip">Linux</span><span class="chip">Windows</span><span class="chip">Redes</span>
+            <span class="chip">Virtualización</span><span class="chip">Nmap</span><span class="chip">Burp Suite</span>
+            <span class="chip">Web Pentesting</span><span class="chip">OWASP Top 10</span><span class="chip">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-block reveal">
+        <span class="kicker">Información adicional</span>
+        <div class="card">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:14px">
+            <li><span style="color:var(--accent)">–</span> Inglés: nivel intermedio</li>
+            <li><span style="color:var(--accent)">–</span> Carnet de conducir y vehículo propio</li>
+            <li><span style="color:var(--accent)">–</span> Disponibilidad para viajar</li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="btn btn-primary" href="index.html" style="width:100%;justify-content:center">← Volver a Inicio</a>
+    </aside>
   </div>
 </div>
 
-<h2>Certificaciones</h2>
-<div class="card">
-  <ul>
-    <li>eLearnSecurity Junior Penetration Tester v2 (eJPTv2) — 2025</li>
-    <li>Curso Splunk</li>
-    <li>Curso Introducción al Web Hacking</li>
-    <li>Blue Team Path — TryHackMe</li>
-  </ul>
-</div>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div><div style="font-weight:800;font-size:16px">Alberto Hidalgo</div><div class="f-copy">SOC Analyst · Blue Team — © 2026</div></div>
+    <div class="f-links">
+      <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html">Inicio</a>
+      <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a>
+    </div>
+  </div>
+</footer>
 
-<h2>Habilidades Técnicas</h2>
-<div class="skills">
-  <span>Linux & Windows</span>
-  <span>Redes</span>
-  <span>Virtualización</span>
-  <span>Splunk</span>
-  <span>Detección de amenazas</span>
-  <span>OWASP Top 10</span>
-  <span>Nmap</span>
-  <span>Burp Suite</span>
-  <span>Web Pentesting</span>
-</div>
-
-<h2>Información Adicional</h2>
-<div class="card">
-  <ul>
-    <li>Inglés: nivel intermedio</li>
-    <li>Carnet de conducir y vehículo propio</li>
-    <li>Disponibilidad para viajar</li>
-  </ul>
-</div>
-
-<h2>Contacto</h2>
-<div class="card contact">
-  <p><a href="https://github.com/bitsofalber" target="_blank">GitHub</a></p>
-  <p><a href="https://www.linkedin.com/in/ahidalgotech" target="_blank">LinkedIn</a></p>
-  <p><a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a></p>
-</div>
-
-<div class="back-home">
-  <a href="index.html" class="btn-home">← Volver a Inicio</a>
-</div>
-
-</div>
-
-<!-- SCRIPT FONDO ANIMADO -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <script>
-tsParticles.load("particles-js", {
-  background: { color: "transparent" },
-  particles: {
-    number: { value: 35 },
-    color: { value: "#9FEF00" },
-    links: {
-      enable: true,
-      distance: 140,
-      color: "#9FEF00",
-      opacity: 0.15,
-      width: 1
-    },
-    move: { enable: true, speed: 0.6 },
-    size: { value: 2 },
-    opacity: { value: 0.35 }
-  },
-  interactivity: {
-    events: { onHover: { enable: true, mode: "grab" } },
-    modes: { grab: { distance: 120, links: { opacity: 0.3 } } }
-  }
-});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
 </script>
-
 </body>
 </html>
