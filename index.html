@@ -13,251 +13,217 @@
 <meta property="og:url" content="https://bitsofalber.github.io/">
 <meta property="og:image" content="https://bitsofalber.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="bg-glow"></div><div class="bg-grid"></div>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">
-      <span class="logo">A</span>
-      <span>Alberto Hidalgo<small>bitsofalber · SOC Trainee</small></span>
+<div class="device-frame">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <a href="index.html" class="nav-btn active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
     </a>
-    <button class="nav-toggle" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('open')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    <div class="nav-links" id="nav">
-      <a href="#sobre-mi" data-en="About">Sobre mí</a>
-      <a href="#writeups" data-en="Write-ups">Write-ups</a>
-      <a href="#proyectos" data-en="Projects">Proyectos</a>
-      <a href="cv.html" data-en="CV">CV</a>
-      <a href="terminal.html">Terminal</a>
-      <span class="lang-btn"><button data-lang="es">ES</button><button data-lang="en">EN</button></span>
-      <a class="cta" href="mailto:bitsofalber@gmail.com" data-en="Contact">Contacto</a>
+    <a href="cv.html" class="nav-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </a>
+    <a href="writeups.html" class="nav-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </a>
+    <a href="projects.html" class="nav-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    </a>
+    <a href="terminal.html" class="nav-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+    </a>
+    <a href="mailto:albertohidalgomoreno@gmail.com" class="nav-btn sidebar-bottom">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="app-content">
+    <div class="header">
+      <div class="header-left">
+        <span data-en="Welcome to">Dashboard de</span> <b>Alberto Hidalgo</b>
+      </div>
+      <div class="header-right">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar habilidades, experiencia..." data-en="Search skills, experience...">
+          <button class="search-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+        <a href="https://github.com/bitsofalber" class="nav-btn" style="color:var(--text-dark); border: 1.5px solid var(--border); border-radius:50%; width:44px; height:44px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <div class="profile">
+          <img src="img/img.webp" alt="Alberto Hidalgo" class="profile-pic">
+          <div class="profile-info">
+            <span class="profile-name">Alberto Hidalgo</span>
+            <span class="profile-role">@bitsofalber</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-scroll">
+      
+      <!-- CARDS SECTION -->
+      <div class="section-header">
+        <h2 class="section-title" data-en="My Highlights">Destacados</h2>
+        <div class="filter-tags">
+          <button class="filter-tag active" data-en="All">Todos</button>
+          <a href="projects.html" class="filter-tag" style="text-decoration:none; color:var(--text-dark)" data-en="Projects">Proyectos</a>
+          <a href="writeups.html" class="filter-tag" style="text-decoration:none; color:var(--text-dark)" data-en="Write-ups">Write-ups</a>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <div class="course-card yellow">
+          <div class="card-top">
+            <span class="card-tag">Proyectos</span>
+            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+          </div>
+          <h3 class="card-title">KrakenSOC-Labs</h3>
+          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Blue Team</span><span>Docker</span></span>
+            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
+          </div>
+          <div class="card-footer">
+            <div style="font-size:13px; font-weight:500;">9 Labs interactivos</div>
+            <a href="https://github.com/bitsofalber/KrakenSOC-Labs" class="card-btn" style="text-decoration:none" data-en="View">Ver Github</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="course-card purple">
+          <div class="card-top">
+            <span class="card-tag">Artículos</span>
+            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+          </div>
+          <h3 class="card-title">Write-ups & Detecciones</h3>
+          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Investigaciones</span><span>Splunk</span></span>
+            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
+          </div>
+          <div class="card-footer">
+            <div style="font-size:13px; font-weight:500;">Casos prácticos</div>
+            <a href="writeups.html" class="card-btn" style="text-decoration:none" data-en="Read">Leer Más</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="course-card blue">
+          <div class="card-top">
+            <span class="card-tag">Interactivo</span>
+            <button class="bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+          </div>
+          <h3 class="card-title">Terminal Hacker</h3>
+          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Pruébalo</span><span>CLI</span></span>
+            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%; background:var(--text-dark)"></div></div>
+          </div>
+          <div class="card-footer">
+            <div style="font-size:13px; font-weight:500;">Entorno simulado</div>
+            <a href="terminal.html" class="card-btn" style="text-decoration:none" data-en="Start">Iniciar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW -->
+      <div class="bottom-grid">
+        <!-- Lessons / Write-ups -->
+        <div class="lessons-panel">
+          <div class="lessons-header">
+            <h2 class="lessons-title" data-en="Latest Investigations">Últimas Investigaciones</h2>
+            <a href="writeups.html" class="lessons-link" data-en="View all">Ver todas</a>
+          </div>
+          <table class="lessons-table">
+            <thead>
+              <tr>
+                <th data-en="Title">Título</th>
+                <th data-en="Category">Categoría</th>
+                <th style="text-align:right" data-en="Tags">Etiquetas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="lesson-info">
+                    <span class="lesson-num-title">Silent Harvest</span>
+                    <span class="lesson-desc" data-en="DNS tunneling exfiltration">Exfiltración por DNS tunneling</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="lesson-teacher">
+                    <div class="teacher-pic" style="background:#E6DAFF">NF</div>
+                    Network Forensics
+                  </div>
+                </td>
+                <td class="lesson-duration">T1048.003</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="lesson-info">
+                    <span class="lesson-num-title">Battering Ram</span>
+                    <span class="lesson-desc" data-en="Password spraying vs brute force">Password spraying vs fuerza bruta</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="lesson-teacher">
+                    <div class="teacher-pic" style="background:#FBE47F">SI</div>
+                    SIEM
+                  </div>
+                </td>
+                <td class="lesson-duration">T1110.003</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="lesson-info">
+                    <span class="lesson-num-title">Overwatch</span>
+                    <span class="lesson-desc" data-en="Full intrusion correlation">Correlación de intrusión completa</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="lesson-teacher">
+                    <div class="teacher-pic" style="background:#D6F1FA">CO</div>
+                    Correlation
+                  </div>
+                </td>
+                <td class="lesson-duration">Splunk</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Right Panel (About / Skills) -->
+        <div class="right-panel">
+          <div class="rp-subtitle" data-en="About me">Sobre mí</div>
+          <div><span class="rp-tag">Cybersecurity Specialist</span></div>
+          <h3 class="rp-title" data-en="ASIR student and Blue Team enthusiast.">Estudiante de ASIR y apasionado del Blue Team.</h3>
+          
+          <p style="font-size:13px; color:#CCCCCC; margin-bottom:24px; line-height:1.5" data-en="I build hands-on threat simulation environments and SIEM labs to practice attack detection.">
+            Desarrollo entornos de simulación de amenazas y laboratorios SIEM para poner en práctica la detección de ataques. Busco aportar mi mentalidad analítica en un equipo de SOC.
+          </p>
+
+          <div style="font-size:12px; color:#A0A0A0; margin-bottom:12px">Habilidades Técnicas:</div>
+          <div class="skills-container">
+            <span class="skill-chip">Splunk</span>
+            <span class="skill-chip">Sistemas y Redes</span>
+            <span class="skill-chip">Linux & Windows</span>
+            <span class="skill-chip">Nmap</span>
+            <span class="skill-chip">Pentesting Web</span>
+            <span class="skill-chip">Docker</span>
+          </div>
+
+          <a href="cv.html" class="rp-btn" data-en="View Full CV">Ver Currículum Completo</a>
+        </div>
+      </div>
+
     </div>
   </div>
-</nav>
-
-<div class="wrap">
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="reveal">
-      <span class="kicker">Cybersecurity & Systems Specialist</span>
-      <h1>Alberto <span class="grad">Hidalgo</span></h1>
-      <p class="lead" style="font-size:20px;color:var(--text);font-weight:600;margin-bottom:10px" data-en="ASIR student and <b>Blue Team</b> enthusiast.">Estudiante de ASIR y apasionado del <b>Blue Team</b>.</p>
-      <p class="lead" data-en="I build hands-on <b>threat simulation environments</b> and SIEM labs to practice attack detection. Seeking to bring my analytical mindset to a SOC team.">Desarrollo <b>entornos de simulación de amenazas</b> y laboratorios SIEM para poner en práctica la detección de ataques. Busco aportar mi mentalidad analítica en un equipo de SOC.</p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:bitsofalber@gmail.com" data-en="Contact me">Contáctame</a>
-        <a class="btn btn-outline" href="cv.html" data-en="View CV">Ver CV</a>
-        <a class="btn btn-outline" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" rel="noopener">KrakenSOC-Labs ↗</a>
-      </div>
-
-      <div class="metrics reveal">
-        <div class="metric"><div class="m-num">9</div><div class="m-lbl" data-en="Blue Team Docker labs">Labs Blue Team en Docker</div></div>
-        <div class="metric"><div class="m-num">30+</div><div class="m-lbl" data-en="ATT&CK techniques">Técnicas ATT&CK</div></div>
-        <div class="metric"><div class="m-num">Sigma</div><div class="m-lbl" data-en="+ Suricata detection rules">+ Suricata · reglas de detección</div></div>
-        <div class="metric"><div class="m-num">eJPTv2</div><div class="m-lbl" data-en="Certified (verifiable)">Certificado (verificable)</div></div>
-      </div>
-
-      <div class="chips" style="margin-bottom:20px">
-        <a class="cred" href="https://certs.ine.com/a936b81a-2e84-47f2-9cb6-a6334e6b4db8#acc.BF9vQ26p" target="_blank" rel="noopener" style="text-decoration:none"><span class="ic">◆</span> eJPTv2 <span style="color:var(--dim)">↗</span></a>
-        <span class="cred"><span class="ic">◆</span> Splunk</span>
-        <span class="cred"><span class="ic">◆</span> ASIR</span>
-        <span class="cred"><span class="ic">◆</span> MITRE ATT&CK</span>
-      </div>
-
-      <div class="socials">
-        <a href="https://github.com/bitsofalber" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 5 18 5.3 18 5.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a>
-        <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21H18v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H10V9Z"/></svg></a>
-        <a href="mailto:bitsofalber@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
-      </div>
-    </div>
-
-    <div class="profile reveal">
-      <img src="img/img.webp" alt="Alberto Hidalgo" width="132" height="132">
-      <div class="p-name">Alberto Hidalgo</div>
-      <div class="p-role">SOC Trainee</div>
-      <div class="status"><span class="dot"></span> <span data-en="Open to work">Open to work</span></div>
-    </div>
-  </header>
-
-  <!-- SOBRE MÍ -->
-  <section id="sobre-mi">
-    <div class="reveal">
-      <span class="kicker" data-en="About">Sobre mí</span>
-      <h2 class="h-section" data-en="Defense, detection and response">Defensa, detección y respuesta</h2>
-      <p class="section-sub" data-en="ASIR student passionate about defensive security. I live the SOC day-to-day: log analysis, threat detection with Splunk, cross-source correlation and incident response — backed by offensive fundamentals (eJPTv2) to think like the attacker.">Estudiante de ASIR y apasionado de la ciberseguridad defensiva. Trabajo el día a día del SOC: análisis de logs, detección de amenazas con Splunk, correlación entre fuentes y respuesta a incidentes — apoyado en fundamentos ofensivos (eJPTv2) para entender al atacante.</p>
-    </div>
-    <div class="grid cols-3" style="margin-top:26px">
-      <div class="card reveal">
-        <div class="c-ic"><svg class="icn" viewBox="0 0 24 24"><path d="M3 12h3l2 6 4-14 3 9 2-3h4"/></svg></div>
-        <h3>SIEM &amp; Threat Hunting</h3>
-        <p data-en="Investigation with Splunk over Sysmon, Windows Event Logs, Zeek and proxy. TTP hunting and multi-source correlation.">Investigación con Splunk sobre Sysmon, Windows Event Logs, Zeek y proxy. Caza de TTPs y correlación multi-fuente.</p>
-      </div>
-      <div class="card reveal">
-        <div class="c-ic"><svg class="icn" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Detection Engineering</h3>
-        <p data-en="Sigma and SPL rules, MITRE ATT&CK mapping and validating detections against real attacks.">Reglas Sigma y SPL, mapeo a MITRE ATT&amp;CK y validación de detecciones contra ataques reales.</p>
-      </div>
-      <div class="card reveal">
-        <div class="c-ic"><svg class="icn" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
-        <h3>Network Forensics &amp; DFIR</h3>
-        <p data-en="PCAP analysis (Wireshark/tcpdump), reconstructing the attack chain and incident response.">Análisis de PCAP (Wireshark/tcpdump), reconstrucción de la cadena de ataque y respuesta a incidentes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURED -->
-  <section id="destacado">
-    <div class="reveal"><span class="kicker" data-en="Featured project">Proyecto destacado</span></div>
-    <div class="featured reveal" style="margin-top:16px">
-      <div class="featured-inner">
-        <span class="flag"><svg class="flag-ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg>KrakenSOC-Labs</span>
-        <h3 data-en="Blue Team labs, packaged in Docker">Laboratorios Blue Team en Docker</h3>
-        <p data-en="A collection of SOC labs packaged in Docker: download a lab, spin it up on your machine and investigate real attacker techniques with real tools (Wireshark, tcpdump, <b>a real Splunk</b>). Every lab is deterministic, MITRE ATT&CK-mapped and ships Sigma/Suricata detection rules.">Una colección de labs SOC empaquetados en Docker: te los descargas, levantas el entorno en tu máquina e investigas técnicas reales de atacante con herramientas reales (Wireshark, tcpdump, <b>un Splunk real</b>). Cada lab es determinista, mapeado a MITRE ATT&amp;CK e incluye reglas de detección Sigma/Suricata.</p>
-        <div class="lab-cols">
-          <div class="lab-col">
-            <h4 data-en="Network Forensics">Forense de Red</h4>
-            <ul>
-              <li><b>Plain Sight</b> <span data-en="— cleartext credential capture">— captura de credenciales en claro</span></li>
-              <li><b>Silent Harvest</b> <span data-en="— DNS exfiltration">— exfiltración por DNS</span></li>
-              <li><b>Ghost Protocol</b> <span data-en="— HTTP C2 beacon analysis">— análisis de beacon C2 HTTP</span></li>
-            </ul>
-          </div>
-          <div class="lab-col">
-            <h4>Splunk / SIEM</h4>
-            <ul>
-              <li><b>Baited</b> · <b>Battering Ram</b> · <b>Pilfer</b> · <b>Poltergeist</b></li>
-              <li><span data-en="phishing · brute force · insider/USB · PowerShell">phishing · fuerza bruta · insider/USB · PowerShell</span></li>
-              <li><b>Cryptolock</b> (ransomware) · <b>Overwatch</b> (capstone)</li>
-            </ul>
-          </div>
-        </div>
-        <a class="btn btn-primary" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" rel="noopener" data-en="View on GitHub ↗">Ver en GitHub ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WRITE-UPS TEASER -->
-  <section id="writeups">
-    <div class="reveal">
-      <span class="kicker" data-en="Proof of work">Demostración práctica</span>
-      <h2 class="h-section">Write-ups &amp; detecciones</h2>
-      <p class="section-sub" data-en="Real investigations from my own labs: the hypothesis, the SPL, the detection logic and the ATT&CK mapping — not just a tool list.">Investigaciones reales de mis propios labs: la hipótesis, la SPL, la lógica de detección y el mapeo ATT&amp;CK — no una lista de herramientas.</p>
-    </div>
-    <div class="grid cols-3 reveal" style="margin-top:24px">
-      <a class="card proj" href="writeups.html#silent-harvest">
-        <div class="p-top"><span class="p-tag">Network Forensics · T1048.003</span><span class="arrow">↗</span></div>
-        <h3>Silent Harvest</h3>
-        <p data-en="Detecting DNS tunneling exfiltration in a PCAP: high-entropy subdomains and base32 reconstruction.">Detección de exfiltración por DNS tunneling en un PCAP: subdominios de alta entropía y reconstrucción base32.</p>
-      </a>
-      <a class="card proj" href="writeups.html#battering-ram">
-        <div class="p-top"><span class="p-tag">SIEM · T1110.003</span><span class="arrow">↗</span></div>
-        <h3>Battering Ram</h3>
-        <p data-en="Password spraying vs brute force in Windows Security logs, and pivoting to the compromise.">Password spraying vs fuerza bruta en logs de Windows, y el pivote al compromiso.</p>
-      </a>
-      <a class="card proj" href="writeups.html#overwatch">
-        <div class="p-top"><span class="p-tag">SIEM · Correlation</span><span class="arrow">↗</span></div>
-        <h3>Overwatch</h3>
-        <p data-en="Correlating a full intrusion across Sysmon, Azure AD, Zeek and proxy in Splunk.">Correlación de una intrusión completa entre Sysmon, Azure AD, Zeek y proxy en Splunk.</p>
-      </a>
-    </div>
-    <div style="margin-top:20px" class="reveal"><a class="btn btn-outline" href="writeups.html" data-en="Read all write-ups →">Ver todos los write-ups →</a></div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section id="proyectos">
-    <div class="reveal">
-      <span class="kicker" data-en="Projects">Proyectos</span>
-      <h2 class="h-section" data-en="Work & labs">Trabajo &amp; laboratorios</h2>
-      <p class="section-sub" data-en="Hands-on environments, notes and cybersecurity tools.">Entornos prácticos, apuntes y herramientas de ciberseguridad.</p>
-    </div>
-    <div class="grid cols-3" style="margin-top:26px">
-      <a class="card proj reveal" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">Blue Team · Docker</span><span class="arrow">↗</span></div>
-        <h3>KrakenSOC-Labs</h3>
-        <p data-en="9 Blue Team Docker labs: network forensics and threat hunting with Splunk.">9 laboratorios Blue Team en Docker: forense de red y caza de amenazas con Splunk.</p>
-        <div class="p-tech"><span>Docker</span><span>Splunk</span><span>Sigma</span><span>Python</span></div>
-      </a>
-      <a class="card proj reveal" href="https://github.com/bitsofalber/asir-learning-labs" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">Systems · Networking</span><span class="arrow">↗</span></div>
-        <h3>ASIR Learning Labs</h3>
-        <p data-en="Hands-on labs in Linux, networking, databases and security.">Laboratorios prácticos de Linux, redes, bases de datos y seguridad.</p>
-        <div class="p-tech"><span>Linux</span><span>Networking</span><span>Security</span></div>
-      </a>
-      <a class="card proj reveal" href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">DevSecOps · Homelab</span><span class="arrow">↗</span></div>
-        <h3>Raspberry Homelab</h3>
-        <p data-en="Secure self-hosted infrastructure on Raspberry Pi with Docker and automation.">Infraestructura self-hosted segura en Raspberry Pi con Docker y automatización.</p>
-        <div class="p-tech"><span>Docker</span><span>VPN</span><span>Automation</span></div>
-      </a>
-      <a class="card proj reveal" href="https://github.com/bitsofalber/ciberseguridad" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">Notes · Blue Team</span><span class="arrow">↗</span></div>
-        <h3>Cybersecurity Notes</h3>
-        <p data-en="Technical notes on cybersecurity and defensive concepts.">Apuntes técnicos de ciberseguridad y conceptos defensivos.</p>
-        <div class="p-tech"><span>Blue Team</span><span>DFIR</span><span>SOC</span></div>
-      </a>
-      <a class="card proj reveal" href="https://tech4uacademy.es" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">Founder · Training</span><span class="arrow">↗</span></div>
-        <h3>tech4uAcademy</h3>
-        <p data-en="Hands-on cybersecurity training project I founded and maintain.">Proyecto de formación práctica en ciberseguridad que fundé y mantengo.</p>
-        <div class="p-tech"><span>Training</span><span>SOC</span><span>Web</span></div>
-      </a>
-      <a class="card proj reveal" href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank" rel="noopener">
-        <div class="p-top"><span class="p-tag">Web</span><span class="arrow">↗</span></div>
-        <h3>Portfolio</h3>
-        <p data-en="This site — clean design and an interactive terminal.">Esta web — diseño limpio y una terminal interactiva.</p>
-        <div class="p-tech"><span>HTML</span><span>CSS</span><span>JS</span></div>
-      </a>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="reveal">
-      <span class="kicker">Skills</span>
-      <h2 class="h-section" data-en="Tools & knowledge">Herramientas &amp; conocimientos</h2>
-    </div>
-    <div class="grid cols-2 reveal" style="margin-top:24px">
-      <div class="card">
-        <div class="skillgroup"><div class="sg-title">// Blue Team &amp; SIEM</div>
-          <div class="chips"><span class="chip accent">Splunk</span><span class="chip">SPL</span><span class="chip">Sysmon</span><span class="chip">Windows Event Logs</span><span class="chip">Zeek</span><span class="chip">Suricata</span><span class="chip">Sigma</span><span class="chip">MITRE ATT&CK</span><span class="chip">Threat Hunting</span></div>
-        </div>
-        <div class="skillgroup" style="margin-bottom:0"><div class="sg-title">// Forensics &amp; DFIR</div>
-          <div class="chips"><span class="chip">Wireshark</span><span class="chip">tcpdump</span><span class="chip">Network Forensics</span><span class="chip">Incident Response</span></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="skillgroup"><div class="sg-title" data-en="// Offensive (fundamentals)">// Offensive (fundamentos)</div>
-          <div class="chips"><span class="chip accent">eJPTv2</span><span class="chip">Nmap</span><span class="chip">Burp Suite</span><span class="chip">Web Pentesting</span><span class="chip">OWASP Top 10</span></div>
-        </div>
-        <div class="skillgroup" style="margin-bottom:0"><div class="sg-title" data-en="// Systems & Dev">// Sistemas &amp; Dev</div>
-          <div class="chips"><span class="chip">Linux</span><span class="chip">Windows</span><span class="chip" data-en="Networking">Redes</span><span class="chip" data-en="Virtualization">Virtualización</span><span class="chip">Docker</span><span class="chip">Python</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </div>
-
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <div>
-      <div style="font-weight:800;font-size:16px">Alberto Hidalgo</div>
-      <div class="f-copy">SOC Trainee — © 2026</div>
-    </div>
-    <div class="f-links">
-      <a href="https://github.com/bitsofalber" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/ahidalgotech" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="writeups.html">Write-ups</a>
-      <a href="cv.html">CV</a>
-      <a href="mailto:bitsofalber@gmail.com">bitsofalber@gmail.com</a>
-    </div>
-  </div>
-</footer>
 
 <script src="assets/main.js"></script>
 </body>
