@@ -12,140 +12,152 @@
 </head>
 <body>
 
-<div class="device-frame">
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <a href="index.html" class="nav-btn">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">A</div>
+    Alberto Hidalgo
+  </a>
+  <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
+  <div class="nav-links" id="nav-menu">
+    <a href="index.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      Inicio
     </a>
-    <a href="cv.html" class="nav-btn">
+    <a href="cv.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      CV
     </a>
-    <a href="writeups.html" class="nav-btn">
+    <a href="writeups.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      Write-ups
     </a>
-    <a href="projects.html" class="nav-btn active">
+    <a href="projects.html" class="nav-link active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Proyectos
     </a>
-    <a href="terminal.html" class="nav-btn">
+    <a href="terminal.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-    </a>
-    <a href="mailto:albertohidalgomoreno@gmail.com" class="nav-btn sidebar-bottom">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Terminal
     </a>
   </div>
+</nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="app-content">
-    <div class="header">
-      <div class="header-left">
-        <span data-en="Projects & Labs">Proyectos & Labs</span> <b>Destacados</b>
-      </div>
-      <div class="header-right">
-        <div class="search-bar">
-          <input type="text" placeholder="Buscar proyectos..." data-en="Search projects...">
-          <button class="search-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </button>
-        </div>
-        <a href="https://github.com/bitsofalber" class="nav-btn" style="color:var(--text-dark); border: 1.5px solid var(--border); border-radius:50%; width:44px; height:44px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-      </div>
+<!-- MAIN CONTENT -->
+<main class="container">
+  
+  <header class="page-header">
+    <div>
+      <h1 class="page-title">Proyectos <span style="color:var(--text-muted); font-weight:400" data-en="& Labs">& Labs</span></h1>
+      <p class="page-subtitle" data-en="Hands-on defensive security, systems and automation projects.">Laboratorios prácticos, infraestructuras y desarrollo orientado a ciberseguridad.</p>
     </div>
-
-    <div class="dashboard-scroll">
-      
-      <!-- FEATURED PROJECT -->
-      <div class="lessons-panel" style="margin-bottom:30px; border-color:var(--yellow); background:#FFFAF0">
-        <div class="lessons-header" style="margin-bottom:10px">
-          <h2 class="lessons-title">KrakenSOC-Labs</h2>
-          <span class="rp-tag" style="margin:0; background:var(--yellow)">Destacado</span>
-        </div>
-        <p style="color:var(--text-dark); font-size:14px; margin-bottom:24px" data-en="9 Blue Team Docker labs deployed with one command. Network forensics (PCAP) and threat hunting in a real Splunk. MITRE ATT&CK-mapped, with Sigma/Suricata rules.">9 laboratorios Blue Team en Docker que se despliegan con un comando: forense de red (PCAP) y caza de amenazas en un Splunk real. Mapeados a MITRE ATT&CK, con reglas Sigma/Suricata.</p>
-        
-        <div class="skills-container" style="margin-bottom:24px">
-          <span class="skill-chip" style="background:var(--text-dark); border:none">Docker</span>
-          <span class="skill-chip" style="background:var(--text-dark); border:none">Splunk</span>
-          <span class="skill-chip" style="background:var(--text-dark); border:none">Python</span>
-          <span class="skill-chip" style="background:var(--text-dark); border:none">Sigma</span>
-          <span class="skill-chip" style="background:var(--text-dark); border:none">Suricata</span>
-        </div>
-        
-        <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" style="display:inline-block" data-en="View on GitHub ↗">Ver en GitHub ↗</a>
-      </div>
-
-      <!-- OTHER PROJECTS -->
-      <div class="section-header">
-        <h2 class="section-title" data-en="Other Projects">Otros Proyectos</h2>
-      </div>
-
-      <div class="cards-grid">
-        
-        <!-- Project 1 -->
-        <a href="https://github.com/bitsofalber/asir-learning-labs" target="_blank" class="course-card purple">
-          <div class="card-top">
-            <span class="card-tag">Systems</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
-          </div>
-          <h3 class="card-title">ASIR Learning Labs</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <p data-en="Hands-on labs in Linux, networking, databases and security.">Laboratorios prácticos de Linux, redes, bases de datos y seguridad.</p>
-          </div>
-        </a>
-
-        <!-- Project 2 -->
-        <a href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank" class="course-card blue">
-          <div class="card-top">
-            <span class="card-tag">DevSecOps</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
-          </div>
-          <h3 class="card-title">Raspberry Homelab</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <p data-en="Secure self-hosted infrastructure on Raspberry Pi with Docker and automation.">Infraestructura self-hosted segura en Raspberry Pi con Docker y automatización.</p>
-          </div>
-        </a>
-
-        <!-- Project 3 -->
-        <a href="https://tech4uacademy.es" target="_blank" class="course-card yellow">
-          <div class="card-top">
-            <span class="card-tag" style="background:var(--text-dark)">Training</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
-          </div>
-          <h3 class="card-title">tech4uAcademy</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <p data-en="Hands-on cybersecurity training project I founded and maintain.">Proyecto de formación práctica en ciberseguridad que fundé y mantengo.</p>
-          </div>
-        </a>
-
-        <!-- Project 4 -->
-        <a href="https://github.com/bitsofalber/ciberseguridad" target="_blank" class="course-card" style="background:#f5f5f5">
-          <div class="card-top">
-            <span class="card-tag" style="background:var(--text-dark)">Notes</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
-          </div>
-          <h3 class="card-title">Cybersecurity Notes</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <p data-en="Technical notes on cybersecurity and defensive concepts.">Apuntes técnicos de ciberseguridad y conceptos defensivos (DFIR, SOC).</p>
-          </div>
-        </a>
-
-        <!-- Project 5 -->
-        <a href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank" class="course-card" style="background:#f5f5f5">
-          <div class="card-top">
-            <span class="card-tag" style="background:var(--text-dark)">Web</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
-          </div>
-          <h3 class="card-title">Portfolio Website</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <p data-en="Personal site with clean dashboard design.">Sitio web personal con diseño limpio tipo dashboard (HTML, CSS, JS).</p>
-          </div>
-        </a>
-
-      </div>
+    
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="https://github.com/bitsofalber" target="_blank" style="color:var(--text-dark);">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
     </div>
+  </header>
+
+  <!-- FEATURED PROJECT -->
+  <div class="lessons-panel" style="margin-bottom:40px; border-color:var(--yellow); background:#FFFAF0">
+    <div class="lessons-header" style="margin-bottom:10px">
+      <h2 class="lessons-title">KrakenSOC-Labs</h2>
+      <span class="rp-tag" style="margin:0; background:var(--yellow)">Destacado</span>
+    </div>
+    <p style="color:var(--text-dark); font-size:14px; margin-bottom:24px" data-en="9 Blue Team Docker labs deployed with one command. Network forensics (PCAP) and threat hunting in a real Splunk. MITRE ATT&CK-mapped, with Sigma/Suricata rules.">9 laboratorios Blue Team en Docker que se despliegan con un comando: forense de red (PCAP) y caza de amenazas en un Splunk real. Mapeados a MITRE ATT&CK, con reglas Sigma/Suricata.</p>
+    
+    <div class="skills-container" style="margin-bottom:24px">
+      <span class="skill-chip" style="background:var(--text-dark); border:none">Docker</span>
+      <span class="skill-chip" style="background:var(--text-dark); border:none">Splunk</span>
+      <span class="skill-chip" style="background:var(--text-dark); border:none">Python</span>
+      <span class="skill-chip" style="background:var(--text-dark); border:none">Sigma</span>
+      <span class="skill-chip" style="background:var(--text-dark); border:none">Suricata</span>
+    </div>
+    
+    <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" style="display:inline-block" data-en="View on GitHub ↗">Ver en GitHub ↗</a>
   </div>
-</div>
+
+  <!-- OTHER PROJECTS -->
+  <div class="section-header">
+    <h2 class="section-title" data-en="Other Projects">Otros Proyectos</h2>
+  </div>
+
+  <div class="cards-grid">
+    
+    <!-- Project 1 -->
+    <a href="https://github.com/bitsofalber/asir-learning-labs" target="_blank" class="course-card purple">
+      <div class="card-top">
+        <span class="card-tag">Systems</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+      </div>
+      <h3 class="card-title">ASIR Learning Labs</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <p data-en="Hands-on labs in Linux, networking, databases and security.">Laboratorios prácticos de Linux, redes, bases de datos y seguridad.</p>
+      </div>
+    </a>
+
+    <!-- Project 2 -->
+    <a href="https://github.com/bitsofalber/raspberry-homelab-infrastructure" target="_blank" class="course-card blue">
+      <div class="card-top">
+        <span class="card-tag">DevSecOps</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+      </div>
+      <h3 class="card-title">Raspberry Homelab</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <p data-en="Secure self-hosted infrastructure on Raspberry Pi with Docker and automation.">Infraestructura self-hosted segura en Raspberry Pi con Docker y automatización.</p>
+      </div>
+    </a>
+
+    <!-- Project 3 -->
+    <a href="https://tech4uacademy.es" target="_blank" class="course-card yellow">
+      <div class="card-top">
+        <span class="card-tag" style="background:var(--text-dark)">Training</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+      </div>
+      <h3 class="card-title">tech4uAcademy</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <p data-en="Hands-on cybersecurity training project I founded and maintain.">Proyecto de formación práctica en ciberseguridad que fundé y mantengo.</p>
+      </div>
+    </a>
+
+    <!-- Project 4 -->
+    <a href="https://github.com/bitsofalber/ciberseguridad" target="_blank" class="course-card" style="background:#f5f5f5">
+      <div class="card-top">
+        <span class="card-tag" style="background:var(--text-dark)">Notes</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+      </div>
+      <h3 class="card-title">Cybersecurity Notes</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <p data-en="Technical notes on cybersecurity and defensive concepts.">Apuntes técnicos de ciberseguridad y conceptos defensivos (DFIR, SOC).</p>
+      </div>
+    </a>
+
+    <!-- Project 5 -->
+    <a href="https://github.com/bitsofalber/bitsofalber.github.io" target="_blank" class="course-card" style="background:#f5f5f5">
+      <div class="card-top">
+        <span class="card-tag" style="background:var(--text-dark)">Web</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></button>
+      </div>
+      <h3 class="card-title">Portfolio Website</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <p data-en="Personal site with clean dashboard design.">Sitio web personal con diseño limpio tipo dashboard (HTML, CSS, JS).</p>
+      </div>
+    </a>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div><strong>Alberto Hidalgo</strong> — SOC Analyst · Blue Team</div>
+  <div class="footer-links">
+    <a href="https://github.com/bitsofalber">GitHub</a>
+    <a href="https://linkedin.com/in/ahidalgotech">LinkedIn</a>
+  </div>
+</footer>
 
 <script src="assets/main.js"></script>
 </body>

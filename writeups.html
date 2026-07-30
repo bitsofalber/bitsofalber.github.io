@@ -13,133 +13,139 @@
 </head>
 <body>
 
-<div class="device-frame">
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <a href="index.html" class="nav-btn">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">A</div>
+    Alberto Hidalgo
+  </a>
+  <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
+  <div class="nav-links" id="nav-menu">
+    <a href="index.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      Inicio
     </a>
-    <a href="cv.html" class="nav-btn">
+    <a href="cv.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      CV
     </a>
-    <a href="writeups.html" class="nav-btn active">
+    <a href="writeups.html" class="nav-link active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      Write-ups
     </a>
-    <a href="projects.html" class="nav-btn">
+    <a href="projects.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Proyectos
     </a>
-    <a href="terminal.html" class="nav-btn">
+    <a href="terminal.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-    </a>
-    <a href="mailto:albertohidalgomoreno@gmail.com" class="nav-btn sidebar-bottom">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Terminal
     </a>
   </div>
+</nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="app-content">
-    <div class="header">
-      <div class="header-left">
-        <b>Write-ups</b> <span data-en="& Detections">& Detecciones</span>
-      </div>
-      <div class="header-right">
-        <a href="https://github.com/bitsofalber" class="nav-btn" style="color:var(--text-dark); border: 1.5px solid var(--border); border-radius:50%; width:44px; height:44px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-        <div class="profile">
-          <img src="img/img.webp" alt="Alberto Hidalgo" class="profile-pic">
-          <div class="profile-info">
-            <span class="profile-name">Alberto Hidalgo</span>
-            <span class="profile-role">@bitsofalber</span>
-          </div>
-        </div>
-      </div>
+<!-- MAIN CONTENT -->
+<main class="container">
+  
+  <header class="page-header">
+    <div>
+      <h1 class="page-title">Write-ups <span style="color:var(--text-muted); font-weight:400" data-en="& Detections">& Detecciones</span></h1>
+      <p class="page-subtitle" data-en="Methodology-focused investigations from my KrakenSOC-Labs: hypothesis, the exact SPL/filters, the detection logic and the ATT&CK mapping. Flags are omitted so the labs stay solvable.">Investigaciones centradas en la metodología, de mis KrakenSOC-Labs: hipótesis, la SPL/filtros exactos, la lógica de detección y el mapeo ATT&CK. Se omiten las flags para no destripar los labs.</p>
     </div>
+    
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="https://github.com/bitsofalber" target="_blank" style="color:var(--text-dark);">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </header>
 
-    <div class="dashboard-scroll">
+  <!-- WRITEUP 1 -->
+  <div class="lessons-panel" style="margin-bottom:30px">
+    <div class="lessons-header" style="margin-bottom:10px">
+      <h2 class="lessons-title">Silent Harvest — Exfiltración por DNS tunneling</h2>
+      <span class="rp-tag" style="margin:0; background:var(--purple)">Network Forensics</span>
+    </div>
+    <p style="color:var(--text-muted); font-size:14px; margin-bottom:24px" data-en="A workstation leaks a payroll file off the network using only DNS. Prove it, quantify it and reconstruct what was stolen.">Una estación filtra un fichero de nóminas fuera de la red usando solo DNS. Demostrarlo, cuantificarlo y reconstruir lo robado.</p>
+    
+    <div class="text-content">
+      <h3>Idea clave & Hipótesis</h3>
+      <p data-en="No HTTP upload, no email — but a spike in DNS. Hypothesis: DNS tunneling, where data is encoded into subdomain labels toward an attacker-controlled domain.">No hay subida HTTP ni correo, pero sí un pico de DNS. Hipótesis: DNS tunneling, con datos codificados en las etiquetas de subdominio hacia un dominio del atacante.</p>
       
-      <div class="section-header" style="margin-bottom:40px">
-        <p style="color:var(--text-muted); font-size:15px; max-width:800px" data-en="Methodology-focused investigations from my KrakenSOC-Labs: hypothesis, the exact SPL/filters, the detection logic and the ATT&CK mapping. Flags are omitted so the labs stay solvable.">Investigaciones centradas en la metodología, de mis KrakenSOC-Labs: hipótesis, la SPL/filtros exactos, la lógica de detección y el mapeo ATT&CK. Se omiten las flags para no destripar los labs.</p>
-      </div>
-
-      <!-- WRITEUP 1 -->
-      <div class="lessons-panel" style="margin-bottom:30px">
-        <div class="lessons-header" style="margin-bottom:10px">
-          <h2 class="lessons-title">Silent Harvest — Exfiltración por DNS tunneling</h2>
-          <span class="rp-tag" style="margin:0; background:var(--purple)">Network Forensics</span>
-        </div>
-        <p style="color:var(--text-muted); font-size:14px; margin-bottom:24px" data-en="A workstation leaks a payroll file off the network using only DNS. Prove it, quantify it and reconstruct what was stolen.">Una estación filtra un fichero de nóminas fuera de la red usando solo DNS. Demostrarlo, cuantificarlo y reconstruir lo robado.</p>
-        
-        <div class="text-content">
-          <h3>Idea clave & Hipótesis</h3>
-          <p data-en="No HTTP upload, no email — but a spike in DNS. Hypothesis: DNS tunneling, where data is encoded into subdomain labels toward an attacker-controlled domain.">No hay subida HTTP ni correo, pero sí un pico de DNS. Hipótesis: DNS tunneling, con datos codificados en las etiquetas de subdominio hacia un dominio del atacante.</p>
-          
-          <div style="background:#111; color:#0F0; font-family:monospace; padding:16px; border-radius:12px; margin-bottom:20px; overflow-x:auto; font-size:13px">
+      <div style="background:#111; color:#0F0; font-family:monospace; padding:16px; border-radius:12px; margin-bottom:20px; overflow-x:auto; font-size:13px">
 # dominios más consultados en el PCAP<br>
 tshark -r dns-exfil.pcap -Y 'dns.flags.response==0' -T fields -e dns.qry.name \<br>
 &nbsp;&nbsp;| rev | cut -d. -f1-2 | rev | sort | uniq -c | sort -rn | head
-          </div>
+      </div>
 
-          <h3>Detección Sigma</h3>
-          <p data-en="Alert on DNS query names with very long, high-entropy labels toward a single parent domain — classic tunneling.">Alertar sobre nombres DNS con etiquetas muy largas y de alta entropía hacia un mismo dominio padre — tunneling clásico.</p>
-          <div style="background:#f5f5f5; border:1px solid var(--border); padding:16px; border-radius:12px; font-family:monospace; margin-bottom:20px; font-size:13px">
+      <h3>Detección Sigma</h3>
+      <p data-en="Alert on DNS query names with very long, high-entropy labels toward a single parent domain — classic tunneling.">Alertar sobre nombres DNS con etiquetas muy largas y de alta entropía hacia un mismo dominio padre — tunneling clásico.</p>
+      <div style="background:#f5f5f5; border:1px solid var(--border); padding:16px; border-radius:12px; font-family:monospace; margin-bottom:20px; font-size:13px">
 detection:<br>
 &nbsp;&nbsp;selection_long_label:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;dns.query.name|re: '([a-z2-7]{40,})\.'<br>
 &nbsp;&nbsp;condition: selection_long_label<br>
 level: high  # tags: attack.t1048.003, attack.t1071.004
-          </div>
-          <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/silent-harvest" target="_blank" style="display:inline-block">Ver Lab Completo ↗</a>
-        </div>
       </div>
+      <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/silent-harvest" target="_blank" style="display:inline-block">Ver Lab Completo ↗</a>
+    </div>
+  </div>
 
-      <!-- WRITEUP 2 -->
-      <div class="lessons-panel" style="margin-bottom:30px">
-        <div class="lessons-header" style="margin-bottom:10px">
-          <h2 class="lessons-title">Battering Ram — Password spraying & takeover</h2>
-          <span class="rp-tag" style="margin:0; background:var(--yellow)">SIEM / Splunk</span>
-        </div>
-        <p style="color:var(--text-muted); font-size:14px; margin-bottom:24px" data-en="A flood of failed logons. Distinguish spraying from brute force, find the attacker IP and the account that fell.">Un aluvión de logins fallidos. Distinguir spraying de fuerza bruta, hallar la IP atacante y la cuenta que cayó.</p>
-        
-        <div class="text-content">
-          <h3>Idea Clave</h3>
-          <p data-en="Spraying = one password against many accounts (many distinct users, few failures each, one source IP). Brute force = one account, many failures. Both show as 4625; you tell them apart by counting per IP and per account.">Spraying = una contraseña contra muchas cuentas (muchos usuarios distintos, pocos fallos cada uno, una IP). Fuerza bruta = una cuenta, muchos fallos. Ambos son 4625; se distinguen contando por IP y por cuenta.</p>
-          
-          <div style="background:#111; color:#0F0; font-family:monospace; padding:16px; border-radius:12px; margin-bottom:20px; overflow-x:auto; font-size:13px">
+  <!-- WRITEUP 2 -->
+  <div class="lessons-panel" style="margin-bottom:30px">
+    <div class="lessons-header" style="margin-bottom:10px">
+      <h2 class="lessons-title">Battering Ram — Password spraying & takeover</h2>
+      <span class="rp-tag" style="margin:0; background:var(--yellow)">SIEM / Splunk</span>
+    </div>
+    <p style="color:var(--text-muted); font-size:14px; margin-bottom:24px" data-en="A flood of failed logons. Distinguish spraying from brute force, find the attacker IP and the account that fell.">Un aluvión de logins fallidos. Distinguir spraying de fuerza bruta, hallar la IP atacante y la cuenta que cayó.</p>
+    
+    <div class="text-content">
+      <h3>Idea Clave</h3>
+      <p data-en="Spraying = one password against many accounts (many distinct users, few failures each, one source IP). Brute force = one account, many failures. Both show as 4625; you tell them apart by counting per IP and per account.">Spraying = una contraseña contra muchas cuentas (muchos usuarios distintos, pocos fallos cada uno, una IP). Fuerza bruta = una cuenta, muchos fallos. Ambos son 4625; se distinguen contando por IP y por cuenta.</p>
+      
+      <div style="background:#111; color:#0F0; font-family:monospace; padding:16px; border-radius:12px; margin-bottom:20px; overflow-x:auto; font-size:13px">
 # una IP fallando contra MUCHAS cuentas = spraying<br>
 index=northwind sourcetype=WinEventLog:Security EventCode=4625<br>
 | stats count dc(Account_Name) as cuentas by Source_Network_Address<br>
 | where cuentas >= 10 | sort -cuentas
-          </div>
-          <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/battering-ram" target="_blank" style="display:inline-block">Ver Lab Completo ↗</a>
-        </div>
       </div>
+      <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/battering-ram" target="_blank" style="display:inline-block">Ver Lab Completo ↗</a>
+    </div>
+  </div>
 
-      <!-- WRITEUP 3 -->
-      <div class="lessons-panel">
-        <div class="lessons-header" style="margin-bottom:10px">
-          <h2 class="lessons-title">Overwatch — Correlación Multi-fuente</h2>
-          <span class="rp-tag" style="margin:0; background:var(--blue)">Advanced SIEM</span>
-        </div>
-        <p style="color:var(--text-muted); font-size:14px; margin-bottom:24px" data-en="A full intrusion seen from the SOC: no single source tells the story — you correlate them.">Una intrusión completa vista desde el SOC: ninguna fuente por sí sola cuenta la historia — se correlacionan.</p>
-        
-        <div class="text-content">
-          <h3>Enfoque</h3>
-          <p data-en="Azure AD gives the WHO (a high-risk sign-in), Sysmon the WHAT (PowerShell -EncodedCommand → an implant), proxy/Zeek the WHO-WITH (C2 beaconing), and DNS the WHAT-WAS-TAKEN (base32 exfiltration). The value is the join.">Azure AD da el QUIÉN (un sign-in de alto riesgo), Sysmon el QUÉ (PowerShell -EncodedCommand → un implante), proxy/Zeek el CON-QUIÉN (beaconing C2) y DNS el QUÉ-SE-LLEVARON (exfiltración base32). El valor está en cruzarlos.</p>
-          
-          <div style="background:#111; color:#0F0; font-family:monospace; padding:16px; border-radius:12px; margin-bottom:20px; overflow-x:auto; font-size:13px">
+  <!-- WRITEUP 3 -->
+  <div class="lessons-panel">
+    <div class="lessons-header" style="margin-bottom:10px">
+      <h2 class="lessons-title">Overwatch — Correlación Multi-fuente</h2>
+      <span class="rp-tag" style="margin:0; background:var(--blue)">Advanced SIEM</span>
+    </div>
+    <p style="color:var(--text-muted); font-size:14px; margin-bottom:24px" data-en="A full intrusion seen from the SOC: no single source tells the story — you correlate them.">Una intrusión completa vista desde el SOC: ninguna fuente por sí sola cuenta la historia — se correlacionan.</p>
+    
+    <div class="text-content">
+      <h3>Enfoque</h3>
+      <p data-en="Azure AD gives the WHO (a high-risk sign-in), Sysmon the WHAT (PowerShell -EncodedCommand → an implant), proxy/Zeek the WHO-WITH (C2 beaconing), and DNS the WHAT-WAS-TAKEN (base32 exfiltration). The value is the join.">Azure AD da el QUIÉN (un sign-in de alto riesgo), Sysmon el QUÉ (PowerShell -EncodedCommand → un implante), proxy/Zeek el CON-QUIÉN (beaconing C2) y DNS el QUÉ-SE-LLEVARON (exfiltración base32). El valor está en cruzarlos.</p>
+      
+      <div style="background:#111; color:#0F0; font-family:monospace; padding:16px; border-radius:12px; margin-bottom:20px; overflow-x:auto; font-size:13px">
 # beaconing: cadencia casi fija hacia un dominio<br>
 index=northwind sourcetype=proxy:web<br>
 | streamstats current=f last(_time) as prev by src,dest_host<br>
 | eval gap=_time-prev | stats avg(gap) dc(gap) by src,dest_host,http_user_agent
-          </div>
-          <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/overwatch" target="_blank" style="display:inline-block">Ver Lab Completo ↗</a>
-        </div>
       </div>
-
+      <a class="card-btn" href="https://github.com/bitsofalber/KrakenSOC-Labs/tree/main/overwatch" target="_blank" style="display:inline-block">Ver Lab Completo ↗</a>
     </div>
   </div>
-</div>
+
+</main>
+
+<footer class="footer">
+  <div><strong>Alberto Hidalgo</strong> — SOC Analyst · Blue Team</div>
+  <div class="footer-links">
+    <a href="https://github.com/bitsofalber">GitHub</a>
+    <a href="https://linkedin.com/in/ahidalgotech">LinkedIn</a>
+  </div>
+</footer>
 
 <script src="assets/main.js"></script>
 </body>

@@ -10,229 +10,233 @@
 </head>
 <body>
 
-<div class="device-frame">
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <a href="#" class="nav-btn">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">A</div>
+    Alberto Hidalgo
+  </a>
+  <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
+  <div class="nav-links" id="nav-menu">
+    <a href="index.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      Inicio
     </a>
-    <a href="cv.html" class="nav-btn active">
+    <a href="cv.html" class="nav-link active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      CV
     </a>
-    <a href="writeups.html" class="nav-btn">
+    <a href="writeups.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      Write-ups
     </a>
-    <a href="index.html" class="nav-btn">
+    <a href="projects.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Proyectos
     </a>
-    <a href="terminal.html" class="nav-btn">
+    <a href="terminal.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-    </a>
-
-    <a href="mailto:albertohidalgomoreno@gmail.com" class="nav-btn sidebar-bottom">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Terminal
     </a>
   </div>
+</nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="app-content">
-    <div class="header">
-      <div class="header-left">
-        <span data-en="Welcome to">CV de</span> <b>Alberto Hidalgo</b>
+<!-- MAIN CONTENT -->
+<main class="container">
+  
+  <header class="page-header">
+    <div>
+      <h1 class="page-title"><span style="color:var(--text-muted); font-weight:400; font-size:28px" data-en="CV of ">CV de </span>Alberto Hidalgo</h1>
+      <p class="page-subtitle" data-en="SOC Trainee | Cybersecurity & Systems">SOC Trainee | Ciberseguridad & Sistemas</p>
+    </div>
+    
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="https://github.com/bitsofalber" target="_blank" style="color:var(--text-dark);">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a href="cv.pdf" download style="background:var(--primary); color:white; padding:10px 20px; border-radius:12px; font-weight:600; text-decoration:none;" data-en="Download PDF">Descargar PDF</a>
+    </div>
+  </header>
+
+  <!-- CARDS SECTION -->
+  <div class="section-header">
+    <h2 class="section-title" data-en="My Experience & Projects">Experiencia y Proyectos</h2>
+    <div class="filter-tags">
+      <button class="filter-tag active" data-en="All">Todos</button>
+      <button class="filter-tag" data-en="Projects">Proyectos</button>
+      <button class="filter-tag" data-en="Work">Trabajo</button>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    <!-- Card 1 -->
+    <a href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" class="course-card yellow">
+      <div class="card-top">
+        <span class="card-tag">Proyectos</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
       </div>
-      <div class="header-right">
-        <div class="search-bar">
-          <input type="text" placeholder="Buscar habilidades, experiencia..." data-en="Search skills, experience...">
-          <button class="search-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </button>
-        </div>
-        <a href="https://github.com/bitsofalber" class="nav-btn" style="color:var(--text-dark); border: 1.5px solid var(--border); border-radius:50%; width:44px; height:44px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-        <div class="profile">
-          <img src="img/img.webp" alt="Alberto Hidalgo" class="profile-pic">
-          <div class="profile-info">
-            <span class="profile-name">Alberto Hidalgo</span>
-            <span class="profile-role">@bitsofalber</span>
-          </div>
-        </div>
+      <h3 class="card-title">tech4uacademy | krakenSOC</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Desarrollo</span><span>Full-Stack</span></span>
+        <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="card-footer">
+        <div style="font-size:13px; font-weight:500;">Next.js, Python, Splunk</div>
+        <span class="card-btn" data-en="View">Ver Github</span>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <div class="course-card purple">
+      <div class="card-top">
+        <span class="card-tag">Laboral</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+      </div>
+      <h3 class="card-title">Vigilante de Seguridad</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>2018 - 2026</span><span>8 años</span></span>
+        <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="card-footer">
+        <div style="font-size:13px; font-weight:500;">Protección & CCTV</div>
+        <button class="card-btn" data-en="Details">Detalles</button>
       </div>
     </div>
 
-    <div class="dashboard-scroll">
+    <!-- Card 3 -->
+    <div class="course-card blue">
+      <div class="card-top">
+        <span class="card-tag">Laboral</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+      </div>
+      <h3 class="card-title">Técnico en Emergencias</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Prácticas FCT</span><span>2026</span></span>
+        <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%; background:var(--text-dark)"></div></div>
+      </div>
+      <div class="card-footer">
+        <div style="font-size:13px; font-weight:500;">Soporte Vital Básico</div>
+        <button class="card-btn" data-en="Details">Detalles</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="bottom-grid">
+    <!-- Lessons / Education -->
+    <div class="lessons-panel">
+      <div class="lessons-header">
+        <h2 class="lessons-title" data-en="Education & Certs">Educación y Certificaciones</h2>
+        <a href="https://certs.ine.com/a936b81a-2e84-47f2-9cb6-a6334e6b4db8#acc.BF9vQ26p" target="_blank" class="lessons-link" data-en="Verify eJPTv2">Verificar eJPTv2</a>
+      </div>
+      <table class="lessons-table">
+        <thead>
+          <tr>
+            <th data-en="Title">Título</th>
+            <th data-en="Institution">Institución</th>
+            <th style="text-align:right" data-en="Date">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">01. Administración de Sistemas Informáticos en Red (ASIR)</span>
+                <span class="lesson-desc" data-en="Systems and networking">Sistemas y redes informáticas</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic">EU</div>
+                FP Euroformac
+              </div>
+            </td>
+            <td class="lesson-duration">2025 - Act.</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">02. eJPTv2 (eLearnSecurity Junior PenTester)</span>
+                <span class="lesson-desc" data-en="Cybersecurity certification">Certificación oficial en ciberseguridad</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic">IN</div>
+                INE Security
+              </div>
+            </td>
+            <td class="lesson-duration">2024</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">03. Técnico en Emergencias Sanitarias</span>
+                <span class="lesson-desc" data-en="Healthcare">Formación Profesional</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic">EB</div>
+                Ebora Formación
+              </div>
+            </td>
+            <td class="lesson-duration">2023 - 2026</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">04. Curso Especialización Red Team y Blue Team</span>
+                <span class="lesson-desc" data-en="Practical cybersecurity">Ciberseguridad práctica</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic">HT</div>
+                Hack The Box
+              </div>
+            </td>
+            <td class="lesson-duration">2025 - Act.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right Panel (About / Skills) -->
+    <div class="right-panel">
+      <div class="rp-subtitle" data-en="About me matching your needs">Perfil adaptado a tus necesidades</div>
+      <div><span class="rp-tag">Blue Team / SOC</span></div>
+      <h3 class="rp-title" data-en="ASIR student with a strong interest in cybersecurity and systems monitoring.">Estudiante de ASIR con especial interés en ciberseguridad y monitorización.</h3>
       
-      <!-- CARDS SECTION -->
-      <div class="section-header">
-        <h2 class="section-title" data-en="My Experience & Projects">Experiencia y Proyectos</h2>
-        <div class="filter-tags">
-          <button class="filter-tag active" data-en="All">Todos</button>
-          <button class="filter-tag" data-en="Projects">Proyectos</button>
-          <button class="filter-tag" data-en="Work">Trabajo</button>
-        </div>
+      <p style="font-size:13px; color:#CCCCCC; margin-bottom:24px; line-height:1.5" data-en="Hands-on experience in log analysis, threat detection with Splunk and penetration testing in controlled environments. Seeking junior roles.">
+        Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados. Interesado en posiciones de prácticas o junior en sistemas, redes o ciberseguridad.
+      </p>
+
+      <div style="font-size:12px; color:#A0A0A0; margin-bottom:12px">Habilidades Técnicas:</div>
+      <div class="skills-container">
+        <span class="skill-chip">Splunk</span>
+        <span class="skill-chip">Sistemas y Redes</span>
+        <span class="skill-chip">Linux & Windows</span>
+        <span class="skill-chip">Nmap</span>
+        <span class="skill-chip">Pentesting Web</span>
+        <span class="skill-chip">MySQL</span>
       </div>
 
-      <div class="cards-grid">
-        <!-- Card 1 -->
-        <div class="course-card yellow">
-          <div class="card-top">
-            <span class="card-tag">Proyectos</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
-          </div>
-          <h3 class="card-title">tech4uacademy | krakenSOC</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Desarrollo</span><span>Full-Stack</span></span>
-            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
-          </div>
-          <div class="card-footer">
-            <div style="font-size:13px; font-weight:500;">Next.js, Python, Splunk</div>
-            <a href="https://github.com/bitsofalber/KrakenSOC-Labs" class="card-btn" style="text-decoration:none" data-en="View">Ver Github</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="course-card purple">
-          <div class="card-top">
-            <span class="card-tag">Laboral</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
-          </div>
-          <h3 class="card-title">Vigilante de Seguridad</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>2018 - 2026</span><span>8 años</span></span>
-            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
-          </div>
-          <div class="card-footer">
-            <div style="font-size:13px; font-weight:500;">Protección & CCTV</div>
-            <button class="card-btn" data-en="Details">Detalles</button>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="course-card blue">
-          <div class="card-top">
-            <span class="card-tag">Laboral</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
-          </div>
-          <h3 class="card-title">Técnico en Emergencias</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Prácticas FCT</span><span>2026</span></span>
-            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%; background:var(--text-dark)"></div></div>
-          </div>
-          <div class="card-footer">
-            <div style="font-size:13px; font-weight:500;">Soporte Vital Básico</div>
-            <button class="card-btn" data-en="Details">Detalles</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- BOTTOM ROW -->
-      <div class="bottom-grid">
-        <!-- Lessons / Education -->
-        <div class="lessons-panel">
-          <div class="lessons-header">
-            <h2 class="lessons-title" data-en="Education & Certs">Educación y Certificaciones</h2>
-            <a href="https://certs.ine.com/a936b81a-2e84-47f2-9cb6-a6334e6b4db8#acc.BF9vQ26p" target="_blank" class="lessons-link" data-en="Verify eJPTv2">Verificar eJPTv2</a>
-          </div>
-          <table class="lessons-table">
-            <thead>
-              <tr>
-                <th data-en="Title">Título</th>
-                <th data-en="Institution">Institución</th>
-                <th style="text-align:right" data-en="Date">Fecha</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">01. Administración de Sistemas Informáticos en Red (ASIR)</span>
-                    <span class="lesson-desc" data-en="Systems and networking">Sistemas y redes informáticas</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic">EU</div>
-                    FP Euroformac
-                  </div>
-                </td>
-                <td class="lesson-duration">2025 - Act.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">02. eJPTv2 (eLearnSecurity Junior PenTester)</span>
-                    <span class="lesson-desc" data-en="Cybersecurity certification">Certificación oficial en ciberseguridad</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic">IN</div>
-                    INE Security
-                  </div>
-                </td>
-                <td class="lesson-duration">2024</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">03. Técnico en Emergencias Sanitarias</span>
-                    <span class="lesson-desc" data-en="Healthcare">Formación Profesional</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic">EB</div>
-                    Ebora Formación
-                  </div>
-                </td>
-                <td class="lesson-duration">2023 - 2026</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">04. Curso Especialización Red Team y Blue Team</span>
-                    <span class="lesson-desc" data-en="Practical cybersecurity">Ciberseguridad práctica</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic">HT</div>
-                    Hack The Box
-                  </div>
-                </td>
-                <td class="lesson-duration">2025 - Act.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Right Panel (About / Skills) -->
-        <div class="right-panel">
-          <div class="rp-subtitle" data-en="About me matching your needs">Perfil adaptado a tus necesidades</div>
-          <div><span class="rp-tag">Blue Team / SOC</span></div>
-          <h3 class="rp-title" data-en="ASIR student with a strong interest in cybersecurity and systems monitoring.">Estudiante de ASIR con especial interés en ciberseguridad y monitorización.</h3>
-          
-          <p style="font-size:13px; color:#CCCCCC; margin-bottom:24px; line-height:1.5" data-en="Hands-on experience in log analysis, threat detection with Splunk and penetration testing in controlled environments. Seeking junior roles.">
-            Experiencia práctica en análisis de logs, detección de amenazas con Splunk y pruebas de penetración en entornos controlados. Interesado en posiciones de prácticas o junior en sistemas, redes o ciberseguridad.
-          </p>
-
-          <div style="font-size:12px; color:#A0A0A0; margin-bottom:12px">Habilidades Técnicas:</div>
-          <div class="skills-container">
-            <span class="skill-chip">Splunk</span>
-            <span class="skill-chip">Sistemas y Redes</span>
-            <span class="skill-chip">Linux & Windows</span>
-            <span class="skill-chip">Nmap</span>
-            <span class="skill-chip">Pentesting Web</span>
-            <span class="skill-chip">MySQL</span>
-          </div>
-
-          <a href="cv.pdf" class="rp-btn" download data-en="Download PDF CV">Descargar CV (PDF)</a>
-        </div>
-      </div>
-
+      <a href="cv.pdf" class="rp-btn" download data-en="Download PDF CV">Descargar CV (PDF)</a>
     </div>
   </div>
-</div>
+
+</main>
+
+<footer class="footer">
+  <div><strong>Alberto Hidalgo</strong> — SOC Analyst · Blue Team</div>
+  <div class="footer-links">
+    <a href="https://github.com/bitsofalber">GitHub</a>
+    <a href="https://linkedin.com/in/ahidalgotech">LinkedIn</a>
+  </div>
+</footer>
 
 <script src="assets/main.js"></script>
 </body>

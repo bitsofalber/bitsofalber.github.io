@@ -17,213 +17,222 @@
 </head>
 <body>
 
-<div class="device-frame">
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <a href="index.html" class="nav-btn active">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">A</div>
+    Alberto Hidalgo
+  </a>
+  <button class="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
+  <div class="nav-links" id="nav-menu">
+    <a href="index.html" class="nav-link active">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      Inicio
     </a>
-    <a href="cv.html" class="nav-btn">
+    <a href="cv.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      CV
     </a>
-    <a href="writeups.html" class="nav-btn">
+    <a href="writeups.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      Write-ups
     </a>
-    <a href="projects.html" class="nav-btn">
+    <a href="projects.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Proyectos
     </a>
-    <a href="terminal.html" class="nav-btn">
+    <a href="terminal.html" class="nav-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      Terminal
     </a>
-    <a href="mailto:albertohidalgomoreno@gmail.com" class="nav-btn sidebar-bottom">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </div>
+  <div class="nav-actions" style="display:none">
+    <!-- Desktop actions if needed later -->
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+  
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div>
+      <h1 class="page-title">Bienvenido a mi Portfolio</h1>
+      <p class="page-subtitle" data-en="I build hands-on threat simulation environments and SIEM labs.">Desarrollo entornos de simulación de amenazas y laboratorios SIEM para poner en práctica la detección de ataques.</p>
+    </div>
+    
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <a href="https://github.com/bitsofalber" target="_blank" style="color:var(--text-dark);">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a href="mailto:albertohidalgomoreno@gmail.com" style="background:var(--primary); color:white; padding:10px 20px; border-radius:12px; font-weight:600; text-decoration:none;" data-en="Contact Me">Contáctame</a>
+    </div>
+  </header>
+
+  <!-- CARDS SECTION -->
+  <div class="section-header">
+    <h2 class="section-title" data-en="My Highlights">Destacados</h2>
+    <div class="filter-tags">
+      <button class="filter-tag active" data-en="All">Todos</button>
+      <a href="projects.html" class="filter-tag" data-en="Projects">Proyectos</a>
+      <a href="writeups.html" class="filter-tag" data-en="Write-ups">Write-ups</a>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    <!-- Card 1 -->
+    <a href="https://github.com/bitsofalber/KrakenSOC-Labs" target="_blank" class="course-card yellow">
+      <div class="card-top">
+        <span class="card-tag">Proyectos</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+      </div>
+      <h3 class="card-title">KrakenSOC-Labs</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Blue Team</span><span>Docker</span></span>
+        <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="card-footer">
+        <div style="font-size:13px; font-weight:500;">9 Labs interactivos</div>
+        <span class="card-btn" data-en="View">Ver Github</span>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="writeups.html" class="course-card purple">
+      <div class="card-top">
+        <span class="card-tag">Artículos</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+      </div>
+      <h3 class="card-title">Write-ups & Detecciones</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Investigaciones</span><span>Splunk</span></span>
+        <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
+      </div>
+      <div class="card-footer">
+        <div style="font-size:13px; font-weight:500;">Casos prácticos</div>
+        <span class="card-btn" data-en="Read">Leer Más</span>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="terminal.html" class="course-card blue">
+      <div class="card-top">
+        <span class="card-tag">Interactivo</span>
+        <button class="bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+      </div>
+      <h3 class="card-title">Terminal Hacker</h3>
+      <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
+        <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Pruébalo</span><span>CLI</span></span>
+        <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%; background:var(--text-dark)"></div></div>
+      </div>
+      <div class="card-footer">
+        <div style="font-size:13px; font-weight:500;">Entorno simulado</div>
+        <span class="card-btn" data-en="Start">Iniciar</span>
+      </div>
     </a>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="app-content">
-    <div class="header">
-      <div class="header-left">
-        <span data-en="Welcome to">Dashboard de</span> <b>Alberto Hidalgo</b>
+  <!-- BOTTOM ROW -->
+  <div class="bottom-grid">
+    <!-- Lessons / Write-ups -->
+    <div class="lessons-panel">
+      <div class="lessons-header">
+        <h2 class="lessons-title" data-en="Latest Investigations">Últimas Investigaciones</h2>
+        <a href="writeups.html" class="lessons-link" data-en="View all">Ver todas</a>
       </div>
-      <div class="header-right">
-        <div class="search-bar">
-          <input type="text" placeholder="Buscar habilidades, experiencia..." data-en="Search skills, experience...">
-          <button class="search-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </button>
-        </div>
-        <a href="https://github.com/bitsofalber" class="nav-btn" style="color:var(--text-dark); border: 1.5px solid var(--border); border-radius:50%; width:44px; height:44px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-        <div class="profile">
-          <img src="img/img.webp" alt="Alberto Hidalgo" class="profile-pic">
-          <div class="profile-info">
-            <span class="profile-name">Alberto Hidalgo</span>
-            <span class="profile-role">@bitsofalber</span>
-          </div>
-        </div>
-      </div>
+      <table class="lessons-table">
+        <thead>
+          <tr>
+            <th data-en="Title">Título</th>
+            <th data-en="Category">Categoría</th>
+            <th style="text-align:right" data-en="Tags">Etiquetas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">Silent Harvest</span>
+                <span class="lesson-desc" data-en="DNS tunneling exfiltration">Exfiltración por DNS tunneling</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic" style="background:#E6DAFF">NF</div>
+                Network Forensics
+              </div>
+            </td>
+            <td class="lesson-duration">T1048.003</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">Battering Ram</span>
+                <span class="lesson-desc" data-en="Password spraying vs brute force">Password spraying vs fuerza bruta</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic" style="background:#FBE47F">SI</div>
+                SIEM
+              </div>
+            </td>
+            <td class="lesson-duration">T1110.003</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="lesson-info">
+                <span class="lesson-num-title">Overwatch</span>
+                <span class="lesson-desc" data-en="Full intrusion correlation">Correlación de intrusión completa</span>
+              </div>
+            </td>
+            <td>
+              <div class="lesson-teacher">
+                <div class="teacher-pic" style="background:#D6F1FA">CO</div>
+                Correlation
+              </div>
+            </td>
+            <td class="lesson-duration">Splunk</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="dashboard-scroll">
+    <!-- Right Panel (About / Skills) -->
+    <div class="right-panel">
+      <div class="rp-subtitle" data-en="About me">Sobre mí</div>
+      <div><span class="rp-tag">Cybersecurity Specialist</span></div>
+      <h3 class="rp-title" data-en="ASIR student and Blue Team enthusiast.">Estudiante de ASIR y apasionado del Blue Team.</h3>
       
-      <!-- CARDS SECTION -->
-      <div class="section-header">
-        <h2 class="section-title" data-en="My Highlights">Destacados</h2>
-        <div class="filter-tags">
-          <button class="filter-tag active" data-en="All">Todos</button>
-          <a href="projects.html" class="filter-tag" style="text-decoration:none; color:var(--text-dark)" data-en="Projects">Proyectos</a>
-          <a href="writeups.html" class="filter-tag" style="text-decoration:none; color:var(--text-dark)" data-en="Write-ups">Write-ups</a>
-        </div>
+      <p style="font-size:13px; color:#CCCCCC; margin-bottom:24px; line-height:1.5" data-en="Seeking to apply my analytical mindset in a SOC team.">
+        Busco aportar mi mentalidad analítica en un equipo de SOC y seguir creciendo profesionalmente.
+      </p>
+
+      <div style="font-size:12px; color:#A0A0A0; margin-bottom:12px">Habilidades Técnicas:</div>
+      <div class="skills-container">
+        <span class="skill-chip">Splunk</span>
+        <span class="skill-chip">Sistemas y Redes</span>
+        <span class="skill-chip">Linux & Windows</span>
+        <span class="skill-chip">Nmap</span>
+        <span class="skill-chip">Pentesting Web</span>
+        <span class="skill-chip">Docker</span>
       </div>
 
-      <div class="cards-grid">
-        <!-- Card 1 -->
-        <div class="course-card yellow">
-          <div class="card-top">
-            <span class="card-tag">Proyectos</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
-          </div>
-          <h3 class="card-title">KrakenSOC-Labs</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Blue Team</span><span>Docker</span></span>
-            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
-          </div>
-          <div class="card-footer">
-            <div style="font-size:13px; font-weight:500;">9 Labs interactivos</div>
-            <a href="https://github.com/bitsofalber/KrakenSOC-Labs" class="card-btn" style="text-decoration:none" data-en="View">Ver Github</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="course-card purple">
-          <div class="card-top">
-            <span class="card-tag">Artículos</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
-          </div>
-          <h3 class="card-title">Write-ups & Detecciones</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Investigaciones</span><span>Splunk</span></span>
-            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%"></div></div>
-          </div>
-          <div class="card-footer">
-            <div style="font-size:13px; font-weight:500;">Casos prácticos</div>
-            <a href="writeups.html" class="card-btn" style="text-decoration:none" data-en="Read">Leer Más</a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="course-card blue">
-          <div class="card-top">
-            <span class="card-tag">Interactivo</span>
-            <button class="bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
-          </div>
-          <h3 class="card-title">Terminal Hacker</h3>
-          <div style="font-size:13px; margin-bottom:12px; color:var(--text-dark)">
-            <span style="display:flex; justify-content:space-between; margin-bottom:6px"><span>Pruébalo</span><span>CLI</span></span>
-            <div class="card-progress-bar"><div class="card-progress-fill" style="width: 100%; background:var(--text-dark)"></div></div>
-          </div>
-          <div class="card-footer">
-            <div style="font-size:13px; font-weight:500;">Entorno simulado</div>
-            <a href="terminal.html" class="card-btn" style="text-decoration:none" data-en="Start">Iniciar</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- BOTTOM ROW -->
-      <div class="bottom-grid">
-        <!-- Lessons / Write-ups -->
-        <div class="lessons-panel">
-          <div class="lessons-header">
-            <h2 class="lessons-title" data-en="Latest Investigations">Últimas Investigaciones</h2>
-            <a href="writeups.html" class="lessons-link" data-en="View all">Ver todas</a>
-          </div>
-          <table class="lessons-table">
-            <thead>
-              <tr>
-                <th data-en="Title">Título</th>
-                <th data-en="Category">Categoría</th>
-                <th style="text-align:right" data-en="Tags">Etiquetas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">Silent Harvest</span>
-                    <span class="lesson-desc" data-en="DNS tunneling exfiltration">Exfiltración por DNS tunneling</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic" style="background:#E6DAFF">NF</div>
-                    Network Forensics
-                  </div>
-                </td>
-                <td class="lesson-duration">T1048.003</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">Battering Ram</span>
-                    <span class="lesson-desc" data-en="Password spraying vs brute force">Password spraying vs fuerza bruta</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic" style="background:#FBE47F">SI</div>
-                    SIEM
-                  </div>
-                </td>
-                <td class="lesson-duration">T1110.003</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="lesson-info">
-                    <span class="lesson-num-title">Overwatch</span>
-                    <span class="lesson-desc" data-en="Full intrusion correlation">Correlación de intrusión completa</span>
-                  </div>
-                </td>
-                <td>
-                  <div class="lesson-teacher">
-                    <div class="teacher-pic" style="background:#D6F1FA">CO</div>
-                    Correlation
-                  </div>
-                </td>
-                <td class="lesson-duration">Splunk</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Right Panel (About / Skills) -->
-        <div class="right-panel">
-          <div class="rp-subtitle" data-en="About me">Sobre mí</div>
-          <div><span class="rp-tag">Cybersecurity Specialist</span></div>
-          <h3 class="rp-title" data-en="ASIR student and Blue Team enthusiast.">Estudiante de ASIR y apasionado del Blue Team.</h3>
-          
-          <p style="font-size:13px; color:#CCCCCC; margin-bottom:24px; line-height:1.5" data-en="I build hands-on threat simulation environments and SIEM labs to practice attack detection.">
-            Desarrollo entornos de simulación de amenazas y laboratorios SIEM para poner en práctica la detección de ataques. Busco aportar mi mentalidad analítica en un equipo de SOC.
-          </p>
-
-          <div style="font-size:12px; color:#A0A0A0; margin-bottom:12px">Habilidades Técnicas:</div>
-          <div class="skills-container">
-            <span class="skill-chip">Splunk</span>
-            <span class="skill-chip">Sistemas y Redes</span>
-            <span class="skill-chip">Linux & Windows</span>
-            <span class="skill-chip">Nmap</span>
-            <span class="skill-chip">Pentesting Web</span>
-            <span class="skill-chip">Docker</span>
-          </div>
-
-          <a href="cv.html" class="rp-btn" data-en="View Full CV">Ver Currículum Completo</a>
-        </div>
-      </div>
-
+      <a href="cv.html" class="rp-btn" data-en="View Full CV">Ver Currículum Completo</a>
     </div>
   </div>
-</div>
+
+</main>
+
+<footer class="footer">
+  <div><strong>Alberto Hidalgo</strong> — SOC Analyst · Blue Team</div>
+  <div class="footer-links">
+    <a href="https://github.com/bitsofalber">GitHub</a>
+    <a href="https://linkedin.com/in/ahidalgotech">LinkedIn</a>
+  </div>
+</footer>
 
 <script src="assets/main.js"></script>
 </body>
