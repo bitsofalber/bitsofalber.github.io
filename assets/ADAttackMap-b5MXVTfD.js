@@ -1,4 +1,4 @@
-import{a as e,n as t,t as n}from"./jsx-runtime-n5LQ9ujS.js";import{L as r}from"./index-Cb21vUpX.js";var i=e(t(),1),a=n(),o=[{id:`recon`,label:`Reconocimiento`,short:`RECON`,color:`#2563eb`,glow:`rgba(37,99,235,0.25)`,nodes:[{id:`nmap`,title:`Escaneo de Red`,impact:`INFO`,tools:[`nmap`,`CrackMapExec`,`netexec`],desc:`Descubrimiento de hosts y servicios expuestos en la red del dominio. Punto de partida de cualquier auditoría interna.`,poc:`# Descubrir hosts activos y DC
+import{a as e,n as t,t as n}from"./jsx-runtime-n5LQ9ujS.js";import{L as r}from"./index-CGroPai3.js";var i=e(t(),1),a=n(),o=[{id:`recon`,label:`Reconocimiento`,short:`RECON`,color:`#2563eb`,glow:`rgba(37,99,235,0.25)`,nodes:[{id:`nmap`,title:`Escaneo de Red`,impact:`INFO`,tools:[`nmap`,`CrackMapExec`,`netexec`],desc:`Descubrimiento de hosts y servicios expuestos en la red del dominio. Punto de partida de cualquier auditoría interna.`,poc:`# Descubrir hosts activos y DC
 nmap -sV -p 88,389,445,636,3268 10.10.10.0/24
 
 # Identificar DC con netexec
