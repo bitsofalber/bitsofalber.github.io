@@ -37,6 +37,11 @@
   <url><loc>https://ahidalgo.es/pentesting/web/tomcat</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/web/wordpress-cms</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/web/file-upload-hacking</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahidalgo.es/pentesting/git-exposure</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahidalgo.es/pentesting/git-exposure/deteccion-y-verificacion</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahidalgo.es/pentesting/git-exposure/dumping-y-reconstruccion</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahidalgo.es/pentesting/git-exposure/git-forensics-commits-branches-stashes</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahidalgo.es/pentesting/git-exposure/secret-harvesting-gitleaks-trufflehog</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/privilege-escalation</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/privilege-escalation/linux</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/privilege-escalation/windows</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
