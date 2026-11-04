@@ -28,6 +28,7 @@
   <url><loc>https://ahidalgo.es/pentesting/services/puerto-3306-mysql</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/services/3389-rdp</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/web</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahidalgo.es/pentesting/web/metodologia-burp</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/web/drupal-cms</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/web/jenkins</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahidalgo.es/pentesting/web/joomla-cms</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
