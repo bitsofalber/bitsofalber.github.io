@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/About-Bb96RNaM.js","assets/jsx-runtime-n5LQ9ujS.js","assets/Projects-DBrX0QkP.js","assets/Achievements-BnO9uh-o.js","assets/Writeups-QZxZOqpF.js","assets/Contact-C0__cKKs.js","assets/Pentesting-Bma36BQ2.js","assets/Pentesting-C8LL_u4z.css","assets/ADAttackMap-DEnqrSTO.js","assets/NotFound-BpS4Fll8.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/About-LqCnHqfx.js","assets/jsx-runtime-n5LQ9ujS.js","assets/Projects-BNjUDDfB.js","assets/Achievements-BU528YS5.js","assets/Writeups-Bpv0WzZD.js","assets/Contact-D1UpNDL3.js","assets/Pentesting-Df2nNVfu.js","assets/Pentesting-C8LL_u4z.css","assets/ADAttackMap-Cv_Bk8Rk.js","assets/NotFound-BaRNuhzs.js"])))=>i.map(i=>d[i]);
 import{a as e,n as t,r as n,t as r}from"./jsx-runtime-n5LQ9ujS.js";(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var i=n((e=>{function t(e,t){var n=e.length;e.push(t);a:for(;0<n;){var r=n-1>>>1,a=e[r];if(0<i(a,t))e[r]=t,e[n]=a,n=r;else break a}}function n(e){return e.length===0?null:e[0]}function r(e){if(e.length===0)return null;var t=e[0],n=e.pop();if(n!==t){e[0]=n;a:for(var r=0,a=e.length,o=a>>>1;r<o;){var s=2*(r+1)-1,c=e[s],l=s+1,u=e[l];if(0>i(c,n))l<a&&0>i(u,c)?(e[r]=u,e[l]=n,r=l):(e[r]=c,e[s]=n,r=s);else if(l<a&&0>i(u,n))e[r]=u,e[l]=n,r=l;else break a}}return t}function i(e,t){var n=e.sortIndex-t.sortIndex;return n===0?e.id-t.id:n}if(e.unstable_now=void 0,typeof performance==`object`&&typeof performance.now==`function`){var a=performance;e.unstable_now=function(){return a.now()}}else{var o=Date,s=o.now();e.unstable_now=function(){return o.now()-s}}var c=[],l=[],u=1,d=null,f=3,p=!1,m=!1,h=!1,g=!1,_=typeof setTimeout==`function`?setTimeout:null,v=typeof clearTimeout==`function`?clearTimeout:null,y=typeof setImmediate<`u`?setImmediate:null;function b(e){for(var i=n(l);i!==null;){if(i.callback===null)r(l);else if(i.startTime<=e)r(l),i.sortIndex=i.expirationTime,t(c,i);else break;i=n(l)}}function x(e){if(h=!1,b(e),!m)if(n(c)!==null)m=!0,S||(S=!0,w());else{var t=n(l);t!==null&&oe(x,t.startTime-e)}}var S=!1,C=-1,ee=5,te=-1;function ne(){return g?!0:!(e.unstable_now()-te<ee)}function re(){if(g=!1,S){var t=e.unstable_now();te=t;var i=!0;try{a:{m=!1,h&&(h=!1,v(C),C=-1),p=!0;var a=f;try{b:{for(b(t),d=n(c);d!==null&&!(d.expirationTime>t&&ne());){var o=d.callback;if(typeof o==`function`){d.callback=null,f=d.priorityLevel;var s=o(d.expirationTime<=t);if(t=e.unstable_now(),typeof s==`function`){d.callback=s,b(t),i=!0;break b}d===n(c)&&r(c),b(t)}else r(c);d=n(c)}if(d!==null)i=!0;else{var u=n(l);u!==null&&oe(x,u.startTime-t),i=!1}}break a}finally{d=null,f=a,p=!1}i=void 0}}finally{i?w():S=!1}}}var w;if(typeof y==`function`)w=function(){y(re)};else if(typeof MessageChannel<`u`){var ie=new MessageChannel,ae=ie.port2;ie.port1.onmessage=re,w=function(){ae.postMessage(null)}}else w=function(){_(re,0)};function oe(t,n){C=_(function(){t(e.unstable_now())},n)}e.unstable_IdlePriority=5,e.unstable_ImmediatePriority=1,e.unstable_LowPriority=4,e.unstable_NormalPriority=3,e.unstable_Profiling=null,e.unstable_UserBlockingPriority=2,e.unstable_cancelCallback=function(e){e.callback=null},e.unstable_forceFrameRate=function(e){0>e||125<e?console.error(`forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported`):ee=0<e?Math.floor(1e3/e):5},e.unstable_getCurrentPriorityLevel=function(){return f},e.unstable_next=function(e){switch(f){case 1:case 2:case 3:var t=3;break;default:t=f}var n=f;f=t;try{return e()}finally{f=n}},e.unstable_requestPaint=function(){g=!0},e.unstable_runWithPriority=function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=f;f=e;try{return t()}finally{f=n}},e.unstable_scheduleCallback=function(r,i,a){var o=e.unstable_now();switch(typeof a==`object`&&a?(a=a.delay,a=typeof a==`number`&&0<a?o+a:o):a=o,r){case 1:var s=-1;break;case 2:s=250;break;case 5:s=1073741823;break;case 4:s=1e4;break;default:s=5e3}return s=a+s,r={id:u++,callback:i,priorityLevel:r,startTime:a,expirationTime:s,sortIndex:-1},a>o?(r.sortIndex=a,t(l,r),n(c)===null&&r===n(l)&&(h?(v(C),C=-1):h=!0,oe(x,a-o))):(r.sortIndex=s,t(c,r),m||p||(m=!0,S||(S=!0,w()))),r},e.unstable_shouldYield=ne,e.unstable_wrapCallback=function(e){var t=f;return function(){var n=f;f=t;try{return e.apply(this,arguments)}finally{f=n}}}})),a=n(((e,t)=>{t.exports=i()})),o=n((e=>{var n=t();function r(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function i(){}var a={d:{f:i,r:function(){throw Error(r(522))},D:i,C:i,L:i,m:i,X:i,S:i,M:i},p:0,findDOMNode:null},o=Symbol.for(`react.portal`);function s(e,t,n){var r=3<arguments.length&&arguments[3]!==void 0?arguments[3]:null;return{$$typeof:o,key:r==null?null:``+r,children:e,containerInfo:t,implementation:n}}var c=n.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function l(e,t){if(e===`font`)return``;if(typeof t==`string`)return t===`use-credentials`?t:``}e.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=a,e.createPortal=function(e,t){var n=2<arguments.length&&arguments[2]!==void 0?arguments[2]:null;if(!t||t.nodeType!==1&&t.nodeType!==9&&t.nodeType!==11)throw Error(r(299));return s(e,t,null,n)},e.flushSync=function(e){var t=c.T,n=a.p;try{if(c.T=null,a.p=2,e)return e()}finally{c.T=t,a.p=n,a.d.f()}},e.preconnect=function(e,t){typeof e==`string`&&(t?(t=t.crossOrigin,t=typeof t==`string`?t===`use-credentials`?t:``:void 0):t=null,a.d.C(e,t))},e.prefetchDNS=function(e){typeof e==`string`&&a.d.D(e)},e.preinit=function(e,t){if(typeof e==`string`&&t&&typeof t.as==`string`){var n=t.as,r=l(n,t.crossOrigin),i=typeof t.integrity==`string`?t.integrity:void 0,o=typeof t.fetchPriority==`string`?t.fetchPriority:void 0;n===`style`?a.d.S(e,typeof t.precedence==`string`?t.precedence:void 0,{crossOrigin:r,integrity:i,fetchPriority:o}):n===`script`&&a.d.X(e,{crossOrigin:r,integrity:i,fetchPriority:o,nonce:typeof t.nonce==`string`?t.nonce:void 0})}},e.preinitModule=function(e,t){if(typeof e==`string`)if(typeof t==`object`&&t){if(t.as==null||t.as===`script`){var n=l(t.as,t.crossOrigin);a.d.M(e,{crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0})}}else t??a.d.M(e)},e.preload=function(e,t){if(typeof e==`string`&&typeof t==`object`&&t&&typeof t.as==`string`){var n=t.as,r=l(n,t.crossOrigin);a.d.L(e,n,{crossOrigin:r,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,type:typeof t.type==`string`?t.type:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0,referrerPolicy:typeof t.referrerPolicy==`string`?t.referrerPolicy:void 0,imageSrcSet:typeof t.imageSrcSet==`string`?t.imageSrcSet:void 0,imageSizes:typeof t.imageSizes==`string`?t.imageSizes:void 0,media:typeof t.media==`string`?t.media:void 0})}},e.preloadModule=function(e,t){if(typeof e==`string`)if(t){var n=l(t.as,t.crossOrigin);a.d.m(e,{as:typeof t.as==`string`&&t.as!==`script`?t.as:void 0,crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0})}else a.d.m(e)},e.requestFormReset=function(e){a.d.r(e)},e.unstable_batchedUpdates=function(e,t){return e(t)},e.useFormState=function(e,t,n){return c.H.useFormState(e,t,n)},e.useFormStatus=function(){return c.H.useHostTransitionStatus()},e.version=`19.2.7`})),s=n(((e,t)=>{function n(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>`u`||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!=`function`))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=o()})),c=n((e=>{var n=a(),r=t(),i=s();function o(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function c(e){return!(!e||e.nodeType!==1&&e.nodeType!==9&&e.nodeType!==11)}function l(e){var t=e,n=e;if(e.alternate)for(;t.return;)t=t.return;else{e=t;do t=e,t.flags&4098&&(n=t.return),e=t.return;while(e)}return t.tag===3?n:null}function u(e){if(e.tag===13){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function d(e){if(e.tag===31){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function f(e){if(l(e)!==e)throw Error(o(188))}function p(e){var t=e.alternate;if(!t){if(t=l(e),t===null)throw Error(o(188));return t===e?e:null}for(var n=e,r=t;;){var i=n.return;if(i===null)break;var a=i.alternate;if(a===null){if(r=i.return,r!==null){n=r;continue}break}if(i.child===a.child){for(a=i.child;a;){if(a===n)return f(i),e;if(a===r)return f(i),t;a=a.sibling}throw Error(o(188))}if(n.return!==r.return)n=i,r=a;else{for(var s=!1,c=i.child;c;){if(c===n){s=!0,n=i,r=a;break}if(c===r){s=!0,r=i,n=a;break}c=c.sibling}if(!s){for(c=a.child;c;){if(c===n){s=!0,n=a,r=i;break}if(c===r){s=!0,r=a,n=i;break}c=c.sibling}if(!s)throw Error(o(189))}}if(n.alternate!==r)throw Error(o(190))}if(n.tag!==3)throw Error(o(188));return n.stateNode.current===n?e:t}function m(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e;for(e=e.child;e!==null;){if(t=m(e),t!==null)return t;e=e.sibling}return null}var h=Object.assign,g=Symbol.for(`react.element`),_=Symbol.for(`react.transitional.element`),v=Symbol.for(`react.portal`),y=Symbol.for(`react.fragment`),b=Symbol.for(`react.strict_mode`),x=Symbol.for(`react.profiler`),S=Symbol.for(`react.consumer`),C=Symbol.for(`react.context`),ee=Symbol.for(`react.forward_ref`),te=Symbol.for(`react.suspense`),ne=Symbol.for(`react.suspense_list`),re=Symbol.for(`react.memo`),w=Symbol.for(`react.lazy`),ie=Symbol.for(`react.activity`),ae=Symbol.for(`react.memo_cache_sentinel`),oe=Symbol.iterator;function se(e){return typeof e!=`object`||!e?null:(e=oe&&e[oe]||e[`@@iterator`],typeof e==`function`?e:null)}var ce=Symbol.for(`react.client.reference`);function le(e){if(e==null)return null;if(typeof e==`function`)return e.$$typeof===ce?null:e.displayName||e.name||null;if(typeof e==`string`)return e;switch(e){case y:return`Fragment`;case x:return`Profiler`;case b:return`StrictMode`;case te:return`Suspense`;case ne:return`SuspenseList`;case ie:return`Activity`}if(typeof e==`object`)switch(e.$$typeof){case v:return`Portal`;case C:return e.displayName||`Context`;case S:return(e._context.displayName||`Context`)+`.Consumer`;case ee:var t=e.render;return e=e.displayName,e||=(e=t.displayName||t.name||``,e===``?`ForwardRef`:`ForwardRef(`+e+`)`),e;case re:return t=e.displayName||null,t===null?le(e.type)||`Memo`:t;case w:t=e._payload,e=e._init;try{return le(e(t))}catch{}}return null}var ue=Array.isArray,T=r.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,E=i.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,de={pending:!1,data:null,method:null,action:null},fe=[],pe=-1;function me(e){return{current:e}}function he(e){0>pe||(e.current=fe[pe],fe[pe]=null,pe--)}function D(e,t){pe++,fe[pe]=e.current,e.current=t}var ge=me(null),_e=me(null),ve=me(null),ye=me(null);function be(e,t){switch(D(ve,t),D(_e,e),D(ge,null),t.nodeType){case 9:case 11:e=(e=t.documentElement)&&(e=e.namespaceURI)?Vd(e):0;break;default:if(e=t.tagName,t=t.namespaceURI)t=Vd(t),e=Hd(t,e);else switch(e){case`svg`:e=1;break;case`math`:e=2;break;default:e=0}}he(ge),D(ge,e)}function xe(){he(ge),he(_e),he(ve)}function Se(e){e.memoizedState!==null&&D(ye,e);var t=ge.current,n=Hd(t,e.type);t!==n&&(D(_e,e),D(ge,n))}function Ce(e){_e.current===e&&(he(ge),he(_e)),ye.current===e&&(he(ye),Qf._currentValue=de)}var we,Te;function Ee(e){if(we===void 0)try{throw Error()}catch(e){var t=e.stack.trim().match(/\n( *(at )?)/);we=t&&t[1]||``,Te=-1<e.stack.indexOf(`
     at`)?` (<anonymous>)`:-1<e.stack.indexOf(`@`)?`@unknown:0:0`:``}return`
 `+we+e+Te}var De=!1;function Oe(e,t){if(!e||De)return``;De=!0;var n=Error.prepareStackTrace;Error.prepareStackTrace=void 0;try{var r={DetermineComponentFrameRoot:function(){try{if(t){var n=function(){throw Error()};if(Object.defineProperty(n.prototype,"props",{set:function(){throw Error()}}),typeof Reflect==`object`&&Reflect.construct){try{Reflect.construct(n,[])}catch(e){var r=e}Reflect.construct(e,[],n)}else{try{n.call()}catch(e){r=e}e.call(n.prototype)}}else{try{throw Error()}catch(e){r=e}(n=e())&&typeof n.catch==`function`&&n.catch(function(){})}}catch(e){if(e&&r&&typeof e.stack==`string`)return[e.stack,r.stack]}return[null,null]}};r.DetermineComponentFrameRoot.displayName=`DetermineComponentFrameRoot`;var i=Object.getOwnPropertyDescriptor(r.DetermineComponentFrameRoot,`name`);i&&i.configurable&&Object.defineProperty(r.DetermineComponentFrameRoot,"name",{value:`DetermineComponentFrameRoot`});var a=r.DetermineComponentFrameRoot(),o=a[0],s=a[1];if(o&&s){var c=o.split(`
@@ -6092,13 +6092,13 @@ Cuando los desarrolladores despliegan aplicaciones mediante \`git pull\` o copia
 * **LinkedIn:** [ahidalgotech](https://linkedin.com/in/ahidalgotech)
 `,Ni=`# Detección y Reconocimiento de .git Expuesto
 
-Durante la fase de reconocimiento web, una de las primeras comprobaciones activas consiste en verificar si el directorio \`.git\` se encuentra accesible públicamente a través del servidor web.
+Durante la fase de reconocimiento web, una de las comprobaciones prioritarias consiste en verificar si el directorio \`.git\` se encuentra accesible públicamente a través del servidor web. 
 
 ---
 
 ## 1. Archivos Clave para Confirmar la Exposición
 
-Muchos servidores web devuelven un código \`403 Forbidden\` al solicitar directamente el directorio raíz \`/.git/\` debido a restricciones por defecto de navegación de directorios. Sin embargo, **los archivos internos dentro de \`.git/\` pueden seguir siendo accesibles**.
+Muchos servidores web devuelven un código \`403 Forbidden\` al solicitar directamente el directorio raíz \`/.git/\` debido a restricciones por defecto de navegación de directorios (*Directory Indexing* desactivado). Sin embargo, **los archivos internos dentro de \`.git/\` pueden seguir siendo accesibles**.
 
 Para confirmar sin lugar a dudas la exposición, se debe consultar la existencia de archivos estructurados específicos:
 
@@ -6106,103 +6106,116 @@ Para confirmar sin lugar a dudas la exposición, se debe consultar la existencia
 Contiene la referencia a la rama activa actual (habitualmente \`refs/heads/main\` o \`refs/heads/master\`).
 
 \`\`\`bash
-curl -s -i "http://target.local/.git/HEAD"
+# Comprobar código HTTP
+curl -s -o /dev/null -w "%{http_code}\\n" "https://target.local/.git/HEAD"
+
+# Inspeccionar contenido de la respuesta
+curl -s "https://target.local/.git/HEAD"
 \`\`\`
 
 **Respuesta confirmatoria esperada:**
 \`\`\`http
-HTTP/1.1 200 OK
-Content-Type: text/plain
-
 ref: refs/heads/main
 \`\`\`
+*(o un commit hash hexadecimal de 40 caracteres en caso de detached HEAD).*
+
+> [!WARNING]
+> **Cuidado con los falsos positivos (Soft 404):** Algunos servidores web devuelven código \`200 OK\` con una página HTML genérica de error para cualquier ruta inexistente. Confirma siempre que el cuerpo de la respuesta contenga \`ref: refs/\` o un hash de 40/64 caracteres.
+
+---
 
 ### B. Archivo \`/.git/config\`
-Contiene la configuración del repositorio local, incluyendo la URL del repositorio remoto (\`origin\`), lo que puede revelar URLs de GitHub/GitLab privadas o nombres de usuario internos.
+Contiene la configuración del repositorio local y revela la URL del repositorio remoto (\`origin\`), exponiendo URLs de GitHub/GitLab internas o nombres de usuarios:
 
 \`\`\`bash
-curl -s "http://target.local/.git/config"
+curl -s "https://target.local/.git/config"
 \`\`\`
 
-**Respuesta típica:**
+**Respuesta esperada:**
 \`\`\`ini
 [core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
 [remote "origin"]
-	url = https://github.com/empresa-privada/core-backend.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
+    url = https://github.com/empresa-privada/core-backend.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
 \`\`\`
 
-### C. Archivo binario \`/.git/index\`
-Es el archivo binario que actúa como área de preparación (*staging area*). Contiene la lista completa de todas las rutas de archivos que componen el repositorio junto con sus hashes SHA-1.
+---
+
+### C. Archivo \`/.git/logs/HEAD\`
+Este archivo contiene el registro histórico de movimientos de la referencia \`HEAD\`. Es una mina de oro inicial:
 
 \`\`\`bash
-curl -s -I "http://target.local/.git/index"
+curl -s "https://target.local/.git/logs/HEAD"
 \`\`\`
 
-Una respuesta \`HTTP/1.1 200 OK\` con un cuerpo binario que comience con la cabecera \`DIRC\` (Directory Cache) confirma que el índice es descargable.
+**Revela de inmediato:**
+* Hashes de commits previos.
+* Nombres y direcciones de correo de los desarrolladores (\`Autor <email@target.local>\`).
+* Marcas de tiempo de los cambios.
+* Mensajes de commits originales.
+
+---
+
+### D. Archivo binario \`/.git/index\`
+Es el índice de preparación (*staging area*). Contiene la lista completa de todas las rutas de archivos que componen el repositorio junto con sus hashes SHA-1:
+
+\`\`\`bash
+# Comprobación de cabecera binaria (debe comenzar por DIRC)
+curl -s "https://target.local/.git/index" | head -c 4
+\`\`\`
+
+Si devuelve \`DIRC\` (Directory Cache, valor hexadecimal \`44 49 52 43\`), la estructura completa de archivos es recuperable.
 
 ---
 
 ## 2. Automatización de la Detección
 
-### Escaneo con Ffuf / Gobuster
-Podemos añadir directivas de comprobación rápida en nuestras wordlists de fuzzing:
+### A. Escaneo Masivo de Subdominios en Bash
+Si has obtenido una lista de subdominios (\`hosts.txt\`) tras una fase de enumeración con Subfinder o Amass:
 
 \`\`\`bash
-ffuf -u "http://target.local/FUZZ" -w - << 'EOF'
-.git/HEAD
-.git/config
-.git/index
-.git/COMMIT_EDITMSG
-.git/logs/HEAD
-EOF
+for h in $(cat hosts.txt); do
+    echo -n "$h: "
+    curl -sk -o /dev/null -w "%{http_code}\\n" "https://$h/.git/HEAD"
+done | grep -E "200|403"
 \`\`\`
 
-### Script de Detección Rápida en Bash
+### B. Detección con Nuclei
+Nuclei cuenta con plantillas oficiales para detectar exposiciones de configuración de Git sin generar ruido innecesario:
+
 \`\`\`bash
-#!/usr/bin/env bash
-TARGET="$1"
-if [ -z "$TARGET" ]; then echo "Uso: $0 <url>"; exit 1; fi
+# Objetivo individual
+nuclei -u https://target.local -t http/exposures/configs/git-config.yaml
 
-echo "[*] Comprobando exposición de Git en: $TARGET"
-STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$TARGET/.git/HEAD")
-
-if [ "$STATUS" -eq 200 ]; then
-    BODY=$(curl -s "$TARGET/.git/HEAD")
-    if [[ "$BODY" =~ "ref:" ]]; then
-        echo "[+] ¡VULNERABLE! Se confirma .git expuesto:"
-        echo "    $BODY"
-        exit 0
-    fi
-fi
-
-echo "[-] No se detectó .git/HEAD accesible (Código HTTP: $STATUS)."
+# Múltiples hosts
+nuclei -l hosts.txt -t http/exposures/configs/git-config.yaml
 \`\`\`
 
 ---
 
-## 3. Comportamiento en Servidores con Directory Listing
+## 3. Comprobación de Otros Sistemas de Control de Versiones (SVN)
 
-Si el servidor tiene habilitado el listado de directorios (*Directory Indexing*):
-* La petición a \`http://target.local/.git/\` devuelve un listado HTML interactivo.
-* La descarga del repositorio se vuelve trivial utilizando herramientas nativas como \`wget\`:
+No te limites a Git; entornos heredados o desarrollos antiguos pueden haber utilizado **Subversion (SVN)**. Al igual que \`.git\`, SVN mantiene un archivo de base de datos local SQLite:
 
 \`\`\`bash
-wget -r -np -R "index.html*" http://target.local/.git/
-\`\`\`
+# 1. Comprobar si existe la base de datos de control de versiones de SVN
+curl -s "https://target.local/.svn/wc.db" -o wc.db
 
-Sin embargo, en el 90% de los casos reales, el listado de directorios estará deshabilitado (\`403 Forbidden\`). Para esos escenarios, requerimos técnicas de dumping recursivo basadas en la lectura del archivo \`index\`.
+# 2. Si se descarga una base de datos SQLite válida, consultar las rutas internas:
+sqlite3 wc.db 'SELECT local_relpath FROM NODES;'
+\`\`\`
+Esta consulta devolverá el mapa completo de archivos y directorios del proyecto en el servidor web.
 `,Pi=`# Dumping y Reconstrucción del Repositorio
 
-Cuando el servidor web bloquea el listado directo de directorios (\`403 Forbidden\` en \`/.git/\`), no es posible utilizar un simple \`wget\` recursivo. Sin embargo, si archivos específicos como \`/.git/index\` y los objetos bajo \`/.git/objects/\` son accesibles individualmente, es posible reconstruir el repositorio en su totalidad.
+Cuando el servidor web bloquea el listado directo de directorios (\`403 Forbidden\` en \`/.git/\`), no es posible utilizar un simple \`wget\` recursivo. Sin embargo, si los archivos individuales (\`.git/HEAD\`, \`.git/index\` y los objetos bajo \`.git/objects/\`) responden a peticiones directas, es posible reconstruir el repositorio en su totalidad.
 
 ---
 
-## 1. ¿Cómo funciona la reconstrucción ciega?
+## 1. ¿Cómo funciona la Reconstrucción Ciega?
 
 1. **Lectura del índice (\`.git/index\`):** El atacante descarga el archivo binario del índice. Al parsear su contenido, obtiene la lista exacta de todos los archivos del proyecto y el hash SHA-1 de cada *blob*.
 2. **Descarga de objetos sueltos:** Conociendo los hashes SHA-1 (por ejemplo \`4b825dc642cb6eb9a060e54bf8d69288fbee4904\`), el atacante solicita el objeto comprimido en \`/.git/objects/4b/825dc642cb6eb9a060e54bf8d69288fbee4904\`.
@@ -6211,240 +6224,480 @@ Cuando el servidor web bloquea el listado directo de directorios (\`403 Forbidde
 
 ---
 
-## 2. Herramientas Automatizadas de Extracción
+## 2. Herramientas de Extracción
 
-### A. Git-Dumper (Python)
-Es el estándar de la industria y la herramienta más fiable para entornos CTF y auditorías reales:
+### A. Git-Dumper (Estándar en Python)
+Es la herramienta más recomendada para exámenes de certificación y auditorías reales:
 
 \`\`\`bash
-# Instalación recomendada vía pipx
+# Instalación con pipx
 pipx install git-dumper
 
-# O en entorno virtual / Docker
-pip install git-dumper
+# Descarga estándar
+git-dumper https://target.local/.git/ ./loot
 \`\`\`
 
-**Uso:**
-\`\`\`bash
-git-dumper http://target.local/.git/ ./repositorio-dumpeado
-\`\`\`
-
-La herramienta descargará automáticamente:
-* \`HEAD\` y \`config\`
-* El archivo \`index\`
-* El log de commits (\`logs/HEAD\`, \`logs/refs/heads/*\`)
-* Todos los objetos referenciados en \`objects/\`
-* Y finalmente ejecutará \`git checkout -f\` para restaurar los archivos del proyecto.
-
-### B. Go-GitDumper (Alta Velocidad)
-Para repositorios grandes o conexiones con latencia, la versión compilada en Go ofrece concurrencia masiva:
+#### Control de Hilos y Evasión de WAF / Rate-Limits
+Para evitar saturar el servidor o disparar restricciones de tasa de peticiones (*rate-limits*):
 
 \`\`\`bash
-go install github.com/arthaud/git-dumper@latest
-git-dumper http://target.local/.git/ ./repo-descargado
+git-dumper --threads 10 --retry 3 https://target.local/.git/ ./loot
 \`\`\`
 
 ---
 
-## 3. Restauración Manual y Solución de Errores
-
-En ocasiones, algunas partes del repositorio no se descargan correctamente debido a bloqueos parciales o corrupción en la transferencia. En este escenario, podemos forzar la recuperación manual con Git local:
+### B. GitTools (Alternativa Robusta en Bash)
+Si GitDumper encuentra problemas de dependencias o falla en la conexión, **GitTools** ofrece un enfoque modular en dos pasos:
 
 \`\`\`bash
-cd ./repositorio-dumpeado
+# Clonar la suite de GitTools
+git clone https://github.com/internetwache/GitTools.git
 
-# 1. Verificar el estado del repositorio local
+# Paso 1: Descargar los objetos disponibles
+./GitTools/Dumper/gitdumper.sh https://target.local/.git/ ./loot
+
+# Paso 2: Extraer y reconstruir los archivos a partir de los objetos
+./GitTools/Extractor/extractor.sh ./loot ./extracted
+\`\`\`
+
+El módulo *Extractor* intentará recomponer versiones del proyecto incluso si el índice original estaba parcialmente dañado.
+
+---
+
+### C. Reconstrucción a partir del Índice sin Listado
+Si solo dispones del archivo \`.git/index\` y necesitas inspeccionar los nombres de archivos antes de dumpear:
+
+\`\`\`bash
+curl -s "https://target.local/.git/index" | git ls-files --stage --debug
+\`\`\`
+
+---
+
+## 3. Restauración en Disco y Solución de Errores
+
+Una vez finalizada la descarga de \`.git\`, entra en el directorio y materializa el código fuente:
+
+\`\`\`bash
+cd ./loot
+
+# 1. Comprobar el estado local
 git status
 
-# 2. Restaurar todos los archivos eliminados o en staging
+# 2. Restaurar todos los archivos del árbol de trabajo
 git checkout -- .
 
-# 3. Si checkout falla debido a referencias rotas
+# 3. Si el checkout falla por referencias incompletas
 git restore --staged .
 git restore .
 
 # 4. Listar las ramas disponibles
 git branch -a
+
+# 5. Ver el historial resumido de commits
+git log --oneline
 \`\`\`
+Una vez restaurado el código, comienza la fase de mayor impacto: **Git Forensics**.
+`,Fi=`# Git Forensics: Commits, Ramas Ocultas, Stashes y Objetos Perdidos
 
-Una vez reconstruido el código fuente en disco, disponemos de la aplicación tal y como fue programada, abriendo la puerta a la siguiente fase crítica: **el análisis forense de Git**.
-`,Fi=`# Git Forensics: Commits, Ramas Ocultas y Stashes
+Tener el código fuente de la versión actual de la aplicación desplegada es solo la punta del iceberg. La verdadera potencia de explotar un repositorio Git radica en **la auditoría forense de su historial y su base de datos de objetos**.
 
-Tener el código fuente de la versión actual de la aplicación es solo la punta del iceberg. La verdadera potencia de explotar un repositorio Git radica en **la auditoría forense de su historial**.
-
-Los desarrolladores cometen con frecuencia el error de subir credenciales (claves de API, contraseñas de producción, certificados) y eliminarlas en un commit posterior pensando que han resuelto el problema. En Git, **todo cambio queda registrado en la base de datos de objetos para siempre**.
+Los desarrolladores cometen con frecuencia el error de subir credenciales críticas (claves de API, contraseñas de producción, certificados, tokens OAuth) y eliminarlas en un commit posterior creyendo haber resuelto el problema. En Git, **todo cambio queda registrado permanentemente en la base de datos de objetos (\`.git/objects\`) a menos que el repositorio haya sido reescrito y purgado expresamente**.
 
 ---
 
-## 1. Análisis del Historial de Commits
+## 1. Mapeo y Visualización del Historial de Commits
 
-### Inspección completa con Diffs (\`git log -p\`)
-Para ver no solo los mensajes de los commits, sino exactamente qué líneas de código se añadieron (\`+\`) o se borraron (\`-\`):
+Una vez dentro del directorio del repositorio reconstruido (\`./loot\`):
+
+### A. Vista Gráfica Completa del Árbol
+Para obtener una visión clara de todas las bifurcaciones, merges y ramas activas o descolgadas:
+
+\`\`\`bash
+git log --oneline --graph --decorate --all
+\`\`\`
+
+* \`--oneline\`: Condensa cada commit a su hash corto y mensaje.
+* \`--graph\`: Dibuja un árbol en texto ASCII mostrando ramas paralelas y uniones.
+* \`--decorate\`: Muestra a qué commit apuntan las etiquetas (*tags*) y las ramas (*heads*).
+* \`--all\`: Incluye todas las ramas y referencias, no solo la rama activa en \`HEAD\`.
+
+### B. Inspección Exhaustiva con Diffs (\`git log -p\`)
+Muestra en orden cronológico inverso cada commit junto con las líneas añadidas (\`+\`) y borradas (\`-\`):
 
 \`\`\`bash
 git log -p
 \`\`\`
 
-### Búsqueda de Commits Sospechosos por Mensaje
-Filtra commits cuyos mensajes indiquen correcciones de seguridad apresuradas:
+Para ver únicamente qué archivos fueron modificados y cuántas líneas cambiaron:
 
 \`\`\`bash
-git log --grep="fix" --grep="secret" --grep="password" --grep="key" --grep="token" --grep="config" -i
-\`\`\`
-
-### Inspección de un Commit Específico
-Cuando identifiques un commit donde se "eliminó" una credencial, inspecciona el estado previo del código:
-
-\`\`\`bash
-# Ver el diff exacto de un commit por su hash
-git show 4a19fd1
-
-# Ver la diferencia entre el commit y su versión anterior
-git diff 4a19fd1^ 4a19fd1
+git log --stat
 \`\`\`
 
 ---
 
-## 2. Inspección de Ramas Ocultas (*Branches*)
+## 2. Búsqueda Quirúrgica en el Historial
 
-El comando \`git checkout\` inicial solo restaura la rama por defecto (generalmente \`main\` o \`master\`). En muchos desarrollos existen ramas secundarias de prueba, staging o características experimentales:
+### A. Búsqueda por Mensajes de Commit Sospechosos
+Los desarrolladores suelen dejar pistas evidentes en los mensajes de confirmación cuando solucionan errores o eliminan credenciales:
 
 \`\`\`bash
-# Listar todas las ramas (locales y remotas)
+git log --grep="fix" --grep="secret" --grep="password" --grep="key" --grep="token" --grep="config" --grep="cred" --grep="temp" -i
+\`\`\`
+
+### B. Pickaxe Search: Rastrear la Introducción y Eliminación de Cadenas (\`git log -S\`)
+El parámetro \`-S\` (Pickaxe) es una de las opciones más letales en Git Forensics: busca commits que alteraron el número de ocurrencias de una cadena exacta (es decir, cuando se añadió o cuando se borró):
+
+\`\`\`bash
+# Rastrear cuándo se introdujo o eliminó una clave específica
+git log -S "AKIA" -p
+git log -S "DB_PASSWORD" -p
+git log -S "BEGIN RSA PRIVATE KEY" -p
+git log -S "SECRET_KEY" -p
+\`\`\`
+
+### C. Búsqueda por Expresiones Regulares (\`git log -G\`)
+A diferencia de \`-S\`, \`-G\` utiliza expresiones regulares para buscar cualquier commit cuyo diff contenga una línea que coincida con el patrón:
+
+\`\`\`bash
+git log -G "(api[_-]?key|password|jwt_secret|private_key)" -p -i
+\`\`\`
+
+---
+
+## 3. Recuperación de Archivos Eliminados
+
+Si un archivo fue eliminado en un commit anterior, no aparecerá en el sistema de archivos actual, pero su contenido sigue existiendo en el historial.
+
+### A. Localizar Archivos que Fueron Borrados
+El filtro \`--diff-filter=D\` muestra únicamente los eventos de eliminación de archivos en todas las ramas:
+
+\`\`\`bash
+git log --all --diff-filter=D --summary
+\`\`\`
+
+**Ejemplo de salida:**
+\`\`\`text
+commit c8f9b21a3e87d12f45c6e890123456789abcdef0
+Author: dev-admin <dev@target.local>
+Date:   Mon Jan 15 10:24:18 2024 +0100
+
+    Cleanup temporary files before production deploy
+
+ delete mode 100644 config/database.backup.php
+ delete mode 100644 .env.staging
+ delete mode 100644 certs/server.key
+\`\`\`
+
+### B. Visualizar el Contenido del Archivo Eliminado
+Para leer el archivo directamente desde el commit previo a su borrado (o indicando el commit exacto donde aún existía):
+
+\`\`\`bash
+# Sintaxis: git show <commit_hash>:<ruta/del/archivo>
+git show c8f9b21a^:config/database.backup.php
+
+# O redirigirlo a un archivo local
+git show c8f9b21a^:.env.staging > ./env_recuperado.txt
+\`\`\`
+*(El símbolo \`^\` hace referencia al commit inmediatamente anterior al que introdujo el borrado).*
+
+---
+
+## 4. Inspección Directa de Objetos sin Checkout (\`git rev-list\`)
+
+En auditorías rápidas, puedes listar todos los objetos indexados en la base de datos de Git con sus nombres de archivo originales, sin necesidad de hacer checkout ni cambiar de rama:
+
+\`\`\`bash
+git rev-list --objects --all | grep -iE '\\.env|\\.pem|\\.pfx|\\.kdbx|backup|config|id_rsa|credentials'
+\`\`\`
+
+**Salida típica:**
+\`\`\`text
+a3f12bc8... .env.production
+7d891e4a... certs/private.pem
+e23401fb... backups/users_dump.sql
+\`\`\`
+
+Una vez identificado el hash del objeto (*blob*), se imprime su contenido directamente con \`cat-file\`:
+
+\`\`\`bash
+git cat-file -p a3f12bc8
+\`\`\`
+
+---
+
+## 5. Inspección de Ramas Ocultas y Referencias
+
+El comando \`git checkout\` inicial solo restaura la rama apuntada por \`HEAD\` (usualmente \`main\` o \`master\`). Sin embargo, en el repositorio suelen existir ramas de pruebas o despliegue:
+
+\`\`\`bash
+# Listar todas las ramas locales y remotas
 git branch -a
 
-# Cambiar a una rama secundaria sospechosa (ej. staging, dev, hotfix)
-git checkout feature/api-integration
+# Listar todas las etiquetas (tags / releases)
+git tag -l
+
+# Mostrar todas las referencias con su nombre completo
+git show-ref
+
+# Listar referencias ordenadas
+git for-each-ref --format='%(refname)'
 \`\`\`
 
-Revisa las ramas huérfanas o que quedaron olvidadas; frecuentemente contienen configuraciones sin ofuscar o endpoints de prueba sin autenticación.
+Para auditar una rama secundaria o de desarrollo:
+
+\`\`\`bash
+git checkout feature/api-integration
+# o
+git checkout remotes/origin/staging
+\`\`\`
 
 ---
 
-## 3. Inspección del Stash (\`git stash\`)
+## 6. Inspección del Stash (\`git stash\`)
 
-El comando \`git stash\` es utilizado por los desarrolladores para guardar temporalmente cambios locales sin crear un commit oficial. Al realizar un despliegue mediante copia directa, el archivo \`.git/refs/stash\` puede filtrarse:
+El stash almacena cambios en desarrollo que el programador apartó temporalmente sin llegar a confirmarlos en un commit formal (\`git stash\`). En copias accidentales del directorio de trabajo, estas referencias pueden viajar en \`.git/refs/stash\` o en el log de stashes:
 
 \`\`\`bash
-# Listar stashes guardados
+# 1. Comprobar si existen stashes guardados
 git stash list
 
-# Inspeccionar el contenido del primer stash
+# 2. Inspeccionar el diff del último stash guardado
 git stash show -p stash@{0}
+
+# 3. Aplicar o recuperar los cambios del stash
+git stash apply stash@{0}
 \`\`\`
 
-Es muy habitual encontrar contraseñas de prueba, configuraciones de desarrollo local y fragmentos de código sensibles en los stashes.
+Es común encontrar contraseñas de conexión a bases de datos locales, tokens personales de depuración o rutas internas en los stashes.
 
 ---
 
-## 4. Búsqueda de Objetos Huérfanos (*Dangling Blobs*)
+## 7. Perfilado de Autores y Recolección de Datos (OSINT)
 
-Incluso si un desarrollador ejecutó \`git reset --hard\` o eliminó un commit, los objetos huérfanos (*dangling objects*) pueden permanecer en la base de datos de Git antes de que el recolector de basura (*garbage collector*) los purgue:
+Los metadatos de Git revelan información valiosa sobre el personal de desarrollo, convenciones de nombres de usuario y direcciones de correo electrónico corporativas:
 
+### A. Listado Consolidado de Colaboradores
 \`\`\`bash
-# Identificar objetos huérfanos no referenciados
-git fsck --lost-found
-
-# Los objetos encontrados se guardan en .git/lost-found/other/ o commit/
-# Inspeccionar el contenido de un blob huérfano:
-git cat-file -p <hash_del_blob>
+git shortlog -sne --all
 \`\`\`
 
-Podemos concatenar y buscar cadenas en todos los blobs huérfanos con un bucle:
+**Ejemplo:**
+\`\`\`text
+    42  Alberto Gomez <alberto.gomez@target.local>
+    18  John Doe <jdoe@externo-consultoria.com>
+     3  root <root@srv-build-01.internal>
+\`\`\`
+
+### B. Mapeo Cronológico de Actividad
+\`\`\`bash
+git log --all --source --remotes --pretty=format:'%h | %ad | %an <%ae> | %s' --date=short
+\`\`\`
+
+Esta información alimenta fases posteriores de ingeniería social, enumeración de usuarios en Active Directory o campañas de phishing dirigido (*spear phishing*).
+
+---
+
+## 8. Objetos Huérfanos y Recuperación Profunda (\`git fsck\`)
+
+Incluso si un desarrollador intentó borrar su rastro ejecutando \`git reset --hard\` o eliminando ramas, los objetos huérfanos (*dangling objects*) permanecen en \`.git/objects/\` hasta que Git ejecute una recolección de basura (\`git gc\`), lo cual casi nunca ocurre en un servidor web desplegado.
+
+### A. Identificar Objetos no Referenciados
+\`\`\`bash
+# Verificar la base de datos de objetos buscando elementos huérfanos
+git fsck --full --unreachable --lost-found
+\`\`\`
+
+Git identificará:
+* \`dangling commit\`: Commits desvinculados de cualquier rama.
+* \`dangling blob\`: Archivos huérfanos cuyo puntero se perdió.
+* \`dangling tree\`: Estructuras de directorios desvinculadas.
+
+Los objetos recuperados se depositarán automáticamente en \`.git/lost-found/other/\` y \`.git/lost-found/commit/\`.
+
+### B. Inspección Masiva Automatizada de Blobs Huérfanos
+Ejecuta este bucle para inspeccionar el contenido de todos los blobs huérfanos e identificar credenciales:
 
 \`\`\`bash
-for blob in $(git fsck --lost-found 2>/dev/null | awk '/dangling blob/ {print $3}'); do
-    echo "=== BLOB: $blob ==="
-    git cat-file -p "$blob" | grep -Ei "password|secret|token|api_key|private_key"
+for blob in $(git fsck --full --unreachable 2>/dev/null | awk '/unreachable blob/ {print $3}'); do
+    echo "[+] Analizando Blob: $blob"
+    git cat-file -p "$blob" | grep -Ei "password|secret|token|api[_-]?key|BEGIN (RSA|OPENSSH) PRIVATE"
 done
 \`\`\`
-`,Ii=`# Secret Harvesting: Gitleaks, TruffleHog y Credenciales
+`,Ii=`# Secret Harvesting: Gitleaks, TruffleHog, Nosey Parker y Dorking
 
-El *Secret Harvesting* es el proceso de auditar de forma exhaustiva y automatizada todo el árbol de commits en busca de claves criptográficas, certificados privados, tokens OAuth y contraseñas codificadas en duro (*hardcoded credentials*).
+El *Secret Harvesting* es el proceso de auditar de forma exhaustiva y automatizada todo el árbol de commits y objetos de Git en busca de claves criptográficas, certificados privados, tokens OAuth, cadenas de conexión y contraseñas incrustadas (*hardcoded credentials*).
 
 ---
 
 ## 1. Automatización con Gitleaks
 
-**Gitleaks** es una de las herramientas más rápidas y precisas para auditar repositorios locales y remotos utilizando reglas basadas en entropía y expresiones regulares para más de 160 tipos de proveedores (AWS, Google Cloud, Stripe, Slack, RSA Private Keys, etc.).
+**Gitleaks** es un escáner de alta velocidad escrito en Go que utiliza expresiones regulares y análisis de entropía de Shannon para detectar más de 160 tipos de secretos (claves AWS, GCP, Azure, Stripe, GitHub PATs, Slack webhooks, llaves RSA, etc.).
 
-### Instalación
+### A. Instalación
 \`\`\`bash
 # macOS (Homebrew)
 brew install gitleaks
 
-# Linux (Binario oficial o Go)
+# Linux (Binario precompilado o Go)
 go install github.com/zricethezav/gitleaks/v8@latest
 \`\`\`
 
-### Escaneo Completo del Historial
+### B. Modos de Ejecución
 \`\`\`bash
-# Escaneo de todo el historial con reporte en consola
-gitleaks detect --source ./repositorio-dumpeado -v
+# 1. Escaneo exhaustivo del repositorio local con salida en tiempo real
+gitleaks detect --source ./loot -v
 
-# Generar un informe detallado en formato JSON
-gitleaks detect --source ./repositorio-dumpeado --report-path reporte-secretos.json --report-format json
+# 2. Generar informe estructurado en formato JSON
+gitleaks detect --source ./loot --report-path reporte-secretos.json --report-format json
+
+# 3. Escaneo ignorando el historial (solo archivos actuales en el staging/working tree)
+gitleaks detect --source ./loot --no-git -v
 \`\`\`
 
-Gitleaks te indicará:
-* La regla coincidente (ej. \`aws-secret-access-key\`, \`private-key\`).
-* El hash exacto del commit donde se introdujo el secreto.
-* El archivo y la línea de código afectada.
-* El valor redactado de la credencial.
+### C. Interpretación de Resultados
+Cada detección proporciona:
+* **RuleID:** Identificador del tipo de credencial (\`aws-access-token\`, \`private-key\`, \`generic-api-key\`).
+* **Commit:** Hash exacto donde se introdujo el secreto.
+* **File & Line:** Ruta relativa y número de línea.
+* **Secret:** Fragmento del secreto detectado.
 
 ---
 
-## 2. Automatización con TruffleHog
+## 2. Validación Activa con TruffleHog
 
-**TruffleHog** va un paso más allá de la detección estática: incluye motores de validación activos para comprobar si las credenciales encontradas (claves de AWS, GitHub Personal Access Tokens, llaves de OpenAI, etc.) continúan siendo válidas en el proveedor correspondiente.
+**TruffleHog** se diferencia de otros escáneres porque no se limita a la detección estática: incluye motores de validación activa que realizan comprobaciones ligeras contra las APIs de los proveedores oficiales (AWS STS, GitHub API, OpenAI, Slack, Google Cloud) para verificar si la credencial detectada continúa activa en tiempo real.
 
-### Instalación y Ejecución
+### A. Instalación y Ejecución
 \`\`\`bash
-# Vía Docker
-docker run --rm -v "$(pwd):/pwd" trufflesecurity/trufflehog:latest git file:///pwd/repositorio-dumpeado
+# Vía Docker (sin instalar dependencias locales)
+docker run --rm -v "$(pwd)/loot:/loot" trufflesecurity/trufflehog:latest git file:///loot
 
-# Binario nativo
-trufflehog git file://./repositorio-dumpeado --only-valid
+# Binario nativo filtrando únicamente secretos validados
+trufflehog git file://./loot --only-verified
 \`\`\`
 
-La bandera \`--only-valid\` filtra el ruido y muestra únicamente aquellos secretos que siguen operativos frente a las APIs oficiales del proveedor.
-
----
-
-## 3. Búsqueda Quirúrgica Manual con Git y Ripgrep
-
-Si no dispones de herramientas de terceros instaladas en tu entorno de pentesting, las utilidades nativas de Git combinadas con \`ripgrep\` o \`grep\` permiten cazar secretos rápidamente:
-
-### Búsqueda con \`git log -S\` (Pickaxe Search)
-El parámetro \`-S\` busca commits que hayan añadido o eliminado una cadena exacta en cualquier punto del tiempo:
+### B. Análisis Acotado por Historial
+En repositorios con un volumen masivo de commits, puedes limitar el escaneo a los últimos cambios:
 
 \`\`\`bash
-# Buscar commits donde apareció la palabra DB_PASSWORD
-git log -S "DB_PASSWORD" -p
-
-# Buscar apariciones de cabeceras de claves privadas
-git log -S "BEGIN OPENSSH PRIVATE KEY" -p
-git log -S "BEGIN RSA PRIVATE KEY" -p
-\`\`\`
-
-### Escaneo de Archivos de Configuración Críticos
-Filtra directamente en el árbol de trabajo y ramas:
-
-\`\`\`bash
-# Búsqueda de archivos sensibles típicos
-find . -type f \\( -name ".env*" -o -name "*config*.php" -o -name "*settings*.py" -o -name "*.pem" -o -name "*.id_rsa" \\)
-
-# Búsqueda con ripgrep ignorando restricciones de .gitignore
-rg -uu -i "api[_-]?key|secret|password|access[_-]?token|bearer"
+trufflehog git file://./loot --since-commit HEAD~50
 \`\`\`
 
 ---
 
-## 4. Medidas de Remediación y Hardening
+## 3. Escaneo de Alto Rendimiento con Nosey Parker
 
-Para proteger un servidor frente a la exposición de Git:
+**Nosey Parker** es una herramienta forense de última generación desarrollada en Rust. Diseñada para procesar gigabytes de código e historiales masivos con un rendimiento significativamente superior a herramientas tradicionales y una tasa de falsos positivos extremadamente reducida.
 
-### A. Bloqueo en Nginx
+### A. Creación del Datastore y Escaneo
+Nosey Parker utiliza una base de datos local SQLite (\`datastore\`) para indexar y deduplicar hallazgos:
+
+\`\`\`bash
+# Escanear el repositorio recuperado y almacenar resultados en la base de datos local
+noseyparker scan --datastore np-db ./loot
+\`\`\`
+
+### B. Generación de Resumen e Informes
+\`\`\`bash
+# 1. Ver un resumen numérico categorizado de hallazgos
+noseyparker summarize --datastore np-db
+
+# 2. Generar el informe detallado con líneas de código y secretos
+noseyparker report --datastore np-db
+
+# 3. Exportar resultados a formato JSON para procesamiento con jq
+noseyparker report --datastore np-db --format json > noseyparker_report.json
+\`\`\`
+
+---
+
+## 4. Búsqueda Quirúrgica Manual (Git + Ripgrep)
+
+Cuando se trabaja en entornos aislados sin acceso a herramientas externas, los comandos nativos de Git y \`ripgrep\` (\`rg\`) permiten una detección precisa:
+
+### A. Localización de Archivos Críticos por Extensión y Nombre
+\`\`\`bash
+find . -type f \\( \\
+    -name ".env*" -o \\
+    -name "*config*.php" -o \\
+    -name "*settings*.py" -o \\
+    -name "*.pem" -o \\
+    -name "*.key" -o \\
+    -name "*.p12" -o \\
+    -name "*.pfx" -o \\
+    -name "*.kdbx" -o \\
+    -name "*.sql" -o \\
+    -name "id_rsa*" \\
+\\) 2>/dev/null
+\`\`\`
+
+### B. Búsqueda con Ripgrep en Todo el Árbol (Incluyendo .gitignore)
+La bandera \`-uu\` deshabilita el filtrado de archivos ocultos y de reglas \`.gitignore\`:
+
+\`\`\`bash
+# Buscar patrones típicos de contraseñas y asignaciones de claves
+rg -uu -i '(api[_-]?key|jwt[_-]?secret|password|db_pass|access_token)\\s*(=|:)\\s*["'\\''"][^"'\\''"]+["'\\''"]'
+
+# Buscar cadenas de conexión a bases de datos
+rg -uu -i '(postgres|mysql|mongodb(\\+srv)?|redis)://[^:]+:[^@]+@'
+
+# Buscar cabeceras de claves privadas criptográficas
+rg -uu 'BEGIN (RSA|DSA|EC|OPENSSH|PGP) PRIVATE KEY'
+\`\`\`
+
+---
+
+## 5. Reconocimiento Pasivo: GitHub y GitLab Dorking
+
+El reconocimiento no termina en el servidor web auditado. Muchas organizaciones y empleados suben involuntariamente fragmentos de código, proyectos satélite o archivos de configuración a repositorios públicos de GitHub o GitLab.
+
+### A. Operadores Clave en GitHub Search
+Utiliza la búsqueda de código de GitHub (\`github.com/search\`) combinando el operador de organización (\`org:\`) o usuario (\`user:\`):
+
+\`\`\`text
+# Cadenas de conexión a bases de datos
+org:objetivo "mongodb+srv://"
+org:objetivo "jdbc:mysql://"
+org:objetivo "postgres://"
+
+# Archivos de entorno y variables de configuración
+org:objetivo filename:.env
+org:objetivo filename:.env.production
+org:objetivo filename:application.properties "password="
+org:objetivo filename:wp-config.php
+
+# Claves privadas y certificados
+org:objetivo "BEGIN RSA PRIVATE KEY"
+org:objetivo filename:id_rsa
+org:objetivo extension:pem "PRIVATE KEY"
+
+# Tokens y credenciales de servicios en la nube
+org:objetivo "AKIA"
+org:objetivo "aws_secret_access_key"
+org:objetivo "slack_api_token"
+org:objetivo "xoxb-"
+org:objetivo "Authorization: Bearer"
+
+# Búsqueda orientada a nombres de empleados o dominios internos
+"target.internal" password
+user:desarrollador-objetivo "internal.target.local"
+\`\`\`
+
+### B. Búsqueda en GitLab
+En instancias de GitLab (tanto públicas en \`gitlab.com\` como autohospedadas en la organización objetivo), investiga:
+* **Snippets públicos:** Fragmentos de código temporales compartidos entre desarrolladores que frecuentemente incluyen credenciales de depuración.
+* **Filtros por grupo:** \`Group > Search > Blobs\` buscando términos como \`DB_PASSWORD\`, \`SECRET_KEY\`, \`FTP_PASS\`.
+* **Archivos CI/CD:** El archivo \`.gitlab-ci.yml\` a menudo expone variables de entorno o credenciales de despliegue en entornos de staging.
+
+---
+
+## 6. Remediación y Hardening Definitivo
+
+### A. Bloqueo a Nivel de Servidor Web
+
+#### Nginx
+Añadir al bloque de configuración del servidor o virtual host:
 \`\`\`nginx
 location ~ /\\.git {
     deny all;
@@ -6452,19 +6705,23 @@ location ~ /\\.git {
 }
 \`\`\`
 
-### B. Bloqueo en Apache (\`.htaccess\` o \`httpd.conf\`)
+#### Apache (\`.htaccess\` o \`httpd.conf\`)
 \`\`\`apache
 <DirectoryMatch "/\\.git">
     Require all denied
 </DirectoryMatch>
 \`\`\`
 
-### C. Limpieza del Historial en el Repositorio
-Si un secreto se subió accidentalmente, eliminarlo con un nuevo commit no es suficiente. Es obligatorio reescribir el historial con \`git-filter-repo\` y revocar inmediatamente la clave en el proveedor:
+### B. Purgado del Historial del Repositorio
+Si una credencial fue confirmada en el historial de Git, crear un nuevo commit borrándola **no soluciona la vulnerabilidad**. Es imperativo reescribir la base de datos de objetos y forzar la actualización:
 
+1. **Reescritura del historial con \`git-filter-repo\`:**
 \`\`\`bash
-git filter-repo --path-glob 'claves/*.pem' --invert-paths
+git filter-repo --path-glob 'certs/*.pem' --invert-paths
 \`\`\`
+
+2. **Rotación y Revocación Inmediata:**
+Toda credencial o clave privada expuesta en el historial debe ser tratada como comprometida; debe revocarse y reemplazarse de inmediato en el proveedor correspondiente.
 `,Li=`> **Linux Pentesting Field Guide.** Qué hacer cuando ya tienes una shell en un Linux: enumeración, *situational awareness*, *credential hunting* y preparación de la escalada de privilegios, con comandos explicados y orientados a decisión.
 
 Guía de consulta rápida para responder a *"tengo una shell Linux, ¿qué hago ahora?"*. Cada comando se explica por **qué hace → cómo se usa → qué buscar en la salida → qué hacer después**, no como una lista suelta.
@@ -10927,7 +11184,7 @@ La defensa es deshabilitar el modo de transición y parchear los clientes/AP.
 8. **Fluxion vs Airgeddon:** Fluxion = Evil Twin + portal cautivo (obtiene la clave por ingeniería social); Airgeddon = framework general con módulos para múltiples ataques.
 9. **WPA3:** usa SAE/Dragonfly (resistente a crackeo offline); Dragonblood permite downgrade a WPA2 y side-channels.
 10. **PMKID:** se captura **sin cliente conectado**, interactuando solo con el AP (hcxdumptool).
-`,ya=[{slug:`enumeration`,title:{es:`Enumeración`,en:`Enumeration`},icon:`search`,introTitle:`Fase de Enumeración`,pages:[{slug:`comandos-de-red`,title:`Comandos de Red`},{slug:`descubrimiento-de-hosts`,title:`Descubrimiento de HOSTS!`},{slug:`nmap`,title:`Nmap para Pentesting`},{slug:`dirbuster-fuzzing-web`,title:`Dirbuster - Fuzzing Web`},{slug:`ffuf-fuzzing-web`,title:`Ffuf - Fuzzing Web`},{slug:`feroxbuster`,title:`Feroxbuster - Fuzzing Web`},{slug:`gobuster-fuzzing-web`,title:`Gobuster - Fuzzing Web`},{slug:`wfuzz`,title:`Wfuzz - Web Fuzzer`},{slug:`nikto-escaner-web`,title:`Nikto - Escaner Web`},{slug:`subfinder`,title:`Subfinder - Subdominios`}]},{slug:`services`,title:{es:`Servicios y Puertos`,en:`Services & Ports`},icon:`server`,introTitle:`Enumeración y Explotación de Servicios`,pages:[{slug:`puerto-21-ftp`,title:`FTP · Puerto 21`},{slug:`puerto-22-ssh`,title:`SSH · Puerto 22`},{slug:`puerto-25-smtp`,title:`SMTP · Puerto 25`},{slug:`puerto-80-443-http-https`,title:`HTTP/HTTPS · Puertos 80/443`},{slug:`puertos-139-445-smb`,title:`SMB / RPC · Puertos 139/445`},{slug:`puerto-1521-oracle-database`,title:`Oracle Database · Puerto 1521`},{slug:`puerto-3306-mysql`,title:`MySQL · Puerto 3306`},{slug:`3389-rdp`,title:`RDP · Puerto 3389`}]},{slug:`web`,title:{es:`Explotación Web`,en:`Web Exploitation`},icon:`globe`,introTitle:`Auditoría y Explotación Web`,pages:[{slug:`metodologia-burp`,title:`⚡ Metodología Web & Burp Cheat Sheet`},{slug:`drupal-cms`,title:`Drupal - CMS`},{slug:`jenkins`,title:`Jenkins - Tecnology`},{slug:`joomla-cms`,title:`Joomla - CMS`},{slug:`microsoft-iis-webshell-windows`,title:`Microsoft IIS - Webshell - windows`},{slug:`servidor-web-local-en-python`,title:`Servidor Web Local en Python`},{slug:`tomcat`,title:`Tomcat - Tecnology`},{slug:`wordpress-cms`,title:`WordPress - CMS`},{slug:`file-upload-hacking`,title:`File Upload Hacking`}]},{slug:`git-exposure`,title:{es:`Git Exposure & Forensics`,en:`Git Exposure & Forensics`},icon:`git`,introTitle:`Auditoría de Repositorios Expuestos y Forense de Git`,pages:[{slug:`deteccion-y-verificacion`,title:`Detección y Reconocimiento de .git Expuesto`},{slug:`dumping-y-reconstruccion`,title:`Dumping y Reconstrucción del Repositorio (git-dumper)`},{slug:`git-forensics-commits-branches-stashes`,title:`Git Forensics: Commits, Ramas Ocultas y Stashes`},{slug:`secret-harvesting-gitleaks-trufflehog`,title:`Secret Harvesting: Gitleaks, TruffleHog y Credenciales`}]},{slug:`privilege-escalation`,title:{es:`Escalada de Privilegios`,en:`Privilege Escalation`},icon:`arrow-up`,introTitle:`Escalada de Privilegios (PrivEsc)`,pages:[{slug:`linux`,title:`Escala de privilegios en Linux`},{slug:`windows`,title:`Escalada de privilegios en Windows`}]},{slug:`post-exploitation`,title:{es:`Post-Explotación`,en:`Post-Exploitation`},icon:`terminal`,introTitle:`Fase de Post-Explotación`,pages:[{slug:`pivoting`,title:`Pivoting con Metasploit utilizando una máquina Windows`},{slug:`tty`,title:`TTY - Spawning`},{slug:`windows-post-exploitation`,title:`Windows - Post-Explotación`},{slug:`winrm`,title:`WinRM`}]},{slug:`linux`,title:{es:`Linux`,en:`Linux`},icon:`code`,introTitle:`Linux Pentesting Field Guide`,pages:[{slug:`introduccion`,title:`Introducción y Quick Reference`},{slug:`informacion-del-sistema`,title:`Información del sistema`},{slug:`archivos-permisos`,title:`Archivos, búsqueda y permisos`},{slug:`red`,title:`Red y Samba`},{slug:`procesos-texto-shell`,title:`Procesos, texto y shell`}]},{slug:`active-directory`,title:{es:`Active Directory`,en:`Active Directory`},icon:`network`,introTitle:`Active Directory Pentesting`,pages:[{slug:`mapa-de-ataques`,title:`00 · Mapa de Arquitectura de Ataques`},{slug:`introduccion`,title:`01 · Introducción a Active Directory`},{slug:`metodologia`,title:`02 · Metodología y Reconocimiento`},{slug:`enumeracion`,title:`03 · Enumeración (usuarios, grupos, equipos)`},{slug:`ldap`,title:`04 · LDAP Enumeration`},{slug:`smb-sysvol`,title:`05 · SMB, SYSVOL y GPP`},{slug:`kerberos`,title:`06 · Kerberos: AS-REP y Kerberoasting`},{slug:`password-attacks`,title:`07 · Password Attacks`},{slug:`bloodhound`,title:`08 · BloodHound`},{slug:`acl-ace`,title:`09 · ACL / ACE Abuse`},{slug:`gpo`,title:`10 · GPO Abuse`},{slug:`delegation`,title:`11 · Delegation (Unconstrained/Constrained/RBCD)`},{slug:`credential-dumping`,title:`12 · Credential Dumping`},{slug:`dcsync`,title:`13 · DCSync`},{slug:`mimikatz`,title:`14 · Mimikatz y AV/EDR`},{slug:`ntlm-coercion`,title:`15 · NTLM Relay y Coercion`},{slug:`adcs`,title:`16 · ADCS y Shadow Credentials`},{slug:`tickets`,title:`17 · Golden, Silver y Skeleton Key`},{slug:`lateral-movement`,title:`18 · Lateral Movement (PtH/PtT)`},{slug:`mssql-trusts`,title:`19 · MSSQL y Forest Trusts`},{slug:`persistence-opsec`,title:`20 · Persistence y OPSEC`},{slug:`attack-paths`,title:`21 · Attack Paths y Domain Dominance`},{slug:`reference`,title:`22 · Quick Reference y Checklist`}]},{slug:`tools`,title:{es:`Herramientas`,en:`Tools`},icon:`tool`,introTitle:`Herramientas de Seguridad (Tools)`,pages:[{slug:`john-the-ripper`,title:`John the Ripper - HASH`},{slug:`netexec`,title:`NetExec (nxc) - AD`},{slug:`windows-hotfix`,title:`HotFixed`}]},{slug:`wifi`,title:{es:`Wi-Fi`,en:`Wi-Fi`},icon:`wifi`,introTitle:`Auditoría de Redes Inalámbricas (Wi-Fi)`,pages:[{slug:`wifi-pentesting`,title:`Wi-Fi Pentesting`}]}],ba=Object.assign({"./active-directory/_index.md":Qr,"./active-directory/acl-ace.md":$r,"./active-directory/adcs.md":ei,"./active-directory/attack-paths.md":ti,"./active-directory/bloodhound.md":ni,"./active-directory/credential-dumping.md":ri,"./active-directory/dcsync.md":ii,"./active-directory/delegation.md":ai,"./active-directory/enumeracion.md":oi,"./active-directory/gpo.md":si,"./active-directory/introduccion.md":ci,"./active-directory/kerberos.md":li,"./active-directory/lateral-movement.md":ui,"./active-directory/ldap.md":di,"./active-directory/metodologia.md":fi,"./active-directory/mimikatz.md":pi,"./active-directory/mssql-trusts.md":mi,"./active-directory/ntlm-coercion.md":hi,"./active-directory/password-attacks.md":gi,"./active-directory/persistence-opsec.md":_i,"./active-directory/reference.md":vi,"./active-directory/smb-sysvol.md":yi,"./active-directory/tickets.md":bi,"./enumeration/_index.md":xi,"./enumeration/comandos-de-red.md":Si,"./enumeration/descubrimiento-de-hosts.md":Ci,"./enumeration/dirbuster-fuzzing-web.md":wi,"./enumeration/feroxbuster.md":Ti,"./enumeration/ffuf-fuzzing-web.md":Ei,"./enumeration/gobuster-fuzzing-web.md":Di,"./enumeration/nikto-escaner-web.md":Oi,"./enumeration/nmap.md":ki,"./enumeration/subfinder.md":Ai,"./enumeration/wfuzz.md":ji,"./git-exposure/_index.md":Mi,"./git-exposure/deteccion-y-verificacion.md":Ni,"./git-exposure/dumping-y-reconstruccion.md":Pi,"./git-exposure/git-forensics-commits-branches-stashes.md":Fi,"./git-exposure/secret-harvesting-gitleaks-trufflehog.md":Ii,"./linux/_index.md":Li,"./linux/archivos-permisos.md":Ri,"./linux/informacion-del-sistema.md":zi,"./linux/introduccion.md":Bi,"./linux/procesos-texto-shell.md":M,"./linux/red.md":N,"./post-exploitation/_index.md":Vi,"./post-exploitation/pivoting.md":Hi,"./post-exploitation/tty.md":Ui,"./post-exploitation/windows-post-exploitation.md":Wi,"./post-exploitation/winrm.md":Gi,"./privilege-escalation/_index.md":Ki,"./privilege-escalation/linux.md":qi,"./privilege-escalation/windows.md":Ji,"./services/3389-rdp.md":Yi,"./services/_index.md":Xi,"./services/puerto-1521-oracle-database.md":Zi,"./services/puerto-21-ftp.md":Qi,"./services/puerto-22-ssh.md":$i,"./services/puerto-25-smtp.md":ea,"./services/puerto-3306-mysql.md":ta,"./services/puerto-80-443-http-https.md":na,"./services/puertos-139-445-smb.md":ra,"./tools/_index.md":ia,"./tools/john-the-ripper.md":aa,"./tools/netexec.md":oa,"./tools/windows-hotfix.md":sa,"./web/_index.md":ca,"./web/drupal-cms.md":la,"./web/file-upload-hacking.md":ua,"./web/jenkins.md":da,"./web/joomla-cms.md":fa,"./web/metodologia-burp.md":P,"./web/microsoft-iis-webshell-windows.md":pa,"./web/servidor-web-local-en-python.md":ma,"./web/tomcat.md":ha,"./web/wordpress-cms.md":ga,"./wifi/_index.md":_a,"./wifi/wifi-pentesting.md":va}),xa={};for(let[e,t]of Object.entries(ba)){let n=e.replace(/^\.\//,``).replace(/\.md$/,``);xa[n]=t}var Sa=ya,Ca=(e,t)=>xa[`${e}/${t}`]||null,wa=e=>ya.find(t=>t.slug===e)||null,Ta=e=>{let t=(xa[`${e}/_index`]||``).split(`
+`,ya=[{slug:`enumeration`,title:{es:`Enumeración`,en:`Enumeration`},icon:`search`,introTitle:`Fase de Enumeración`,pages:[{slug:`comandos-de-red`,title:`Comandos de Red`},{slug:`descubrimiento-de-hosts`,title:`Descubrimiento de HOSTS!`},{slug:`nmap`,title:`Nmap para Pentesting`},{slug:`dirbuster-fuzzing-web`,title:`Dirbuster - Fuzzing Web`},{slug:`ffuf-fuzzing-web`,title:`Ffuf - Fuzzing Web`},{slug:`feroxbuster`,title:`Feroxbuster - Fuzzing Web`},{slug:`gobuster-fuzzing-web`,title:`Gobuster - Fuzzing Web`},{slug:`wfuzz`,title:`Wfuzz - Web Fuzzer`},{slug:`nikto-escaner-web`,title:`Nikto - Escaner Web`},{slug:`subfinder`,title:`Subfinder - Subdominios`}]},{slug:`services`,title:{es:`Servicios y Puertos`,en:`Services & Ports`},icon:`server`,introTitle:`Enumeración y Explotación de Servicios`,pages:[{slug:`puerto-21-ftp`,title:`FTP · Puerto 21`},{slug:`puerto-22-ssh`,title:`SSH · Puerto 22`},{slug:`puerto-25-smtp`,title:`SMTP · Puerto 25`},{slug:`puerto-80-443-http-https`,title:`HTTP/HTTPS · Puertos 80/443`},{slug:`puertos-139-445-smb`,title:`SMB / RPC · Puertos 139/445`},{slug:`puerto-1521-oracle-database`,title:`Oracle Database · Puerto 1521`},{slug:`puerto-3306-mysql`,title:`MySQL · Puerto 3306`},{slug:`3389-rdp`,title:`RDP · Puerto 3389`}]},{slug:`web`,title:{es:`Explotación Web`,en:`Web Exploitation`},icon:`globe`,introTitle:`Auditoría y Explotación Web`,pages:[{slug:`metodologia-burp`,title:`⚡ Metodología Web & Burp Cheat Sheet`},{slug:`drupal-cms`,title:`Drupal - CMS`},{slug:`jenkins`,title:`Jenkins - Tecnology`},{slug:`joomla-cms`,title:`Joomla - CMS`},{slug:`microsoft-iis-webshell-windows`,title:`Microsoft IIS - Webshell - windows`},{slug:`servidor-web-local-en-python`,title:`Servidor Web Local en Python`},{slug:`tomcat`,title:`Tomcat - Tecnology`},{slug:`wordpress-cms`,title:`WordPress - CMS`},{slug:`file-upload-hacking`,title:`File Upload Hacking`}]},{slug:`git-exposure`,title:{es:`Git Exposure & Forensics`,en:`Git Exposure & Forensics`},icon:`git`,introTitle:`Auditoría de Repositorios Expuestos y Forense de Git`,pages:[{slug:`deteccion-y-verificacion`,title:`Detección y Reconocimiento de .git Expuesto`},{slug:`dumping-y-reconstruccion`,title:`Dumping y Reconstrucción del Repositorio (git-dumper)`},{slug:`git-forensics-commits-branches-stashes`,title:`Git Forensics: Commits, Ramas y Objetos Huérfanos`},{slug:`secret-harvesting-gitleaks-trufflehog`,title:`Secret Harvesting: Gitleaks, TruffleHog y Dorking`}]},{slug:`privilege-escalation`,title:{es:`Escalada de Privilegios`,en:`Privilege Escalation`},icon:`arrow-up`,introTitle:`Escalada de Privilegios (PrivEsc)`,pages:[{slug:`linux`,title:`Escala de privilegios en Linux`},{slug:`windows`,title:`Escalada de privilegios en Windows`}]},{slug:`post-exploitation`,title:{es:`Post-Explotación`,en:`Post-Exploitation`},icon:`terminal`,introTitle:`Fase de Post-Explotación`,pages:[{slug:`pivoting`,title:`Pivoting con Metasploit utilizando una máquina Windows`},{slug:`tty`,title:`TTY - Spawning`},{slug:`windows-post-exploitation`,title:`Windows - Post-Explotación`},{slug:`winrm`,title:`WinRM`}]},{slug:`linux`,title:{es:`Linux`,en:`Linux`},icon:`code`,introTitle:`Linux Pentesting Field Guide`,pages:[{slug:`introduccion`,title:`Introducción y Quick Reference`},{slug:`informacion-del-sistema`,title:`Información del sistema`},{slug:`archivos-permisos`,title:`Archivos, búsqueda y permisos`},{slug:`red`,title:`Red y Samba`},{slug:`procesos-texto-shell`,title:`Procesos, texto y shell`}]},{slug:`active-directory`,title:{es:`Active Directory`,en:`Active Directory`},icon:`network`,introTitle:`Active Directory Pentesting`,pages:[{slug:`mapa-de-ataques`,title:`00 · Mapa de Arquitectura de Ataques`},{slug:`introduccion`,title:`01 · Introducción a Active Directory`},{slug:`metodologia`,title:`02 · Metodología y Reconocimiento`},{slug:`enumeracion`,title:`03 · Enumeración (usuarios, grupos, equipos)`},{slug:`ldap`,title:`04 · LDAP Enumeration`},{slug:`smb-sysvol`,title:`05 · SMB, SYSVOL y GPP`},{slug:`kerberos`,title:`06 · Kerberos: AS-REP y Kerberoasting`},{slug:`password-attacks`,title:`07 · Password Attacks`},{slug:`bloodhound`,title:`08 · BloodHound`},{slug:`acl-ace`,title:`09 · ACL / ACE Abuse`},{slug:`gpo`,title:`10 · GPO Abuse`},{slug:`delegation`,title:`11 · Delegation (Unconstrained/Constrained/RBCD)`},{slug:`credential-dumping`,title:`12 · Credential Dumping`},{slug:`dcsync`,title:`13 · DCSync`},{slug:`mimikatz`,title:`14 · Mimikatz y AV/EDR`},{slug:`ntlm-coercion`,title:`15 · NTLM Relay y Coercion`},{slug:`adcs`,title:`16 · ADCS y Shadow Credentials`},{slug:`tickets`,title:`17 · Golden, Silver y Skeleton Key`},{slug:`lateral-movement`,title:`18 · Lateral Movement (PtH/PtT)`},{slug:`mssql-trusts`,title:`19 · MSSQL y Forest Trusts`},{slug:`persistence-opsec`,title:`20 · Persistence y OPSEC`},{slug:`attack-paths`,title:`21 · Attack Paths y Domain Dominance`},{slug:`reference`,title:`22 · Quick Reference y Checklist`}]},{slug:`tools`,title:{es:`Herramientas`,en:`Tools`},icon:`tool`,introTitle:`Herramientas de Seguridad (Tools)`,pages:[{slug:`john-the-ripper`,title:`John the Ripper - HASH`},{slug:`netexec`,title:`NetExec (nxc) - AD`},{slug:`windows-hotfix`,title:`HotFixed`}]},{slug:`wifi`,title:{es:`Wi-Fi`,en:`Wi-Fi`},icon:`wifi`,introTitle:`Auditoría de Redes Inalámbricas (Wi-Fi)`,pages:[{slug:`wifi-pentesting`,title:`Wi-Fi Pentesting`}]}],ba=Object.assign({"./active-directory/_index.md":Qr,"./active-directory/acl-ace.md":$r,"./active-directory/adcs.md":ei,"./active-directory/attack-paths.md":ti,"./active-directory/bloodhound.md":ni,"./active-directory/credential-dumping.md":ri,"./active-directory/dcsync.md":ii,"./active-directory/delegation.md":ai,"./active-directory/enumeracion.md":oi,"./active-directory/gpo.md":si,"./active-directory/introduccion.md":ci,"./active-directory/kerberos.md":li,"./active-directory/lateral-movement.md":ui,"./active-directory/ldap.md":di,"./active-directory/metodologia.md":fi,"./active-directory/mimikatz.md":pi,"./active-directory/mssql-trusts.md":mi,"./active-directory/ntlm-coercion.md":hi,"./active-directory/password-attacks.md":gi,"./active-directory/persistence-opsec.md":_i,"./active-directory/reference.md":vi,"./active-directory/smb-sysvol.md":yi,"./active-directory/tickets.md":bi,"./enumeration/_index.md":xi,"./enumeration/comandos-de-red.md":Si,"./enumeration/descubrimiento-de-hosts.md":Ci,"./enumeration/dirbuster-fuzzing-web.md":wi,"./enumeration/feroxbuster.md":Ti,"./enumeration/ffuf-fuzzing-web.md":Ei,"./enumeration/gobuster-fuzzing-web.md":Di,"./enumeration/nikto-escaner-web.md":Oi,"./enumeration/nmap.md":ki,"./enumeration/subfinder.md":Ai,"./enumeration/wfuzz.md":ji,"./git-exposure/_index.md":Mi,"./git-exposure/deteccion-y-verificacion.md":Ni,"./git-exposure/dumping-y-reconstruccion.md":Pi,"./git-exposure/git-forensics-commits-branches-stashes.md":Fi,"./git-exposure/secret-harvesting-gitleaks-trufflehog.md":Ii,"./linux/_index.md":Li,"./linux/archivos-permisos.md":Ri,"./linux/informacion-del-sistema.md":zi,"./linux/introduccion.md":Bi,"./linux/procesos-texto-shell.md":M,"./linux/red.md":N,"./post-exploitation/_index.md":Vi,"./post-exploitation/pivoting.md":Hi,"./post-exploitation/tty.md":Ui,"./post-exploitation/windows-post-exploitation.md":Wi,"./post-exploitation/winrm.md":Gi,"./privilege-escalation/_index.md":Ki,"./privilege-escalation/linux.md":qi,"./privilege-escalation/windows.md":Ji,"./services/3389-rdp.md":Yi,"./services/_index.md":Xi,"./services/puerto-1521-oracle-database.md":Zi,"./services/puerto-21-ftp.md":Qi,"./services/puerto-22-ssh.md":$i,"./services/puerto-25-smtp.md":ea,"./services/puerto-3306-mysql.md":ta,"./services/puerto-80-443-http-https.md":na,"./services/puertos-139-445-smb.md":ra,"./tools/_index.md":ia,"./tools/john-the-ripper.md":aa,"./tools/netexec.md":oa,"./tools/windows-hotfix.md":sa,"./web/_index.md":ca,"./web/drupal-cms.md":la,"./web/file-upload-hacking.md":ua,"./web/jenkins.md":da,"./web/joomla-cms.md":fa,"./web/metodologia-burp.md":P,"./web/microsoft-iis-webshell-windows.md":pa,"./web/servidor-web-local-en-python.md":ma,"./web/tomcat.md":ha,"./web/wordpress-cms.md":ga,"./wifi/_index.md":_a,"./wifi/wifi-pentesting.md":va}),xa={};for(let[e,t]of Object.entries(ba)){let n=e.replace(/^\.\//,``).replace(/\.md$/,``);xa[n]=t}var Sa=ya,Ca=(e,t)=>xa[`${e}/${t}`]||null,wa=e=>ya.find(t=>t.slug===e)||null,Ta=e=>{let t=(xa[`${e}/_index`]||``).split(`
 `),n=[];for(let e of t){if(/^(#{1,6}\s|\*\*\*|---|\||\s*[-*]\s|\d+\.\s)/.test(e.trim())&&n.length||/^(#{1,6}\s|\*\*\*|---|\|)/.test(e.trim()))break;n.push(e)}return n.join(`
 `).trim()},Ea=(e,t)=>{let n=xa[`${e}/${t}`]||``,r=[];for(let e of n.split(`
 `)){let t=e.trim();if(!t){if(r.length)break;continue}if(/^(#{1,6}\s|>|\||[-*]\s|\d+\.\s|```|\*\*\*|---|<)/.test(t)){if(r.length)break;continue}r.push(t)}return r.join(` `).replace(/\[([^\]]+)\]\([^)]+\)/g,`$1`).replace(/[*_`]+/g,``).replace(/\s+/g,` `).trim()};function Da({isOpen:e,onClose:t}){let{lang:n,tr:r,toggle:i}=or(),a=vt(),[o,s]=(0,u.useState)(``),[c,l]=(0,u.useState)(0),d=(0,u.useRef)(null),f=n===`es`,p=(0,u.useMemo)(()=>{let e=[];return gr.forEach(n=>{e.push({type:`page`,category:f?`Navegación`:`Navigation`,title:r(n.label),subtitle:n.path,icon:n.icon||`terminal`,action:()=>{a(n.path),t()}})}),Sa.forEach(n=>{let i=r(n.title);e.push({type:`doc-cat`,category:f?`Pentesting: Sección`:`Pentesting: Category`,title:i,subtitle:`/pentesting/${n.slug}`,icon:n.icon||`book`,action:()=>{a(`/pentesting/${n.slug}`),t()}}),n.pages?.forEach(r=>{e.push({type:`doc-page`,category:`Pentesting: ${i}`,title:r.title,subtitle:`/pentesting/${n.slug}/${r.slug}`,icon:`document`,action:()=>{a(r.external||`/pentesting/${n.slug}/${r.slug}`),t()}})})}),e.push({type:`doc-page`,category:`Pentesting: Active Directory`,title:f?`Mapa de Ataques de Active Directory`:`Active Directory Attack Map`,subtitle:`/pentesting/active-directory/mapa-de-ataques`,icon:`network`,action:()=>{a(`/pentesting/active-directory/mapa-de-ataques`),t()}}),dr.forEach(n=>{e.push({type:`project`,category:f?`Proyectos`:`Projects`,title:n.title,subtitle:r(n.desc),icon:`briefcase`,action:()=>{a(`/projects`),t()}})}),fr.forEach(n=>{e.push({type:`cert`,category:f?`Certificaciones`:`Certifications`,title:`${n.name} — ${n.full}`,subtitle:`${n.issuer} (${r({es:n.score,en:n.score})})`,icon:`target`,action:()=>{a(`/achievements`),t()}})}),hr.forEach(n=>{e.push({type:`writeup`,category:`Writeups`,title:`${n.platform} — ${n.title}`,subtitle:r(n.summary),icon:`document`,action:()=>{n.url?window.open(n.url,`_blank`,`noopener,noreferrer`):n.path&&a(n.path),t()}})}),e.push({type:`action`,category:f?`Acciones Rápidas`:`Quick Actions`,title:f?`Cambiar Idioma (ES / EN)`:`Toggle Language (ES / EN)`,subtitle:f?`Cambiar a inglés`:`Switch to Spanish`,icon:`globe`,action:()=>{i(),t()}}),e.push({type:`action`,category:f?`Acciones Rápidas`:`Quick Actions`,title:f?`Copiar Email de Alberto`:`Copy Alberto’s Email`,subtitle:cr.email,icon:`mail`,action:()=>{navigator.clipboard.writeText(cr.email),alert(f?`Email copiado: `+cr.email:`Email copied: `+cr.email),t()}}),e.push({type:`action`,category:f?`Acciones Rápidas`:`Quick Actions`,title:`GitHub: bitsofalber`,subtitle:cr.github,icon:`code`,action:()=>{window.open(cr.github,`_blank`,`noopener,noreferrer`),t()}}),e},[n,r,i,a,t,f]),m=(0,u.useMemo)(()=>{if(!o.trim())return p.slice(0,10);let e=o.toLowerCase();return p.filter(t=>t.title.toLowerCase().includes(e)||t.subtitle?.toLowerCase().includes(e)||t.category.toLowerCase().includes(e)).slice(0,15)},[p,o]);return(0,u.useEffect)(()=>{l(0)},[o]),(0,u.useEffect)(()=>{e&&(s(``),l(0),setTimeout(()=>d.current?.focus(),50))},[e]),e?(0,k.jsx)(`div`,{className:`palette-backdrop`,onClick:t,role:`dialog`,"aria-modal":`true`,children:(0,k.jsxs)(`div`,{className:`palette-modal`,onClick:e=>e.stopPropagation(),children:[(0,k.jsxs)(`div`,{className:`palette-search-bar`,children:[(0,k.jsx)(Mr,{}),(0,k.jsx)(`input`,{ref:d,type:`text`,className:`palette-input`,placeholder:f?`Buscar comandos, guías de pentesting, proyectos...`:`Search commands, pentesting guides, projects...`,value:o,onChange:e=>s(e.target.value),onKeyDown:e=>{e.key===`Escape`?(e.preventDefault(),t()):e.key===`ArrowDown`?(e.preventDefault(),l(e=>(e+1)%Math.max(1,m.length))):e.key===`ArrowUp`?(e.preventDefault(),l(e=>(e-1+m.length)%Math.max(1,m.length))):e.key===`Enter`&&(e.preventDefault(),m[c]&&m[c].action())}}),(0,k.jsx)(`kbd`,{className:`palette-esc`,onClick:t,children:`ESC`})]}),(0,k.jsx)(`div`,{className:`palette-results`,children:m.length===0?(0,k.jsx)(`div`,{className:`palette-empty`,children:f?`No se encontraron resultados para "`+o+`"`:`No results found for "`+o+`"`}):m.map((e,t)=>(0,k.jsxs)(`div`,{className:`palette-item${t===c?` active`:``}`,onClick:()=>e.action(),onMouseEnter:()=>l(t),children:[(0,k.jsx)(`div`,{className:`palette-item-icon`,children:(0,k.jsx)(`span`,{className:`palette-dot`})}),(0,k.jsxs)(`div`,{className:`palette-item-info`,children:[(0,k.jsx)(`div`,{className:`palette-item-title`,children:e.title}),(0,k.jsxs)(`div`,{className:`palette-item-sub`,children:[(0,k.jsx)(`span`,{className:`palette-tag`,children:e.category}),e.subtitle&&(0,k.jsx)(`span`,{className:`palette-text`,children:e.subtitle})]})]}),(0,k.jsx)(`span`,{className:`palette-enter`,"aria-hidden":`true`,children:`↵`})]},`${e.type}-${e.title}-${t}`))}),(0,k.jsxs)(`div`,{className:`palette-footer`,children:[(0,k.jsxs)(`span`,{children:[(0,k.jsx)(`kbd`,{children:`↑`}),` `,(0,k.jsx)(`kbd`,{children:`↓`}),` `,f?`Navegar`:`Navigate`]}),(0,k.jsxs)(`span`,{children:[(0,k.jsx)(`kbd`,{children:`↵`}),` `,f?`Seleccionar`:`Select`]}),(0,k.jsxs)(`span`,{children:[(0,k.jsx)(`kbd`,{children:`ESC`}),` `,f?`Cerrar`:`Close`]})]})]})}):null}function Oa({name:e}){switch(e){case`terminal`:return(0,k.jsx)(Lr,{});case`book`:return(0,k.jsx)(zr,{});case`briefcase`:return(0,k.jsx)(yr,{});case`target`:return(0,k.jsx)(xr,{});case`document`:return(0,k.jsx)(Sr,{});case`user`:return(0,k.jsx)(vr,{});case`mail`:return(0,k.jsx)(Tr,{});case`globe`:return(0,k.jsx)(Fr,{});default:return(0,k.jsx)(Lr,{})}}var ka=`!<>-_\\/[]{}~=+*^?#0123456789`;function Aa({text:e,as:t=`span`,className:n=``,triggerOnHover:r=!0,...i}){let a=(0,u.useRef)(null),o=(0,u.useRef)(null),s=(0,u.useRef)(!1),c=()=>{if(!a.current)return;o.current&&cancelAnimationFrame(o.current),s.current=!0;let t=[];for(let n=0;n<e.length;n++){let r=e[n],i=r===` `,a=i?0:Math.floor(n*1.2),o=i?0:a+9+Math.floor(Math.random()*5);t.push({to:r,isSpace:i,start:a,end:o,char:ka[Math.floor(Math.random()*28)]})}let n=0,r=()=>{let e=0,i=``;for(let r=0;r<t.length;r++){let a=t[r];a.isSpace?(i+=` `,e++):n>=a.end?(i+=a.to,e++):(a.char=ka[Math.floor(Math.random()*28)],i+=`<span class="scramble-dud">${a.char}</span>`)}a.current&&(a.current.innerHTML=i),e===t.length?s.current=!1:(n++,o.current=requestAnimationFrame(r))};r()};return(0,u.useEffect)(()=>(c(),()=>{o.current&&cancelAnimationFrame(o.current)}),[e]),(0,k.jsx)(t,{ref:a,className:`scramble-text ${n}`,onMouseEnter:()=>{r&&!s.current&&c()},...i,children:e})}function ja({firstName:e,lastName:t,handle:n,className:r=``}){let i=(0,u.useRef)(null),a=(0,u.useRef)(null),o=(0,u.useRef)(!1),s=`${e} ${t} [@${n}]`,c=e.length,l=t.length,d=()=>{if(!i.current)return;a.current&&cancelAnimationFrame(a.current),o.current=!0;let e=[];for(let t=0;t<s.length;t++){let n=s[t],r=n===` `,i=r?0:Math.floor(t*1.1),a=r?0:i+9+Math.floor(Math.random()*5);e.push({to:n,isSpace:r,start:i,end:a,char:ka[Math.floor(Math.random()*28)]})}let t=0,n=()=>{let r=0,s=``,u=``,d=``;for(let n=0;n<e.length;n++){let i=e[n],a=``;i.isSpace?(a=` `,r++):t>=i.end?(a=i.to,r++):(i.char=ka[Math.floor(Math.random()*28)],a=`<span class="scramble-dud">${i.char}</span>`),n<c?s+=a:n===c||(n<c+1+l?u+=a:n===c+1+l||(d+=a))}i.current&&(i.current.innerHTML=`<span class="hero-first">${s}</span> <span class="hero-last">${u}</span> <span class="hero-tag">${d}</span>`),r===e.length?o.current=!1:(t++,a.current=requestAnimationFrame(n))};n()};return(0,u.useEffect)(()=>(d(),()=>{a.current&&cancelAnimationFrame(a.current)}),[e,t,n]),(0,k.jsxs)(`h1`,{ref:i,className:`hero-name ${r}`,onMouseEnter:()=>{o.current||d()},style:{cursor:`default`},title:`${e} ${t} [@${n}]`,children:[(0,k.jsx)(`span`,{className:`hero-first`,children:e}),` `,(0,k.jsx)(`span`,{className:`hero-last`,children:t}),` `,(0,k.jsxs)(`span`,{className:`hero-tag`,children:[`[@`,n,`]`]})]})}function Ma(){let{pathname:e}=ht(),{lang:t,tr:n,toggle:r}=or(),[i,a]=(0,u.useState)(!1),[o,s]=(0,u.useState)(!1),c=t===`es`;(0,u.useEffect)(()=>{window.scrollTo(0,0),a(!1)},[e]),(0,u.useEffect)(()=>{let e=e=>{(e.metaKey||e.ctrlKey)&&e.key.toLowerCase()===`k`&&(e.preventDefault(),s(e=>!e))};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[]),(0,u.useEffect)(()=>{let e=window.matchMedia(`(hover: hover) and (pointer: fine)`),t=window.matchMedia(`(prefers-reduced-motion: reduce)`);if(!e.matches||t.matches)return;let n=e=>{let t=e.target.closest?.(`.bento-card`);if(!t)return;let n=t.getBoundingClientRect();t.style.setProperty(`--mx`,`${e.clientX-n.left}px`),t.style.setProperty(`--my`,`${e.clientY-n.top}px`)};return document.addEventListener(`pointermove`,n,{passive:!0}),()=>document.removeEventListener(`pointermove`,n)},[]);let l=()=>e===`/`?`home`:e.replace(/^\//,``).replace(/\//g,` / `),d=gr.map(t=>(0,k.jsx)(`li`,{className:`nav-item${e===t.path||t.path!==`/`&&e.startsWith(t.path)?` active`:``}`,style:{"--c":t.color},children:(0,k.jsxs)(Bn,{to:t.path,end:t.path===`/`,className:({isActive:e})=>`nav-link${e?` active`:``}`,onClick:()=>a(!1),children:[(0,k.jsx)(`span`,{className:`nav-icon-wrap`,"aria-hidden":`true`,children:(0,k.jsx)(Oa,{name:t.icon})}),(0,k.jsx)(`span`,{className:`nav-label`,children:n(t.label)}),(0,k.jsxs)(`span`,{className:`nav-code`,"aria-hidden":`true`,children:[`0x`,t.code]})]})},t.path));return(0,k.jsxs)(`div`,{className:`layout-shell`,children:[(0,k.jsx)(`a`,{className:`skip-link`,href:`#main`,children:`Skip to content`}),(0,k.jsx)(Da,{isOpen:o,onClose:()=>s(!1)}),i&&(0,k.jsx)(`div`,{className:`sidebar-backdrop`,onClick:()=>a(!1),"aria-hidden":`true`}),(0,k.jsxs)(`aside`,{id:`sidebar`,className:`sidebar${i?` mobile-open`:``}`,children:[(0,k.jsx)(sr,{opacity:.22}),(0,k.jsxs)(`div`,{className:`sidebar-inner`,children:[(0,k.jsxs)(`header`,{className:`profile-wrapper`,children:[(0,k.jsx)(O,{to:`/`,className:`avatar-link`,"aria-label":`Alberto Hidalgo — Inicio`,children:(0,k.jsxs)(`div`,{id:`avatar`,className:`avatar`,children:[(0,k.jsx)(`div`,{className:`avatar-hex`,children:A.avatarImage?(0,k.jsx)(`img`,{src:A.avatarImage,alt:`${A.firstName} ${A.lastName}`,className:`avatar-img`}):(0,k.jsx)(`span`,{className:`avatar-initials`,children:A.avatarText})}),(0,k.jsx)(`div`,{className:`avatar-radar`,"aria-hidden":`true`})]})}),(0,k.jsx)(`h1`,{className:`site-title`,children:(0,k.jsxs)(O,{to:`/`,children:[(0,k.jsx)(`span`,{className:`name-bold`,children:(0,k.jsx)(Aa,{text:`${A.firstName} ${A.lastName}`})}),(0,k.jsx)(`span`,{className:`handle-tag`,children:(0,k.jsx)(Aa,{text:`@${A.handle}`})})]})}),(0,k.jsx)(`div`,{className:`site-subtitle`,"aria-live":`polite`,children:(0,k.jsx)(Zr,{})}),(0,k.jsxs)(`div`,{className:`status-pill-sidebar`,children:[(0,k.jsx)(`span`,{className:`live-dot`,"aria-hidden":`true`}),(0,k.jsx)(`span`,{children:n(_r.openToWork)})]})]}),(0,k.jsx)(`nav`,{className:`sidebar-nav`,"aria-label":`Main Navigation`,children:(0,k.jsx)(`ul`,{className:`nav-list`,children:d})}),(0,k.jsxs)(`div`,{className:`sidebar-bottom`,children:[(0,k.jsxs)(`div`,{className:`sidebar-socials`,children:[(0,k.jsx)(`a`,{href:cr.github,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`GitHub`,className:`social-btn github`,title:`GitHub: bitsofalber`,children:(0,k.jsx)(Dr,{})}),(0,k.jsx)(`a`,{href:cr.linkedin,target:`_blank`,rel:`noopener noreferrer`,"aria-label":`LinkedIn`,className:`social-btn linkedin`,title:`LinkedIn: Alberto Hidalgo`,children:(0,k.jsx)(Or,{})}),(0,k.jsx)(`a`,{href:`mailto:${cr.email}`,"aria-label":`Email`,className:`social-btn email`,title:cr.email,children:(0,k.jsx)(Tr,{})})]}),(0,k.jsxs)(`div`,{className:`sidebar-footer-row`,children:[(0,k.jsxs)(`button`,{type:`button`,className:`lang-toggle-btn`,onClick:r,"aria-label":n(_r.switchLang),title:n(_r.switchLang),children:[(0,k.jsx)(`span`,{className:t===`es`?`active-lang`:``,children:`ES`}),(0,k.jsx)(`span`,{className:`lang-sep`,children:`/`}),(0,k.jsx)(`span`,{className:t===`en`?`active-lang`:``,children:`EN`})]}),(0,k.jsx)(`span`,{className:`sidebar-version`,children:`v2.4.0`})]})]})]})]}),(0,k.jsxs)(`div`,{className:`main-shell`,children:[(0,k.jsxs)(`header`,{className:`topbar`,children:[(0,k.jsxs)(`div`,{className:`topbar-left`,children:[(0,k.jsx)(`button`,{type:`button`,className:`mobile-toggle-btn`,onClick:()=>a(e=>!e),"aria-label":n(i?_r.closeMenu:_r.menu),children:i?(0,k.jsx)(jr,{}):(0,k.jsx)(Ar,{})}),(0,k.jsxs)(`div`,{className:`topbar-breadcrumb`,children:[(0,k.jsx)(`span`,{className:`bc-root`,children:`~`}),(0,k.jsx)(`span`,{className:`bc-sep`,children:`/`}),(0,k.jsx)(`span`,{className:`bc-site`,children:`ahidalgo.es`}),(0,k.jsx)(`span`,{className:`bc-sep`,children:`/`}),(0,k.jsx)(`span`,{className:`bc-path`,children:l()})]})]}),(0,k.jsxs)(`div`,{className:`topbar-right`,children:[(0,k.jsxs)(`button`,{type:`button`,className:`topbar-search-trigger`,onClick:()=>s(!0),"aria-label":n(_r.searchPlaceholder),children:[(0,k.jsx)(Mr,{}),(0,k.jsx)(`span`,{className:`search-text`,children:n(_r.searchPlaceholder)}),(0,k.jsx)(`kbd`,{className:`search-shortcut`,children:`⌘K`})]}),(0,k.jsxs)(`div`,{className:`topbar-status`,children:[(0,k.jsx)(`span`,{className:`status-ping`,"aria-hidden":`true`}),(0,k.jsx)(`span`,{className:`status-label`,children:`ONLINE`})]})]})]}),(0,k.jsx)(`main`,{id:`main`,className:`content-container`,children:(0,k.jsx)(u.Suspense,{fallback:(0,k.jsx)(`div`,{className:`content-loading`}),children:(0,k.jsx)(qt,{})})}),(0,k.jsx)(`footer`,{className:`site-footer`,children:(0,k.jsxs)(`div`,{className:`footer-content`,children:[(0,k.jsxs)(`p`,{className:`footer-copy`,children:[`© `,new Date().getFullYear(),` Alberto Hidalgo (`,(0,k.jsx)(`strong`,{children:A.handle}),`).`,` `,c?`Seguridad Ofensiva & Pentesting.`:`Offensive Security & Pentesting.`]}),(0,k.jsxs)(`p`,{className:`footer-links`,children:[(0,k.jsx)(`a`,{href:cr.github,target:`_blank`,rel:`noopener noreferrer`,children:`GitHub`}),(0,k.jsx)(`span`,{className:`dot-sep`,children:`·`}),(0,k.jsx)(`a`,{href:cr.linkedin,target:`_blank`,rel:`noopener noreferrer`,children:`LinkedIn`}),(0,k.jsx)(`span`,{className:`dot-sep`,children:`·`}),(0,k.jsx)(O,{to:`/contact`,children:c?`Contacto`:`Contact`})]})]})})]})]})}var Na=[`BitsOfAlber Security Terminal v2.4 (x86_64-pc-linux-gnu)`,`Type "help" for a list of available commands or click any chip below.`];function Pa({className:e=``}){let{tr:t,lang:n}=or(),r=vt(),i=n===`es`,[a,o]=(0,u.useState)([{type:`system`,text:Na.join(`
@@ -10960,4 +11217,4 @@ La defensa es deshabilitar el modo de transición y parchear los clientes/AP.
 
 `);break;case`wiki`:case`pentesting`:case`docs`:s=i?`Navegando a /pentesting...`:`Navigating to /pentesting...`,setTimeout(()=>r(`/pentesting`),500);break;case`contact`:s=`Email:    ${cr.email}\nGitHub:   ${cr.github}\nLinkedIn: ${cr.linkedin}`;break;case`cat flag.txt`:case`flag`:s=`[+] FLAG DISCOVERED!
 FLAG{b1ts0f4lb3r_3jptv2_0scp_c4nd1d4t3_r00t_2026}
-Hint: Great curiosity! Don't hesitate to reach out.`;break;case`sudo su`:case`su`:case`sudo`:s=`[-] Nice try! User '${A.handle.toLowerCase()}' is already in sudoers, but root requires eJPTv2 authorization.`;break;case`clear`:o([]),c(``);return;default:s=i?`zsh: orden no encontrada: ${n}. Escribe 'help' para ver los comandos.`:`zsh: command not found: ${n}. Type 'help' to see valid commands.`}o(e=>[...e,{type:`cmd`,cmd:n,output:s}]),c(``)};return(0,k.jsxs)(`div`,{className:`hx-term ${e}`,onClick:()=>h.current?.focus(),children:[(0,k.jsxs)(`div`,{className:`hx-term-bar`,children:[(0,k.jsxs)(`div`,{className:`hx-term-dots`,"aria-hidden":`true`,children:[(0,k.jsx)(`span`,{className:`hx-dot r`}),(0,k.jsx)(`span`,{className:`hx-dot y`}),(0,k.jsx)(`span`,{className:`hx-dot g`})]}),(0,k.jsx)(`div`,{className:`hx-term-title`,children:(0,k.jsx)(`span`,{children:`bitsofalber@portfolio:~ (zsh)`})}),(0,k.jsx)(`div`,{className:`hx-term-badge`,children:`bash 5.2`})]}),(0,k.jsxs)(`div`,{className:`hx-term-quick`,children:[(0,k.jsx)(`span`,{className:`hx-quick-label`,children:i?`Sugerencias:`:`Quick cmds:`}),(0,k.jsx)(`div`,{className:`hx-quick-chips`,children:[`whoami`,`skills`,`projects`,`certs`,`writeups`,`cat flag.txt`,`help`,`clear`].map(e=>(0,k.jsx)(`button`,{type:`button`,className:`hx-chip`,onClick:t=>{t.stopPropagation(),_(e)},children:e},e))})]}),(0,k.jsxs)(`div`,{className:`hx-term-body`,children:[a.map((e,t)=>(0,k.jsxs)(`div`,{className:`hx-term-entry`,children:[e.type===`system`&&(0,k.jsx)(`pre`,{className:`hx-t-out hx-t-system`,children:e.text}),e.type===`cmd`&&(0,k.jsxs)(k.Fragment,{children:[(0,k.jsxs)(`div`,{className:`hx-t-cmd`,children:[(0,k.jsxs)(`span`,{className:`hx-t-ps1`,children:[(0,k.jsx)(`b`,{children:`bitsofalber@sec-box`}),`:`,(0,k.jsx)(`b`,{children:`~`}),`$ `]}),(0,k.jsx)(`span`,{className:`hx-t-in`,children:e.cmd})]}),e.output&&(0,k.jsx)(`pre`,{className:`hx-t-out`,children:e.output})]})]},t)),(0,k.jsxs)(`div`,{className:`hx-t-cmd hx-t-active`,children:[(0,k.jsxs)(`span`,{className:`hx-t-ps1`,children:[(0,k.jsx)(`b`,{children:`bitsofalber@sec-box`}),`:`,(0,k.jsx)(`b`,{children:`~`}),`$ `]}),(0,k.jsx)(`input`,{ref:h,type:`text`,className:`hx-t-input`,value:s,onChange:e=>c(e.target.value),onKeyDown:e=>{if(e.key===`Enter`)e.preventDefault(),_(s);else if(e.key===`ArrowUp`){if(e.preventDefault(),l.length===0)return;let t=Math.min(f+1,l.length-1);p(t),c(l[t]||``)}else if(e.key===`ArrowDown`)if(e.preventDefault(),f>0){let e=f-1;p(e),c(l[e]||``)}else p(-1),c(``)},spellCheck:`false`,autoComplete:`off`,autoCapitalize:`off`,"aria-label":`Terminal command prompt`})]}),(0,k.jsx)(`div`,{ref:m})]})]})}var Fa=`bitsofalber`,Ia=300*1e3,La=[`KrakenSOC-Labs`,`asir-learning-labs`,`bitsofalber.github.io`],Ra=e=>!e.fork&&!La.includes(e.name);function za(){let[e,t]=(0,u.useState)(null),[n,r]=(0,u.useState)([]),[i,a]=(0,u.useState)(!0),[o,s]=(0,u.useState)(null);return(0,u.useEffect)(()=>{let e=`gh_${Fa}_v2`,n=sessionStorage.getItem(e);if(n){let{ts:e,user:i,repos:o}=JSON.parse(n);if(Date.now()-e<Ia){t(i),r(o),a(!1);return}}Promise.all([fetch(`https://api.github.com/users/${Fa}`).then(e=>e.json()),fetch(`https://api.github.com/users/${Fa}/repos?sort=updated&per_page=20`).then(e=>e.json())]).then(([n,i])=>{if(n.message)throw Error(n.message);let a=Array.isArray(i)?i.filter(Ra).slice(0,6):[];t(n),r(a),sessionStorage.setItem(e,JSON.stringify({ts:Date.now(),user:n,repos:a}))}).catch(e=>s(e.message)).finally(()=>a(!1))},[]),{data:e,repos:n,loading:i,error:o}}function Ba({headingless:e=!1}){let{data:t,repos:n,loading:r,error:i}=za(),{t:a,lang:o}=or(),s=n.reduce((e,t)=>e+t.stargazers_count,0);return(0,k.jsxs)(`div`,{children:[r&&(0,k.jsxs)(`div`,{className:`gh-loading`,children:[(0,k.jsx)(`span`,{className:`gh-dot`}),(0,k.jsx)(`span`,{className:`gh-dot`}),(0,k.jsx)(`span`,{className:`gh-dot`}),(0,k.jsx)(`span`,{style:{marginLeft:`8px`,color:`var(--text-muted)`,fontFamily:`var(--font-mono)`,fontSize:`12px`},children:a(`github.loading`)})]}),i&&(0,k.jsx)(`div`,{style:{fontSize:`13px`,color:`var(--text-muted)`,padding:`12px`},children:a(`github.error`)}),t&&!r&&(0,k.jsxs)(k.Fragment,{children:[(0,k.jsxs)(`div`,{className:`gh-stats`,children:[(0,k.jsxs)(`div`,{className:`gh-stat`,children:[(0,k.jsx)(`div`,{className:`gh-stat-n`,children:t.public_repos}),(0,k.jsx)(`div`,{className:`gh-stat-l`,children:a(`github.repos`)})]}),(0,k.jsxs)(`div`,{className:`gh-stat`,children:[(0,k.jsx)(`div`,{className:`gh-stat-n`,children:t.followers}),(0,k.jsx)(`div`,{className:`gh-stat-l`,children:a(`github.followers`)})]}),(0,k.jsxs)(`div`,{className:`gh-stat`,children:[(0,k.jsx)(`div`,{className:`gh-stat-n`,children:s}),(0,k.jsx)(`div`,{className:`gh-stat-l`,children:a(`github.stars`)})]})]}),(0,k.jsx)(`div`,{className:`gh-repo-list`,children:n.map(e=>(0,k.jsxs)(`a`,{href:e.html_url,target:`_blank`,rel:`noopener noreferrer`,className:`gh-repo`,children:[(0,k.jsxs)(`div`,{className:`gh-repo-info`,children:[(0,k.jsx)(`div`,{className:`gh-repo-name`,children:e.name}),e.description&&(0,k.jsx)(`div`,{className:`gh-repo-desc`,children:e.description})]}),(0,k.jsxs)(`div`,{className:`gh-repo-meta`,children:[e.language&&(0,k.jsx)(`span`,{className:`gh-repo-lang`,children:e.language}),e.stargazers_count>0&&(0,k.jsxs)(`span`,{className:`gh-repo-stars`,children:[(0,k.jsx)(Gr,{size:12}),` `,e.stargazers_count]})]})]},e.id))}),(0,k.jsx)(`a`,{href:`https://github.com/${t.login}`,target:`_blank`,rel:`noopener noreferrer`,className:`gh-view-all`,children:a(`github.viewAll`)})]})]})}var Va=`https://ahidalgo.es`,Ha=`Alberto Hidalgo`,Ua=`Alberto Hidalgo (bitsofalber) — Junior Penetration Tester. eJPTv2, candidato OSCP, estudiante de ASIR y fundador de Tech4U Academy.`;function Wa(e=`/`){return!e||e===`/`?`${Va}/`:`https://ahidalgo.es/`+String(e).replace(/^\/+|\/+$/g,``)}function Ga({title:e,description:t,path:n=`/`,jsonLd:r,suffix:i=!0}){let a=e?i?`${e} — ${Ha}`:e:null,o=(t||Ua).replace(/\s+/g,` `).trim().slice(0,160),s=Wa(n);return(0,k.jsxs)(k.Fragment,{children:[a&&(0,k.jsx)(`title`,{children:a}),(0,k.jsx)(`meta`,{name:`description`,content:o}),(0,k.jsx)(`link`,{rel:`canonical`,href:s}),(r?Array.isArray(r)?r:[r]:[]).map((e,t)=>(0,k.jsx)(`script`,{type:`application/ld+json`,dangerouslySetInnerHTML:{__html:JSON.stringify(e)}},t))]})}function Ka(){let{lang:e,tr:t}=or(),n=e===`es`;return(0,u.useEffect)(()=>{document.title=`${A.firstName} ${A.lastName} (@${A.handle}) — Junior Penetration Tester`},[]),(0,k.jsxs)(`div`,{className:`home-bento-wrapper`,children:[(0,k.jsx)(Ga,{description:`Alberto Hidalgo (bitsofalber) — Junior Penetration Tester. eJPTv2, candidato OSCP, estudiante de ASIR y fundador de Tech4U Academy.`,path:`/`,jsonLd:[{"@context":`https://schema.org`,"@type":`Person`,name:`Alberto Hidalgo`,alternateName:`bitsofalber`,url:`https://ahidalgo.es/`,jobTitle:`Junior Penetration Tester`,sameAs:[`https://github.com/bitsofalber`,`https://www.linkedin.com/in/ahidalgotech`,`https://medium.com/@albertohidalgomoreno`],knowsAbout:[`Penetration Testing`,`Active Directory`,`Red Team`,`OSCP`,`Ciberseguridad`,`Linux`]},{"@context":`https://schema.org`,"@type":`WebSite`,name:`ahidalgo.es`,url:`https://ahidalgo.es/`,inLanguage:`es`}]}),(0,k.jsxs)(`section`,{className:`bento-grid-hero`,children:[(0,k.jsxs)(`div`,{className:`bento-card bento-hero-bio`,children:[(0,k.jsxs)(`div`,{className:`hero-bio-header`,children:[A.avatarImage&&(0,k.jsx)(`img`,{src:A.avatarImage,alt:`${A.firstName} ${A.lastName}`,className:`hero-avatar-photo`,width:`76`,height:`76`}),(0,k.jsxs)(`div`,{className:`hero-bio-title-wrap`,children:[(0,k.jsxs)(`div`,{className:`card-kicker`,children:[(0,k.jsx)(`span`,{className:`dot-radar`,"aria-hidden":`true`}),(0,k.jsx)(`span`,{children:`OFFENSIVE SECURITY & SYSTEM ADMINISTRATION`})]}),(0,k.jsx)(ja,{firstName:A.firstName,lastName:A.lastName,handle:A.handle})]})]}),(0,k.jsx)(`p`,{className:`hero-role`,children:t(A.role)}),(0,k.jsx)(`p`,{className:`hero-desc`,children:t(A.tagline)}),(0,k.jsxs)(`div`,{className:`hero-badges`,children:[(0,k.jsxs)(`span`,{className:`tactical-badge cert-badge`,children:[(0,k.jsx)(xr,{}),` eJPTv2 Certified`]}),(0,k.jsxs)(`span`,{className:`tactical-badge oscp-badge`,children:[(0,k.jsx)(wr,{}),` OSCP Candidate`]}),(0,k.jsxs)(`span`,{className:`tactical-badge asir-badge`,children:[(0,k.jsx)(Br,{}),` ASIR Student`]}),(0,k.jsxs)(`span`,{className:`tactical-badge founder-badge`,children:[(0,k.jsx)(Rr,{}),` Tech4U Founder`]})]}),(0,k.jsxs)(`div`,{className:`hero-actions`,children:[(0,k.jsxs)(O,{to:`/projects`,className:`hx-btn hx-btn-primary`,children:[(0,k.jsx)(yr,{}),` `,n?`Explorar Proyectos`:`Explore Projects`]}),(0,k.jsxs)(`a`,{href:`/cv.pdf`,target:`_blank`,rel:`noopener noreferrer`,className:`hx-btn hx-btn-secondary`,title:n?`Descargar Curriculum Vitae en PDF`:`Download CV in PDF`,children:[(0,k.jsx)(Sr,{}),` `,n?`Descargar CV`:`Download CV`]}),(0,k.jsxs)(O,{to:`/pentesting`,className:`hx-btn hx-btn-ghost`,children:[(0,k.jsx)(zr,{}),` `,n?`Wiki de Pentesting`:`Pentesting Wiki`]}),(0,k.jsxs)(O,{to:`/contact`,className:`hx-btn hx-btn-ghost`,children:[(0,k.jsx)(Tr,{}),` `,n?`Contactar`:`Get in Touch`]})]})]}),(0,k.jsx)(`div`,{className:`bento-card bento-terminal-card`,children:(0,k.jsx)(Pa,{})})]}),(0,k.jsxs)(`section`,{className:`bento-section`,children:[(0,k.jsxs)(`div`,{className:`section-head`,children:[(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(`span`,{className:`sec-hash`,children:`01 //`}),` `,n?`Certificaciones y Acreditaciones`:`Certifications & Credentials`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Validación técnica oficial en auditorías de penetración y seguridad ofensiva`:`Official technical validation in penetration testing and offensive security`})]}),(0,k.jsxs)(O,{to:`/achievements`,className:`section-link`,children:[t(_r.viewAll),` `,(0,k.jsx)(Pr,{})]})]}),(0,k.jsx)(`div`,{className:`bento-cert-row`,children:fr.map(e=>(0,k.jsxs)(`div`,{className:`bento-card cert-showcase-card cert-${e.state}`,style:{"--cert-c":e.color},children:[(0,k.jsxs)(`div`,{className:`cert-top`,children:[(0,k.jsx)(`div`,{className:`cert-issuer-chip`,children:e.issuer}),(0,k.jsxs)(`div`,{className:`status-tag cert-status-${e.state}`,children:[(0,k.jsx)(`span`,{className:`status-dot`,"aria-hidden":`true`}),t(_r.cert[e.state])]})]}),(0,k.jsxs)(`div`,{className:`cert-main`,children:[(0,k.jsx)(`h3`,{className:`cert-title`,children:e.name}),(0,k.jsx)(`p`,{className:`cert-fullname`,children:e.full})]}),(0,k.jsx)(`div`,{className:`cert-topics`,children:e.topics?.map(e=>(0,k.jsx)(`span`,{className:`topic-chip`,children:e},e))}),(0,k.jsxs)(`div`,{className:`cert-foot`,children:[(0,k.jsx)(`span`,{className:`cert-date`,children:e.date}),e.verify&&(0,k.jsxs)(`a`,{href:e.verify,target:`_blank`,rel:`noopener noreferrer`,className:`cert-verify-link`,children:[n?`Verificar credencial`:`Verify credential`,` `,(0,k.jsx)(kr,{})]})]})]},e.name))})]}),(0,k.jsxs)(`section`,{className:`bento-section`,children:[(0,k.jsxs)(`div`,{className:`section-head`,children:[(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(`span`,{className:`sec-hash`,children:`02 //`}),` `,n?`Proyectos e Infraestructura`:`Projects & Infrastructure`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Laboratorios de entrenamiento, academias y despliegues defensivos`:`Training labs, academy platforms and defensive deployments`})]}),(0,k.jsxs)(O,{to:`/projects`,className:`section-link`,children:[t(_r.viewAll),` `,(0,k.jsx)(Pr,{})]})]}),(0,k.jsx)(`div`,{className:`bento-projects-grid`,children:dr.map(e=>(0,k.jsxs)(`div`,{className:`bento-card project-card`,children:[(0,k.jsxs)(`div`,{className:`project-card-header`,children:[(0,k.jsxs)(`div`,{className:`project-tag-group`,children:[(0,k.jsx)(`div`,{className:`project-initials-badge`,children:e.initials}),(0,k.jsxs)(`div`,{children:[(0,k.jsx)(`h3`,{className:`project-title`,children:e.title}),(0,k.jsx)(`span`,{className:`project-metric`,children:t(e.metrics)})]})]}),(0,k.jsxs)(`div`,{className:`status-tag status-${e.status}`,children:[(0,k.jsx)(`span`,{className:`status-dot`,"aria-hidden":`true`}),t(_r.status[e.status])]})]}),(0,k.jsx)(`p`,{className:`project-desc`,children:t(e.desc)}),(0,k.jsx)(`div`,{className:`project-tags`,children:e.tags.map(e=>(0,k.jsx)(`span`,{className:`tech-chip`,children:e},e))}),(0,k.jsxs)(`div`,{className:`project-footer`,children:[e.link&&(0,k.jsxs)(`a`,{href:e.link,target:`_blank`,rel:`noopener noreferrer`,className:`hx-btn hx-btn-sm`,children:[(0,k.jsx)(Dr,{}),` GitHub Repo`]}),(0,k.jsxs)(O,{to:`/projects`,className:`project-learn-more`,children:[n?`Detalles`:`Details`,` `,(0,k.jsx)(Pr,{})]})]})]},e.slug))})]}),(0,k.jsxs)(`section`,{className:`bento-section`,children:[(0,k.jsx)(`div`,{className:`section-head`,children:(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(`span`,{className:`sec-hash`,children:`03 //`}),` `,n?`Matriz de Habilidades Técnicas`:`Technical Skills Matrix`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Seguridad Ofensiva, Operaciones Defensivas y Administración de Sistemas`:`Offensive Security, Defensive Operations and Systems Administration`})]})}),(0,k.jsx)(`div`,{className:`bento-skills-grid`,children:ur.map(e=>(0,k.jsxs)(`div`,{className:`bento-card skill-group-card`,style:{"--sg-color":e.color},children:[(0,k.jsxs)(`div`,{className:`skill-group-head`,children:[(0,k.jsx)(`span`,{className:`skill-group-indicator`}),(0,k.jsx)(`h3`,{className:`skill-group-title`,children:t(e.label)})]}),(0,k.jsx)(`ul`,{className:`skill-item-list`,children:e.items.map(e=>(0,k.jsxs)(`li`,{className:`skill-item`,children:[(0,k.jsx)(`span`,{className:`skill-item-bullet`,children:`›`}),(0,k.jsx)(`span`,{className:`skill-item-name`,children:e.name})]},e.name))})]},e.key))})]}),(0,k.jsx)(`section`,{className:`bento-section`,children:(0,k.jsxs)(`div`,{className:`bento-split-row`,children:[(0,k.jsxs)(`div`,{className:`bento-card wiki-quick-card`,children:[(0,k.jsxs)(`div`,{className:`wiki-card-head`,children:[(0,k.jsxs)(`div`,{children:[(0,k.jsx)(`span`,{className:`card-kicker`,children:`KNOWLEDGE BASE`}),(0,k.jsxs)(`h3`,{className:`card-title-lg`,children:[(0,k.jsx)(zr,{}),` `,n?`Documentación de Pentesting`:`Pentesting Documentation`]})]}),(0,k.jsx)(O,{to:`/pentesting`,className:`hx-btn hx-btn-sm hx-btn-primary`,children:n?`Ver Todo`:`View All`})]}),(0,k.jsx)(`p`,{className:`wiki-card-desc`,children:n?`Apuntes técnicos, chuletas y metodologías de explotación recopiladas en auditorías y laboratorios.`:`Technical notes, cheat sheets, and exploitation methodologies gathered from audits and labs.`}),(0,k.jsxs)(`div`,{className:`wiki-quick-links`,children:[(0,k.jsxs)(O,{to:`/pentesting/active-directory/mapa-de-ataques`,className:`wiki-pill hot-pill`,children:[(0,k.jsx)(`span`,{className:`pulse-dot`}),` `,n?`Mapa de Ataque AD`:`AD Attack Map`]}),(0,k.jsx)(O,{to:`/pentesting/active-directory`,className:`wiki-pill`,children:`Active Directory`}),(0,k.jsx)(O,{to:`/pentesting/enumeration`,className:`wiki-pill`,children:`Enumeración`}),(0,k.jsx)(O,{to:`/pentesting/web`,className:`wiki-pill`,children:`Web Pentesting`}),(0,k.jsx)(O,{to:`/pentesting/privilege-escalation`,className:`wiki-pill`,children:`Privilege Escalation`}),(0,k.jsx)(O,{to:`/pentesting/services`,className:`wiki-pill`,children:`Servicios & Puertos`})]})]}),(0,k.jsxs)(`div`,{className:`bento-card writeups-quick-card`,children:[(0,k.jsxs)(`div`,{className:`wiki-card-head`,children:[(0,k.jsxs)(`div`,{children:[(0,k.jsx)(`span`,{className:`card-kicker`,children:`OSCP LABS & CTF`}),(0,k.jsxs)(`h3`,{className:`card-title-lg`,children:[(0,k.jsx)(Sr,{}),` Writeups`]})]}),(0,k.jsx)(O,{to:`/writeups`,className:`hx-btn hx-btn-sm`,children:n?`Ver Todos`:`View All`})]}),(0,k.jsx)(`div`,{className:`writeup-mini-list`,children:hr.slice(0,3).map(e=>(0,k.jsxs)(`a`,{href:e.url,target:`_blank`,rel:`noopener noreferrer`,className:`writeup-mini-item`,children:[(0,k.jsxs)(`div`,{className:`wu-mini-top`,children:[e.avatar&&(0,k.jsx)(`img`,{src:e.avatar,alt:``,className:`wu-mini-avatar-thumb`,style:{width:`24px`,height:`24px`,borderRadius:`6px`,objectFit:`cover`,border:`1px solid var(--hx-green)`}}),(0,k.jsx)(`span`,{className:`wu-platform-tag`,children:e.platform}),(0,k.jsxs)(`span`,{className:`diff-badge diff-${e.difficulty}`,children:[e.os===`windows`?(0,k.jsx)(Jr,{size:10,className:`inline mr-1`}):(0,k.jsx)(Yr,{size:10,className:`inline mr-1`}),e.difficulty.toUpperCase()]}),(0,k.jsxs)(`span`,{className:`wu-os-tag`,children:[e.os===`windows`?(0,k.jsx)(Jr,{size:11,className:`inline mr-1`}):(0,k.jsx)(Yr,{size:11,className:`inline mr-1`}),e.os.toUpperCase()]})]}),(0,k.jsx)(`h4`,{className:`wu-mini-title`,children:e.title}),(0,k.jsx)(`p`,{className:`wu-mini-summary`,children:t(e.summary)})]},e.slug))})]})]})}),(0,k.jsx)(`section`,{className:`bento-section`,children:(0,k.jsxs)(`div`,{className:`bento-card gh-activity-card`,children:[(0,k.jsxs)(`div`,{className:`section-head mb-0`,children:[(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(Dr,{}),` GitHub Telemetry: @bitsofalber`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Actividad y repositorios públicos en tiempo real`:`Real-time public repositories and commit activity`})]}),(0,k.jsxs)(`a`,{href:cr.github,target:`_blank`,rel:`noopener noreferrer`,className:`hx-btn hx-btn-sm`,children:[`GitHub Profile `,(0,k.jsx)(kr,{})]})]}),(0,k.jsx)(`div`,{className:`gh-embed-wrapper`,children:(0,k.jsx)(Ba,{headingless:!0})})]})})]})}var qa=(0,u.lazy)(()=>h(()=>import(`./About-Bb96RNaM.js`),__vite__mapDeps([0,1]))),Ja=(0,u.lazy)(()=>h(()=>import(`./Projects-DBrX0QkP.js`),__vite__mapDeps([2,1]))),Ya=(0,u.lazy)(()=>h(()=>import(`./Achievements-BnO9uh-o.js`),__vite__mapDeps([3,1]))),Xa=(0,u.lazy)(()=>h(()=>import(`./Writeups-QZxZOqpF.js`),__vite__mapDeps([4,1]))),Za=(0,u.lazy)(()=>h(()=>import(`./Contact-C0__cKKs.js`),__vite__mapDeps([5,1]))),Qa=(0,u.lazy)(()=>h(()=>import(`./Pentesting-Bma36BQ2.js`),__vite__mapDeps([6,1,7]))),$a=(0,u.lazy)(()=>h(()=>import(`./ADAttackMap-DEnqrSTO.js`),__vite__mapDeps([8,1]))),eo=(0,u.lazy)(()=>h(()=>import(`./NotFound-BpS4Fll8.js`),__vite__mapDeps([9,1])));function to(){return(0,k.jsx)(ar,{children:(0,k.jsx)(Rn,{children:(0,k.jsx)(Xt,{children:(0,k.jsxs)(Jt,{path:`/`,element:(0,k.jsx)(Ma,{}),children:[(0,k.jsx)(Jt,{index:!0,element:(0,k.jsx)(Ka,{})}),(0,k.jsx)(Jt,{path:`about`,element:(0,k.jsx)(qa,{})}),(0,k.jsx)(Jt,{path:`projects`,element:(0,k.jsx)(Ja,{})}),(0,k.jsx)(Jt,{path:`achievements`,element:(0,k.jsx)(Ya,{})}),(0,k.jsx)(Jt,{path:`writeups`,element:(0,k.jsx)(Xa,{})}),(0,k.jsx)(Jt,{path:`pentesting`,element:(0,k.jsx)(Qa,{})}),(0,k.jsx)(Jt,{path:`pentesting/:category`,element:(0,k.jsx)(Qa,{})}),(0,k.jsx)(Jt,{path:`pentesting/:category/:slug`,element:(0,k.jsx)(Qa,{})}),(0,k.jsx)(Jt,{path:`pentesting/active-directory/mapa-de-ataques`,element:(0,k.jsx)($a,{})}),(0,k.jsx)(Jt,{path:`contact`,element:(0,k.jsx)(Za,{})}),(0,k.jsx)(Jt,{path:`*`,element:(0,k.jsx)(eo,{})})]})})})})}(0,d.createRoot)(document.getElementById(`root`)).render((0,k.jsx)(u.StrictMode,{children:(0,k.jsx)(to,{})}));export{Rr as A,ur as B,Yr as C,Mr as D,Vr as E,pr as F,Bn as G,hr as H,mr as I,St as J,Kt as K,cr as L,Jr as M,Wr as N,Br as O,fr as P,A as R,Or as S,Ar as T,or as U,_r as V,O as W,h as Y,Cr as _,wa as a,br as b,Ea as c,Ur as d,Nr as f,kr as g,Sr as h,Sa as i,Hr as j,Lr as k,Ir as l,Er as m,Ba as n,Ta as o,Pr as p,ht as q,Aa as r,Ca as s,Ga as t,zr as u,Dr as v,Tr as w,wr as x,Fr as y,dr as z};
+Hint: Great curiosity! Don't hesitate to reach out.`;break;case`sudo su`:case`su`:case`sudo`:s=`[-] Nice try! User '${A.handle.toLowerCase()}' is already in sudoers, but root requires eJPTv2 authorization.`;break;case`clear`:o([]),c(``);return;default:s=i?`zsh: orden no encontrada: ${n}. Escribe 'help' para ver los comandos.`:`zsh: command not found: ${n}. Type 'help' to see valid commands.`}o(e=>[...e,{type:`cmd`,cmd:n,output:s}]),c(``)};return(0,k.jsxs)(`div`,{className:`hx-term ${e}`,onClick:()=>h.current?.focus(),children:[(0,k.jsxs)(`div`,{className:`hx-term-bar`,children:[(0,k.jsxs)(`div`,{className:`hx-term-dots`,"aria-hidden":`true`,children:[(0,k.jsx)(`span`,{className:`hx-dot r`}),(0,k.jsx)(`span`,{className:`hx-dot y`}),(0,k.jsx)(`span`,{className:`hx-dot g`})]}),(0,k.jsx)(`div`,{className:`hx-term-title`,children:(0,k.jsx)(`span`,{children:`bitsofalber@portfolio:~ (zsh)`})}),(0,k.jsx)(`div`,{className:`hx-term-badge`,children:`bash 5.2`})]}),(0,k.jsxs)(`div`,{className:`hx-term-quick`,children:[(0,k.jsx)(`span`,{className:`hx-quick-label`,children:i?`Sugerencias:`:`Quick cmds:`}),(0,k.jsx)(`div`,{className:`hx-quick-chips`,children:[`whoami`,`skills`,`projects`,`certs`,`writeups`,`cat flag.txt`,`help`,`clear`].map(e=>(0,k.jsx)(`button`,{type:`button`,className:`hx-chip`,onClick:t=>{t.stopPropagation(),_(e)},children:e},e))})]}),(0,k.jsxs)(`div`,{className:`hx-term-body`,children:[a.map((e,t)=>(0,k.jsxs)(`div`,{className:`hx-term-entry`,children:[e.type===`system`&&(0,k.jsx)(`pre`,{className:`hx-t-out hx-t-system`,children:e.text}),e.type===`cmd`&&(0,k.jsxs)(k.Fragment,{children:[(0,k.jsxs)(`div`,{className:`hx-t-cmd`,children:[(0,k.jsxs)(`span`,{className:`hx-t-ps1`,children:[(0,k.jsx)(`b`,{children:`bitsofalber@sec-box`}),`:`,(0,k.jsx)(`b`,{children:`~`}),`$ `]}),(0,k.jsx)(`span`,{className:`hx-t-in`,children:e.cmd})]}),e.output&&(0,k.jsx)(`pre`,{className:`hx-t-out`,children:e.output})]})]},t)),(0,k.jsxs)(`div`,{className:`hx-t-cmd hx-t-active`,children:[(0,k.jsxs)(`span`,{className:`hx-t-ps1`,children:[(0,k.jsx)(`b`,{children:`bitsofalber@sec-box`}),`:`,(0,k.jsx)(`b`,{children:`~`}),`$ `]}),(0,k.jsx)(`input`,{ref:h,type:`text`,className:`hx-t-input`,value:s,onChange:e=>c(e.target.value),onKeyDown:e=>{if(e.key===`Enter`)e.preventDefault(),_(s);else if(e.key===`ArrowUp`){if(e.preventDefault(),l.length===0)return;let t=Math.min(f+1,l.length-1);p(t),c(l[t]||``)}else if(e.key===`ArrowDown`)if(e.preventDefault(),f>0){let e=f-1;p(e),c(l[e]||``)}else p(-1),c(``)},spellCheck:`false`,autoComplete:`off`,autoCapitalize:`off`,"aria-label":`Terminal command prompt`})]}),(0,k.jsx)(`div`,{ref:m})]})]})}var Fa=`bitsofalber`,Ia=300*1e3,La=[`KrakenSOC-Labs`,`asir-learning-labs`,`bitsofalber.github.io`],Ra=e=>!e.fork&&!La.includes(e.name);function za(){let[e,t]=(0,u.useState)(null),[n,r]=(0,u.useState)([]),[i,a]=(0,u.useState)(!0),[o,s]=(0,u.useState)(null);return(0,u.useEffect)(()=>{let e=`gh_${Fa}_v2`,n=sessionStorage.getItem(e);if(n){let{ts:e,user:i,repos:o}=JSON.parse(n);if(Date.now()-e<Ia){t(i),r(o),a(!1);return}}Promise.all([fetch(`https://api.github.com/users/${Fa}`).then(e=>e.json()),fetch(`https://api.github.com/users/${Fa}/repos?sort=updated&per_page=20`).then(e=>e.json())]).then(([n,i])=>{if(n.message)throw Error(n.message);let a=Array.isArray(i)?i.filter(Ra).slice(0,6):[];t(n),r(a),sessionStorage.setItem(e,JSON.stringify({ts:Date.now(),user:n,repos:a}))}).catch(e=>s(e.message)).finally(()=>a(!1))},[]),{data:e,repos:n,loading:i,error:o}}function Ba({headingless:e=!1}){let{data:t,repos:n,loading:r,error:i}=za(),{t:a,lang:o}=or(),s=n.reduce((e,t)=>e+t.stargazers_count,0);return(0,k.jsxs)(`div`,{children:[r&&(0,k.jsxs)(`div`,{className:`gh-loading`,children:[(0,k.jsx)(`span`,{className:`gh-dot`}),(0,k.jsx)(`span`,{className:`gh-dot`}),(0,k.jsx)(`span`,{className:`gh-dot`}),(0,k.jsx)(`span`,{style:{marginLeft:`8px`,color:`var(--text-muted)`,fontFamily:`var(--font-mono)`,fontSize:`12px`},children:a(`github.loading`)})]}),i&&(0,k.jsx)(`div`,{style:{fontSize:`13px`,color:`var(--text-muted)`,padding:`12px`},children:a(`github.error`)}),t&&!r&&(0,k.jsxs)(k.Fragment,{children:[(0,k.jsxs)(`div`,{className:`gh-stats`,children:[(0,k.jsxs)(`div`,{className:`gh-stat`,children:[(0,k.jsx)(`div`,{className:`gh-stat-n`,children:t.public_repos}),(0,k.jsx)(`div`,{className:`gh-stat-l`,children:a(`github.repos`)})]}),(0,k.jsxs)(`div`,{className:`gh-stat`,children:[(0,k.jsx)(`div`,{className:`gh-stat-n`,children:t.followers}),(0,k.jsx)(`div`,{className:`gh-stat-l`,children:a(`github.followers`)})]}),(0,k.jsxs)(`div`,{className:`gh-stat`,children:[(0,k.jsx)(`div`,{className:`gh-stat-n`,children:s}),(0,k.jsx)(`div`,{className:`gh-stat-l`,children:a(`github.stars`)})]})]}),(0,k.jsx)(`div`,{className:`gh-repo-list`,children:n.map(e=>(0,k.jsxs)(`a`,{href:e.html_url,target:`_blank`,rel:`noopener noreferrer`,className:`gh-repo`,children:[(0,k.jsxs)(`div`,{className:`gh-repo-info`,children:[(0,k.jsx)(`div`,{className:`gh-repo-name`,children:e.name}),e.description&&(0,k.jsx)(`div`,{className:`gh-repo-desc`,children:e.description})]}),(0,k.jsxs)(`div`,{className:`gh-repo-meta`,children:[e.language&&(0,k.jsx)(`span`,{className:`gh-repo-lang`,children:e.language}),e.stargazers_count>0&&(0,k.jsxs)(`span`,{className:`gh-repo-stars`,children:[(0,k.jsx)(Gr,{size:12}),` `,e.stargazers_count]})]})]},e.id))}),(0,k.jsx)(`a`,{href:`https://github.com/${t.login}`,target:`_blank`,rel:`noopener noreferrer`,className:`gh-view-all`,children:a(`github.viewAll`)})]})]})}var Va=`https://ahidalgo.es`,Ha=`Alberto Hidalgo`,Ua=`Alberto Hidalgo (bitsofalber) — Junior Penetration Tester. eJPTv2, candidato OSCP, estudiante de ASIR y fundador de Tech4U Academy.`;function Wa(e=`/`){return!e||e===`/`?`${Va}/`:`https://ahidalgo.es/`+String(e).replace(/^\/+|\/+$/g,``)}function Ga({title:e,description:t,path:n=`/`,jsonLd:r,suffix:i=!0}){let a=e?i?`${e} — ${Ha}`:e:null,o=(t||Ua).replace(/\s+/g,` `).trim().slice(0,160),s=Wa(n);return(0,k.jsxs)(k.Fragment,{children:[a&&(0,k.jsx)(`title`,{children:a}),(0,k.jsx)(`meta`,{name:`description`,content:o}),(0,k.jsx)(`link`,{rel:`canonical`,href:s}),(r?Array.isArray(r)?r:[r]:[]).map((e,t)=>(0,k.jsx)(`script`,{type:`application/ld+json`,dangerouslySetInnerHTML:{__html:JSON.stringify(e)}},t))]})}function Ka(){let{lang:e,tr:t}=or(),n=e===`es`;return(0,u.useEffect)(()=>{document.title=`${A.firstName} ${A.lastName} (@${A.handle}) — Junior Penetration Tester`},[]),(0,k.jsxs)(`div`,{className:`home-bento-wrapper`,children:[(0,k.jsx)(Ga,{description:`Alberto Hidalgo (bitsofalber) — Junior Penetration Tester. eJPTv2, candidato OSCP, estudiante de ASIR y fundador de Tech4U Academy.`,path:`/`,jsonLd:[{"@context":`https://schema.org`,"@type":`Person`,name:`Alberto Hidalgo`,alternateName:`bitsofalber`,url:`https://ahidalgo.es/`,jobTitle:`Junior Penetration Tester`,sameAs:[`https://github.com/bitsofalber`,`https://www.linkedin.com/in/ahidalgotech`,`https://medium.com/@albertohidalgomoreno`],knowsAbout:[`Penetration Testing`,`Active Directory`,`Red Team`,`OSCP`,`Ciberseguridad`,`Linux`]},{"@context":`https://schema.org`,"@type":`WebSite`,name:`ahidalgo.es`,url:`https://ahidalgo.es/`,inLanguage:`es`}]}),(0,k.jsxs)(`section`,{className:`bento-grid-hero`,children:[(0,k.jsxs)(`div`,{className:`bento-card bento-hero-bio`,children:[(0,k.jsxs)(`div`,{className:`hero-bio-header`,children:[A.avatarImage&&(0,k.jsx)(`img`,{src:A.avatarImage,alt:`${A.firstName} ${A.lastName}`,className:`hero-avatar-photo`,width:`76`,height:`76`}),(0,k.jsxs)(`div`,{className:`hero-bio-title-wrap`,children:[(0,k.jsxs)(`div`,{className:`card-kicker`,children:[(0,k.jsx)(`span`,{className:`dot-radar`,"aria-hidden":`true`}),(0,k.jsx)(`span`,{children:`OFFENSIVE SECURITY & SYSTEM ADMINISTRATION`})]}),(0,k.jsx)(ja,{firstName:A.firstName,lastName:A.lastName,handle:A.handle})]})]}),(0,k.jsx)(`p`,{className:`hero-role`,children:t(A.role)}),(0,k.jsx)(`p`,{className:`hero-desc`,children:t(A.tagline)}),(0,k.jsxs)(`div`,{className:`hero-badges`,children:[(0,k.jsxs)(`span`,{className:`tactical-badge cert-badge`,children:[(0,k.jsx)(xr,{}),` eJPTv2 Certified`]}),(0,k.jsxs)(`span`,{className:`tactical-badge oscp-badge`,children:[(0,k.jsx)(wr,{}),` OSCP Candidate`]}),(0,k.jsxs)(`span`,{className:`tactical-badge asir-badge`,children:[(0,k.jsx)(Br,{}),` ASIR Student`]}),(0,k.jsxs)(`span`,{className:`tactical-badge founder-badge`,children:[(0,k.jsx)(Rr,{}),` Tech4U Founder`]})]}),(0,k.jsxs)(`div`,{className:`hero-actions`,children:[(0,k.jsxs)(O,{to:`/projects`,className:`hx-btn hx-btn-primary`,children:[(0,k.jsx)(yr,{}),` `,n?`Explorar Proyectos`:`Explore Projects`]}),(0,k.jsxs)(`a`,{href:`/cv.pdf`,target:`_blank`,rel:`noopener noreferrer`,className:`hx-btn hx-btn-secondary`,title:n?`Descargar Curriculum Vitae en PDF`:`Download CV in PDF`,children:[(0,k.jsx)(Sr,{}),` `,n?`Descargar CV`:`Download CV`]}),(0,k.jsxs)(O,{to:`/pentesting`,className:`hx-btn hx-btn-ghost`,children:[(0,k.jsx)(zr,{}),` `,n?`Wiki de Pentesting`:`Pentesting Wiki`]}),(0,k.jsxs)(O,{to:`/contact`,className:`hx-btn hx-btn-ghost`,children:[(0,k.jsx)(Tr,{}),` `,n?`Contactar`:`Get in Touch`]})]})]}),(0,k.jsx)(`div`,{className:`bento-card bento-terminal-card`,children:(0,k.jsx)(Pa,{})})]}),(0,k.jsxs)(`section`,{className:`bento-section`,children:[(0,k.jsxs)(`div`,{className:`section-head`,children:[(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(`span`,{className:`sec-hash`,children:`01 //`}),` `,n?`Certificaciones y Acreditaciones`:`Certifications & Credentials`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Validación técnica oficial en auditorías de penetración y seguridad ofensiva`:`Official technical validation in penetration testing and offensive security`})]}),(0,k.jsxs)(O,{to:`/achievements`,className:`section-link`,children:[t(_r.viewAll),` `,(0,k.jsx)(Pr,{})]})]}),(0,k.jsx)(`div`,{className:`bento-cert-row`,children:fr.map(e=>(0,k.jsxs)(`div`,{className:`bento-card cert-showcase-card cert-${e.state}`,style:{"--cert-c":e.color},children:[(0,k.jsxs)(`div`,{className:`cert-top`,children:[(0,k.jsx)(`div`,{className:`cert-issuer-chip`,children:e.issuer}),(0,k.jsxs)(`div`,{className:`status-tag cert-status-${e.state}`,children:[(0,k.jsx)(`span`,{className:`status-dot`,"aria-hidden":`true`}),t(_r.cert[e.state])]})]}),(0,k.jsxs)(`div`,{className:`cert-main`,children:[(0,k.jsx)(`h3`,{className:`cert-title`,children:e.name}),(0,k.jsx)(`p`,{className:`cert-fullname`,children:e.full})]}),(0,k.jsx)(`div`,{className:`cert-topics`,children:e.topics?.map(e=>(0,k.jsx)(`span`,{className:`topic-chip`,children:e},e))}),(0,k.jsxs)(`div`,{className:`cert-foot`,children:[(0,k.jsx)(`span`,{className:`cert-date`,children:e.date}),e.verify&&(0,k.jsxs)(`a`,{href:e.verify,target:`_blank`,rel:`noopener noreferrer`,className:`cert-verify-link`,children:[n?`Verificar credencial`:`Verify credential`,` `,(0,k.jsx)(kr,{})]})]})]},e.name))})]}),(0,k.jsxs)(`section`,{className:`bento-section`,children:[(0,k.jsxs)(`div`,{className:`section-head`,children:[(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(`span`,{className:`sec-hash`,children:`02 //`}),` `,n?`Proyectos e Infraestructura`:`Projects & Infrastructure`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Laboratorios de entrenamiento, academias y despliegues defensivos`:`Training labs, academy platforms and defensive deployments`})]}),(0,k.jsxs)(O,{to:`/projects`,className:`section-link`,children:[t(_r.viewAll),` `,(0,k.jsx)(Pr,{})]})]}),(0,k.jsx)(`div`,{className:`bento-projects-grid`,children:dr.map(e=>(0,k.jsxs)(`div`,{className:`bento-card project-card`,children:[(0,k.jsxs)(`div`,{className:`project-card-header`,children:[(0,k.jsxs)(`div`,{className:`project-tag-group`,children:[(0,k.jsx)(`div`,{className:`project-initials-badge`,children:e.initials}),(0,k.jsxs)(`div`,{children:[(0,k.jsx)(`h3`,{className:`project-title`,children:e.title}),(0,k.jsx)(`span`,{className:`project-metric`,children:t(e.metrics)})]})]}),(0,k.jsxs)(`div`,{className:`status-tag status-${e.status}`,children:[(0,k.jsx)(`span`,{className:`status-dot`,"aria-hidden":`true`}),t(_r.status[e.status])]})]}),(0,k.jsx)(`p`,{className:`project-desc`,children:t(e.desc)}),(0,k.jsx)(`div`,{className:`project-tags`,children:e.tags.map(e=>(0,k.jsx)(`span`,{className:`tech-chip`,children:e},e))}),(0,k.jsxs)(`div`,{className:`project-footer`,children:[e.link&&(0,k.jsxs)(`a`,{href:e.link,target:`_blank`,rel:`noopener noreferrer`,className:`hx-btn hx-btn-sm`,children:[(0,k.jsx)(Dr,{}),` GitHub Repo`]}),(0,k.jsxs)(O,{to:`/projects`,className:`project-learn-more`,children:[n?`Detalles`:`Details`,` `,(0,k.jsx)(Pr,{})]})]})]},e.slug))})]}),(0,k.jsxs)(`section`,{className:`bento-section`,children:[(0,k.jsx)(`div`,{className:`section-head`,children:(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(`span`,{className:`sec-hash`,children:`03 //`}),` `,n?`Matriz de Habilidades Técnicas`:`Technical Skills Matrix`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Seguridad Ofensiva, Operaciones Defensivas y Administración de Sistemas`:`Offensive Security, Defensive Operations and Systems Administration`})]})}),(0,k.jsx)(`div`,{className:`bento-skills-grid`,children:ur.map(e=>(0,k.jsxs)(`div`,{className:`bento-card skill-group-card`,style:{"--sg-color":e.color},children:[(0,k.jsxs)(`div`,{className:`skill-group-head`,children:[(0,k.jsx)(`span`,{className:`skill-group-indicator`}),(0,k.jsx)(`h3`,{className:`skill-group-title`,children:t(e.label)})]}),(0,k.jsx)(`ul`,{className:`skill-item-list`,children:e.items.map(e=>(0,k.jsxs)(`li`,{className:`skill-item`,children:[(0,k.jsx)(`span`,{className:`skill-item-bullet`,children:`›`}),(0,k.jsx)(`span`,{className:`skill-item-name`,children:e.name})]},e.name))})]},e.key))})]}),(0,k.jsx)(`section`,{className:`bento-section`,children:(0,k.jsxs)(`div`,{className:`bento-split-row`,children:[(0,k.jsxs)(`div`,{className:`bento-card wiki-quick-card`,children:[(0,k.jsxs)(`div`,{className:`wiki-card-head`,children:[(0,k.jsxs)(`div`,{children:[(0,k.jsx)(`span`,{className:`card-kicker`,children:`KNOWLEDGE BASE`}),(0,k.jsxs)(`h3`,{className:`card-title-lg`,children:[(0,k.jsx)(zr,{}),` `,n?`Documentación de Pentesting`:`Pentesting Documentation`]})]}),(0,k.jsx)(O,{to:`/pentesting`,className:`hx-btn hx-btn-sm hx-btn-primary`,children:n?`Ver Todo`:`View All`})]}),(0,k.jsx)(`p`,{className:`wiki-card-desc`,children:n?`Apuntes técnicos, chuletas y metodologías de explotación recopiladas en auditorías y laboratorios.`:`Technical notes, cheat sheets, and exploitation methodologies gathered from audits and labs.`}),(0,k.jsxs)(`div`,{className:`wiki-quick-links`,children:[(0,k.jsxs)(O,{to:`/pentesting/active-directory/mapa-de-ataques`,className:`wiki-pill hot-pill`,children:[(0,k.jsx)(`span`,{className:`pulse-dot`}),` `,n?`Mapa de Ataque AD`:`AD Attack Map`]}),(0,k.jsx)(O,{to:`/pentesting/active-directory`,className:`wiki-pill`,children:`Active Directory`}),(0,k.jsx)(O,{to:`/pentesting/enumeration`,className:`wiki-pill`,children:`Enumeración`}),(0,k.jsx)(O,{to:`/pentesting/web`,className:`wiki-pill`,children:`Web Pentesting`}),(0,k.jsx)(O,{to:`/pentesting/privilege-escalation`,className:`wiki-pill`,children:`Privilege Escalation`}),(0,k.jsx)(O,{to:`/pentesting/services`,className:`wiki-pill`,children:`Servicios & Puertos`})]})]}),(0,k.jsxs)(`div`,{className:`bento-card writeups-quick-card`,children:[(0,k.jsxs)(`div`,{className:`wiki-card-head`,children:[(0,k.jsxs)(`div`,{children:[(0,k.jsx)(`span`,{className:`card-kicker`,children:`OSCP LABS & CTF`}),(0,k.jsxs)(`h3`,{className:`card-title-lg`,children:[(0,k.jsx)(Sr,{}),` Writeups`]})]}),(0,k.jsx)(O,{to:`/writeups`,className:`hx-btn hx-btn-sm`,children:n?`Ver Todos`:`View All`})]}),(0,k.jsx)(`div`,{className:`writeup-mini-list`,children:hr.slice(0,3).map(e=>(0,k.jsxs)(`a`,{href:e.url,target:`_blank`,rel:`noopener noreferrer`,className:`writeup-mini-item`,children:[(0,k.jsxs)(`div`,{className:`wu-mini-top`,children:[e.avatar&&(0,k.jsx)(`img`,{src:e.avatar,alt:``,className:`wu-mini-avatar-thumb`,style:{width:`24px`,height:`24px`,borderRadius:`6px`,objectFit:`cover`,border:`1px solid var(--hx-green)`}}),(0,k.jsx)(`span`,{className:`wu-platform-tag`,children:e.platform}),(0,k.jsxs)(`span`,{className:`diff-badge diff-${e.difficulty}`,children:[e.os===`windows`?(0,k.jsx)(Jr,{size:10,className:`inline mr-1`}):(0,k.jsx)(Yr,{size:10,className:`inline mr-1`}),e.difficulty.toUpperCase()]}),(0,k.jsxs)(`span`,{className:`wu-os-tag`,children:[e.os===`windows`?(0,k.jsx)(Jr,{size:11,className:`inline mr-1`}):(0,k.jsx)(Yr,{size:11,className:`inline mr-1`}),e.os.toUpperCase()]})]}),(0,k.jsx)(`h4`,{className:`wu-mini-title`,children:e.title}),(0,k.jsx)(`p`,{className:`wu-mini-summary`,children:t(e.summary)})]},e.slug))})]})]})}),(0,k.jsx)(`section`,{className:`bento-section`,children:(0,k.jsxs)(`div`,{className:`bento-card gh-activity-card`,children:[(0,k.jsxs)(`div`,{className:`section-head mb-0`,children:[(0,k.jsxs)(`div`,{className:`section-title-wrap`,children:[(0,k.jsxs)(`h2`,{className:`section-title`,children:[(0,k.jsx)(Dr,{}),` GitHub Telemetry: @bitsofalber`]}),(0,k.jsx)(`p`,{className:`section-sub`,children:n?`Actividad y repositorios públicos en tiempo real`:`Real-time public repositories and commit activity`})]}),(0,k.jsxs)(`a`,{href:cr.github,target:`_blank`,rel:`noopener noreferrer`,className:`hx-btn hx-btn-sm`,children:[`GitHub Profile `,(0,k.jsx)(kr,{})]})]}),(0,k.jsx)(`div`,{className:`gh-embed-wrapper`,children:(0,k.jsx)(Ba,{headingless:!0})})]})})]})}var qa=(0,u.lazy)(()=>h(()=>import(`./About-LqCnHqfx.js`),__vite__mapDeps([0,1]))),Ja=(0,u.lazy)(()=>h(()=>import(`./Projects-BNjUDDfB.js`),__vite__mapDeps([2,1]))),Ya=(0,u.lazy)(()=>h(()=>import(`./Achievements-BU528YS5.js`),__vite__mapDeps([3,1]))),Xa=(0,u.lazy)(()=>h(()=>import(`./Writeups-Bpv0WzZD.js`),__vite__mapDeps([4,1]))),Za=(0,u.lazy)(()=>h(()=>import(`./Contact-D1UpNDL3.js`),__vite__mapDeps([5,1]))),Qa=(0,u.lazy)(()=>h(()=>import(`./Pentesting-Df2nNVfu.js`),__vite__mapDeps([6,1,7]))),$a=(0,u.lazy)(()=>h(()=>import(`./ADAttackMap-Cv_Bk8Rk.js`),__vite__mapDeps([8,1]))),eo=(0,u.lazy)(()=>h(()=>import(`./NotFound-BaRNuhzs.js`),__vite__mapDeps([9,1])));function to(){return(0,k.jsx)(ar,{children:(0,k.jsx)(Rn,{children:(0,k.jsx)(Xt,{children:(0,k.jsxs)(Jt,{path:`/`,element:(0,k.jsx)(Ma,{}),children:[(0,k.jsx)(Jt,{index:!0,element:(0,k.jsx)(Ka,{})}),(0,k.jsx)(Jt,{path:`about`,element:(0,k.jsx)(qa,{})}),(0,k.jsx)(Jt,{path:`projects`,element:(0,k.jsx)(Ja,{})}),(0,k.jsx)(Jt,{path:`achievements`,element:(0,k.jsx)(Ya,{})}),(0,k.jsx)(Jt,{path:`writeups`,element:(0,k.jsx)(Xa,{})}),(0,k.jsx)(Jt,{path:`pentesting`,element:(0,k.jsx)(Qa,{})}),(0,k.jsx)(Jt,{path:`pentesting/:category`,element:(0,k.jsx)(Qa,{})}),(0,k.jsx)(Jt,{path:`pentesting/:category/:slug`,element:(0,k.jsx)(Qa,{})}),(0,k.jsx)(Jt,{path:`pentesting/active-directory/mapa-de-ataques`,element:(0,k.jsx)($a,{})}),(0,k.jsx)(Jt,{path:`contact`,element:(0,k.jsx)(Za,{})}),(0,k.jsx)(Jt,{path:`*`,element:(0,k.jsx)(eo,{})})]})})})})}(0,d.createRoot)(document.getElementById(`root`)).render((0,k.jsx)(u.StrictMode,{children:(0,k.jsx)(to,{})}));export{Rr as A,ur as B,Yr as C,Mr as D,Vr as E,pr as F,Bn as G,hr as H,mr as I,St as J,Kt as K,cr as L,Jr as M,Wr as N,Br as O,fr as P,A as R,Or as S,Ar as T,or as U,_r as V,O as W,h as Y,Cr as _,wa as a,br as b,Ea as c,Ur as d,Nr as f,kr as g,Sr as h,Sa as i,Hr as j,Lr as k,Ir as l,Er as m,Ba as n,Ta as o,Pr as p,ht as q,Aa as r,Ca as s,Ga as t,zr as u,Dr as v,Tr as w,wr as x,Fr as y,dr as z};
